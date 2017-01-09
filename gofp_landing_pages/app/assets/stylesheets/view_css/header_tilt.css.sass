@@ -1,0 +1,83 @@
+@import 'constants'
+@import 'mixins'
+
+
+.splash__header-container
+  position: relative
+  top: 0
+  width: 100%
+  max-width: 975px
+  padding: 20px 10px
+  margin: auto
+.splash__header-logo
+  float: left
+  margin-top: -10px
+.splash__header-logo-img
+  height: 40px
+  display: inline-block
+.splash__header-logo-txt
+  color: $bzHeadingGray
+  font-size: 22px
+  font-weight: 600
+  display: inline-block
+  vertical-align: middle
+  padding-left: 4px
+
+.splash__header-link-list-items
+  float: right
+  ul
+    list-style-type: none
+    li
+      display: inline
+      margin-right: 30px
+      a
+        font-size: 16px
+        font-weight: 500
+        color: $bzHeadingGray
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+
+
+.splash__header-link-list-item-box
+  border-radius: 4px
+  border: 1px solid gray
+  padding: 10px
+
+.splash__header-link-list-item-search-toggle
+  z-index: 10
+  position: relative
+.splash__header-link-list-item-fade-left
+.splash__header-link-list-item-search-field
+  max-width: 240px
+  display: inline
+  position: absolute
+  right: 130px
+  margin-top: -6px
+  z-index: 1
+
+// .fadeOutRight
+//   -webkit-animation: fadeOutRight .5s
+//   -moz-animation: fadeOutRight .5s
+//   -o-animation: fadeOutRight .5s
+//   animation: fadeOutRight .5s
+// .fadeOutLeft
+//   -webkit-animation: fadeOutLeft .5s
+//   -moz-animation: fadeOutLeft .5s
+//   -o-animation: fadeOutLeft .5s
+//   animation: fadeOutLeft .5s
+// .fadeInRight
+//   -webkit-animation: fadeInRight .5s
+//   -moz-animation: fadeInRight .5s
+//   -o-animation: fadeInRight .5s
+//   animation: fadeInRight .5s
+// .fadeInLeft
+//   -webkit-animation: fadeInLeft .5s
+//   -moz-animation: fadeInLeft .5s
+//   -o-animation: fadeInLeft .5s
+//   animation: fadeInLeft .5s

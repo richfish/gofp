@@ -1,0 +1,156 @@
+-view_css :full_theme_3
+-view_js :abacus
+
+.splash__container
+  .splash__header
+    .container
+      .splash__header-logo
+        =image_tag "abacus-logo.png", class: 'splash__header-logo-img'
+      .splash__header-link-list-items
+        .visible-xs
+          =mobile_menu_toggler_button
+        .visible-md.visible-lg.visible-sm
+          %ul
+            %li
+              =link_to "#" do
+                Features
+            %li
+              =link_to "#" do
+                Pricing
+            %li
+              =link_to "#" do
+                About
+            %li
+              =link_to "#" do
+                Blog
+            %li
+              =link_to "#LoginLinkReplace" do
+                Log in
+            %li
+              =link_to "#SignupLinkReplace", class: 'splash__header-link-list-item-box' do
+                Try free
+
+  .splash__push-top-hero
+  .container
+    .splash__central-content
+      .splash__central-content-title
+        Expense Reporting Optimized for Real People
+      .splash__central-content-subtitle
+        Abacus is the easiest way for you to reimburse your team, reconcile corporate credit cards, and implement your expense policy.
+      .splash__central-content-cta-btn--shaded.ab-btn--shaded
+        Try it free
+      .splash__central-content-cta-btn-transparent.ab-btn--transparent
+        schedule demo
+
+    .splash__slide-img{ 'data-index' => 1 }
+      =image_tag "abacus-slide-1.png"
+    .splash__slide-img{ style: 'display:none;', 'data-index' => 2}
+      =image_tag "abacus-slide-2.png"
+    .splash__slide-img{ style: 'display:none;', 'data-index' => 3}
+      =image_tag "abacus-slide-3.png"
+
+  .splash__footer-with-toggle
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          .row
+            .col-sm-4.splash__footer-toggle.splash__footer-toggle--active{ 'data-toggle-index' => 1}
+              .splash__footer-step-icon
+                =image_tag "abacus-footer-item-1.png"
+              .splash__footer-step-info-block
+                .splash__footer-step-name
+                  Submit
+                .splash__footer-step-description
+                  Snap a photo of the receipt, enter information and send
+            .col-sm-4.splash__footer-toggle{ 'data-toggle-index' => 2}
+              .splash__footer-step-icon
+                =image_tag "abacus-footer-item-2.png"
+              .splash__footer-step-info-block
+                .splash__footer-step-name
+                  Review
+                .splash__footer-step-description
+                  Approve the expense via mobile or web
+            .col-sm-4.splash__footer-toggle{ 'data-toggle-index' => 3}
+              .splash__footer-step-icon
+                =image_tag "abacus-footer-item-3.png"
+              .splash__footer-step-info-block
+                .splash__footer-step-name
+                  Pay
+                .splash__footer-step-description
+                  Reimbursement is direct deposited within 2 days
+
+
+.splash__section-icon-set
+  .container
+    .splash__section-icon-set-title
+      REAL TIME EXPENSE REPORTING
+    .splash__section-icon-set-subtitle
+      RichApp manages each business expense as an independent transaction in order to empower finance teams with real time data to monitor cash flow and create dynamic reports.
+    .splash__section-icon-set-centered-icon-box
+      .row
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+
+        .clearfix.visible-sm-block
+
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+
+        .clearfix.visible-sm-block
+
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+
+        .clearfix.visible-sm-block
+
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+        .col-sm-6.col-md-3
+          .splash__section-icon-set-icon-box
+            .splash__section-icon-set-icon
+              =iconf('map-marker')
+            .splash__section-icon-set-icon-description
+              smart expense fields
+
+.splash__section-quotes
+.splash__section-customers
+.splash__stack
+  .container
+    .splash__stack-tagline
+      Learn how RichApp made their app glorious with us
+    .splash__stack-cta-btn.ab-btn--transparent--small
+      Learn more

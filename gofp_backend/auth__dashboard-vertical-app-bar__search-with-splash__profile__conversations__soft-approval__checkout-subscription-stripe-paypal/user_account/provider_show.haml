@@ -1,0 +1,44 @@
+-# maybe something like this - depends if will already have profile or not, or if will use dashboard, etc.
+
+-# -profile = current_user.profile.decorate rescue nil
+-# -if current_user_has_image_no_profile?
+-#   -profile = current_user.build_profile.decorate
+-# #dashboard
+-#   .profile
+-#     .row.o-visible
+-#       .col-sm-12
+-#         -if profile
+-#           -if current_user_has_image_no_profile?
+-#             .row
+-#               %div.col-sm-12
+-#                 %span.title Your Profile
+-#                 =link_to_if profile.editable?, 'Edit Profile', new_or_edit_link_for_profile, class: 'profile_edit'
+-#           .row.o-visible
+-#             .col-sm-9.col-sm-offset-1
+-#               =render "profiles/meta_and_account", profile: profile
+-#             .col-sm-2
+-#               =render "profiles/side_nav_buttons", profile: profile
+-#             %div
+-#               -if profile.publicly_searchable?
+-#                 =render "profiles/level_badge", profile: profile
+-#               -else
+-#                 =render "profiles/steps_left", profile: profile
+-#         -else
+-#           .row
+-#             .col-sm-12
+-#               =render "profiles/first_visit"
+-#             %div
+-#               =render "profiles/steps_left_first_visit"
+-#
+-#     -if profile && !current_user_has_image_no_profile?
+-#       .row
+-#         .col-sm-12
+-#           =render "profiles/the_basics", profile: profile
+-#
+-#   -if profile && profile.profile_info_complete?
+-#     #power_sessions
+-#       =render "power_sessions/power_session_summary_profile"
+-#     #bootcamps
+-#       =render 'bootcamps/bootcamps_summary_profile'
+-#
+-#

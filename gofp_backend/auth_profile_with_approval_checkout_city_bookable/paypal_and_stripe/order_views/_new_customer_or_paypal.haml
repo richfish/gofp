@@ -1,0 +1,33 @@
+=form_tag orders_path, id: "payment-form" do
+  -if current_user && current_user.is_customer?
+    %p="<b>Email:</b> #{current_user.email}".html_safe
+    %p="<b>Order name:</b> #{current_user.full_name}".html_safe
+  -else
+    .form-group
+      =text_field_tag :email, nil, placeholder: "Your email address", class: "form-control input-lg cc_field margin-bottom-neg5", required: 'required'
+    .form-group
+      =text_field_tag :email_confirm, nil, placeholder: "Confirm email", class: "form-control input-lg cc_field margin-bottom-neg5", required: 'required'
+    .form-group
+      =text_field_tag :last_name, nil, placeholder: "Last name", class: "form-control input-lg cc_field", required: 'required'
+    .form-group
+      =text_field_tag :first_name, nil, placeholder: "First name", class: "form-control input-lg cc_field", required: 'required'
+
+  .cc_box.new_customer{ style: "margin-top:30px;" }
+    .form-group
+      .cc_box_stripe
+        .header.padding-lr-30{ style: "color:#393939; font-weight:bolder; opacity:.6;"}
+          ="Payment Details".upcase
+          =link_to image_tag('stripe_transparent.png', height: 35, width: 60, style: 'float:right; margin:-3px 0 0 -4px; opacity: .6'), "https://stripe.com/", target: 'blank'
+          %span{style: 'float:right; opacity:.6; font-size:18px; margin-top:2px;'}=icon('lock')
+    .form-group.padding-lr-30
+      -placeholder_dots = "&middot;&middot;&middot;&middot;&nbsp;&middot;&middot;&middot;&middot;&nbsp;&middot;&middot;&middot;&middot;&nbsp;&middot;&middot;&middot;&middot;"
+      %input{ "data-stripe" => "number", :size => "20", :type => "text", placeholder: placeholder_dots.html_safe, class: 'form-control input-lg cc_placeholder cc_field', style: 'margin-bottom:-5px', id: "cc_number_field", onfocus: "this.placeholder = ''", onblur: "this.placeholder = '#{placeholder_dots}'".html_safe }
+    .form-group.padding-lr-30
+      .form-inline
+        %input{ "data-stripe" => "exp-month", :size => "3", max: "2", :type => "text", placeholder: "MM", class: 'form-control input-lg cc_field' }
+        %input{" data-stripe" => "exp-year", :size => "5", max: "4", :type => "text", placeholder: "YYYY", class: 'form-control input-lg cc_field', style: 'margin-left:-4px;' }
+        %input{ "data-stripe" => "cvc", :size => "4", :type => "text", placeholder: "CVC", class: 'form-control input-lg cc_field', style: 'width:133px; float:right;' }
+        #stripe_token_internal
+    .form-group.padding-lr-30
+      %button.submit_button_styled{ type: 'submit', :'data-disable-with' => disable_with('Submitting'), style: 'width: 100%; font-weight:bolder; opacity:.8; font-size:14px;text-align:center; padding: 10px 0; margin:10px 0 0 0'}="#{booking_total} <span style='font-size:8px;margin:5px'>#{iconf('circle')}</span> Book".html_safe
+    %i.payment-errors

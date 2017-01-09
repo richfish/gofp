@@ -1,0 +1,73 @@
+%p="Hi #{@bookable_asset.user.full_name},"
+%p
+  You have a new booking_request for your bookable_asset
+  &nbsp;
+  =link_to @bookable_asset.name, user_bookable_asset_url(@bookable_asset.user, @bookable_asset), target: '_blank'
+
+%p
+  Remember, you have 48 hours to respond or it will auto expire, and the charge will not go through.
+
+
+%p
+  You can view the booking_request and respond to it on your dashboard:
+  =link_to "Your Dashboard", user_url(@bookable_asset.user), target: '_blank'
+
+%p
+  Or, if you want to confirm it immediately without signing in, here's the booking_request summary, and click the "Accept!" button below:
+
+%p
+  Name
+  %br
+  =@booking_request.guest_name
+%p
+  Linkedin Profile
+  %br
+  =link_to @booking_request.linkedin_profile, @booking_request.linkedin_profile, target: '_blank'
+
+%p
+  Proposed Start Date
+  %br
+  -if @bookable_asset.rolling
+    =@booking_request.rolling_start_date
+  -else
+    =@bookable_asset.start_date
+  %br
+  -if @booking_request.flexible
+    **This participant is flexible on the start date.
+
+%p
+  Participant's Background
+  %br
+  =@booking_request.background
+
+%p
+  Participant's Goals
+  %br
+  =@booking_request.hopeful_gains
+
+-if @booking_request.misc_notes.present?
+  %p
+    Misc Notes
+    %br
+    =@booking_request.misc_notes
+
+%p
+  Confirmation Button!
+  %br
+  =form_tag user_bookable_asset_email_confirm_bookable_asset_url(@bookable_asset.user, @bookable_asset), method: :get, style: 'display:inline' do
+    =hidden_field_tag :booking_request_id, @booking_request.id
+    =hidden_field_tag :euid, @bookable_asset.euid
+    =button_tag style: 'height:40px; width:100px', class: 'submit_button_small' do
+      Accept!
+
+  %i{ style: 'font-size: 14px'} Note - if you hit this button multiple times, it's not a big deal, but you might land on an 'Already Accepted' page.
+
+%p
+  Make sure to read up on
+  =link_to 'our policies', provider_policies_url
+  if you haven't already.
+
+%p
+  Best,
+  %br
+  Monkey Team

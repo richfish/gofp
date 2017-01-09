@@ -1,0 +1,16 @@
+#footer_post_auth
+  .container.text-center{ style: 'background-color:#383838; padding-bottom:0; padding-top:20px;' }
+    .row
+      .col-md-6
+        -#&copy; Copyright 2014 Charming Drones
+      .col-md-6
+        / %a{:href => "http://twitter.com/CharmingDrones", target: "_blank"}
+        /   %i.fa.fa-fw.fa-2x.fa-twitter-square
+        / %a{:href => "https://www.facebook.com/pages/Charming-Drones/641988999233609", target: "_blank"}
+        /   %i.fa.fa-2x.fa-fw.fa-facebook-square
+        %a.pull-right{:href => "mailto:support@offlinedating.io", target: "_blank", style: 'margin-top:-3px'}
+          %i.fa.fa-fw.fa-1x.fa-envelope{ style: 'margin:-3px -2px 0px 0px'}
+          Talk to us
+        %a.pull-right#help{ href: (current_user ? provider_policies_path : policies_path) }
+          %i.fa.fa-fw.fa-1x.fa-question-circle{ style: 'margin:-3px -2px 0px 0px'}
+          Policies & Help

@@ -1,0 +1,11 @@
+-# Access to "object.properties for custom data"
+%a.map-view__infowindow-container{ href: searchable_entity_path(1), target: "_blank"}
+  .map-view__infowindow-map-with-overlay-container
+    =image_tag "welcome/awkwardtable.jpg", class: 'map-view__infowindow-img'
+    .map-view__infowindow-price-overlay
+      =number_to_currency(80 * rand(0.90..1.10))
+  .map-view__infowindow-meta-info-container
+    .map-view__infowindow-title
+      Sample Title for Asset
+    .map-view__infowindow-subtitle
+      This is a Salvatore Ferrangami Suit only warn once before at my sister's wedding...

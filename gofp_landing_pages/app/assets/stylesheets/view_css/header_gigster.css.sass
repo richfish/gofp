@@ -1,0 +1,74 @@
+@import 'constants'
+@import 'mixins'
+
+
+.splash__header-container
+  position: relative
+  width: 100%
+  padding: 50px 10px
+  margin: auto
+.splash__header-logo
+  float: left
+  margin-top: -18px
+.splash__header-logo-img
+  height: 56px
+  display: inline-block
+.splash__header-logo-txt
+  color: #282828
+  font-size: 25px
+  font-weight: 500
+  display: inline-block
+  vertical-align: middle
+  padding-left: 14px
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.splash__header-link-list-items
+  text-align: center
+  margin-left: -10px
+  ul
+    list-style-type: none
+    li
+      &:last-child
+        float: right
+      display: inline
+      margin-right: 30px
+      a
+        font-size: 16px
+        font-weight: 500
+        color: $bzHeadingGray
+        text-transform: uppercase
+        font-size: 12px
+        letter-spacing: 1px
+        color: #5e5e5e
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+
+.splash__below-header-flourish
+  position: relative
+  margin-top: -16px
+.splash__below-header-bubble
+  margin-top: -25px
+  background: #deecfa
+  padding: 6px 10px 6px 10px
+  border-radius: 5px
+  display: inline-block
+  font-size: 15px
+  text-decoration: underline
+  &:before
+    position: absolute
+    z-index: -1
+    content: " "
+    width: 0
+    height: 0
+    top: -20px
+    left: 28px
+    border-top: 16px solid transparent
+    border-bottom: 16px solid transparent
+    border-left: 16px solid #deecfa

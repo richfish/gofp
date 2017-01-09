@@ -1,0 +1,52 @@
+-view_js :reviews
+-application = @bookable_asset.booking_requests.accepted.first
+
+.review
+  .title{ style: 'margin-bottom:10px'}
+    Your Review for
+    =@bookable_asset.user.full_name
+  %p
+    =link_to "#{@bookable_asset.name},", user_bookable_asset_path(@bookable_asset.user, @bookable_asset, review: @bookable_asset.review_key)
+    =@bookable_asset.decorate.start_date_end_date_range
+  %i{ style: 'margin-top:10px;margin-bottom:20px;'}
+    Please checkout our
+    =link_to "review policy page", reviews_policy_path
+    to learn more.
+
+  =form_for @review ||= @bookable_asset.build_review do |f|
+    =errors(@review)
+
+    .form-group
+      %span.title_small Teaching Ability
+      =star_group
+      =f.hidden_field :teaching_ability, value: 5
+
+    .form-group
+      %span.title_small Value of Experience
+      =star_group
+      =f.hidden_field :value_of_experience, value: 5
+
+    .form-group
+      %span.title_small Satisfaction
+      =star_group
+      =f.hidden_field :satisfaction, value: 5
+
+    .form-group
+      %span.title_small Overall Rating
+      =star_group
+      =f.hidden_field :overall, value: 5
+
+    .form-group
+      =f.text_area :synopsis, class: 'input-lg form-control', placeholder: 'Your Review. How was the experience? Would you recommend it for others? Was everything accurate on the profile page?', rows: 4, required: 'required'
+    .form-group
+      %i Display name for Review:
+      %span.bold_red="#{application.first_name} #{application.last_name}"
+    .form-group{ style: 'margin-top:30px'}
+      %h3 Private Feedback
+      %p="This information will not be made public, or shared with #{@bookable_asset.user.first_name}. This is to let us know about something we may need to know."
+      =f.text_area :private_message, class: 'input-lg form-control', placeholder: "Complaints, concerns, complements, etc.", rows: 4
+
+      =hidden_field_tag :euid, params[:euid]
+
+      =orange_submit_button("Submit Review")
+

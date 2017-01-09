@@ -1,0 +1,70 @@
+-customer = opts[:customer] rescue nil
+
+.policies_main
+  .mega_title Policies, General Info
+
+  %i To keep it simple, there are two groups on our platform, "customers" and "providers"
+
+  .title_small Who is Boilerplate For?
+  %p Boilerplate has the broad vision of encouraging people to meet out in the world, in person, for romance or friendship, without any sort of online basis or foundation to the relationship. It's not just that people are often very different from the online profiles they cultivate, but we believe meeting in person keeps things at an organic, exciting level that often gets lost when you meet people through online tools.
+
+  .title_small#privacy_policy Privacy
+  %p Personal information is never shared between customers or providers. The one exception is after booking where the contact info the provider has added is shared with the customer, to help with last minute logistics issues.
+  %p Providers can list anonymously or with their real identity, and customers can likewise book anonymously or with their real identity.
+  %p No sensitive financial information hits our servers. We use Stripe and Paypal to process payments and issue refunds.
+  %p We will never sell your data to any other party.
+
+  .title_small Trust & Safety
+  %p We pre-approve all providers on our platform, but like other sites such as AirBnB, we do not perform background checks or require identity verification for everyone. Providers are encouraged to use their real identities, but may use a persona if they prefer.
+  %p It is up to the provider and customer to use their own judgement if they wish to go on an outing.
+  %p Parties always first meetup at public places (privately or publicly owned establishments, just places which the public can access). If a provider suggests meeting somewhere else, such as a private residence, they will be banned.
+  %p As a customer, if things were not as expected you can initiate a dispute with us, which may entitle you to a partial or full refund.
+
+  .title_small#cancellation_refunds_policy Cancellations & Refunds
+  %p If the provider cancels for any reason, the customer receives a full refund including any fees.
+  %p In case of any disputes or issues arising during the outing, we have a resolution procedure that may entitle the customer to a partial or full refund.
+  %p OfflineDating has measures in place to help prevent last minute logistics issues and handle lateness. Providers are also required to remain at the meetup location for at least an hour. Of course, lateness on the part of the provider means a partial refund for the customer.
+  %p A customer can cancel up to 48 hours before a booking to receive a half refund.
+  %p If the customer paid with Bitcoin, the customer will need to provide a BTC address to receive the refund.
+
+  %p Depending on your payment method, refunds may take up to 5 business days to be issued. Both parties will be alerted via email throughout the process.
+
+
+  .title_small#dispute_policy Disputes & Resolution
+  %p In case of any disputes or issues arising during the outing, the customer may initiate a dispute within 3 days after the booking ends. The dispute and/ or potential refund cannot take place after the 3 days.
+  %p Both parties will be talked with, and we will work out an agreement that's fair and in accord with our policies.
+  %p Gross misrepresentation of the outing or provider is something we are strongly against, and can entitle the customer to a partial or even full refund, and possible banning of the provider.
+  %p="Shoot us an email at <a href='mailto:support@offlinedating.io', target='_blank'> support@offlinedating.io</a> and we will get the ball rolling.".html_safe
+
+  .title_small#accounts_policy Provider and Customer Accounts
+  %p Customers do not require any login and can indefinitely book as guests. After booking, customers are given the option to create an account, to allow for speedy rebooking and to have a dashboard to manage all their bookings. Previous bookings as a guest will still be shown in your dashboard when you create your account.
+  %p A customer with an account can easily become a provider by clicking a button on your "Account" page.
+  %p A provider can easily become a customer by clicking a button on your "Account" page.
+  %p If you move cities, you can easily update your city on your "Account" page
+  %p If you need to change your primary email or password, you can do so from the "Account" page
+  %P If you need to change your Payment information, do some from the "Account" page
+
+  .title_small Booking Times
+  %p Customers can book up to 6 weeks in advance in a provider's schedule
+  %p Bookings must be at least 24 hours out from the present.
+
+  .title_small#reviews_policy Reviews
+  %p Customer will have 7 days to write a review after an outing if they wish to.
+  %p Customers will be prompted by email to write a review some time after the outing is over.
+
+
+  -if customer
+    .title_small Meetup logistics:
+    %p The provider will give specific instructions for where to meet and how to connect.
+    %p The customer sees the location immediately after booking, as well as any specific instructions for the outing (e.g. have eaten, dress nice, etc.)
+    %p Upon booking, the customer receives a method of contacting the provider, usually either a phone number or personal email.
+    %p "The provider is required to stay at the meetup location for up to an hour, in case you are running late. You can always contact us <a href='mailto:support@offlinedating.io' target='_blank'>(support@offlinedating.io)</a> or the provider if you are running late.".html_safe
+    %p Please give up to 20 minutes for the provider to arrive. We will do our best to get in touch with you if the provider will be much later (you of course are entitled to partial or even full refunds for a provider's lateness).
+    %p In the unlikely event that provider is a complete no show without any contact, you will receive a full refund and except for extenuating circumstances, the provider will be banned.
+
+  .title_small#booking_issues Booking Help
+  %p All pertinent details about your booking, including location, specific instructions, and provider contact info have been sent by email, and they can also be accessed from your booking confirmation page.
+  %p="For technical support, email us at <a href='mailto:support@offlinedating.io' target='_blank'>support@offlinedating.io</a> and we'll get in touch as soon as we can.".html_safe
+
+
+

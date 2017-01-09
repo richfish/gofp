@@ -1,0 +1,25 @@
+-bootcamp_name = @conversation.bootcamp.name
+%p="Hi #{@conversation.bootcamp.user.profile.first_name},"
+
+%p
+  You've received an inquiry message from
+  =@conversation.guest_name
+  about your bootcamp
+  =link_to bootcamp_name, user_bootcamp_url(@conversation.bootcamp.user, @conversation.bootcamp), target: '_blank'
+
+%p
+  ="#{@conversation.first_name} says:"
+  =@message.message
+
+%p
+  If you don't want to login, click the link below and you can view the whole thread and respond there:
+  %br
+  =link_to "Your conversation with #{@conversation.first_name}", conversation_url(@conversation, euid: @conversation.euid), target: '_blank'
+
+%p
+  Otherwise please login to respond.
+
+%p
+  Best,
+  %br
+  The Monkey Team

@@ -1,0 +1,158 @@
+@import 'constants'
+@import 'mixins'
+
+.splash__container
+  background-color: $abacusBlue
+  min-height: 700px
+.splash__header
+  position: fixed
+  top: 0
+  background-color: $abacusBlue
+  z-index: 9999
+  padding: 20px 60px
+  padding-top: 20px
+  width: 100%
+.splash__header-logo
+  float: left
+.splash__header-logo-img
+  height: 20px
+.splash__header-link-list-items
+  float: right
+  ul
+    list-style-type: none
+    li
+      display: inline
+      margin-right: 20px
+      a
+        font-size: 13px
+        font-weight: 500
+        color: white
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+.splash__header-link-list-item-box
+  color: $abacusBlue !important
+  text-transform: uppercase
+  padding: 12px 15px
+  background-color: white
+  border-radius: 4px
+
+.splash__push-top-hero
+  width: 100%
+  background-color: #0187d0
+  min-height: 100px
+  padding-top: 100px
+.splash__central-content
+  margin-top: 40px
+  max-width: 700px
+  margin-bottom: 50px
+.splash__central-content-title
+  font-size: 50px
+  margin-bottom: 30px
+  color: white
+  line-height: 60px
+  font-weight: 400
+.splash__central-content-subtitle
+  font-size: 19px
+  line-height: 32px
+  margin-bottom: 20px
+  color: white
+.splash__central-content-cta-btn--shaded
+  margin-right: 8px
+.splash__central-content-cta-btn-transparent
+.splash__slide-img
+  height: 350px
+  margin: auto
+  text-align: center
+  img
+    height: 350px
+.splash__footer-with-toggle
+  width: 100%
+  background-color: white
+  cursor: pointer
+.splash__footer-toggle
+  border: 2px solid white
+  &:hover
+    border-bottom: 2px solid #0187d0
+    transition: border-bottom .5s
+.splash__footer-toggle--active
+  border-bottom: 2px solid #0187d0
+.splash__footer-step-icon
+  float: left
+  margin: 20px
+  img
+    height: 50px
+    width: 50px
+.splash__footer-step-info-block
+  float: left
+  width: 60%
+  padding: 20px 0px
+.splash__footer-step-name
+  text-transform: uppercase
+  color: #999
+  font-weight: 500
+.splash__footer-step-description
+  color: #999
+
+
+.splash__section-icon-set
+  min-height: 200px
+  background-color: #f5f5f5
+  text-align: center
+  padding-top: 130px
+  padding-bottom: 130px
+.splash__section-icon-set-title
+  text-transform: uppercase
+  color: #777
+  font-size: 15px
+  font-weight: 600
+  margin-bottom: 8px
+.splash__section-icon-set-subtitle
+  color: #777
+  font-size: 15px
+  max-width: 720px
+  padding: 0px 10px
+  line-height: 25px
+  margin: auto
+.splash__section-icon-set-centered-icon-box
+  max-width: 760px
+  margin: auto
+  margin-top: 60px
+  text-align: center
+.splash__section-icon-set-icon-box
+  padding: 30px
+  background-color: white
+  min-width: 190px
+  padding-top: 40px
+  margin-bottom: 6px
+.splash__section-icon-set-icon
+  .fa
+    color: $abacusBlue
+    font-size: 35px
+  margin-bottom: 8px
+.splash__section-icon-set-icon-description
+  font-size: 12px
+  font-weight: 600
+  color: #b6b6b6
+  text-transform: uppercase
+
+
+.splash__stack
+  min-height: 80px
+  width: 100%
+  background-color: #0187d0
+  padding-top: 24px
+  text-align: center
+.splash__stack-tagline
+  font-size: 15px
+  color: white
+  display: inline-block
+  margin-right: 20px
+.splash__stack-cta-btn
+  font-size: 15px
+  display: inline-block

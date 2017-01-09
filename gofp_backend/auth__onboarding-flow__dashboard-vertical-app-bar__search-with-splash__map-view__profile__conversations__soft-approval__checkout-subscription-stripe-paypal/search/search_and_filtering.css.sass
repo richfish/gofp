@@ -1,0 +1,277 @@
+@import 'constants'
+@import 'mixins'
+
+
+
+.searchnfilter__searched-tech-terminal
+  //@include linear-gradient-left-to-right(rgba(96, 54, 54, 0.86), $darkerGray2)
+  color: #FDEDE7
+  background-color: #504E4D
+  font-weight: 300
+  width: 100%
+  height: 50px
+  padding-top: 10px
+  border: 3px solid rgb(189, 178, 178)
+  border-left: none
+  border-right: none
+  span
+    opacity: .9
+    font-size: 15px
+    letter-spacing: 0.5px
+    font-family: monospace
+  img
+    position: absolute
+    left: -16px
+    top: -13px
+
+
+.searchnfilter__location-badge
+  float: right
+  padding: 30px
+  line-height: 12px
+  text-align: center
+  p:first-child
+    font-weight: 500
+    text-transform: uppercase
+    font-size: 14px
+
+.searchnfilter__search-bar
+  text-align: center
+.searchnfilter__search-bar__optional-btn
+  display: inline-block
+  &:hover
+    cursor: pointer
+.searchnfilter__search-bar-input--giant
+  height: 59px
+  border: none
+  border-bottom: 1px solid #BFBBBB
+  padding-left: 42px
+  font-size: 24px
+  min-width: 400px
+  max-width: 500px
+  &:hover
+    border: none
+    box-shadow: none
+    border-bottom: 1px solid #BFBBBB
+  &:focus
+    border: none
+    box-shadow: none
+    border-bottom: 1px solid #BFBBBB
+#filter_search_loading_spinner
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  font-size: 28px
+  display: none
+
+.searchable_entity_search_results__container
+  position: relative
+.searchable_entity_search_results__paginate-bar
+  margin-top: 40px
+  text-align: center
+
+.searchnfilter__filter-bar
+  text-align: center
+.searchnfilter__filter-set
+  display: inline-block
+  p
+    text-transform: uppercase
+    font-weight: 400
+    color: grey
+    opacity: .8
+    padding-top: 10px
+  .or-seperator
+    vertical-align: top
+    margin-top: 18px
+    display: inline-block
+.searchnfilter__filter-set--doubleline
+  @extend .searchnfilter__filter-set
+  p
+    font-size: 14px
+    font-weight: 200
+    span
+      font-size: 15px
+      font-weight: 400
+.searchnfilter__filter-set-option
+  display: inline-block
+  padding: 20px
+  width: 200px
+  height: 145px
+  opacity: .9
+  &:hover
+    cursor: pointer
+    background-color: white
+    border-radius: 5px
+.searchnfilter__filter-set-option--active
+  @extend .searchnfilter__filter-set-option
+  background-color: white
+  opacity: 1
+.searchnfilter__filter-go-btn
+.searchnfilter__results-display-title-text
+  text-align: center
+  padding: 50px
+  font-size: 32px
+  padding-bottom: 30px
+.searchnfilter__results-display-title-flourish
+  width: 60px
+  height: 2px
+  margin: auto
+  margin-bottom: 20px
+  background-color: $hjGreen
+
+
+.program-category__splash-stripe
+  width: 100%
+  background-color: #0D6182
+  height: 24px
+  bottom: 0
+  position: absolute
+
+.program-category__slash-and-toggle
+  position: relative
+  min-height: 270px
+  width: 100%
+  background-color: #09455D
+  margin-bottom: 40px
+  margin-top: 11px
+
+.program-category__splash--active
+  display: block !important
+.program-category__splash--base
+  display: none
+.program-category__splash--web
+  @extend .program-category__splash--base
+.program-category__splash--mobile
+  @extend .program-category__splash--base
+.program-category__splash--design
+  @extend .program-category__splash--base
+.program-category__splash--misc
+  @extend .program-category__splash--base
+
+
+.program-category__splash-content-container
+  max-width: 800px
+  margin: auto
+  text-align: center
+  padding-top: 60px
+.program-category__splash-title
+  font-size: 36px
+  font-weight: 100
+  color: #CED5D8
+  text-transform: uppercase
+  margin-bottom: 8px
+
+.program-category__splash-teaser
+  font-size: 16px
+  font-weight: 100
+  color: #CED5D8
+
+.program-category__toggler
+  text-align: center
+  margin-top: 20px
+.program-category__toggle-btn
+  padding: 14px
+  border: 1px solid $black
+  display: block
+  cursor: pointer
+  width: 260px
+  text-transform: uppercase
+  font-size: 12px
+  color: white
+  margin-bottom: 4px
+  background-color: #007ba7
+  border-color: #007ba7
+  &:hover
+    background-color: #01b8de
+    border-color: #01b8de
+.active-btn
+  background-color: #01b8de
+  border-color: #01b8de
+
+.program-category__container
+  display: none
+  opacity: 0
+  transition: opacity .4s ease-in
+.program-category--active
+  opacity: 1 !important
+  transition: opacity .4s ease-in
+
+.program-option__container
+  padding-bottom: 4px
+  border: 1px solid #D2D2D2
+  background-color: white
+  box-shadow: 0px 3px 0px #999
+  margin-bottom: 20px
+.program-option__icon-name-container
+/*  background-image: linear-gradient(to right, turquoise, #ACACFF)*/
+.program-option__icon
+  height: 140px
+  display: block
+  margin: auto
+  padding: 10px
+.program-option__name
+  font-size: 20px
+  font-weight: 400
+  text-align: right
+  margin-top: -40px
+  color: #847B7B
+  margin-left: 20px
+  opacity: .6
+  &:hover
+    text-decoration: none
+    color: #847B7B
+.program-option__description
+  padding: 20px
+  padding-bottom: 4px
+  font-size: 14px
+  font-weight: 300
+  text-indent: 20px
+  letter-spacing: .5px
+  line-height: 24px
+.program-option__tech-list-container
+  padding: 10px
+.program-option__tech-list-caption
+  font-size: 13px
+  font-style: italic
+  margin-top: -9px
+  text-align: right
+  margin-bottom: 7px
+
+.program-option__tech-list-item
+  display: inline
+  padding-left: 10px
+  padding-right: 10px
+  a
+    font-size: 14px
+    font-weight: 300
+    &:hover
+      text-decoration: none
+.guided-icon-small
+  a
+    img
+      height: 15px !important
+
+.program-option__tech-list-icon
+  height: 24px
+  max-width: 38px
+  border-radius: 4px
+  opacity: .8
+  padding-bottom: 2px
+
+.program-option__tech-list-item-row
+  margin-bottom: 2px
+  padding-bottom: 6px
+  position: relative
+  min-height: 24px
+  .program-option__tech-list-item:first-child
+    position: absolute
+    left: 0
+  .program-option__tech-list-item:last-child
+    position: absolute
+    right: 0
+
+
+
+.guided-search-container
+  margin: 0 40px

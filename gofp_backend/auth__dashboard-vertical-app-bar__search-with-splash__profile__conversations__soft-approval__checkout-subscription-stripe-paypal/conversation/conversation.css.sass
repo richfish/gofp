@@ -1,0 +1,70 @@
+@import 'constants'
+@import 'mixins'
+
+.inquiries
+  padding: 10px
+  .title_small
+    opacity: .8
+    margin-top: 20px
+    margin-bottom: 8px
+
+.conversation
+  .first_message
+    h4
+      margin-bottom: 10px
+    p
+      font-size: 14px
+    ul
+    li
+      font-size: 14px
+      font-weight: 300
+    .form-group
+      font-size: 14px
+      margin-right: 10px
+      margin-bottom: 10px
+    .row
+      margin-bottom: 0px
+    img
+      display: block
+      margin: 0 auto
+    input
+      min-width: 270px
+    select
+      min-width: 268px
+    button
+      float: right
+    .col-sm-8
+      border-left: 1px solid $backgroundGray
+  form
+    margin-bottom: 65px
+    margin-top: 16px
+    button
+      margin-top: 4px
+  .conversation_infopanel
+    margin-top: 42px
+    li
+      font-size: 14px
+.modal-content
+  @include border-radius(0px)
+
+
+
+.conversation_summary
+  button
+    margin-left: 7px
+    margin-top: 5px
+    opacity: .8
+  margin-bottom: 20px
+  margin-left: 20px
+
+.comment
+  margin: 15px 0px
+  .message
+    padding: 20px
+    border: 1px solid $borderGray
+    p
+      font-size: 14px !important
+      opacity: .7 !important
+      font-weight: 300
+  .meta
+    margin-top: 4px

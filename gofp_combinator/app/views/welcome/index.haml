@@ -1,0 +1,29 @@
+-view_js :combinator
+
+=render "welcome/splash"
+
+=form_tag generate_app_path do
+
+  =render "welcome/choose_backend"
+
+  =render "welcome/choose_frontend"
+
+  =render "welcome/choose_landing"
+
+  =render "welcome/choose_auth"
+
+  =hidden_field_tag "combinator_selected_backend", nil
+  =hidden_field_tag "combinator_selected_summary_card", nil
+  =hidden_field_tag "combinator_selected_splash_page", nil
+  =hidden_field_tag "combinator_selected_landing", nil
+  =hidden_field_tag "combinator_selected_auth", nil
+
+  .gofp-combinator__generate-app-btn
+    .gofp-combinator__summary-set
+      #backend_selection_txt
+      #summary_card_selection_txt
+      #splash_page_selection_txt
+      #landing_selection_txt
+      #auth_selection_txt
+    =text_field_tag "app_name", nil, class: 'form-control input-lg', placeholder: 'App Name', style: 'max-width:300px; margin: auto; margin-bottom: 20px;'
+    =button_tag "Generate App", class: 'gb-btn--big', disable_with: disable_with()

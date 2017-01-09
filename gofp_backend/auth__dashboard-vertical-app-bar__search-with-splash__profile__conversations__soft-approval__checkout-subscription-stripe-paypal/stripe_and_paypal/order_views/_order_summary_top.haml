@@ -1,0 +1,23 @@
+.row
+  .col-sm-4.sm-push-35px
+    =centered_content_with_faded_heading('Date & Time') do
+      #date_display_box
+        #time
+          =booking.local_time
+        #the_box
+          #month
+            =booking.month
+          #the_box2
+            #day
+              =booking.day
+            #day_of_week
+              =booking.day_of_week
+  .col-sm-4.sm-push-35px
+    #profile_hover
+      =centered_content_with_faded_heading('Provider') do
+        =#profile_pic_with_sizing(@artist.profile, :medium, 200, 170)
+        =image_tag("missing.png", height: 200, width: 170)
+  .col-sm-4
+    =centered_content_with_faded_heading('Duration') do
+      .little_styled_box
+        .hours=pluralize(booking.num_hours, "hour")

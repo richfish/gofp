@@ -1,0 +1,288 @@
+/* application specific stylings here (homepage only) */
+
+@import 'mixins'
+@import 'constants'
+@import 'bootstrap'
+
+h1, h2, h3, h4, h5, h6, p, div, a
+  font-family: 'Proxima Nova'
+  font-weight: 300
+
+body
+  width: 100% !important
+  height: 100% !important
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+@keyframes bg
+  0%
+    background-position: 100% 0%
+  50%
+    background-position: 50% 0%
+  100%
+    background-position: 0% 0%
+
+
+@keyframes slide-up
+  from
+    background-position: left 0
+  to
+    background-position: left -534px
+
+@keyframes shrink-it
+  to
+    transform: scale(.001, .001)
+
+
+
+//x and then y, e.g. left-center
+.splash__cta-container--center-top
+  color: white
+  padding-top: 90px
+  max-width: 800px
+  text-align: center
+  margin: auto
+  position: relative
+  z-index: 2
+.splash__cta-container--center-center
+  color: white
+  padding-top: 140px
+  max-width: 800px
+  text-align: center
+  margin: auto
+  position: relative
+  z-index: 2
+.splash__cta-container--left-center
+  color: white
+  padding: 140px 10px 200px 60px
+  max-width: 600px
+  position: relative
+  z-index: 2
+.splash__cta-container-backdrop--center-center
+  color: white
+  padding: 32px 10px
+  background-color: rgba(0,0,0, .2)
+  max-width: 800px
+  text-align: center
+  margin: auto
+  margin-top: 100px
+  position: relative
+  z-index: 2
+.splash__cta-heading
+  font-size: 40px
+  font-weight: 500
+  text-transform: uppercase
+  line-height: 1
+.splash__cta-teaser
+  font-size: 20px
+  font-weight: 300
+  margin-bottom: 30px
+.splash__cta-lower-container
+  border-top: 1px solid rgba(255,255,255,0.2)
+  padding-top: 20px
+  width: 300px
+.splash__cta-lower-container--center
+  border-top: 1px solid rgba(255,255,255,0.2)
+  padding-top: 20px
+  width: 300px
+  margin: auto
+.splash__cta-input-button
+  display: inline
+  width: 90px
+  height: 50px
+  background-color: rgb(215, 14, 108)
+  color: white
+  border: none
+  &:hover
+    background-color: rgb(215, 14, 108)
+    color: white
+.splash__cta-input
+  height: 50px
+  padding-left: 20px
+  padding-right: 5px
+  font-weight: 200
+  color: $h-gray
+  font-size: 20px
+.splash__cta-input-header
+  color: rgba(238, 238, 238, .6)
+  font-weight: 400
+  letter-spacing: 1px
+  padding-bottom: 10px
+.splash__cta-or-seperator
+  color: rgba(238, 238, 238, .4)
+  font-weight: 400
+  letter-spacing: 1px
+  padding: 10px 0px
+  text-align: center
+.splash__cta-button--black
+  margin: auto
+  width: 100%
+  color: white
+  height: 50px
+  font-weight: 200
+  background-color: rgba(0,0,0,0.3)
+
+
+
+.splash__cta-footer--black
+  position: absolute
+  width: 100%
+  bottom: 0
+  height: 46
+  padding: 30px 0px
+  background-color: rgba(0, 0, 0, 0.6)
+  text-align: center
+  color: rgba(255, 255, 255, .8)
+
+.splash__cta-footer--transparent
+  position: absolute
+  width: 100%
+  bottom: 0
+  height: 46
+  padding: 30px 0px
+  background-transparent
+  text-align: center
+  color: rgba(255, 255, 255, .8)
+
+.splash__cta-footer-icon-list
+
+
+
+
+li.color-streak-bottom
+  &:hover
+    border-bottom: 2px solid white
+
+li.faded-background
+  &:hover
+    background-color: rgba(255,255,255,0.2)
+    border-radius: 5px
+
+li.condensed-capitalized
+  text-transform: uppercase
+  margin-right: 14px
+  padding-bottom: 6px
+  font-size: 12px
+  letter-spacing: .3px
+  a
+    font-weight: 500
+
+
+// Universal Stylings/ Utilities
+
+// //placeholder stylings
+// ::-webkit-input-placeholder
+//   text-transform: uppercase
+//   font-size: 14px
+//   padding-top: 5px
+//   color: rgba(128, 128, 128, 0.84)
+//
+// \:-moz-placeholder
+//   color: #909
+//   opacity: 1
+//
+// ::-moz-placeholder
+//   color: #909
+//   opacity: 1
+//
+// \:-ms-input-placeholder
+//   color: #909
+
+.z
+  position: relative
+  z-index: 2
+.zplus
+  z-index: 100
+
+
+
+
+.dropdown
+  li
+    display: block
+
+.dropdown:hover
+  display: inline-block !important
+  height: 30px
+  .dropdown-menu
+    display: block
+    margin: 0
+
+.dropdown-menu
+  width: 300px
+  padding: 10px 20px
+  background-color: #f2f2f2
+  top: 100%
+  background: linear-gradient(white, #eee)
+  z-index: 10000 !important
+  li
+    padding-top: 6px
+    padding-bottom: 6px
+    z-index: 10000
+
+.dropdown-menu
+  &::before
+    position: absolute
+    top: -7px
+    right: 9px
+    display: inline-block
+    border-right: 7px solid transparent
+    border-bottom: 7px solid #CCC
+    border-left: 7px solid transparent
+    border-bottom-color: rgba(0, 0, 0, 0.2)
+    content: ''
+  &::after
+    position: absolute
+    top: -6px
+    right: 10px
+    display: inline-block
+    border-right: 6px solid transparent
+    border-bottom: 6px solid white
+    border-left: 6px solid transparent
+    content: ''
+
+
+
+
+.hover-effect-border
+  transition: border 300ms ease
+  &:hover
+    border: 2px solid #19c0af
+
+
+.splash__menu-section
+  min-height: 400px
+  background-color: $mdLime
+.splash__menu-section-menu-items
+  padding-bottom: 40px
+  .row
+    margin-bottom: 40px
+.splash__menu-section-menu-item
+  font-size: 14px
+  font-weight: 300
+  text-decoration: none
+  color: $black
+  padding: 10px 0px
+  display: inline-block
+  text-decoration: underline
+.splash__menu-section-heading
+  max-width: 700px
+  margin: auto
+  text-align: center
+  padding-top: 40px
+  margin-bottom: 40px
+.splash__menu-section-title
+  font-size: 22px
+  font-weight: 200
+  margin-bottom: 8px
+.splash__menu-section-subtitle
+  font-size: 12px
+  text-transform: uppercase
+  font-weight: 500
+
+.splash__menu-section-type
+  font-size: 20px
+  font-weight: 200
+  border-bottom: 1px solid rgba(109, 94, 94, 0.28)
+  margin-bottom: 20px

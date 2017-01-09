@@ -1,0 +1,34 @@
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/raindrops-0.17.0/ext/raindrops
+/Users/richard/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170108-25630-1kgka4p.rb extconf.rb
+checking for mmap() in sys/mman.h... yes
+checking for munmap() in sys/mman.h... yes
+checking for mremap() in sys/mman.h... no
+checking for linux/tcp.h... no
+checking for getpagesize() in unistd.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_io_blocking_region()... yes
+checking for GCC 4+ atomic builtins... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/extensions/x86_64-darwin-16/2.3.0/raindrops-0.17.0/mkmf.log
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/raindrops-0.17.0/ext/raindrops
+make "DESTDIR=" clean
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/raindrops-0.17.0/ext/raindrops
+make "DESTDIR="
+compiling linux_inet_diag.c
+In file included from linux_inet_diag.c:8:
+./my_fileno.h:23:12: warning: unused function 'my_fileno' [-Wunused-function]
+static int my_fileno(VALUE io)
+           ^
+1 warning generated.
+compiling linux_tcp_info.c
+compiling raindrops.c
+linking shared-object raindrops_ext.bundle
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/raindrops-0.17.0/ext/raindrops
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 raindrops_ext.bundle ./.gem.20170108-25630-1ylfspj

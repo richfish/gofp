@@ -1,0 +1,26 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: testwithtemplates
+  password: root
+  min_messages: WARNING
+
+heroku: &heroku
+
+development:
+  <<: *common
+  database: testwithtemplates_development
+
+test:
+  <<: *common
+  database: testwithtemplates_test
+
+staging:
+  <<: *heroku
+  database: testwithtemplates_staging
+
+production:
+  <<: *heroku
+  database: testwithtemplates_production

@@ -1,0 +1,70 @@
+@import 'constants'
+@import 'mixins'
+
+.btn-secondary
+  border-color: lightgray
+  padding: 12px 10px
+  @include border-radius(5px)
+  width: 200px
+
+.submit_button
+  display: inline-block
+  cursor: pointer
+  @include border-radius(2px)
+  padding: 0px 25px
+  letter-spacing: .1em
+  line-height: 56px
+  color: #fff
+  background-color: $sleekOrange
+  border: 1px solid $sleekOrange
+  font-weight: lighter
+  font-size: 18px
+  text-align: center
+  span
+    font-weight: lighter
+  &:hover
+    background-color: $orange
+    color: white
+
+.submit_button_small
+  @extend .submit_button
+  font-size: 14px
+  padding: 0px 20px
+  line-height: 40px
+
+.submit_button_xsmall
+  @extend .submit_button
+  line-height: 23px
+  font-size: 13px
+  padding: 3px 15px
+
+.rounded_button_link
+  display: inline-block
+
+.submit_button_small_secondary
+  @extend .submit_button_small
+  background-color: $cerulean
+  border-color: $cerulean
+  &:hover
+    background-color: $brighterBlue
+    border-color: $brighterBlue
+
+.submit_button_secondary
+  @extend .submit_button
+  background-color: $cerulean
+  border-color: $cerulean
+  &:hover
+    background-color: $brighterBlue
+    border-color: $brighterBlue
+
+
+.non_loading_submit_button
+  @extend .submit_button
+  &:hover
+    text-decoration: none
+
+.submit_button_styled
+  @extend .submit_button
+  background-color: #ff7f2a
+  &:hover
+    background-color: $orange

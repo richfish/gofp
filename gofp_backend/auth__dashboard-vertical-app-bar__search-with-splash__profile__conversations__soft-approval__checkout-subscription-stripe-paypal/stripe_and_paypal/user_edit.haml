@@ -1,0 +1,88 @@
+-view_js :account, :stripe_custom
+
+.account
+  =errors(@user)
+  .title My Account
+
+  =form_for @user, html: {role: 'form', class: 'form-horizontal'} do |f|
+
+    .form-group#account_email
+      =f.label :email, "Account Email", class: 'control-label col-sm-2'
+      .col-sm-6{ style: 'margin-top:5px'}
+        %span#change_account_email
+          .btn.btn-secondary{ style: 'width:100%' }
+            Change Account Email
+
+    .form-group.password_control
+      =f.label :password, class: 'control-label col-sm-2'
+      .col-sm-6{ style: 'margin-top:5px'}
+        %span#change_password
+          .btn.btn-secondary{ style: 'margin-top: -3px; width:100%'}
+            Change Passowrd
+
+    -if current_user.orders.active.present?
+      -cc_manager = StripeCcManager.new(current_user)
+      .form-group#existing_cc
+        .col-sm-2
+          %label.control-label.floatright
+            Your Card
+            =icon('lock')
+        .col-sm-6{ style: 'margin-top:5px'}
+          %span#change_cc{ 'data-toggle' => 'modal', 'data-target' => '#payment_modal'}
+            .btn.btn-secondary{ style: 'margin-top: -3px; width:100%'}
+              Change Card
+              ( ****
+              ****
+              ****
+              =cc_manager.last_four_digits + " )"
+
+      .form-group#cancel_plan
+        .col-sm-2
+          %labl.control-label.floatright
+            Your Plan
+        .col-sm-6{ style: 'margin-top:5px'}
+          %span#cancel_plan_action
+            .btn.btn-secondary{ style: 'margin-top: -3px; width:100%; color: rgba(0,0,0,.5)'}
+              Cancel Service
+
+    %div{ style: 'display:none', id: 'edit_account_email'}
+      .form-group
+        =f.label :email, "Account Email", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.text_field :email, class: 'form-control input-lg', disabled: true
+      .form-group
+        =f.label :password, class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :password, class: 'form-control input-lg', disabled: true
+
+    %div{ style: 'display:none', id: 'new_password'}
+      .form-group
+        =f.label :password, "Old Password", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :old_password, class: 'form-control input-lg', disabled: true
+      .form-group
+        =f.label :password, "New Password", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :new_password, class: 'form-control input-lg', disabled: true
+      .form-group
+        =f.label :new_password_confirmation, "Password Confirmation", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :new_password_confirmation, class: 'form-control input-lg', disabled: true
+
+
+    .form-group.margin-top-30px
+      .col-sm-6.action_row
+        =button_tag data: { disable_with: disable_with('Submitting') }, style: '', class: 'submit_button' do
+          Update Account
+        -path = Proc.new{ user_path(current_user) }
+        =link_to user_path do
+          %span.margin-left-10px Cancel
+
+
+=render "orders/payment_modal", opts: {only_card: true}
+
+#cancel_plan_confirm{ style: 'display:none;'}
+  =form_tag cancel_service_user_path do
+    =link_to '#', onclick: 'return false', id: 'cancel_with_message', :'data-custom-confirm' => "Are you sure you want to cancel Monkey service? You will lose your checks. You will no longer be charged." do
+      .btn.btn-secondary{ style: 'margin-top: -3px; width:100%; color: rgba(0,0,0,.5)'}
+        Cancel Service

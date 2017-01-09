@@ -1,0 +1,34 @@
+.splash-gradient-img__container
+
+  .header-transparent-set-sm
+    .header-transparent-set-sm__logo.pull-left
+      BOILERPLATE
+    .header-transparent-set-sm__link-set.pull-right
+      %ul
+        %li=link_to "Sign Up", signup_path
+        %li=link_to "Log In", login_path
+        %li=link_to "Help", policies_path
+        %li
+          .btn.btn-special
+            Other Provider
+
+  .splash-gradient-img__cta
+    .splash-gradient-img__cta-heading
+      The Best Magic Wands Ever
+    .splash-gradient-img__cta-log
+      Impress your Friends. Impress Magicians.
+    .splash-gradient-img__cta-lower-container
+      .splash-gradient-img__cta-input-header
+        FIND WHAT YOURE LOOKING FOR NOW
+      =form_tag "/" do
+        .input-group
+          =text_field_tag "boilerplate[test_1]", nil, placeholder: "Enter Search Term", class: 'splash-gradient-img__cta-input form-control'
+          .input-group-btn
+            %button.btn.splash-gradient-img__cta-input-button{ :'data-disable-with' => disable_with() }
+              Browse
+      .splash-gradient-img__cta-or-seperator
+        &#8212;
+        OR
+        &#8212;
+      %button.btn.splash-gradient-img__cta-button--black
+        ="#{iconf('gift', nil, 'font-size: 20px;opacity:.7;')} &nbsp; Learn How It Works".html_safe

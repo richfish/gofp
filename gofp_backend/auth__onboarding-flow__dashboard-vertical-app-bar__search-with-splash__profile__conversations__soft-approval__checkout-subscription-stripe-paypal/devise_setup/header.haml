@@ -1,0 +1,51 @@
+#logo
+  %a{ href: root_path }
+    .filler-logo-txt Richard
+    App
+
+#nav_section
+  %nav.navbar.navbar-default{:role => "navigation"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{:"data-target" => "#the_navbar", :"data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      #the_navbar.collapse.navbar-collapse.floatright
+        %ul.nav.navbar-nav
+          -if user_signed_in?
+            %li
+              =link_to root_path do
+                =profile_pic_with_sizing(Profile.new(user: User.new), :thumb, 20, 20)
+                Dashboard
+            %li
+              =link_to edit_user_path(current_user) do
+                =iconf('wrench')
+                Account
+            %li
+              =link_to logout_path do
+                =iconf('sign-out')
+                Logout
+            %li.visible-xs
+              =link_to "#" do
+                =iconf('comment')
+                Messages
+            %li.visible-xs
+              =link_to "#" do
+                =iconf('rocket')
+                Rockets
+            %li.visible-xs
+              =link_to "#" do
+                =iconf('star')
+                Stras
+            %li.visible-xs
+              =link_to "#" do
+                =iconf('user')
+                Your Profile
+
+          -else
+            %li
+              %a{:href => login_path } Sign In
+            %li
+              %a{:href => signup_path } Sign up as Provider

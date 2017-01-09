@@ -1,0 +1,106 @@
+GOFP Template Dev Roadmap
+
+-view_js for stylesheets, guaranteed you can switch template pages w/o having to alter manifest
+
+SUMMARY CARDS
+-hover states
+-funding/ completion widget
+-long description version
+-Ansible style
+-Tradingview (intelligence)
+-Prevoty text only...
+-TheMuse.com/advice... color flourishs
+-TryZen99.com
+-Image free: tradingview.com/gopro
+-Dribble profile, stuff outside 'card'
+-onelogic: supersimple
+-collegescorecard.ed.gov style...
+-orchardplatform.com... like cards with summary tABLES...
+-elegant: http://www.atnomads.com/
+-Thumbtack - card with just a review
+-lishfood.com, text over images...
+-cta buttons on images (agfunder.com)
+-kickstarter.com: elegant/ balanced (faded text too); Crowdfunder titles are nice; experiment.com
+-roomblocker...
+-wishbird.com.mx -> app-y
+-Sprig - visual, elegant/ toggle; craftsmanave.com too --> spaced, visual driven
+-airpair.com/posts, simplicity
+-camperoo.com, partial listing of events/ assets
+-lexshares, pretty elegant too
+-misc asset images no idea the site...
+
+
+SUMMARY ROWS
+-trading view /u/, followers
+-hireart.com/browse
+-buildzoom.com/find/contractors
+
+SUMMARY TABLE
+-pluralsight
+-pingdom.com
+
+SPLASH DATA TABLES
+
+SPLASH PROFILE/ PRODUCT/ COURSE CARD
+-free flowing description
+-formatted ul/li stuff
+-visual heavy
+-cta variations
+-toggle (AirBnB)
+-buildzoom style
+
+SPLASH RESUME/ DOCKET style
+-cozy.co
+
+SPLASH APPLICATION/ FORM
+
+SPLASH MARGIN CARD
+-craftsmanave.com
+
+SPLASH - THE PAGE
+-Sprig - no summary, asset is page
+-crunchbase
+-code academy (app-y/ component-y/ good space)
+-sharedesk.net, integrates with search results listing really well
+-'cards' over dramatic backdrop. bubbly feel. http://www.meetup.com/Nomadpass/
+-textured or photo backgrond can make insane differences...
+
+SPLASH NEEDS MAP
+-sharedesk.net
+-cribspot
+
+PROFILE
+-lightweight version in a pop up... like Kickstarter
+
+MISC
+-categorization/ category icon
+-fading vs. truncating text
+-use of dividers
+-simplicity vs tons of info (codementor a few low info examples)
+-geo integration... google maps
+-toggle size of images for cards (more vertical vs. horizontal, etc.)
+-color variations in titles
+-link to creator/ avatar of creator
+-how compact cards (4, little space between etc.)
+-time stats
+-date stats
+-location stats
+-'level' stats
+-% of something stats
+-cost stats
+-time stamp
+-color flourish
+-# ppl participating
+-online or not
+-lots of tags (codementor search results)
+-text/ cta prompts/ color shades over images (betterdoctor.com)
+-picture scrolling on the card (gallery ish)
+
+JS EFFECTS
+-boxshadow alter when hover (not make larger effect)
+
+MENU
+-bloomboard.com, visual tetris menu
+-upcounsel
+
+Sites to Emulate

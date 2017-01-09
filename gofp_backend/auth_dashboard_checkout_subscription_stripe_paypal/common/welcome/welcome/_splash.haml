@@ -1,0 +1,85 @@
+.splash-gradient-img__container
+
+  .slideout-menu--left
+    .slideout-menu__close-button
+      %span{ 'onclick' => "$('.slideout-menu--left').removeClass('slideout-menu--left--open')" }
+        =iconf('close')
+    .slideout-menu__content-container
+      %h3 BOILERPLATE
+      .slideout-menu__link-set
+        =link_to "This is a Sample Option", "#"
+        =link_to "Another Link you can Click", "#"
+        =link_to "Try this one, silly goose", "#"
+        =link_to "Misc things", "#"
+
+  .header-opaque-streak-with-hover
+    .header-opaque-streak-with-hover__logo.pull-left
+      BOILERPLATE
+    .header-opaque-streak-with-hover__link_set
+      .visible-xs
+        .mobile-menu-toggler__button{ 'onclick' => "$('.slideout-menu--left').toggleClass('slideout-menu--left--open')" }
+          %span=iconf('bars', nil, 'color: rgb(215, 14, 108); font-size: 40px; cursor: pointer;')
+      .visible-md.visible-lg.visible-sm
+        %ul
+          %li.condensed-capitalized
+            .dropdown.inline
+              =link_to "#", 'data-toggle' => 'dropdown', 'data-target' => "#" do
+                DD Content
+                %span.caret
+              %ul.dropdown-menu.dropdown-menu-right
+                %li
+                  =link_to "#" do
+                    =iconf('star')
+                    This is Something One
+                %li
+                  =link_to "#" do
+                    =iconf('star')
+                    This is Something Two
+                %li
+                  =link_to "#" do
+                    =iconf('star')
+                    This is Something Three
+          %li.condensed-capitalized
+            .dropdown.inline
+              =link_to "#", 'data-toggle' => 'dropdown', 'data-target' => "#" do
+                DD Content 2
+                %span.caret
+              %ul.dropdown-menu.dropdown-menu-right
+                %li
+                  =link_to "#" do
+                    =iconf('star')
+                    This is Something One
+                %li
+                  =link_to "#" do
+                    =iconf('star')
+                    This is Something Two
+                %li
+                  =link_to "#" do
+                    =iconf('star')
+                    This is Something Three
+          %li.condensed-capitalized.color-streak-bottom
+            =link_to "Help", "#"
+          %li
+            =link_to "#" do
+              Other Provider
+
+  .splash-gradient-img__cta
+    .splash-gradient-img__cta-heading
+      The Best Magic Wands Ever
+    .splash-gradient-img__cta-log
+      Impress your Friends, and then dance a lot. We promise.
+    .splash-gradient-img__cta-lower-container
+      .splash-gradient-img__cta-input-header
+        FIND WHAT YOURE LOOKING FOR NOW
+      =form_tag "/" do
+        .input-group
+          =text_field_tag "boilerplate[test_1]", nil, placeholder: "Enter Search Term", class: 'splash-gradient-img__cta-input form-control'
+          .input-group-btn
+            %button.btn.splash-gradient-img__cta-input-button{ :'data-disable-with' => disable_with_short() }
+              Browse
+      .splash-gradient-img__cta-or-seperator
+        &#8212;
+        OR
+        &#8212;
+      %button.btn.splash-gradient-img__cta-button--black
+        ="#{iconf('gift', nil, 'font-size: 20px;opacity:.7;')} &nbsp; Learn How It Works".html_safe

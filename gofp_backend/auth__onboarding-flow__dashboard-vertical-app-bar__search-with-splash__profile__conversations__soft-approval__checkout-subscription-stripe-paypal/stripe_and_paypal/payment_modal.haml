@@ -1,0 +1,5 @@
+-opts ||= {}
+.payments__modal
+  =BootstrapHelper::Modal.new('payment_modal', {flat: true}) do |modal|
+    =modal.body do
+      =render "orders/cc_form", opts: opts.merge({modal: true})

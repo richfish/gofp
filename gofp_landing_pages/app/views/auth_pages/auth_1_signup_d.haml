@@ -1,0 +1,60 @@
+-view_css :auth_1
+
+.auth__container
+  .container
+    .row.auth__signup-container
+      .col-md-6.col-md-offset-1
+        #sign_up
+          .auth__signup-form
+            =form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+              =devise_error_messages!
+              .form-group
+                =f.email_field :email, autofocus: true, required: 'required', class: 'form-control input-lg', placeholder: 'Email Address'
+              .form-group
+                =f.password_field :password, autocomplete: "off", class: 'form-control input-lg', placeholder: 'Password'
+              .form-group
+                =text_field_tag :city, nil, class: 'typeahead form-control input-lg', placeholder: 'Nearest City'
+              =button_tag "Submit", class: 'btn btn-lg submit_button ', style: 'font-weight: 400;', data: { disable_with: disable_with() }
+
+
+      .col-md-4
+        .auth__singup-teaser-box
+          .auth__singup-teaser-box__title
+            For Developers with Mininum 3 Years of Professional Work
+          .auth__singup-teaser-box__subtitle
+            It's always Free for you. Quick setup and no commitments.
+          .auth__singup-teaser-box__content
+            %ul
+              %li
+                =iconf('circle')
+                Significant, recurring side income
+              %li
+                =iconf('circle')
+                Based around your schedule, as much as you want
+              %li
+                =iconf('circle')
+                Enjoyable, in-person interaction
+              %li
+                =iconf('circle')
+                Choose who you teach - you always approve requests
+              %li
+                =iconf('circle')
+                Pick you own locations, or we'll suggest good ones
+
+
+          .auth__singup-teaser-box__sign-in
+            Have an account?
+            %a{:href => "#" }
+              Log In
+
+
+    #sign_up_info.center{ style: 'margin-top: 40px;'}
+
+      .auth__singup-teaser-special-relations
+        %span Want to go Full Time?
+        or
+        %span Are you a Digital Nomad?
+      .thirtn
+        Talk to our
+        =link_to 'special relations guy,', 'mailto:sepcial_relations@codeinperson.com'
+        we want to talk to you.

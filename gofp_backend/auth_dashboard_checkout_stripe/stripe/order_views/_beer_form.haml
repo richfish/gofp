@@ -1,0 +1,11 @@
+=form_tag beer_order_path, id: 'beer_form' do
+  -if current_user && current_user.is_customer?
+    %p="<b>Email:</b> #{current_user.email}".html_safe
+  -else
+    .form-group
+      =text_field_tag :email, nil, placeholder: "Your email address", class: "form-control input-lg cc_field margin-bottom-neg5"
+    .form-group
+      =text_field_tag :email_confirm, nil, placeholder: "Confirm email", class: "form-control input-lg cc_field margin-bottom-neg5"
+  .form-group.padding-lr-30
+    %button{ type: 'submit', class: 'submit_button_styled', :'data-disable-with' => disable_with('Submitting') }
+      Book

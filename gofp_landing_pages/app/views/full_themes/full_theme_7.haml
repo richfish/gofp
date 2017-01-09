@@ -1,0 +1,157 @@
+-view_css :full_theme_7
+
+.splash__container
+  .splash__header
+    .splash__header-logo
+      =image_tag "preact-logo.png", class: 'splash__header-logo-img'
+      .splash__header-logo-txt
+        Richapp
+    .splash__header-link-list-items
+      .visible-xs
+        =mobile_menu_toggler_button
+      .visible-md.visible-lg.visible-sm
+        %ul
+          %li
+            =link_to "#" do
+              Product
+          %li
+            =link_to "#" do
+              About Us
+          %li
+            =link_to "#" do
+              Blog
+          %li.floatright
+            =link_to "#" do
+              Sign In
+          %li.floatright
+            =link_to "#", class: 'splash__header-link-list-item-box--transparent' do
+              Free Trial
+          %li.floatright
+            =link_to "#", class: 'splash__header-link-list-item-box--shaded' do
+              Request Demo
+
+
+  .splash__central-content
+    .row
+      .col-md-4.col-lg-5
+        =image_tag "preact-background-img-data-flourish.png", class: 'splash__central-content-flourish-img'
+      .col-md-8.col-lg-7.splash__central-content-title-cta-container
+        .splash__central-content-title
+          SCIENCE MAKES CUSTOMER SUCCESS
+        .row
+          .col-sm-4
+            .splash__central-content-title
+              Simple
+          .col-sm-8.splash__central-content-subcontainer
+            .splash__central-content-subtitle
+              Richapp's data science makes it easy to decode customer behavior, so you can reduce churn and drive revenue with precision.
+            .splash__central-content-cta-btn--shaded
+              Request a Demo
+            .splash__central-content-cta-btn--transparent
+              Learn More
+
+
+.splash__feature-section-1
+  .row
+    .col-sm-6
+      .splash__feature-section-title
+        KNOW YOUR CUSTOMERS' EVERY MOVE
+      .splash__feature-section-description
+        At a glance, Richapp provides the complete picture of customer health. Your team can take action with the right customer at exactly the right moment to prevent customer churn.
+      .splash__feature-section-cta-link
+        Learn more
+    .col-sm-6.center
+      =image_tag 'preact-feature-1.png', class: 'splash__feature-section-img'
+.splash__feature-section-2
+  .row
+    .col-sm-6
+      =image_tag 'preact-feature-2.png', class: 'splash__feature-section-img'
+    .col-sm-6
+      .splash__feature-section-title
+        PREDICT CUSTOMER HEALTH
+      .splash__feature-section-description
+        Take the guesswork out of customer engagement. Powered by big data and machine learning, Richapp automatically crunches customer behavior data to enable smarter, timely, data-driven customer success.
+      .splash__feature-section-cta-link
+        Learn more
+.splash__feature-section-3
+  .row
+    .col-sm-6
+      .splash__feature-section-title
+        Delight customers
+      .splash__feature-section-description
+        Richapps recommends the best proactive customer retention strategy by pushing actionable insights to your team’s fingertips. Richapp workflows bring your predictions to life.
+      .splash__feature-section-cta-link
+        Learn more
+    .col-sm-6.center
+      =image_tag 'preact-feature-3.png', class: 'splash__feature-section-img'
+
+
+.splash__stack-1
+  CUSTOMER SUCCESS RESOURCES
+
+.splash__cta-link-section
+  .row
+    .col-sm-4
+      =image_tag "preact-cta-link-img-1.png", class: "splash__cta-link-section-img"
+      .splash__cta-link-section-title
+        DOWNLOAD THE CUSTOMER SUCCESS STRATEGY TEMPLATE
+      .splash__cta-link-section-cta-btn
+        Get content
+    .col-sm-4
+      =image_tag "preact-cta-link-img-1.png", class: "splash__cta-link-section-img"
+      .splash__cta-link-section-title
+        DOWNLOAD THE QUARTERLY BUSINESS REVIEW TEMPLATE
+      .splash__cta-link-section-cta-btn
+        Get content
+    .col-sm-4
+      =image_tag "preact-cta-link-img-2.png", class: "splash__cta-link-section-img"
+      .splash__cta-link-section-title
+        VIEW THE 7 CAUSES OF CHURN PRESENTATION
+      .splash__cta-link-section-cta-btn
+        Get content
+
+
+.splash__testimonial-squares
+  .row
+    .col-sm-6.splash__testimonial-square--1
+      .splash__testimonial-quote
+        “We chose Richapp because it gives us unprecedented visibility across all the key indicators of customer health so we can take timely action.”
+      .splash__testimonial-person-info.right
+        .splash__testimonial-person-name
+          CARL HARDEL
+        .splash__testimonial-person-job
+          CHIEF CUSTOMER SUCCESS OFFICER
+        .splash__testimonial-person-logo
+          =image_tag "preact-testimonial-logo-1.png", style: 'height: 80px;'
+    .col-sm-6.splash__testimonial-square--2
+      .splash__testimonial-quote
+        "Richapp enables our customer success team to proactively engage with customers to solve their challenges. It's a huge benefit for both our customers and our business.”
+      .splash__testimonial-person-info.left
+        .splash__testimonial-person-name
+          BILL LAPCEVIC
+        .splash__testimonial-person-job
+          VP OF CUSTOMER SUCCESS
+        .splash__testimonial-person-logo
+          =image_tag "preact-testimonial-logo-2.png"
+  .row
+    .col-sm-6.splash__testimonial-square--3
+    .col-sm-6.splash__testimonial-square--4
+      .splash__testimonial-quote
+        “Since we've been using Richapp, our churn rate dropped by over 50%, our entire team became at least 25% more productive, and our upsell rate has grown significantly.”
+      .splash__testimonial-person-info.left
+        .splash__testimonial-person-name
+          ROBERT J. MOORE
+        .splash__testimonial-person-job
+          CEO
+        .splash__testimonial-person-logo
+          =image_tag "preact-testimonial-logo-3.png"
+
+.splash__customers
+  .splash__customers-title
+    Some of our Clients
+  .splash__customers-logos-img
+    =image_tag "preact-customers.png"
+
+.splash__stack-2
+  .splash__stack-2-cta-btn
+    Request demo

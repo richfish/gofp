@@ -1,0 +1,6 @@
+- content_for :content do
+  %h1 THIS GUY NEEDS APPROVAL
+
+  =@profile.inspect
+  %br
+  =link_to "ACTIVE ADMIN", tibetan_sherpa_access_profile_url(@profile)

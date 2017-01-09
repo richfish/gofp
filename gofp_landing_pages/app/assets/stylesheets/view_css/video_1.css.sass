@@ -1,0 +1,18 @@
+@import 'constants'
+@import 'mixins'
+
+.splash-video__container
+  height: 600px
+  position: relative
+// object-fit based, container or cover
+.splash-video__video
+  position: absolute
+  height: 600px
+  width: 100%
+  object-fit: cover
+// place backup background image here if object-fit no workss
+.splash-video-video__background
+  position: absolute
+  background: linear-gradient(to right, rgba(0, 0, 0, .5) 40%, rgba(32, 59, 75, .1) )
+  height: 600px
+  width: 100%

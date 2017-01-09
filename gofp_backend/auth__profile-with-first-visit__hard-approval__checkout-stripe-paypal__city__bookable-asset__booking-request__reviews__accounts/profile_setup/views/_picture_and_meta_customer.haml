@@ -1,0 +1,40 @@
+-user = bootcamp.user
+-profile = user.profile
+
+.row.margin-top-20px
+  .col-xs-3.col-sm-2
+    %div{style: 'text-align:right'}=profile_image_smaller profile
+  .col-xs-9.col-s-10.lg-nmarg-l-10{ style: 'margin-left:10px' }
+    .row{ style: 'margin-bottom:0px'}
+      .col-xs-12
+        .header_with_span
+          .header
+            =profile.full_name
+          %span
+            %b{ style: 'font-size: 16px'}
+              =profile.years_experience
+              Years
+            Professoinal Experience
+    .row{ style: 'margin-bottom:7px'}
+      .col-xs-12{ style: 'font-size:14px'}
+        -no_stars_reviews_str = "<span style='opacity:.6' class='fourtn'>#{iconf('star')}#{iconf('star')}#{iconf('star')}#{iconf('star')}#{iconf('star')} on <span class='b-more bold_red fourtn'>0 reviews</span><span>"
+        -if user.bootcamps.complete.present?
+          -rating = user.avg_overall
+          -num_reviews = pluralize(user.reviews_count, 'review')
+          -stars_str = "#{num_to_stars(user.avg_overall)} on <span><a href='#' class='b-more bold_red'>#{num_reviews}</a></span>"
+          -final_str = user.reviews_count.to_i > 0 ? stars_str : no_stars_reviews_str
+          .color_alt.fourtn=final_str.html_safe
+        -else
+          .color_alt.fourtn="#{no_stars_reviews_str} - <span class='fourtn b-300'>be the first to book!</span>".html_safe
+    .row
+      .col-xs-12
+        -if params[:confirmation_page].presence
+          .submit_button_xsmall_secondary{ style: 'opacity:.6' }
+            Contact
+        -elsif @show_contact_info
+          %i.fourtn You're Booked. Email at:
+          .fourtn="<a href='mailto:#{bootcamp.user.email}' target='_blank'>#{bootcamp.user.email}</a>".html_safe
+        -else
+          .submit_button_xsmall_secondary{ style: 'opacity:.6', 'data-toggle' => 'modal', 'data-target' => '#contact_modal' }
+            Contact
+    =render "conversations/first_conversation_modal", bootcamp: bootcamp

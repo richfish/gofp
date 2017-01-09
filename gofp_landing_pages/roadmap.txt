@@ -1,0 +1,310 @@
+Landing Page Universe Pieces
+
+
+STACKS
+-blend in with other section
+-vertical line themes
+-singup or call to action reminder
+
+
+SECTIONS
+-color contrast, palette background
+-multi combined sections, same bg, not 100% width hrs dividing
+-tab sections
+-giant flat icon half-half
+-sections with color streaks
+-section with screenshot on device, with arrows pointing out features
+-icon section with blurred parallax image from above section, highlight colors
+-icon section with a title subtext above icons
+-subtle geometric backgrounds
+-flat design collage background
+-carousel section
+-drop in short FAQ
+-quote arrangements
+-series of narrow sections
+-very detailed multi part icons
+-spacing on sub icon text
+-check marks not bullet points
+-playing with geometry of section boundaries (divots, dramatic slants, etc.)
+-half and half but both have icon & text & maybe call to action, sharp contrasting colors
+-section contrast, condensed tab/carousel, then a very spaced next section
+-sections with graphics that span sections
+-conveyor belts
+-text underlined with links
+-odd shapred squares with nice visial images
+
+LOGIN/SINGUP
+-login/signup special page w/ dramatic splash image
+-login/signup special page with half-half informational section
+-popup login/signup form
+-camply bold icon login/signup
+-social account integration
+-same popup, tabs for signup or signin (or log up...)
+-signup underline style
+-spring style elegant spaced, underlined signup
+-signup modal with fancy background images
+-icons on auth fields
+
+HEADER
+-opaque header
+-transparent header
+-semi transparent header
+-header with search bar
+-header with search bar that mutates
+-header with options that drop down
+-call to action button variations
+-full button row header
+-just call to action header (maybe mobile button)
+-header that mutates when scroll (name can drop, just icon left)
+-logo that hangs over header
+-header first appears as lower stack, then becomes header (dual headers...)
+
+SPLASH
+-carousel splash
+-carousel splash with tab names
+-splash with gif video
+-100% splash
+-mid width splash
+-short splash with stacks
+-splash with screenshot graphic
+-dramatic gradient splash (w, w/o gradient), color changing?
+-half n half with opaque half of image with text
+-fancy slideout sidebar w/ menu
+-playing with position of elements
+-splash with streak
+-splash with icon row
+-full embedded singup or login on the splash
+-text integration
+-vertical split
+-scrolling background (common ninja)
+
+FOOTER
+-concept footer
+-half and half with logo on one side
+-email subscription
+-multi tier
+-tiny bottom tier
+-with email sign up section above
+-flourish icon at very bottom
+-centered, narrow footer, very long
+-book style
+-made with love from _ (boat); made with love for x,y,z (coffee? margaret?)
+-tiny print tos or about company taking up space
+-incorporation of a map
+
+ONBOARDING/ APP INTEGRATION
+-'cards' or 'assets' to be listed
+-3 step flow where have answer some questions on chic forms
+-autocomplete/ predictive solutions, dropdown (not typeahead...)
+-having two domains for two sides of a marketplace
+-full page overlay with the x and dramatic color (not sure where...)
+
+
+BRAINSTORM
+
+-3 sections with text below them; optional heading w/ subtext above the 3; can combile a 1,2,3 count
+-6 items listed with text (3 per column, header text?, lexshares)
+-4 listed accross
+-5, a ton, etc.
+-can use gifs instead of static images
+-can emphasise as a grid with the 4 together (mattermark)
+-higher level text information section with graphics
+-quantity, data display section (#users)
+-as seen on section
+-people quotes section
+-amazing (giant) signup email field
+-material design get start forms (underline, etc.)
+-big footer with hierarchy
+-100% stetch landing image
+-fixed width splash screen (w/ color overlay or not, with various transparently listed company names & the like)
+-full header, partial transparent header
+4 type look & feel:
+  -corporately look & feel (phone number at top)
+  -fun flat design look & feel
+  -for developers look & feel
+  -super design-y look & feel (sceatt.co)
+  -can look like marketing page (gutters, shadows for central content)
+  -look like ebook or article
+  -personal portfolio
+  -informational pamphlet
+  -actual physical product page, an electronic
+-screenshots of browser, mobile device, or your mac
+-simple large bold statement with large text where formatted certain pieces of text.
+-wait 10 seconds prompt to subscribe box
+-ways for app integration (mini form to get started)
+-sign up/ sign in strategies: bare page, some buttons; pop over thing (not popup); full pop up (airbnb style); embedded fields (facebook)
+-stripe.com carrosel splash section (show like 5 features with screenshots, annoucements) --> could be powerful
+-mid level carousel, pick like 4 cool things, cool custom background back drops
+-descending image left text right blocks
+-'how does it work' integration section (embedded video or a link)
+-banner logo (something sticking out in cool way)
+-instead of straight line dividers between sections, slanted/ diagnol, cool shape.
+-sample 'asset boxes' if site contains a bunch of assets (listings, products, etc.)
+-search bar top integrated with header
+-variable box sizes with cool images with text on them (dronerent, airbnb, boat booking site)
+-map integration with pin points
+-an app sidebar control panel on landing (documentary addict)
+-transformed image (tilting inward, 42)
+-bold play with color palette (unicorn hunt)
+-a mobile style reveal panel from a toggle button
+-overlaying comment boxes
+-all out 'how it works' graphic, like a machine with lines and dots
+-cool autofil options
+-long extended footer, vertical, centered (antology/ poachable)
+-mobile integration, text out a download link..
+-pricing boxes
+-rich bg colors which can change
+-scroll latest tweets
+-dramatic loading screen for main splash window
+-click button full page (x-able) overlay
+-icon theme... have a little flourish on each of them (green lines on minimal icons, etc.)
+-vertical division right down middle of screen; or horizontal division (two shades of color)
+-mixin dramatic cursive
+-two broader geographic designs (top half full width, splash), bottom 3/4 like centered, spaced similar color sections with info
+-tabs  which each hvae their own 6 or 4 section parts in middle of page
+-validation strategies of signup/signin & form hook integrations
+-footer with dramatic logo spaced taking up half, rest of links right half...
+-multi layered footers
+-landing page sections with crazy geometrical patterns (spirals, blueprints, etc)
+-bare page sign in, sign up but with card next to it advertising some interesting feature of your app
+-palette tabs centered
+-or two party options as central tab/toggle buttons on splash (marketplace style)
+-could make footer like front page in book with publishing info etc.
+-little math equation with icons as a section (lingvist)
+-having text with select words underlined which link to nice things
+-cool icon designs that span multi landing page sections
+-laptop image with page from app, and lines pointing out the features (doulingo)
+-obviously gif splashes
+-auto pop up of messager
+-parallax mid section
+-all white background, not flashy, minimal, sections moved in, keeps gutters...
+-using more complex dropdowns from heading bar
+-put an FAQ section with a couple common ?s right in middle of the page
+-closable newsletter or annoucement drop down form top
+-sideshare bar
+-coinpip, icons for every field
+-pages that use bold gradients, orange, purple, green; border one side of boxes, sections with bold gradient or color pallete sampler
+-common pattern, big sections bright colors, stacked to smaller more narrow sections
+-splash section with logo vertically & horizontally centered, instead of a header
+-bare page for signup up but a dramatic color gradient (that changes! knotable)
+-header at top has line of accent color (nice flourish)
+-asset boxes (puas or bootcmaps, do the accent line color, great)
+-combine an about/faq with a 'what they say' section (looksharp)
+-weird texture to splash image
+-header color palette bar but really small segments
+-very subtle geometric background
+-search bar at top (semi transparent, can be in transparent header...), click to search it disappears other things in transparent header!
+-full overlay signup, signin, classy shit
+-never ending scrolling of assets/content from landing page
+-multiple hooks in landing page (gosmith)
+-intentionally load cool background and wait a second or two to animate the content for it... classy
+-tall footer with semi transparent overlay with info on right, full google map location on left half.
+-semi transparent black overlay banner ontop of vibrant splash page image towards bottom...
+-lots of text play on splash page
+-different sections to landing page not on same page, have own splash pages, own info sections
+-bare page could be fancy splash image with cool logo in corner... (blueboard sign in page)
+-or top search bar that comes to life (dropdown, more opaque) after clicking
+-marketplace app will probably need a second themed landing page
+-don't need to have color sections marked off... can all be white backdrop, just hrs (that don't expand 100%) to separate.
+-a popup for signup & signin which just flips to show the other one... vangoart
+-symmetric & assymetric marketplaces... emphasis on showing existing assets or all behind sign up wall
+-seems to be a 500 startups trend of not big scroll page, with dedicated sections in header that show own sections (guy hill approval style)
+-3 trick side by side
+-trend of crazy triangle generator
+-the double search bar, top header and middle splash
+-scribble & arrow to direct attention to something is always an option
+-header transparent but line, another level above it
+-multi tier header
+-splash image backgorund color overlay, left half totally opaque, right half transparent to show image
+-main lp sections, not contrast colors, jsut shades grey/white alternating, very soft & relaxed feel.
+-splash section fixed height, mono color bar below it, will be visible to prompt users about other half of platform or whatever
+-section with a side nav bar (kickstarter, gosmith) where can see a whole bunch of content in that one area
+-kickstarter's cuttable footer with secret signup below it
+-multi tier footer with shades of same color
+-signup is pop up but on another page with totally different splash image...
+-3/4 same row icons, but section off to left where can hover over icon to get more inco & a new, bigger graphic --> clip.mx
+-cool geometric symbol randomly at bottom of footer, nice
+-big fancy flat icon side-by-side
+-make use of tabs on landing page (cloud academy)
+-not just 1 multi-icon row, but 3 or 4 of them!
+-put tiny print terms of serices in footer...
+-splash with giant fucking text (sign up log in too)
+-the 'header that appears' after scroll down
+-when click register it then takes you to page where pick your side of the marketplace
+-dramatic slant cut through page with color contrast
+-conveyor belt of icons with little bits of text below them... cool section
+-full page section with icon, text, subtext, centered, and that's all, same backdrop color as rest of landing page
+-definitely option to do color contrast or same color
+-cool splash graphic in back that is fixed!
+-how it works tabs, each tab reveals a set of steps with screenshots & lines pointing out what's going on
+-if going to do a splash carousel, tilt next slides inward to give a brief preview, incredible.
+-will need social media sign up integration options
+-famebit nice extra splash page for signup, signin
+-strategic use of narrow color bars
+-put "How it works" in narrow color bar; put random metric about how many ppl love it etc. in such a bar
+-more tightly stacked page (multi tier header, then more fixed height splash, two narrow bars under (top one semi transparent, last one has bold color & get started prompt)
+-arrow button to take you to top seem popular in footer
+-splash can just be gradient (maybe shifts), and have a working piece of functionality on top of gradient (algolia)
+-can do nice semi transparent boxes around text or app integration on splash page...
+-looks like Google can do an autocomplete integration
+-parital faq with link to more in footer, nice
+-faq as popover concept, not bad
+-bounceexchange does the dramatic text, cool
+-extreme narrow splash image/color overlay... 42 floors
+-taggable assets (color palette tags - experiment.com)
+-life360 does icon rows but with category off to left
+-splash image with another graphic over it (in addition to text)
+-cool streak line that runs along left side and inersects all the sections (spinakr)
+-fancy form field splash page tie in, icons, underlines, etc. (icons in dropdown)
+-footer can have popular cities listing for commonly searched makrets (good filler for footer)
+-signup pop up can have its own splash screen
+-nice touch, dims screen when click on drop down (also displays an underline for where type)
+-gifs of interactions on your site for mid levels
+-ginzametrics coolest footer ever; illustration of logo, takes up lots of spcae
+-awesome splash image that goes all the way down... more content just overlays it
+-can take a more narrow section approach all the way through
+-entire info/concept graphic on a splash page
+-text color in header synced with sections (branient)
+-the 'assistance line' go through sections (or just 1 section), on side or through middle, branches off with little icons or indictaors
+-coinbase the classy all white (minus splash)
+
+YCOMBINATOR INSPIRATION
+-zencoder, splash carousel but with labels for each slide!
+-airpair, no section dividers, dotted line, same background
+-using a sidebar header/dashboard
+-consistent single color streak at top
+-abacus just white/light grey background, classy; love that abacus logo
+-bellabeat bold interstitial pictures
+-caremessage.org slideing out panel is sweet
+-caremessage awesome icon set, blurred paralax image that's above it, awesome colors
+-caremessage awesome slide out contact message
+-coinbase
+-dotcloud
+-airhelp
+-boostable
+-cambly hell yeah
+
+
+theme forest or template marketplace... !
+
+
+FINAL LIST
+
+
+500 startups favorites:
+-partend
+-looksharp
+-careerdean
+-vangoart
+-runrun.it
+-clip.mx
+-servo/medialets is good
+-experiment.com
+-betterdoctor
+-sprig, very unique, cool (signup/ sign in too)
+
+
+JAN 3 2016
+-Tilt, Abacus, Gigster (full LP, Abacus Splash, Auth popup, sticky top bars, static pages template (tilt))
+  -The offwhite vs lighte gray/ peach background toggling
+  -Need sharper, snappier animations!

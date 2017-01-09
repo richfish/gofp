@@ -1,0 +1,39 @@
+-view_js :bookable_asset
+.bookable_asset
+  .col-sm-offset-1.col-sm-11
+    .title="#{@bookable_asset ? "Edit" : "Make"} Your BookableAsset"
+
+    =toggle_info_panel do
+      %ul
+        %li This bookable_asset information will be shown to prospective clients
+        %li This information will also be used for evaluating who we let on our platform.
+        %li Again, the most important minimum requirement for acceptance is 3 years of professional developer experience, and the thing we like to see the most is a robust portfolio of sites that you have built from scratch.
+        %li="Please read more about our<a href=#{provider_policies_path(anchor:'bookable_asset_guideliens')} target='_blank'>BookableAsset Guidelines</a> and our <a href=#{provider_policies_path(anchor:'minimum_requirements')} target='_blank'> Minimum Requirements</a>".html_safe
+
+    .margin-top-20px
+    -
+    =form_for [current_user, @bookable_asset ||= BookableAsset.new], html: { multipart: true } do |f|
+      =errors(@bookable_asset)
+
+      .form-group
+        %h4
+          Description
+          =tooltip('Please only Yada Yada BookableAsset.')
+        =text_area_tag :description, nil, placeholder: 'In a few sentences, what have you done for most of your developer career? What have you worked on at various companies, and what kind of role did you have? What kinds of apps have you built from scratch?', class: 'input-lg form-control', rows: 3
+
+      .form-group
+        %h4 Amount to charge
+        .inner-addon.left-addon
+          =iconf('dollar')
+        =f.text_field :amount_cents, :value => (number_with_precision((f.object.rate_cents/100 rescue nil), :precision => 2) || nil), class: 'form-control input-lg'
+
+
+      -button_text = if @bookable_asset.persisted?
+        -if @bookable_asset.published?
+          -"Publish Changes"
+        -else
+          -"Submit Edits"
+      -else
+        -"Create BookableAsset"
+      =orange_submit_button(button_text)
+

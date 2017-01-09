@@ -1,0 +1,62 @@
+-view_css :summary_card_2
+
+.bootcamp_search_result__container
+  .row
+    .col-xs-3.col-md-2
+      .bootcamp_search_result__instructor-image
+        =image_tag "welcome/awkwardtable.jpg", height: 80, width: 80, style: 'border-radius:50%'
+    .col-xs-9.col-md-10
+      .row
+        .col-xs-12
+          .bootcamp_search_result__bootcamp-headline
+            $500 Ruby on Rails Thing
+            %span.bootcamp_search_result__tech-tag
+              Thing1
+            %span.bootcamp_search_result__tech-tag
+              Thing2
+      .row
+        .col-xs-12
+          %span=iconf('user')
+          %span - 6 Weeks -
+          %span $1800
+
+      .row
+        .col-xs-12{ style: 'margin-top:4px'}
+          .bootcamp_search_result__ratings-line
+            Instructor rated
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            on
+            %span.bold_purple 5 reviews
+
+  .bootcamp_search_result__description
+    -description = "The monastery revival movement of the 15the century witnessed a lot of secular, lay people rejecting the oppressive ecclesiatical institutions in favor of a more free spirited running off into the woods like St. Francis."
+    =truncate(description, length: 200)
+
+  .bootcamp_search_result__meta-section
+    .row
+      .col-md-5.col-sm-6
+        .row
+          .col-xs-1
+            =image_tag('purplecalendar.png', style: 'height:20px; width:20px;' )
+          .col-xs-10
+            Some widget thing
+      .col-md-7.col-sm-6
+        .row
+          .col-xs-1
+            =image_tag('locationpurple.png', style: 'height:20px; width: 16px;')
+          .col-xs-10
+            %b{ style: 'font-size: 14px; font-weight: 500; color:#605A7F;'} Location
+            %p{ style: 'font-size: 14px;'} Workshop Cafe, San Francisco
+
+  %hr{ style: 'margin-top:10px; margin-bottom: 10px;'}
+
+  .row
+    .col-sm-12
+      .bootcamp_search_result__cta
+        =link_to "#SplashPageLinkRemove" do
+          =iconf('caret-right')
+          Learn more and Book

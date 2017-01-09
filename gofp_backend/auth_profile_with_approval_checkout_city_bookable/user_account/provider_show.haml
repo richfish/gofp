@@ -1,0 +1,46 @@
+-profile = current_user.profile.decorate rescue nil
+#dashboard
+  .row
+    .col-sm-12
+      .profile
+        -if profile
+          .row.margin-bottom-20px
+            %div.col-sm-12
+              %span{ class: 'title'} Your Profile
+              -if profile.editable?
+                =link_to 'Edit Profile', edit_user_profile_path(current_user, profile), class: 'profile_edit'
+              .row
+                .col-sm-12
+                  .title_small=profile.full_name.presence || "Your Name Here"
+            / -if profile.publicly_searchable?
+            /   .col-sm-6
+            /     =render "profiles/published_stamp"
+            / -elsif profile.on_hiatus?
+            /   .col-sm-6
+            /     =render "profiles/hiatus_stamp"
+          .row
+            -if profile.publicly_searchable? #|| profile.on_hiatus?
+              .col-sm-5.col-lg-offset-1.profile_pic.sm-push-20px
+                .sm-float-switch-r-n=profile_image_medium profile
+              .col-sm-5
+                .styled_box_bookings
+                  =#render "profiles/bookings"
+            -else
+              .col-sm-5.col-lg-offset-2.col-md-offset-1.col-sm-offset-1.sm-push-20px
+                .sm-float-switch-r-n=profile_image_medium profile
+              .col-sm-4
+                =render "profiles/steps_left", profile: profile
+        -else
+          =render "profiles/first_visit"
+
+  -if profile
+    .margin-top-30px
+    .row
+      .col-sm-12
+        =render "profiles/the_basics", profile: profile
+
+  -if (profile && profile.profile_info_complete?)
+    %hr
+    .row
+      .col-sm-12
+        Put other Asset/ Whatever else your app does here

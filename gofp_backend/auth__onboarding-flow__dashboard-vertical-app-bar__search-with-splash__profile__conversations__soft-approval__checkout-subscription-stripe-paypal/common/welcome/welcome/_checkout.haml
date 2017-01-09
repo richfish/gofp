@@ -1,0 +1,10 @@
+.landing-page__checkout-demo-container
+  =link_to new_order_path, class: 'submit_button' do
+    See Checkout/ Payments Flow
+
+  %span{ style: 'font-size: 12px;' } or
+
+  %span.btn.btn-special{ 'data-toggle' => 'modal', 'data-target' => '#payment_modal'}
+    Launch Payments Modal
+
+=render "orders/payment_modal"

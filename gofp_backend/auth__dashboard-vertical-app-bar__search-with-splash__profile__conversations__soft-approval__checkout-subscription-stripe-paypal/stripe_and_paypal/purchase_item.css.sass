@@ -1,0 +1,108 @@
+@import 'constants'
+@import 'mixins'
+
+.purchase-item__container
+  padding: 20px
+  border: 1px solid #D2D2D2
+  background-color: white
+  box-shadow: 0px 3px 0px #999
+  margin-bottom: 20px
+.purchase-item-manager__container
+  @extend .purchase-item__container
+
+.purchase-item-manager__stats
+  margin-bottom: 20px
+.purchase-item-manager__stat--created
+  display: inline
+  font-weight: 600
+.purchase-item-manager__stat--remaining
+  @extend .purchase-item-manager__stat--created
+
+
+.purchase-item-info__container
+  @extend .purchase-item__container
+.purchase-item-info__point
+  font-weight: 200
+  font-size: 14px
+  img
+    height: 20px
+
+
+.purchase-item__form
+  margin-bottom: 20px
+  img
+    height: 20px
+
+.purchase-item__title
+  font-weight: 400
+  letter-spacing: -0.5px
+  opacity: .7
+  font-size: 18px
+  border-bottom: 1px solid #D0CECE
+  margin-bottom: 18px
+  padding-bottom: 6px
+  text-transform: uppercase
+.purchase-item-manager__title
+  @extend .purchase-item__title
+.purchase-item-checkout__title
+  @extend .purchase-item__title
+.purchase-item-checkout__title--soft
+  @extend .purchase-item__title
+  font-weight: 500
+  font-size: 16px
+  display: inline
+  margin-left: 20px
+  border: none
+
+.purchase-item__error-message
+  font-weight: 400
+  font-size: 12px
+  display: inline
+  color: $missingRed
+.purchase-item__success-message
+  @extend .purchase-item__error-message
+  color: $hjGreen
+
+.purchase-item__live-flag
+  font-size: 11px
+  font-weight: 500
+  text-transform: uppercase
+  opacity: .8
+  color: $black
+  display: inline
+  margin-right: 10px
+
+.purchase-item__action-btns
+  margin-top: 10px
+
+.purchase-item__instruction-blurb
+  font-style: italic
+  font-size: 14px
+  margin-bottom: 10px
+
+.purchase-item__test-url-msg--success
+  font-size: 13px
+  font-style: italic
+  color: $hjGreen
+  display: inline
+  font-weight: 400
+  img
+    height: 14px
+.purchase-item__test-url-msg--error
+  color: $poppyRed
+  @extend .purchase-item__test-url-msg--success
+
+
+.manage-alerts__container
+  @extend .purchase-item__container
+.manage-alerts__title
+  @extend .purchase-item__title
+.manage-alerts__prompt
+.manager-alerts__prompt-text
+  font-size: 14px !important
+  font-weight: 300 !important
+  display: inline
+.manage-alerts__subscribed-msg
+  font-size: 12px
+  text-align: right
+  font-weight: 200

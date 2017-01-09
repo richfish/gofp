@@ -1,0 +1,35 @@
+-artist = profile.user.decorate
+-bookings = Booking.for_artist(artist).complete_or_pending
+-reviews = ReviewDecorator.decorate_collection Review.for_user(artist)
+-reviews_for_display = ReviewDisplayPolicy.reviews_for_display(reviews)
+.transparency
+  %div{class: (reviews_for_display.present? ? 'styled_box_minimal' : 'styled_box') }
+    .general
+      .title_small="<span style='font-weight:bolder'>#{bookings.count}</span> Total bookings".html_safe
+      %i="Joined #{artist.join_date_formatted}"
+      -if bookings.present? && reviews.present?
+        =review_meta_data_formatted(artist)
+
+    -if reviews_for_display.present?
+      -recent_reviews = take_and_sort_recent_reviews(reviews_for_display)
+      .recent_reviews
+        -recent_reviews.each do |review|
+          .synopsis=truncate(review.synopsis, length: 120)
+          .author="&mdash;#{review.chosen_name} on #{review.local_booking_time_formatted}".html_safe
+      =BootstrapHelper::Accordion.new do |accordion|
+        -accordion.group("See All Reviews") do
+          .row
+            .col-sm-12
+              .all_reviews="Reviews for #{profile.first_name} (#{reviews_for_display.count})"
+              -reviews_for_display.each do |review|
+                .row
+                  .col-sm-12
+                    .synopsis=review.synopsis
+                    .author="&mdash;#{review.chosen_name} on #{review.local_booking_time_formatted}".html_safe
+                %hr
+    -else
+      .big_and_opaque
+        No Reviews Yet
+
+
+

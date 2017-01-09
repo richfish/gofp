@@ -1,0 +1,219 @@
+-view_css :full_theme_9
+-view_js :invision
+
+.splash__container
+  .splash__header
+    .splash__header-logo
+      .splash__header-logo-txt
+        %span R
+        vision
+    .splash__header-link-list-items
+      .visible-xs
+        =mobile_menu_toggler_button
+      .visible-md.visible-lg.visible-sm
+        %ul
+          %li
+            =link_to "#" do
+              Tour
+          %li
+            =link_to "#" do
+              Customers
+          %li
+            =link_to "#" do
+              New features
+          %li
+            =link_to "#" do
+              Enterprise
+          %li
+            =link_to "#" do
+              Blog
+          %li
+            =link_to "#" do
+              Login
+          %li
+            =link_to "#", class: 'splash__header-link-list-item-box--transparent--small' do
+              Sign up Free
+
+  .splash__central-content
+    .splash__central-content-title
+      Design better. Faster. Together.
+    .splash__central-content-subtitle
+      The world's leading prototyping, collaboration & workflow platform
+    .splash__central-content-cta-btn--shaded
+      Get started - free forever!
+    .splash__central-content-play-btn
+      =iconf('caret-right')
+
+  .splash__top-section-footer
+    =image_tag "invision-companies-logos.png"
+
+
+.splash__features
+  .splash__feature
+    .row.o-visible
+      .col-sm-6
+        .splash__feature-info-section
+          .splash__feature-name
+            Powerful design prototyping tools
+          .splash__feature-description
+            Get high-fidelity in under 5 minutes. Upload your design files and add animations, gestures, and transitions to transform your static screens into clickable, interactive prototypes.
+          .splash__feature-icon-txt-block
+            .splash__feature-icon-txt-block-icon
+              =iconf('shopping-cart')
+            .splash__feature-icon-txt-block-name
+              Cross platform support
+            .splash__feature-icon-txt-block-txt
+              Easily create lifelike interactions by adding customizable "hotspots" to your design files that link your screens together realistically.
+          .splash__feature-icon-txt-block
+            .splash__feature-icon-txt-block-icon
+              =iconf('envelope')
+            .splash__feature-icon-txt-block-name
+              Advanced animations and transitions
+            .splash__feature-icon-txt-block-txt
+              Showcase your ideas in any resolution. InVision supports all major mobile, desktop, and wearable screen sizes.
+      .col-sm-6
+        =image_tag "invision-feature-1-img.png", class: 'splash__feature-img'
+
+
+  .splash__feature--extra-padded
+    .row.o-visible
+      .col-sm-6
+        =image_tag "invision-feature-2-img.png", class: 'splash__feature-img--positioned'
+      .col-sm-6
+        .splash__feature-info-section
+          .splash__feature-name
+            Seamless design communication
+          .splash__feature-description
+            Simplify your feedback process by having clients, team members, and stakeholders comment directly on your designs. See new feedback for all your projects in one convenient place, or drill down by active project, specific people, or your own name.
+          .splash__feature-icon-txt-block
+            .splash__feature-icon-txt-block-icon
+              =iconf('bar-chart')
+            .splash__feature-icon-txt-block-name
+              Contextual feedback
+            .splash__feature-icon-txt-block-txt
+              Give feedback more context by commenting directly on a design from within the prototype experience.
+          .splash__feature-icon-txt-block
+            .splash__feature-icon-txt-block-icon
+              =iconf('wechat')
+            .splash__feature-icon-txt-block-name
+              Threaded conversations
+            .splash__feature-icon-txt-block-txt
+              Never lose track of design feedback. All comments are housed together in one convenient location.
+
+
+  .splash__feature--extra-padded
+    .row.o-visible
+      .col-sm-6
+        .splash__feature-info-section
+          .splash__feature-name
+            Design-driven project management
+          .splash__feature-description
+            Manage your project screens and statuses from one single location, quickly see unread comments, preview screens, and notify team members when changes to screen status are made.
+          .splash__feature-icon-txt-block
+            .splash__feature-icon-txt-block-icon
+              =iconf('trophy')
+            .splash__feature-icon-txt-block-name
+              Project status at a glance
+            .splash__feature-icon-txt-block-txt
+              Drag screens between columns to instantly update your team about your project's progress.
+          .splash__feature-icon-txt-block
+            .splash__feature-icon-txt-block-icon
+              =iconf('envelope')
+            .splash__feature-icon-txt-block-name
+              AAutomated project management
+            .splash__feature-icon-txt-block-txt
+              Automatically update your project workflow status by marking screens as "backlog," "in progress," "needs review," or "approved."
+      .col-sm-6
+        =image_tag "invision-feature-3-img.png", class: 'splash__feature-img'
+
+
+.splash__testimonials
+  .splash__testimonial-central-content
+    .splash__testimonial-central-content-title
+      "RVision is a faster way to certainty."
+    .splash__testimonial-central-content-subtitle
+      AARRON WALTER, DIRECTOR OF UX AT MAILCHIMP
+    .splash__testimonial-central-content-cta-btn
+      =iconf('caret-right')
+
+  .splash__testimonials-toggle-row
+    =image_tag "invision-testimonial-img-1.png", class: 'splash__testimonials-toggle-img--active', 'data-target' => '1'
+    =image_tag "invision-testimonial-img-2.png", class: 'splash__testimonials-toggle-img', 'data-target' => '2'
+    =image_tag "invision-testimonial-img-3.png", class: 'splash__testimonials-toggle-img', 'data-target' => '3'
+    =image_tag "invision-testimonial-img-4.png", class: 'splash__testimonials-toggle-img', 'data-target' => '4'
+    =image_tag "invision-testimonial-img-5.png", class: 'splash__testimonials-toggle-img', 'data-target' => '5'
+  .splash__testimonials-background-image-repo{ style: 'display:none;'}
+    .splash__testimonial-slide-container{ 'data-index' =>'1' }
+      .splash__testimonial-central-content--slide
+        .splash__testimonial-central-content-title
+          "RVision is a way of Life."
+        .splash__testimonial-central-content-subtitle
+          AARRON WALTER, DIRECTOR OF UX AT MAILCHIMP
+        .splash__testimonial-central-content-cta-btn
+          =iconf('caret-right')
+      =image_tag "invision-testimonial-1.jpg", class: 'splash__testimonial-slide-img'
+    .splash__testimonial-slide-container{ 'data-index' =>'2' }
+      .splash__testimonial-central-content--slide
+        .splash__testimonial-central-content-title
+          "I can't imagine life without RVision."
+        .splash__testimonial-central-content-subtitle
+          AARRON WALTER, DIRECTOR OF UX AT MAILCHIMP
+        .splash__testimonial-central-content-cta-btn
+          =iconf('caret-right')
+      =image_tag "invision-testimonial-2.jpg", class: 'splash__testimonial-slide-img'
+    .splash__testimonial-slide-container{ 'data-index' =>'3' }
+      .splash__testimonial-central-content--slide
+        .splash__testimonial-central-content-title
+          "Life without RVision, quite simply, is unimaginable."
+        .splash__testimonial-central-content-subtitle
+          AARRON WALTER, DIRECTOR OF UX AT MAILCHIMP
+        .splash__testimonial-central-content-cta-btn
+          =iconf('caret-right')
+      =image_tag "invision-testimonial-3.jpg", class: 'splash__testimonial-slide-img'
+    .splash__testimonial-slide-container{ 'data-index' =>'4' }
+      .splash__testimonial-central-content--slide
+        .splash__testimonial-central-content-title
+          "RVision, there was, and for then, it will be."
+        .splash__testimonial-central-content-subtitle
+          AARRON WALTER, DIRECTOR OF UX AT MAILCHIMP
+        .splash__testimonial-central-content-cta-btn
+          =iconf('caret-right')
+      =image_tag "invision-testimonial-4.jpg", class: 'splash__testimonial-slide-img'
+    .splash__testimonial-slide-container{ 'data-index' =>'5' }
+      .splash__testimonial-central-content--slide
+        .splash__testimonial-central-content-title
+          "Not only as RVision, but also as more than that."
+        .splash__testimonial-central-content-subtitle
+          AARRON WALTER, DIRECTOR OF UX AT MAILCHIMP
+        .splash__testimonial-central-content-cta-btn
+          =iconf('caret-right')
+      =image_tag "invision-testimonial-5.jpg", class: 'splash__testimonial-slide-img'
+
+
+.splash__companies
+  .splash__companies-title
+    DRIVING DESIGN AT SOME OF THE WORLD'S SMARTEST COMPANIES
+  =image_tag "invision-companies-logos-large.png", class: 'splash__companies-logos-img'
+
+.splash__stack-cta
+  .splash__stack-cta-title
+    Join over 1 million designers already using RVision. Get RVision
+    %span free
+    forever!
+  .splash__stack-cta-form
+    .form-inline
+      .form-group
+        =iconf('user')
+        =text_field_tag "noop1", nil, placeholder: "Your Name", class: 'input-lg form-control'
+      .form-group
+        =iconf('envelope')
+        =text_field_tag "noop2", nil, placeholder: "Email Address", class: 'input-lg form-control'
+      .form-group
+        =iconf('lock')
+        =text_field_tag "noop3", nil, placeholder: "Create a Password", class: 'input-lg form-control'
+      .form-group
+        .splash__stack-cta-form-submit-btn
+          Get started - free forever!
+  .splash__stack-cta-form-disclaimer
+    By clicking "Get Started — Free Forever!" I agree to InVision's
+    =link_to "Terms of Service", "#"

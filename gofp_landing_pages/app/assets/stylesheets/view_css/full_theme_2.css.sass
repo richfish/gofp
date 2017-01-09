@@ -1,0 +1,221 @@
+@import 'constants'
+@import 'mixins'
+
+
+.splash__central-content
+  padding-top: 50px
+.splash__central-content-title
+  margin-bottom: 30px
+  line-height: 66px
+  font-size: 60px
+  color: #282828
+  font-weight: 200
+.splash__central-content-subtitle
+  margin-bottom: 40px
+  line-height: 35px
+  font-size: 20px
+  color: #5e5e5e
+
+.carousel-indicators
+  position: static
+  width: 100%
+  margin: auto
+  margin-top: 30px
+  .active
+    border: 2px solid #1f7edd
+    background: #1f7edd
+    height: 18px
+    width: 18px
+  li
+    border: 2px solid #c6c6c6
+    height: 18px
+    width: 18px
+
+.splash__central-content-cta-arrow
+  text-align: center
+  margin: 25px 0px 30px 0px
+  cursor: pointer
+  i
+    font-size: 50px
+    color: #1f7edd
+  .bounce
+    -webkit-animation: bounce 5s infinite
+    -moz-animation: bounce 5s infinite
+    -o-animation: bounce 5s infinite
+    animation: bounce 5sn infinite
+
+.splash__section-quote
+.splash__section-quote-avatar
+  border-radius: 50%
+  height: 150px
+  width: 150px
+  position: absolute
+  top: -72px
+  left: 121px
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26),0 2px 10px 0 rgba(0,0,0,.16)
+.splash__section-quote-card
+  max-width: 400px
+  padding: 105px 60px 70px
+  margin-top: 75px
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26),0 2px 10px 0 rgba(0,0,0,.16)
+  border-radius: 6px
+  border-width: 0
+  background: #fff
+  position: relative
+  margin-bottom: 20px
+.splash__section-quote-txt
+  color: #000
+  font-size: 18px
+  line-height: 32px
+  margin-bottom: 12px
+  font-weight: 300
+  &:before
+    content: '\f10d'
+    font-size: 40px
+    font-family: 'FontAwesome'
+    position: absolute
+    top: 50px
+    color: #1f7edd
+    margin-left: -4px
+.splash__section-quote-author-name
+  text-transform: uppercase
+  font-size: 11px
+  color: #282828
+  font-weight: 400
+.splash__section-quote-author-job
+  text-transform: uppercase
+  font-size: 11px
+  color: #1f7edd
+  font-weight: 400
+
+.splash__section
+  background-color: #f7f7f7
+  padding-top: 90px
+  padding-bottom: 90px
+.splash__section-info-box
+.splash__section-info-box-heading-name
+  margin-bottom: 20px
+  text-transform: uppercase
+  font-size: 11px
+  color: #282828
+  span
+    border-bottom: 3px solid #282828
+    padding-bottom: 6px
+  font-weight: 500
+.splash__section-info-box-title
+  margin-bottom: 25px
+  line-height: 52px
+  font-size: 48px
+  color: #282828
+.splash__section-info-box-subtitle
+  margin-bottom: 20px
+  color: #5e5e5e
+  font-size: 18px
+  line-height: 32px
+.splash__section-info-box-cta-link
+  font-size: 18px
+  color: #1f7edd
+
+
+
+.splash__data-stack
+  padding: 75px 50px
+.splash__data-set
+.splash__data-num
+  color: #1f7edd
+  font-size: 62px
+  line-height: 68px
+  font-weight: 200
+  margin-bottom: 4px
+.splash__data-label
+  font-size: 16px
+  color: #282828
+  text-transform: uppercase
+  font-weight: 500
+
+.splash__stack
+  padding-top: 140px
+  padding-bottom: 140px
+  background-color: #f7f7f7
+  text-align: center
+.splash__stack-tagline
+  font-size: 48px
+  font-weight: 200
+  margin-right: 40px
+  display: inline-block
+  vertical-align: middle
+.splash__stack-cta-btn
+  display: inline-block
+
+
+
+.splash__header-container
+  position: relative
+  width: 100%
+  padding: 50px 10px
+  margin: auto
+.splash__header-logo
+  float: left
+  margin-top: -18px
+.splash__header-logo-img
+  height: 56px
+  display: inline-block
+.splash__header-logo-txt
+  color: #282828
+  font-size: 25px
+  font-weight: 500
+  display: inline-block
+  vertical-align: middle
+  padding-left: 14px
+  text-transform: uppercase
+  letter-spacing: 1px
+
+.splash__header-link-list-items
+  text-align: center
+  margin-left: -10px
+  ul
+    list-style-type: none
+    li
+      &:last-child
+        float: right
+      display: inline
+      margin-right: 30px
+      a
+        font-size: 16px
+        font-weight: 500
+        color: $bzHeadingGray
+        text-transform: uppercase
+        font-size: 12px
+        letter-spacing: 1px
+        color: #5e5e5e
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+
+.splash__below-header-flourish
+  position: relative
+  margin-top: -16px
+.splash__below-header-bubble
+  margin-top: -25px
+  background: #deecfa
+  padding: 6px 10px 6px 10px
+  border-radius: 5px
+  display: inline-block
+  font-size: 15px
+  text-decoration: underline
+  &:before
+    position: absolute
+    z-index: -1
+    content: " "
+    width: 0
+    height: 0
+    top: -20px
+    left: 28px
+    border-top: 16px solid transparent
+    border-bottom: 16px solid transparent
+    border-left: 16px solid #deecfa

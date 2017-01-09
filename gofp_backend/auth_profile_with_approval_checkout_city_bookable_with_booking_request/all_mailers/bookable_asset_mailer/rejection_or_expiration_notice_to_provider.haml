@@ -1,0 +1,22 @@
+%p="Hi #{@bookable_asset.user.first_name},"
+
+%p
+  -if @booking_request.expired?
+    You have allowed a bookable_asset booking_request to expire after 48 hours for
+  -else
+    This is a confirmation that you have rejected a bookable_asset booking_request for
+  =link_to @bookable_asset.name, user_bookable_asset_path(@bookable_asset.user, @bookable_asset)
+  by applicant
+  ="#{@booking_request.guest_name}."
+
+%p
+  The applicant's authorization hold for the bookable_asset has been voided.
+
+%p
+  If you did not mean for this to happen, please shoot us a message ASAP at
+  =link_to "support@monkey.com", "mailto:support@monkey.com"
+
+%p
+  Best,
+  %br
+  Monkey Team

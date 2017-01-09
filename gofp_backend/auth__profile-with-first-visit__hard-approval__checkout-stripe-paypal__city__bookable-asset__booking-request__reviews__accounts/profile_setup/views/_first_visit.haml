@@ -1,0 +1,56 @@
+-view_js :bootcamp
+
+.row.margin-bottom-30px
+  .col-sm-12
+    %span{ class: 'title faded', style: 'display:inline-block' } Your Profile
+    =link_to "#{iconf('caret-right')} Create Profile".html_safe, new_user_profile_path(current_user), style: 'margin-left:5px', class: 'bold_purple'
+
+#the_basics_first_visit
+  .the_basics
+    .row.margin-top-20px
+      .col-xs-6.col-sm-4
+        .profile_meta{ style: 'text-align:right'}
+          .row
+            .col-xs-12
+              .header_with_span
+                .header{ style: 'display:block'}
+                  Johan Glutenberg
+          .row
+            .col-xs-12
+              =profile_image_small_first_visit
+          .row
+            .fourtn.purple
+              %b 6 Years
+              Professional Experience
+          .row
+            .col-xs-12.meta{ style: 'font-size:14px'}
+              .faded.color_alt.fourtn="<span><a href='#' class='b-more'>3 reviews</a></span> on <span>3 bookings</span>".html_safe
+              .faded_stars.fourtn="#{iconf('star')}#{iconf('star')}#{iconf('star')}#{iconf('star')}#{iconf('star-half-empty')}".html_safe
+          .row
+            .col-xs-12
+              Level
+              %b Trusted
+              =iconf('question-circle')
+      .col-xs-12.col-sm-6
+        =render "users/account_display_first_time"
+
+
+%hr
+
+#bookable_asset_first_visit{ style: 'opacity:.5'}
+  .title{ style: 'margin:30px 0px;'} Your BookableAsset
+  #bookable_assets
+    .row
+      .col-sm-12
+        .centered_toggle_buttons
+          #current.submit_button Current
+          #past.submit_button Past
+          #new_bookable_asset
+            .trans_button_disabled
+              =iconf('plus')
+              Create BookableAsset
+
+
+
+
+

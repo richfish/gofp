@@ -1,0 +1,18 @@
+/linked in from bootcamps display page
+-conversations = ConversationDecorator.decorate_collection Conversation.for_bootcamp(bootcamp)
+-conversations.each do |conversation|
+  .row
+    .col-sm-12
+      %h4=conversation.display_title
+      .color_alt
+        %span
+          =conversation.guest_name
+        on
+        %span
+          =conversation.display_date
+      %i.fourteen
+        =truncate(conversation.first_message.message, length: 100)
+
+      =link_to conversation_path(conversation, euid: conversation.euid) do
+        .submit_button_xsmall_secondary
+          View

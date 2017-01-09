@@ -1,0 +1,13 @@
+-view_css :slideout_menu
+
+.slideout-menu--left
+  .slideout-menu__close-button
+    %span{ 'onclick' => "$('.slideout-menu--left').removeClass('slideout-menu--left--open')" }
+      =iconf('close')
+  .slideout-menu__content-container
+    %h3 BOILERPLATE
+    .slideout-menu__link-set
+      =link_to "This is a Sample Option", "#"
+      =link_to "Another Link you can Click", "#"
+      =link_to "Try this one, silly goose", "#"
+      =link_to "Misc things", "#"

@@ -1,0 +1,1 @@
+ADMINISTRATIVE_SETTINGS = HashWithIndifferentAccess.new(YAML.load_file("config/boilerplate_administration.yml"))

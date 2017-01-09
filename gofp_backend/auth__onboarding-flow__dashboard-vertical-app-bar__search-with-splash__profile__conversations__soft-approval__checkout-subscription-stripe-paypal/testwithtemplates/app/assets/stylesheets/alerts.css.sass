@@ -1,0 +1,131 @@
+@import 'constants'
+@import 'mixins'
+
+#flash-clear
+  float: right
+  margin-right: 40px
+  margin-top: 10px
+  font-size: 18px
+  color: white
+  &:hover
+    text-decoration: none
+
+.alert-container
+  margin-top: 20px
+
+.alert-basics
+  min-height: 50px
+  height: 100%
+  font-size: 22px
+  padding: 6px 0 0 100px
+  color: white
+  margin-top: 3px
+  i
+    margin-top: 7px
+  a
+    font-size: 16px
+    margin-left: 10px
+    color: white
+    display: inline-block
+    margin-bottom: 3px
+    vertical-align: bottom
+
+.alert-success
+  @extend .alert-basics
+  background-color: #43D40A
+  padding-top: 13px
+
+.alert-error
+  @extend .alert-basics
+  background-color: $orange
+  .glyphicon
+    margin-top: 3px
+
+.alert-warn
+  @extend .alert-basics
+  background-color: $mutedPurple
+
+
+.alert.alert-error
+  background-color: $orange
+  color: white
+  font-size: initial !important
+  padding: initial !important
+  height: initial !important
+  padding-left: 20px !important
+  padding-bottom: 20px !important
+
+
+
+
+// ui-dialog: The outer container of the dialog.
+// ui-dialog-titlebar: The title bar containing the dialog's title and close button.
+// ui-dialog-title: The container around the textual title of the dialog.
+// ui-dialog-titlebar-close: The dialog's close button.
+// ui-dialog-content: The container around the dialog's content. This is also the element the widget was instantiated with.
+// ui-dialog-buttonpane: The pane that contains the dialog's buttons. This will only be present if the buttons option is set.
+// ui-dialog-buttonset: The container around the buttons themselves.
+
+
+.custom_alert_box
+  padding: 0
+  width: 350px !important
+  @include border-radius(3px)
+  @include box-shadow(0px, 0px, 37px, -2px, 0.54)
+  .ui-dialog-titlebar
+    display: none
+  .ui-dialog-content
+    padding: 0
+  .ui-dialog-buttonpane
+    width: 100%
+    margin-top: 0
+    padding: 5px
+    border: none
+    .ui-dialog-buttonset
+      width: 100%
+      button
+        font-family: 'Proxima Nova'
+        border: none
+        min-height: 30px
+        color: white
+        background-color: white
+        color: $mutedPurple
+        border-top: 1px solid $h-grayLighter
+        &:hover
+          color: $herokuPurple !important
+        width: 100%
+        padding-top: 8px
+      button:first-child
+        margin-left: 6px
+  .content
+    padding: 20px
+    min-height: 80px
+    text-align: center
+    p
+      color: $h-grayDark
+      font-weight: 300
+
+.custom_confirm_box
+  @extend .custom_alert_box
+  button
+    width: 46% !important
+
+
+#toast-container
+  .toast
+    opacity: 1 !important
+    font-size: 14px
+  .toast-message
+    font-size: 13px
+    font-weight: 300
+    text-transform: lowercase
+  .toast-progress
+  .toast-info
+    background-color: $mutedPurple
+  .toast-warning
+    background-color: $mutedPurple
+  .toast-success
+    background-color: $popGreen
+  .toast-error
+    background-color: $poppyRed
+.toast-close-button

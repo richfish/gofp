@@ -1,0 +1,44 @@
+@import 'mixins'
+@import 'constants'
+
+.policies_main
+  margin-bottom: 200px
+  p
+    margin-bottom: 5px
+    &:before
+      font-family: FontAwesome
+      content: "\f111"
+      font-size: 8px
+      display: inline-block
+      padding-right: 5px
+      vertical-align: middle
+      opacity: .7
+  .title_small
+    margin: 20px 0px 8px 0px
+  .row
+    margin-bottom: 2px
+
+
+.policies_sidebar
+  margin-top: 90px
+  opacity: .8
+  a
+    color: $h-grayDark
+    letter-spacing: 1px
+    &:before
+      font-family: FontAwesome
+      content: "\f0da"
+      padding-right: 5px
+      opacity: .1
+  @media (max-width: 767px)
+    margin-top: 10px
+
+
+#booking_issues
+  margin-top: 30px
+  p
+    font-size: 14px
+    font-style: italic
+    &:before
+      content: ''
+      padding-right: 0px

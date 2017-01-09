@@ -1,0 +1,174 @@
+
+@import 'constants'
+@import 'mixins'
+
+.btn-secondary
+  border-color: lightgray
+  padding: 12px 10px
+  @include border-radius(5px)
+  width: 200px
+
+.submit_button
+  display: inline-block
+  cursor: pointer
+  @include border-radius(2px)
+  padding: 0px 25px
+  letter-spacing: .1em
+  line-height: 56px
+  color: #fff
+  background-color: $sleekOrange
+  border: 1px solid $sleekOrange
+  font-weight: 300
+  font-size: 18px
+  text-align: center
+  span
+    font-weight: 300
+  &:hover
+    background-color: $orange
+    color: white
+
+.submit_button_small
+  @extend .submit_button
+  font-size: 14px
+  padding: 0px 20px
+  line-height: 44px
+
+.submit_button_xsmall
+  @extend .submit_button
+  line-height: 23px
+  font-size: 13px
+  padding: 3px 15px
+
+.submit_button_xsmall_secondary
+  @extend .submit_button_xsmall
+  background-color: $cerulean
+  border-color: $cerulean
+  &:hover
+    background-color: $brighterBlue
+    border-color: $brighterBlue
+
+.rounded_button_link
+  display: inline-block
+
+.submit_button_small_secondary
+  @extend .submit_button_small
+  background-color: $cerulean
+  border-color: $cerulean
+  &:hover
+    background-color: $brighterBlue
+    border-color: $brighterBlue
+
+.submit_button_secondary
+  @extend .submit_button
+  background-color: $cerulean
+  border-color: $cerulean
+  &:hover
+    background-color: $brighterBlue
+    border-color: $brighterBlue
+
+.submit_button_small_secondary_red
+  @extend .submit_button_small_secondary
+  background-color: $poppyRed
+  border-color: $poppyRed
+
+
+.non_loading_submit_button
+  @extend .submit_button
+  &:hover
+    text-decoration: none
+
+.submit_button_styled
+  @extend .submit_button
+  background-color: #ff7f2a
+  &:hover
+    background-color: $orange
+
+.btn-special
+  border-color: #007a87
+  border-bottom-color: #004f58
+  background-color: #007a87
+  color: #fff
+
+.btn-special2
+  color: #fff
+  border-bottom-color: rgb(215, 14, 108)
+  border-bottom-width: 2px
+  background-color: #F8A69A
+  font-weight: 300
+  font-size: 14px
+  padding-top: 5px
+  &:hover
+    color: white
+
+.btn-special3
+  @extend .btn-special2
+  border-bottom-color: #37474E
+  background-color: #78909B
+
+
+.btn-tv
+  font-weight: 500
+  letter-spacing: 1px
+  padding: 0 27px
+  line-height: 52px
+  border: none
+  border-left: 4px solid #EFC275
+  background-color: #FFD690
+  color: #fff
+  display: inline-block
+  margin: 20px auto
+  font-size: 14px
+  position: relative
+  transition: border-left 0.3s ease-out
+  text-indent: 0
+  border-radius: 0
+  &:before
+    content: ''
+    width: 0
+    height: 0
+    position: absolute
+    top: 50%
+    margin-top: -8px
+    left: 0px
+    z-index: 9
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+    border-left: 7px solid #EFC275
+  &:hover
+    border-left-width: 20px
+
+.btn-tv2
+  @extend .btn-tv
+  background-color: #F59F20
+
+.btn-gradient-pill
+  position: relative
+  font-weight: 600
+  font-size: 16px
+  padding: 13px 25px
+  text-transform: uppercase
+  letter-spacing: .1em
+  background-image: linear-gradient(to right,#f27c36,#ed485f)
+  transition: opacity 300ms ease
+  opacity: .9
+  border-radius: 30px
+  &:hover
+    opacity: 1
+    background-image: linear-gradient(to left,#ed485f,#f27c36,#ed485f)
+
+.btn-border-white
+  padding: 8px 16px
+  border-radius: 0
+  border: 2px solid white
+  background: transparent
+  &:hover
+    background: rgba(255,255,255,.4)
+
+
+.hover-effect-border
+  transition: border 300ms ease
+  &:hover
+    border: 2px solid #19c0af
+
+
+//Do some transparent background buttons, where text/border changes color

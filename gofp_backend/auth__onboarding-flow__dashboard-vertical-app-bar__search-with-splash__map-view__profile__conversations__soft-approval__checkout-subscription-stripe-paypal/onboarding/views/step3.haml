@@ -1,0 +1,16 @@
+-content_for :full_width_content do
+  =render "onboardings/step_guide_bar", step: 3
+
+.onboarding__step-section{ 'data-section-id' => 3}
+  .onboarding__step-section-heading
+    Give us a sample price range you'd be happy with
+  =form_tag onboardings_path do
+    .onboarding__form-group
+      .onboarding__form-label
+        Test Field Three
+      .form-group
+        =text_field_tag "onboarding[test_field_3]", get_session_val("test_field_3"), class: 'form-control input-lg', placeholder: 'e.g. test field 3'
+
+    =hidden_field_tag "step_id", 3
+    .form-group.center
+      =button_tag "Continue", class: 'btn-tv onboarding__continue-btn', data: { disable_with: disable_with() }

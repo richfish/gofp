@@ -1,0 +1,38 @@
+-availability_step = {link: "#", content: 'Create X,Y,Z Asset'}
+-publish_step = {link: "#", content: "Publish"}
+
+-first_visit = opts[:first_visit] rescue nil
+-if first_visit
+  -step1 = {link: new_user_profile_path(current_user), content: "Create Profile"}
+  =steps_left_box("<b>3</b> <span>Steps Left</span>", step1: step1, step2: availability_step, step3: publish_step)
+-else
+  -profile = profile.decorate
+  -if profile.fixing_issue_unpublished?
+    -step1 = {content: "We had an issue with your submitted profile" }
+    -step2 = {content:  profile.issues.first.description}
+    -step3 = {content: "Please correct this issue and re-publish."}
+    =steps_left_box("<b style='color:#fe4918'>Problem</b>") do
+      %p=profile.issues.first.description
+      %p Please fix and re-publish
+      %a{ href: publish_path }
+        .submit_button{ style: 'margin-top:0px'}
+          ="#{iconf('bolt')} Publish Again".html_safe
+  -else
+    -case profile.steps_left
+      -when 0
+        -if profile.unpublished_pending_approval?
+          -step1 = {content:  "Your Profile will be officially published shortly."}
+          -step2 = {content: "Please check back soon."}
+          =steps_left_box("<b>Pending</b>", step1: step1, step2: step2 )
+        -else
+          =steps_left_box("<b>0</b><span> Steps Left</span>") do
+            =form_tag publish_path, method: :get do
+              =orange_submit_button("#{iconf('bolt')} Publish Profile".html_safe)
+
+      -when 1
+        =steps_left_box("<b>1</b> <span>Step Left</span>", step1: locations_step)
+      -when 2
+        =steps_left_box("<b>2</b> <span>Steps Left</span>", step1: availability_step, step2: locations_step)
+      -when 3
+        -step1 = {link: edit_user_profile_path(current_user, profile), content: "Finish Profile"}
+        =steps_left_box("<b>3</b> <span>Steps Left</span>", step1: step1, step2: availability_step, step3: publish_step)

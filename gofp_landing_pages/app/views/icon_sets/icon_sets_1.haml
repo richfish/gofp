@@ -1,0 +1,29 @@
+-view_css :icon_sets_1
+
+#use_cases
+  .row
+    .stack
+      %p
+        Awake when you want, Asleep when you want.
+
+  .row
+    .col-sm-10.col-sm-offset-1
+      .row
+        .col-sm-4
+          .icon-text{ style: 'text-align: center;'}
+            .icon=image_tag "not-alot-coins.png", style: 'height: 100px;'
+            .text It's Almost Free
+            .star=iconf('star')
+            .subtext $3/ month get you 20 pings, and we'll grandfather you into future features, if you are reading this now.
+        .col-sm-4.padding-top-20px
+          .icon-text{ style: 'text-align: center;'}
+            .icon=image_tag "message-alerts.png", style: 'height: 100px;'
+            .text Get Alerted when Problems
+            .star=iconf('star')
+            .subtext We'll alert you if your app is sleeping when it shouldn't. Have total confidence for an upcoming demo, for example.
+        .col-sm-4.padding-top-20px
+          .icon-text
+            .icon=image_tag "uptime-health.png", style: 'height: 100px;'
+            .text Basic Uptime Monitoring
+            .star=iconf('star')
+            .subtext Use this for basic uptime monitoring even if you don't want to sleep. You'll still get alerted if your site is down.

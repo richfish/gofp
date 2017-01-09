@@ -1,0 +1,48 @@
+.row
+  .col-md-6.col-md-offset-3
+    #sign_up
+      .title
+        Sign up
+        %span.subtitle For Magicians
+      =form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        =devise_error_messages!
+        .form-group
+          =f.email_field :email, autofocus: true, required: 'required', class: 'form-control input-lg', placeholder: 'Email Address'
+        .form-group
+          =f.password_field :password, autocomplete: "off", class: 'form-control input-lg', placeholder: 'Password'
+        =button_tag "Submit", class: 'btn btn-lg submit_button ', data: { disable_with: disable_with() }
+
+
+      =render "users/shared/links"
+  .col-md-1.sign-up-teaser-box__divider-container
+    .sign-up-divider
+  .col-md-2
+    .sign-up-teaser-box
+      .sign-up-teaser-box__content
+        =image_tag "castleicon.png"
+        %ul
+          %li
+            =iconf('circle')
+            Significant, Recurring Side Income
+          %li
+            =iconf('circle')
+            Based around your schedule
+          %li
+            =iconf('circle')
+            Access to Learning Resources
+          %li
+            =iconf('circle')
+            Totally Free
+
+
+#sign_up_info.center
+  .sign-up-divider--horizontal
+
+  .sign-up-teaser-special-relations
+    %span Want to go Full Time?
+    or
+    %span yada yada?
+  .fourtn
+    Talk to our
+    =link_to 'special relations guy,', 'mailto:sepcial_relations@boilerplate.com'
+    we want to talk to you.

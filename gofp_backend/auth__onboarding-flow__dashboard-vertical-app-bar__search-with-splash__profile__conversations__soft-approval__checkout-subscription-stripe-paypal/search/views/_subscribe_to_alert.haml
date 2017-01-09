@@ -1,0 +1,26 @@
+-color_white = search_opts[:white] rescue nil
+
+#success_message{ style: 'display:none; margin-top:10px; font-weight: 400;'}
+  %span=iconf('check')
+  %span.fourtn Thanks! You'll receive an email alert when a Entity is available.
+.see_more{ style: 'margin: 0 auto;', class: ('offwhite' if color_white) }
+  =iconf('caret-right')
+  =iconf('caret-down', nil, 'display:none')
+  Get Alerts about new Entities?
+.see_more_section{ style: "display:none;", class: ('offwhite' if color_white) }
+  %div{ style: 'margin-top:9px; margin-bottom:9px;'}
+    %span.fourtn Keep up-to-date with new
+    %span.bold_purple="technology.titleize"
+    %span.fourtn Entities in
+    %span.bold_purple="city"
+    %br
+    %i.fourtn Note: You will get at most 2 updates per month.
+  =form_for SearchEntitySubscription.new, method: :post, remote: true, data: {type: 'script'} do |f|
+    .form-inline
+      .form-group{ style: 'margin-right:1px;' }
+        =f.text_field :email, placeholder: "Your Email", class: 'input-lg form-control', required: 'required', type: 'email', style: 'width: 200px;'
+        =f.hidden_field :city, value: "city"
+        =f.hidden_field :technology, value: "technology"
+      .form-group
+        =button_tag data: { disable_with: disable_with('Submitting...') }, class: 'submit_button_small_secondary' do
+          Subscribe

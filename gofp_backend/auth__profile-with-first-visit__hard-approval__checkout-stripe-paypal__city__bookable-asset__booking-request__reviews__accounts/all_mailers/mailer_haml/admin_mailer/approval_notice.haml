@@ -1,0 +1,44 @@
+-bookable_asset = @profile.user.bookable_assets.pending_approval.first
+-p = @profile
+
+%h1 THIS GUY NEEDS APPROVAL
+
+%h1 Profile
+%p=link_to p.user.avatar.image.url, URI.unescape(p.user.avatar.image.url), target: "_blank"
+%p=p.full_name
+%p=p.user.email
+%p=p.years_experience + ' Years'
+%p="qualifications - " + p.qualification_description
+%p="competencies - " + p.core_competencies
+%p="teaching style - " + p.teaching_style
+%p=link_to p.linkedin_link, p.linkedin_link, target: "_blank"
+-if p.github_link
+  %p=link_to p.github_link, p.github_link, target: '_blank'
+-if p.portfolio_link
+  %p=link_to p.portfolio_link, p.portfolio_link, target: '_blank'
+
+%h1 BookableAsset
+%p="description - " + bookable_asset.description
+%p
+  Goals -
+  =bookable_asset.goals
+%p
+  Requirements -
+  =bookable_asset.customer_requirements
+%p
+  Customer gains -
+  =bookable_asset.customer_gains
+%p=bookable_asset.days_of_week
+%p=bookable_asset.primary_tech_stack
+%p
+  Secondary
+  =bookable_asset.tech_stack
+%p=bookable_asset.rolling.to_s + " - Rolling?"
+%p See BookableAsset on admin page for rest...
+
+
+
+%br
+%p=link_to "ACTIVE ADMIN - profile link - id #{p.id}", tibetan_sherpa_access_profile_url(@profile), target: '_blank'
+%p=link_to "ACTIVE ADMIN - bookable_asset link - id #{bookable_asset.id}", tibetan_sherpa_access_bookable_asset_url(bookable_asset), target: '_blank'
+%p=link_to "ACtive ADMIN - user link - id #{p.user.id}", tibetan_sherpa_access_user_url(p.user), target: '_blank'

@@ -1,0 +1,7 @@
+.title_xl Cancellation of Service
+%p You can cancel your BirthdayTextAlerts subscription whenever you want, and you will no longer be charged $3/ year.
+%p We'll save your bday alerts in case you want to re-activate the service and don't want to re-type anything.
+%p
+  To cancel just visit your
+  =link_to_if current_user, "account page", (current_user ? edit_user_path(current_user) : "#")
+  and click on the cancel service button.

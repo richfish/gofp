@@ -1,0 +1,37 @@
+= Resource Accessor Changelog
+
+== Version 1.0.0
+
+* Initial release.
+
+== Version 1.0.1
+
+* Bug fix.
+
+== Version 1.1.0
+
+* Write documentation;API change.
+
+== Version 1.1.1
+
+* Adding specs.
+
+== Version 1.1.1
+
+* Adding query parameter.
+
+== Version 1.2.1
+
+* Typo fix.
+
+== Version 1.2.2
+
+* Bug fix for 'put' http method.
+
+== Version 1.2.3
+
+* Adding escape flag in order to control whether we want to escape parameter or not.
+
+== Version 1.2.4-1.2.6
+
+* Bug fix

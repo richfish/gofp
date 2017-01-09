@@ -1,0 +1,88 @@
+@import 'mixins'
+@import 'constants'
+
+footer
+  width: 100%
+  background-color: $blackPurple
+  text-align: center
+  color: $dadaGray
+  min-height: 420px
+  font-size: medium
+  font-weight: lighter
+  #footer_menu
+    margin: auto
+    min-height: 260px
+    padding-top: 40px
+    h4
+      font-size: 16px
+      font-weight: 400
+      margin-bottom: 12px
+    a
+      display: block
+      color: #DEDEDE
+      font-size: 12px
+  span
+    height: 25px
+    line-height: 25px
+    display: inline-block
+  i
+    display: inline-block
+    vertical-align: middle
+  .pull-right
+    font-weight: lighter
+    &:hover
+      text-decoration: none
+  #logo-footer
+    margin-left: 30px
+    height: 80px
+    z-index: 10000
+    margin-top: 18px
+    span
+      margin-right: -3px
+      font-weight: 400
+      opacity: .9
+      letter-spacing: -1px
+    a
+      color: $backgroundGray !important
+      text-decoration: none
+      font-size: 12px
+      &:hover
+        color: white
+  .bullets
+    text-align: right
+    font-size: 14px
+    min-height: 80px
+    @include translate-y(36%)
+    a
+      transition: all 0.2s ease
+      margin-right: 20px
+      color: $dadaGray
+      &:hover
+        color: white
+        text-decoration: none
+  @media (max-width: 540px)
+    .xxs_break
+      width: 100%
+
+
+.footer__subscription-success-message
+  display: none
+  color: $hjGreen
+  font-weight: 400
+
+
+.footer__bottom-vanity-graphic
+  margin-bottom: 20px
+  margin-top: 60px
+
+#legal
+  font-size: 12px
+  background-color: rgba(0,0,0,.9)
+  color: white
+  text-align: center
+  height: 32px
+  padding: 6px
+  a
+    color: $brighterBlue
+    text-decoration: underline
+    font-size: 14px

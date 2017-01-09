@@ -1,0 +1,35 @@
+// uses object-fit with a fallback background image
+// may have to spend sigifnificant time tweaking video positioning/ media queries etc if object fit isn't working
+// everything needs the right z-index...
+
+-view_css :video_1
+
+.splash-video__container
+  .splash-video-video__background
+  =video_tag "Girls-Code.mp4", autoplay: true, loop: true, mute: true, class: 'splash-video__video'
+
+  =render "headers/standard"
+
+  .splash__cta-container--left-center
+    .splash__cta-heading.z
+      The Best Magic Wands Ever
+    .splash__cta-teaser.z
+      Impress your Friends, and then dance a lot. We promise.
+    .splash__cta-lower-container
+      .splash__cta-input-header
+        FIND WHAT YOURE LOOKING FOR NOW
+      =form_tag "/" do
+        .input-group
+          =text_field_tag "boilerplate[test_1]", nil, placeholder: "Enter Search Term", class: 'splash__cta-input form-control'
+          .input-group-btn
+            %button.btn.splash__cta-input-button{ :'data-disable-with' => disable_with_short() }
+              Browse
+      .splash__cta-or-seperator.z
+        &#8212;
+        OR
+        &#8212;
+      %button.btn.splash__cta-button--black
+        ="#{iconf('gift', nil, 'font-size: 20px;opacity:.7;')} &nbsp; Learn How It Works".html_safe
+
+  .splash__cta-footer--black
+    This is a footer you can do some stuff with

@@ -1,0 +1,15 @@
+-review = review.decorate
+.review
+  .row
+    .col-sm-12
+      .review-synopsis
+        =review.synopsis
+      .review-meta
+        %span.fourtn
+          %i reviewed by
+          %span.sixtn.b-300.faded=review.display_name
+        .fourtn=review.display_bootcamp_name
+        .fourtn
+          took place
+          %i=review.display_bootcamp_dates
+

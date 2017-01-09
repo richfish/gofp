@@ -1,0 +1,22 @@
+-if notice.present?
+  #show_flash_notice
+  :coffeescript
+    $(document).ready ->
+      toastr.success("#{notice}") if $("#show_flash_notice").length
+-if flash[:warn].present?
+  #show_flash_warn
+  -msg = [flash[:warn]].flatten.compact.join("<br/>").html_safe
+  :coffeescript
+    $(document).ready ->
+      toastr.warning("#{msg}") if $("#show_flash_warn").length
+-if flash[:error].present?
+  #show_flash_error
+  -msg = [flash[:error]].flatten.compact.join("<br/>").html_safe
+  :coffeescript
+    $(document).ready ->
+      toastr.error("#{msg}") if $("#show_flash_error").length
+-if alert.present?
+  #show_flash_alert
+  :coffeescript
+    $(document).ready ->
+      toastr.error("#{alert}") if $("#show_flash_alert").length

@@ -1,0 +1,25 @@
+.row
+  .col-md-6.col-md-offset-3
+    #sign_in
+      .title Sign in
+      =form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form-group
+          =f.email_field :email, autofocus: true, required: 'required', class: 'form-control input-lg', placeholder: 'Email Address'
+        .form-group
+          =f.password_field :password, autocomplete: "off", class: 'form-control input-lg', placeholder: 'Password'
+        -if devise_mapping.rememberable?
+          .form-group
+            .checkbox{ style: 'margin-left:4px;' }
+              =checkbox_unchecked
+              =checkbox_checked("style:display:none;")
+              =f.check_box :remember_me, class: 'input-lg form-control', style: 'display:none;'
+              %label Keep me logged in
+        %button{type: 'submit', class: 'btn btn-lg submit_button', :'data-disable-with' => disable_with('Submitting') } Submit
+      =render "users/shared/links"
+  .col-md-1.sign-up-teaser-box__divider-container
+    .sign-up-divider
+  .col-md-2
+    .sign-up-teaser-box--short
+      .sign-up-teaser-box__content
+        %p Welcome Back,
+        %p Looking good

@@ -1,0 +1,42 @@
+-view_css :auth_2
+-view_js :auth_2
+
+.auth__container
+
+  .auth__container-modal-toggle.btn-tv{ 'data-toggle' => 'modal', 'data-target' => '#signup-modal'}
+    Sign up Modal Trigger
+
+=BootstrapHelper::Modal.new('signup-modal') do |modal|
+  =modal.body do
+    .auth__signup-close{ onclick: "$('#signup-modal').modal('hide')"}
+      =iconf('close')
+    .auth__signup-title
+      Sign up for Richapp
+    .auth__signup-subtitle
+      Get instant access to the best handmade eats in every city in every state across the land, shipped directly to you.
+    .auth__signup-action-container
+      .auth__signup-form
+        =form_tag "#" do
+          .auth__signup-form-field-set
+            .auth__signup-form-label
+              Email Address
+            .auth__signup-form-field
+              =iconf('user')
+              =text_field_tag "noop1", nil
+          .auth__signup-form-field-set
+            .auth__signup-form-label
+              Choose a password
+            .auth__signup-form-field
+              =iconf('lock')
+              =text_field_tag "noop1", nil
+          .auth__signup-submit-btn.gb-btn--big
+            Sign up
+      .auth__signup-or-divider-wrapper
+        .auth__signup-or-divider
+          Or
+      .auth__signup-fb-cta-btn.gb-btn--big--blue
+        =iconf('facebook')
+        Sign up with Facebook
+      .auth__signup-login-cta
+        Already a member?
+        =link_to "Log in", "#"

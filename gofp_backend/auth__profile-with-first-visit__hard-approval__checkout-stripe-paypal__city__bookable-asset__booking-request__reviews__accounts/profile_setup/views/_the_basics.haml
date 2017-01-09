@@ -1,0 +1,40 @@
+.the_basics.long_form
+  .row
+    .col-sm-3
+      .subtitle
+        =iconf('graduation-cap')
+        Qualifications
+    .col-sm-9
+      %p=simple_format profile.qualification_description
+  .row
+    .col-sm-3
+      .subtitle
+        =iconf('code', nil, 'font-weight:bold')
+        Main Skillset
+    .col-sm-9
+      %p=simple_format profile.core_competencies
+  .row
+    .col-sm-3
+      .subtitle
+        =iconf('book')
+        Teaching Style
+    .col-sm-9
+      %p=simple_format profile.teaching_style
+  .row{ style: 'margin-top:5px'}
+    .col-sm-offset-2.col-sm-6
+      .row{ style: 'margin-top:0px'}
+        .col-sm-12
+          =iconf('linkedin-square', nil, 'margin-right:5px;')
+          =link_to shorten_link(profile.linkedin_link), profile.linkedin_link
+        -if profile.github_link.present?
+          .col-sm-12
+            =iconf('github', nil, 'margin-right:5px;')
+            =link_to shorten_link(profile.github_link), profile.github_link
+        -if profile.portfolio_link.present?
+          .col-sm-12
+            =iconf('folder-open', nil, 'margin-right:5px;')
+            =link_to shorten_link(profile.portfolio_link), profile.portfolio_link
+    .col-sm-4{ style: "margin-top: 5px"}
+      =link_to_if profile.editable?, "#{iconf('caret-right')} Edit Profile".html_safe, new_or_edit_link_for_profile, class: 'bold_red'
+
+

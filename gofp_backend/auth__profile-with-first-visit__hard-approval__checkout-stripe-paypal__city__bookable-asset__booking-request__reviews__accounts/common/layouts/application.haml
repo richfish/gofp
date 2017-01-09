@@ -1,0 +1,52 @@
+!!!
+%html
+  %head
+    =page_title
+
+    //add meta tag logic
+    =csrf_meta_tags
+
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+
+    / SEO
+    %meta{ name:"description", content: "Monkey - Super Cheap Uptime Monitoring with Sleep Control (looking at you Heroku)." }
+    %meta{ name:"keywords", content: "heroku cheap uptime monitoring sleeping pinging downtime awake monitor" }
+    %meta{ property:"og:title", content: "Cheap Uptime Monitoring with Sleep Control" }
+    %meta{ property:"og:type", content: "website" }
+    %meta{ property:"og:url", content: "https://monkey.com/" }
+    %meta{ property:"og:site_name", content: "Monkey" }
+    %meta{ property:"og:description", content: "Monkey - Super Cheap Uptime Monitoring with Sleep Control (looking at you Heroku)." }
+
+    =stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    %link{ href: "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel: "stylesheet" }
+
+    %script{:src => "https://js.stripe.com/v2/", :type => "text/javascript"}
+    //%script{ src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBQezPN-sSw7aK9rOKVSW3YNOR89UkK6Ms"}
+
+    %link{:href => "http://fonts.googleapis.com/css?family=Fascinate|Source+Sans+Pro|Roboto+Slab|Arvo|Ubuntu|Montserrat+Alternates|Lobster|Libre+Baskerville|Ubuntu+Condensed|Open+Sans|Roboto|Oswald|Open+Sans+Condensed:300|Roboto+Condensed|Montserrat|Raleway|Oxygen|Merriweather|Roboto+Slab|Pacifico|Lobster+Two|Grand+Hotel", :rel => "stylesheet", :type => "text/css"}
+
+    =javascript_include_tag 'application', 'data-turbolinks-track' => true
+    /[if lt IE 9]
+      <script data-turbolinks-eval="false" src="/assets/ie/html5shiv.js" type="text/javascript"></script>
+      <script data-turbolinks-eval="false" src="/assets/ie/respond.min.js" type="text/javascript"></script>
+
+    =google_analytics
+
+  %body
+    #wrap
+      =render "layouts/header"
+      =render "layouts/alerts"
+      =yield :full_width_content
+
+      .container
+        =yield
+
+    -if defined?(current_user) && current_user
+      =render "layouts/footer"
+    -else
+      =render "layouts/footer_welcome"
+
+    =Gon::Base.render_data({})
+    =include_view_js
+    =include_view_css    
+    =include_custom_alerts

@@ -1,0 +1,26 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: boilerplate
+  password: root
+  min_messages: WARNING
+
+heroku: &heroku
+
+development:
+  <<: *common
+  database: boilerplate_development
+
+test:
+  <<: *common
+  database: boilerplate_test
+
+staging:
+  <<: *heroku
+  database: boilerplate_staging
+
+production:
+  <<: *heroku
+  database: boilerplate_production

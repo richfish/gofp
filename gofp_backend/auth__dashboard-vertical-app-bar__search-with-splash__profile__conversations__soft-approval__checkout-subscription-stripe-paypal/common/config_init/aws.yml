@@ -1,0 +1,25 @@
+production:
+  bucket: boilerplate-production
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+
+development: &defaults
+  bucket: boilerplate-development
+  access_key_id: 123
+  secret_access_key: 456
+
+test:
+  <<: *defaults
+  bucket: boilerplate-test
+
+demo:
+  <<: *defaults
+  bucket: boilerplate-demo
+
+staging:
+  <<: *defaults
+  bucket: boilerplate-staging
+
+sandbox:
+  <<: *defaults
+  bucket: boilerplate-sandbox

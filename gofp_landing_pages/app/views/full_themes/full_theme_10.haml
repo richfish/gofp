@@ -1,0 +1,32 @@
+-view_css :full_theme_10
+
+.splash__container
+  .splash__header
+    .container
+      .splash__header-logo
+        =image_tag "preact-logo.png", class: 'splash__header-logo-img'
+        .splash__header-logo-txt
+          Richapp
+      .splash__header-link-list-items
+        .visible-xs
+          =mobile_menu_toggler_button
+        .visible-md.visible-lg.visible-sm
+          %ul
+            %li
+              =link_to "#" do
+                Product
+            %li
+              =link_to "#" do
+                About Us
+            %li
+              =link_to "#" do
+                Blog
+            %li
+              =link_to "#", class: 'splash__header-link-list-item-box--shaded' do
+                Request Demo
+            %li
+              =link_to "#", class: 'splash__header-link-list-item-box--transparent' do
+                Free Trial
+            %li
+              =link_to "#" do
+                Sign In

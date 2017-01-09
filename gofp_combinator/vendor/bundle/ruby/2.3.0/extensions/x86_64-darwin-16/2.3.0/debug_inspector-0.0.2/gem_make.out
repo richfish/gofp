@@ -1,0 +1,15 @@
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+/Users/richard/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170108-25630-l6icco.rb extconf.rb
+creating Makefile
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20170108-25630-1fbzwzz

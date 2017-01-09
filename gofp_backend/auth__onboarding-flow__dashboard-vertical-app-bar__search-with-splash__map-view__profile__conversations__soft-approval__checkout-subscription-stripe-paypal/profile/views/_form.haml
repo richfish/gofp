@@ -1,0 +1,89 @@
+-view_js :profile, :asset_images
+.profile
+  .col-sm-offset-1.col-sm-11
+    .title="#{(@profile.present? || current_user_has_image_no_profile?)  ? "Edit" : "Make"} Your Profile"
+
+    =toggle_info_panel do
+      %ul
+        %li This profile information will be shown to prospective clients
+        %li This information will also be used for evaluating who we let on our platform.
+        %li
+          Please read more about our
+          =link_to "Profile Guidelines", provider_profile_guidelines_path
+          and our
+          =link_to "Acceptance Criteria", acceptance_path
+
+    .margin-top-20px
+    =form_for @profile ||= current_user.build_profile, html: { multipart: true } do |f|
+      =errors(@profile)
+
+      .form-group.text
+        Profile Picture
+        =tooltip("We use a portrait shape. Suggested dimensions are 300px width x 350px height")
+      =avatar_field(@profile.user.avatar.try(:image), f, :image_url => profile_image_profiles_path)
+
+      .form-inline
+        %h4
+          Name
+        .form-group
+          =f.text_field :first_name, placeholder: 'First Name', class: 'input-lg form-control', style: 'min-width:280px'
+        .form-group
+          =f.text_field :last_name, placeholder: 'Last Name', class: 'input-lg form-control', style: 'min-width:280px'
+
+      -# .form-inline.margin-top-20px
+      -#   .form-group
+      -#     Years of Professional Dev Experience
+      -#     =tooltip('Again, we require a minimum of 3 years of professional developer experience.')
+      -#   .form-group
+      -#     -years = [3, 3.5, 4, 4.5, 5, 5.5, 6, 7, 8, 9].map{|x| ["#{x} years", x]}.prepend("Select years").append(["10+ years", "10+"])
+      -#     =f.select :years_experience, options_for_select(years, @profile.years_experience), {}, {class: 'input-lg form-control'}
+
+      .form-inline.margin-top-20px
+        .form-group
+          Years of Professional Dev Experience
+          =tooltip('Again, we require a minimum of 3 years of professional developer experience.')
+        .form-group
+          -years = [3, 3.5, 4, 4.5, 5, 5.5, 6, 7, 8, 9].map{|x| ["#{x} years", x]}.prepend("Select years").append(["10+ years", "10+"])
+          =select_tag :years_experience, options_for_select(years, 3), {class: 'input-lg form-control'}
+
+      .form-group
+        %h4
+          Qualifications
+          =tooltip('Please only discuss work or projects during your professional career, and please focus on the highlights.')
+        =text_area_tag :qualification_description, nil, placeholder: 'In a few sentences, what have you done for most of your developer career? What have you worked on at various companies, and what kind of role did you have? What kinds of apps have you built from scratch?', class: 'input-lg form-control', rows: 3
+
+      .form-group
+        %h4 Core Competencies
+        =text_area_tag :core_competencies, nil, placeholder: "Describe your core competencies. Are there certain areas you're specialized in? Describe your predominant technology stack.", class: 'input-lg form-control', rows: 3
+
+      .form-group
+        %h4 Teaching Methods or Philosophy
+        =text_area_tag :teaching_style, nil, placeholder: "Are you purely self taught? Do you believe in baptism by fire? Talk a bit about how you're going to teach and what your beliefs are here.", class: 'input-lg form-control', rows: 3
+
+      .form-group
+        %h4
+          LinkedIn
+          %i{ style: 'font-size: 14px; opacity: .7;' } - full url
+
+        =text_field_tag :linkedin_link, nil, placeholder: "Paste a link to your Linkedin", class: 'input-lg form-control'
+
+      .form-group
+        %h4
+          Portfolio Site
+          %i{ style: 'font-size: 14px; opacity: .7;' } - full url
+          =tooltip('Strongly encouraged.')
+        =text_field_tag :portfolio_link, nil, placeholder: "Paste a link to your portfolio site", class: 'input-lg form-control'
+
+      .form-group
+        %h4
+          Github
+          %i{ style: 'font-size: 14px; opacity: .7;' } - full url
+          =tooltip('This is optional, but strongly encouraged')
+        =text_field_tag :github_link, nil, placeholder: "Paste a link to your Github", class: 'input-lg form-control'
+
+
+      -button_text = if @profile.persisted?
+        -@profile.published? ? "Publish Changes" : "Submit Edits"
+      -else
+        -"Create Profile"
+      =orange_submit_button(button_text)

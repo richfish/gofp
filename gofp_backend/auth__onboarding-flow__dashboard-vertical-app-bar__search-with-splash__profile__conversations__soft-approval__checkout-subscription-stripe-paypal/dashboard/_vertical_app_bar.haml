@@ -1,0 +1,18 @@
+.vertical-app-bar__container.hidden-xs
+  =link_to "#" do
+    .vertical-app-bar__icon
+      -obj = iconf('comment')
+      =tooltip_on_obj('Messages', obj, nil, 'right')
+  =link_to "#" do
+    .vertical-app-bar__icon
+      -obj = iconf('rocket')
+      =tooltip_on_obj('Rockets', obj, nil, 'right')
+  =link_to "#" do
+    .vertical-app-bar__icon
+      -#obj = image_tag "purplecalendar.png", height: 40
+      -obj = iconf('star')
+      =tooltip_on_obj("Favorites", obj, nil, 'right')
+  =link_to "#" do
+    .vertical-app-bar__icon
+      -obj = iconf('user')
+      =tooltip_on_obj("Your Profile", obj, nil, 'right')

@@ -1,0 +1,30 @@
+-if notice.present?
+  :coffeescript
+    $(document).ready ->
+      toastr.success("#{notice}")
+  -# .alert-success
+  -#   =icon('thumbs-up')
+  -#   =notice
+-if flash[:warn].present?
+  msg = [flash[:warn]].flatten.compact.join("<br/>").html_safe
+  :coffeescript
+    $(document).ready ->
+      toastr.warning("#{msg}")
+  -# .alert-warn
+    -# =icon('warning-sign')
+    -# =[flash[:warn]].flatten.compact.join("<br/>").html_safe
+-if flash[:error].present?
+  msg = [flash[:error]].flatten.compact.join("<br/>").html_safe
+  :coffeescript
+    $(document).ready ->
+      toastr.error("#{msg}")
+  -# .alert-error
+    -# =icon('warning-sign')
+    -# =[flash[:error]].flatten.compact.join("<br/>").html_safe
+-if alert.present?
+  :coffeescript
+    $(document).ready ->
+      toastr.error("#{alert}")
+  -# .alert-error
+    -# =icon('warning-sign')
+    -# =alert

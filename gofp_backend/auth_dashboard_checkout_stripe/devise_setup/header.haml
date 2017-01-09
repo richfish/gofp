@@ -1,0 +1,28 @@
+#logo
+  %a{ href: root_path }
+    %span{ class: 'title' } Richard
+    App
+
+#nav_section
+  %nav.navbar.navbar-default{:role => "navigation"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{:"data-target" => "#the_navbar", :"data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      #the_navbar.collapse.navbar-collapse.floatright
+        %ul.nav.navbar-nav
+          -if user_signed_in?
+            %li
+              %a Stuff to Come
+            %li
+              %a{ href: edit_user_path(current_user)}="#{iconf('wrench', nil, 'font-size:18px;opacity:.5')} Account".html_safe
+            %li
+              %a{:href => logout_path } Logout
+          -else
+            %li
+              %a{:href => login_path } Sign In
+            %li
+              %a{:href => signup_path } Sign up as Provider

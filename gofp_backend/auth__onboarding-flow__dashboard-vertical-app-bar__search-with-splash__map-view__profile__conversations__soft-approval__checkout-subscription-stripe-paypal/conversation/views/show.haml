@@ -1,0 +1,60 @@
+-#@conversation = Conversation.includes(:comments).find_by_euid(params[:euid])
+-conversation = @conversation.decorate
+-comments = CommentDecorator.decorate_collection conversation.comments.select{|x| x.id } #because of form
+.conversation
+  .row
+    .col-sm-8
+      .conversation_section
+        .title_small
+          Conversation with
+          %b.faded
+            =#conversation.bootcamp.user.profile.first_name
+            Malkovich
+          and
+          %b.faded
+            John Malkovich
+            =#conversation.guest_name
+
+        .row
+          .col-sm-12
+            =render "conversations/form"
+
+        .row
+          .col-sm-12
+            =render "conversations/inquiry_box", conversation: conversation
+
+        -comments.each do |comment|
+          .row
+            .col-sm-12
+              =render "comments/comment", comment: comment.decorate
+    .col-sm-4
+      .conversation_infopanel
+        .title_smaller Common Topics
+        %p Things you might want to discuss:
+        %ul
+          %li
+            %span.b-less Instructor Requirements -
+            As the instructor has listed requirements and/or preferences on their bootcamp page for participants, you might want to inquire about those.
+          %li
+            %span.b-less Location -
+            You can always chat and reach a consensus where you want to hold the bootcamp
+          %li
+            %span.b-less Times & Start Date -
+            Remember, when you submit a request you pick a start date, if the bootcamp is rolling, you can mark 'flexible' if you are open to multiple start dates. You might also discuss moving it around a couple hours here and there if you are the only participant.
+
+
+        .title_smaller Relevant Policies
+        %p Make sure you're aware:
+        %ul
+          %li
+            %span.b-less Communications -
+            Once booked, you'll have ample opportunity to talk in person prior to the start of the bootcamp.
+          %li
+            %span.b-less Authorizations -
+            When you submit your request, we place an authorization for the bootcamp amount. When the instructor confirms the request, the charge goes through.
+          %li
+            %span.b-less Refunds -
+            If your instructor cancels, you receive a full refund including fees. We screen instructors to meet the minimum requirements for 'experienced developer,' but in case you believe your instructor grossly misrepresented him or herself, this is grounds for a refund.
+          %li
+            %span.b-less Learn more -
+            ="if you haven't, check out our #{link_to 'general policies page', policies_path }".html_safe

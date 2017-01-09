@@ -1,0 +1,35 @@
+@import 'constants'
+@import 'mixins'
+
+.slideout-menu--left
+  position: absolute
+  top: 0
+  left: -300px
+  width: 300px
+  height: 100%
+  background-color: grey
+  z-index: 1000
+  transition: left .3s ease-in
+.slideout-menu--left--open
+  left: 0px !important
+  transition: left .3s ease-in
+.slideout-menu__close-button
+  position: absolute
+  right: 0
+  top: 0
+  padding: 20px
+  span
+    cursor: pointer
+    background-color: #B1AAAA
+    padding: 4px
+    border-radius: 4px
+.slideout-menu__content-container
+  margin-top: 60px
+  padding-left: 20px
+.slideout-menu__link-set
+  a
+    color: rgba(0,0,0,.8)
+    font-size: 16px
+    margin: 10px 0px
+    display: block
+.mobile-menu-toggler__button

@@ -1,0 +1,52 @@
+-searchable_entity = Profile.new(user: User.new).decorate
+
+.searchable_entity_search_result__container
+  .row
+    .col-xs-3.col-md-2
+      .searchable_entity_search_result__instructor-image
+        =profile_image_xsmall(searchable_entity)
+    .col-xs-9.col-md-10
+      .row
+        .col-xs-12
+          .searchable_entity_search_result__searchable-entity-headline
+            =searchable_entity.name
+
+      .row
+        .col-xs-12{ style: 'margin-top:4px'}
+          .searchable_entity_search_result__ratings-line
+            Something something
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            on
+            %span.bold_purple 5 reviews
+
+  .searchable_entity_search_result__description
+    -blurb = searchable_entity.try(:description) || "This is a a generic blurb about something which is hopefully relevant to the type of app being generated no guarantees. This is Richard, the author of these generators filling in a bunch of text that will probably be truncated."
+    =truncate(blurb, length: 200)
+
+  .searchable_entity_search_result__meta-section
+    .row
+      .col-md-5.col-sm-6
+        .row
+          .col-xs-1
+            =image_tag('purplecalendar.png', style: 'height:20px; width:20px;' )
+          .col-xs-10
+            =schedule_formatted_search_results(searchable_entity)
+      .col-md-7.col-sm-6
+        .row
+          .col-xs-1
+            =image_tag('locationpurple.png', style: 'height:20px; width: 16px;')
+          .col-xs-10
+            %span.bold_purple{ style: "font-size: 14px;"} Location
+            %p=searchable_entity.location
+  %hr
+
+  .row
+    .col-sm-12
+      .searchable_entity_search_result__cta
+        =link_to searchable_entity_path(searchable_entity.id || 1) do
+          =iconf('caret-right')
+          See Main Page

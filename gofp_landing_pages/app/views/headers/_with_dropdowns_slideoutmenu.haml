@@ -1,0 +1,65 @@
+-view_css :slideout_menu
+
+.slideout-menu--left
+  .slideout-menu__close-button
+    %span{ 'onclick' => "$('.slideout-menu--left').removeClass('slideout-menu--left--open')" }
+      =iconf('close')
+  .slideout-menu__content-container
+    %h3 BOILERPLATE
+    .slideout-menu__link-set
+      =link_to "This is a Sample Option", "#"
+      =link_to "Another Link you can Click", "#"
+      =link_to "Try this one, silly goose", "#"
+      =link_to "Misc things", "#"
+
+.header-transparent-set-sm.zplus
+  .header-transparent-set-sm__logo.pull-left
+    BOILERPLATE
+  .header-transparent-set-sm__link-set.pull-right
+
+    .visible-xs
+      .mobile-menu-toggler__button{ 'onclick' => "$('.slideout-menu--left').toggleClass('slideout-menu--left--open')" }
+        %span=iconf('bars', nil, 'color: rgb(215, 14, 108); font-size: 40px; cursor: pointer;')
+    .visible-md.visible-lg.visible-sm
+      %ul
+        %li.condensed-capitalized
+          .dropdown.inline
+            =link_to "#", 'data-toggle' => 'dropdown', 'data-target' => "#" do
+              DD Content
+              %span.caret
+            %ul.dropdown-menu.dropdown-menu-right
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something One
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Two
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Three
+        %li.condensed-capitalized
+          .dropdown.inline
+            =link_to "#", 'data-toggle' => 'dropdown', 'data-target' => "#" do
+              DD Content 2
+              %span.caret
+            %ul.dropdown-menu.dropdown-menu-right
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something One
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Two
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Three
+        %li.condensed-capitalized.color-streak-bottom
+          =link_to "Help", "#"
+        %li
+          .btn.btn-special
+            Other Provider

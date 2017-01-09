@@ -1,0 +1,16 @@
+-if notice.present?
+  .alert-success
+    =icon('thumbs-up')
+    =notice
+-if flash[:warn].present?
+  .alert-warn
+    =icon('warning-sign')
+    =[flash[:warn]].flatten.compact.join("<br/>").html_safe
+-if flash[:error].present?
+  .alert-error
+    =icon('warning-sign')
+    =[flash[:error]].flatten.compact.join("<br/>").html_safe
+-if alert.present?
+  .alert-error
+    =icon('warning-sign')
+    =alert

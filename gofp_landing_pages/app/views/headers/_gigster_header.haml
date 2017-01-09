@@ -1,0 +1,31 @@
+-view_css :header_gigster
+
+=render "slideout_menus/default"
+.splash__header-container
+  .splash__header-logo
+    =image_tag "gigster-logo.png", class: 'splash__header-logo-img'
+    .splash__header-logo-txt
+      Richster
+  .splash__header-link-list-items
+    .visible-xs
+      =mobile_menu_toggler_button
+    .visible-md.visible-lg.visible-sm
+      %ul
+        %li
+          =link_to "#" do
+            Who we are
+        %li
+          =link_to "#" do
+            Success Stories
+        %li
+          =link_to "#" do
+            How it works
+        %li
+          =link_to "#SignupLinkReplace" do
+            Join us
+        %li
+          =link_to "#LoginLinkReplace" do
+            Log in
+.splash__below-header-flourish
+  =link_to "#", class: 'splash__below-header-bubble' do
+    Something Here!

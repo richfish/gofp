@@ -1,0 +1,19 @@
+.splash__menu-section--auth
+  .splash__menu-section-heading
+    .splash__menu-section-title
+      Choose Auth Theme
+    .splash__menu-section-subtitle
+      Click on Auth to Add
+
+  .splash__menu-section-menu-items
+    .row
+      .col-sm-10.col-sm-offset-1
+        .splash__menu-section-type
+          Auth Screens - adds a Signup and Login Automatically
+        .row
+          .col-sm-3
+            =link_to '#', class: 'splash__menu-section-menu-item', 'data-auth-type' => 'auth_1' do
+              Auth 1 (CodeInPerson)
+          .col-sm-3
+            =link_to '#', class: 'splash__menu-section-menu-item', 'data-auth-type' => 'auth_2' do
+              Auth 2 (Goldbely)

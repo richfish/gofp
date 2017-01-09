@@ -1,0 +1,19 @@
+- content_for :content do
+  %p
+    ="Hi #{@user.first_name.presence || 'fellow user'},"
+  %p
+    Thanks for purchasing Ping N' Sleep uptime-with-sleep checks.
+  -if @user.orders.active.count > 1
+    %p
+      We see you already have existing checks in place. Depending on when you purchased these additional checks, your billing may appear on your statements at a different times than the first checks.
+  -else
+    %p
+      You will be billed $3/ month beginning on the date on your purchase.
+  %p
+    To cancel at anytime, please login and
+    =link_to "visit your account page", edit_user_path(@user)
+
+  %p
+    Best,
+    %br
+    Ping N' Sleep

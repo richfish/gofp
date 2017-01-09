@@ -1,0 +1,210 @@
+-view_css :full_theme_8
+
+.splash__nav-sidebar
+  .splash__nav-sidebar-logo
+    =image_tag "cozy-logo.png", class: 'splash__nav-sidebar-logo-img'
+    .splash__nav-sidebar-logo-txt
+      Richapp
+  .splash__nav-sidebar-section
+    .splash__nav-sidebar-section-title
+      Property Managers
+    %ul.splash__nav-sidebar-section-link-list
+      %li
+        =link_to "#" do
+          =iconf('bank')
+          Property Listings
+      %li
+        =link_to "#" do
+          =iconf('bar-chart')
+          Rental Applications
+      %li
+        =link_to "#" do
+          =iconf('search')
+          Tenant Screening
+      %li
+        =link_to "#" do
+          =iconf('shopping-cart')
+          Credit Reports
+      %li
+        =link_to "#" do
+          =iconf('envelope')
+          Background Checks
+      %li
+        =link_to "#" do
+          =iconf('folder-open-o')
+          Collect Rent Online
+  .splash__nav-sidebar-section
+    .splash__nav-sidebar-section-title
+      For Renters
+    %ul.splash__nav-sidebar-section-link-list
+      %li
+        =link_to "#" do
+          =iconf('search')
+          Cozy Renter Profile
+      %li
+        =link_to "#" do
+          =iconf('bar-chart')
+          Pay Rent Online
+      %li
+        =link_to "#" do
+          =iconf('envelope')
+          Invite a Landlord
+  .splash__nav-sidebar-section
+    .splash__nav-sidebar-section-title
+      Get Cozy
+    %ul.splash__nav-sidebar-section-link-list
+      %li
+        =link_to "#" do
+          =iconf('shopping-cart')
+          How Cozy Works
+      %li
+        =link_to "#" do
+          =iconf('bar-chart')
+          Customer Love
+      %li
+        =link_to "#" do
+          =iconf('bank')
+          Features & Pricing
+  .splash__nav-sidebar-cta-box
+    .splash__nav-sidebar-cta-btn--shaded
+      Sign Up
+    %span
+      or
+    =link_to "#" do
+      Sign In
+
+.splash__container
+  .splash__central-content
+    .splash__central-content-title
+      The Best Property Management Software
+    .splash__central-content-subtitle
+      Simple, end-to-end property management software, free for landlords and property managers.
+
+.splash__wrapper
+  .splash__cta-section
+    .splash__cta-section-title
+      Get Started. It’s Free.
+    .splash__cta-section-subtitle
+      Already have an account?
+      =link_to "Sign In", "#", class: 'splash__cta-section-sign-in-link'
+    .splash__cta-section-form
+      =form_tag "#" do
+        .row
+          .col-xs-12
+            =select_tag "noop0", options_for_select(["Please Select...", "Thing One", "Thing Two", "Thing Three", "Thing Four"]), class: 'form-control input-lg'
+          .col-xs-6
+            =text_field_tag "noop1", nil, placeholder: 'First Name', class: 'form-control input-lg'
+          .col-xs-6
+            =text_field_tag "noop2", nil, placeholder: 'Last Name', class: 'form-control input-lg'
+          .col-xs-12
+            =text_field_tag "noop3", nil, placeholder: 'Email', class: 'form-control input-lg'
+          .col-xs-6
+            =text_field_tag "noop4", nil, placeholder: 'Create a Password', class: 'form-control input-lg'
+          .col-xs-6
+            =text_field_tag "noop5", nil, placeholder: 'Confirm Password', class: 'form-control input-lg'
+
+        .splash__cta-section-submit-btn
+          Create Your Account
+    .splash__cta-section-disclaimer
+      By creating an account you agree to our
+      =link_to "Terms of Use", "#", class: 'splash__cta-section-sign-in-link'
+
+  .splash__icon-set
+    .row
+      .col-sm-10.col-sm-offset-1
+        .row
+          .col-sm-4
+            .splash__icon-set-icon
+              .splash__icon-set-icon-img
+                =image_tag "cozy-icon-set-1.svg"
+              .splash__icon-set-icon-name
+                Rent Collection
+              .splash__icon-set-icon-description
+                Set it and forget it rent collection.
+              .splash__icon-set-icon-cta-link
+                Learn more
+          .col-sm-4
+            .splash__icon-set-icon
+              .splash__icon-set-icon-img
+                =image_tag "cozy-icon-set-2.svg"
+              .splash__icon-set-icon-name
+                Renter Applications
+              .splash__icon-set-icon-description
+                Easy-to-read, and up-to-date information
+              .splash__icon-set-icon-cta-link
+                Learn more
+          .col-sm-4
+            .splash__icon-set-icon
+              .splash__icon-set-icon-img
+                =image_tag "cozy-icon-set-3.svg"
+              .splash__icon-set-icon-name
+                Screening Tools
+              .splash__icon-set-icon-description
+                Credit reports and background checks.
+              .splash__icon-set-icon-cta-link
+                Learn more
+
+  .splash__testimonial
+    .row
+      .col-sm-3.col-sm-offset-1.right
+        =image_tag "cozy-testimonial-img.jpg", class: 'splash__testimonial-avatar-img'
+      .col-sm-7
+        .splash__testimonial-quote-txt
+          =iconf('quote-left')
+          With Richapp, I never have to wonder when I will receive my rent from my tenant. One less thing to worry about. My rent paid on time, every month.
+        .splash__testimonial-name
+          Mamoon
+        .splash__testimonial-location
+          , Landlord in Palo Alto, CA
+        .splash__testimonial-link-to-more
+          =link_to "#" do
+            More Customer Love
+
+
+  .splash__who-uses-section
+    .row
+      .col-sm-10.col-sm-offset-1
+        .row.o-visible
+          .col-md-8
+            .splash__who-uses-section-data-box
+              .splash__who-uses-section-data-number-box--1
+                35,000
+              .splash__who-uses-section-data-label-box--1
+                .splash__who-uses-section-data-label-bold
+                  Landlords
+                .splash__who-uses-section-data-label-faded
+                  Just like you
+            .splash__who-uses-section-data-box
+              .splash__who-uses-section-data-number-box--2
+                4,500
+              .splash__who-uses-section-data-label-box--2
+                .splash__who-uses-section-data-label-bold
+                  Cities
+                .splash__who-uses-section-data-label-faded
+                  (including yours)
+            .splash__who-uses-section-data-box
+              .splash__who-uses-section-data-number-box--3
+                Millions
+              .splash__who-uses-section-data-label-box--3
+                .splash__who-uses-section-data-label-bold
+                  In Rent
+                .splash__who-uses-section-data-label-faded
+                  Processed monthly
+          .col-md-4
+            .splash__who-uses-section-title
+              Who's Using Richapp?
+            .splash__who-uses-section-description
+              Over 35,000 property managers and landlords save time and money every month with Richapp, whether they’re managing one unit or hundreds. Access Richapp from anywhere in the world with an Internet connection, on any device.
+            .splash__who-uses-section-disclaimer
+              We’re available to property managers, landlords and renters anywhere in the U.S. and its territories.
+
+
+  .splash__security-section
+    .splash__security-section-btn
+      =iconf('lock')
+      Secure
+    .splash__security-section-central-content
+      .splash__security-section-title
+        Rest assured. Your data and transactions are safe.
+      .splash__security-section-description
+        Every interaction you have with Cozy uses bank-level security and encryption. Sensitive data is safe with Cozy.

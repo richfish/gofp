@@ -1,0 +1,25 @@
+# production:
+#   bucket: gofp_combinator-production
+#   access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+#   secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+#
+# development: &defaults
+#   access_key_id: 12342134
+#   secret_access_key: 123412341234
+#   bucket: gofp_combinator-development
+#
+# test:
+#   <<: *defaults
+#   bucket: gofp_combinator-test
+#
+# demo:
+#   <<: *defaults
+#   bucket: gofp_combinator-demo
+#
+# staging:
+#   <<: *defaults
+#   bucket: gofp_combinator-staging
+#
+# sandbox:
+#   <<: *defaults
+#   bucket: gofp_combinator-sandbox

@@ -1,0 +1,21 @@
+=summary_section_checkout_page("#{iconf('map-marker')} Meetup Location:") do
+  ="<b>You will learn the meetup location immediately after booking with this provider</b>, unless you are re-booking and are logged in.".html_safe
+
+=summary_section_checkout_page("Personal Message:") do
+  ="#{booking.customer_booking_name}: #{booking.note_to_provider}".html_safe
+
+=summary_section_checkout_page("Outing Summary:") do
+  We will set up a meeting to determine our next meeting.
+
+=summary_section_checkout_page("Our Policies:") do
+  %p="Neither your payment info name nor email will be given to your provider."
+
+  %p="<b>Refunds & Cancellations</b>".html_safe
+  %p
+    If your provider cancels for whatever reason, you will receive a full refund including any fees.
+  %p
+    ="If you must cancel before the outing, <a href='mailto:cancellations@monkey.com' target='_blank'>please message us ASAP</a>. If canceled within 48 hours of the booking, you will receive a half refund.".html_safe
+  %p
+    If there's a problem during the outing, message us to begin our resolution process, which may lead to a partial or full refund.
+  %p
+    ="For more information, please read more on <a href='#' target='_blank'>our policies page</a>.".html_safe

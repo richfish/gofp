@@ -1,0 +1,34 @@
+-view_js :search_page
+
+-content_for :full_width_content do
+  =render "searchable_entities/search_filter", search_opts: @search_data
+
+-filtered_search = opts[:filtered_search] rescue nil
+.searchable_entity_search_results__container
+  #filter_search_loading_spinner
+    =spinner
+
+  .row
+    -if @searchable_entities.blank?
+      .searchable_entity_search_result__no-results-container
+        .searchable_entity_search_result__headline
+          No Results Found
+
+        -if should_show_not_found_alert_subscription?
+          =render "searchable_entities/subscribe_to_alert", search_opts: @search_data.merge({white: true})
+
+        %div{ style: 'margin-bottom:100px'}
+
+    -else
+      -@searchable_entities.each.with_index do |searchable_entity, i|
+        %div{ class: ('clearfix visible-sm-block visible-md-block visible-lg-block' if i.even?) }
+        .col-sm-6
+          =render "searchable_entity_summary_search", searchable_entity: searchable_entity
+
+  .searchable_entity_search_results__paginate-bar
+    =paginate @searchable_entities if @searchable_entities
+
+.margin-top-20px
+-if @searchable_entities.present?
+  .search_again{ style: 'padding-top:60px;' }
+    =render "searchable_entities/subscribe_to_alert", search_opts: @search_data

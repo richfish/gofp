@@ -1,0 +1,12 @@
+#hook_wrapper
+  #hook
+    #signin
+      %span Have an Account?
+      =link_to "Sign In", login_path
+    .hook_body
+      .hook_title
+        %h1.lg-hero-title{ style: 'font-weight:bolder; text-transform:uppercase;'} Richard's Boilerplate
+        %hr.lg-halfwidth
+        %h2 Why yes it is...
+        %a.submit_button{ href: signup_path, style: 'text-decoration:none;'}
+          %span SIGN UP

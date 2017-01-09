@@ -1,0 +1,8 @@
+-target_type = ClassUtil.non_decorated_class_name(target).underscore.humanize.downcase
+-errors = target.errors.full_messages
+-if errors.present? and errors.any?
+  .alert.alert-error
+    %h2="#{pluralize(errors.count, "error")} prohibited this #{target_type} from being saved"
+    %ul
+      -errors.each do |msg|
+        %li=msg

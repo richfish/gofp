@@ -1,0 +1,10 @@
+- content_for :content do
+  %p
+    Hello there,
+  %p
+    Thanks for signing up with Monkey. Your yada yada service that lets you yada yada. Please click on the confirm link below to complete your signup:
+
+- content_for :cta do
+  = link_to confirmation_url(confirmation_token: @token), target: '_blank', 'data-no-turbolink' => '' do
+    .btn.btn-primary
+      %h4 Confirm my account

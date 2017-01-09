@@ -1,0 +1,33 @@
+%p="Hi #{@booking_request.full_name},"
+%p
+  You have successfully submitted your request for
+  =link_to @bookable_asset.name, user_bookable_asset_url(@bookable_asset.user, @bookable_asset, confirmation_page: @booking_request.order.euid), target: '_blank'
+
+%p
+  Your instructor has 48 hours to confirm your request. If he or she does, then the charge will go through, and you will be notified immediately!
+
+%p
+  We have placed an authorization for the amount:
+  -base_amount = number_to_currency(@bookable_asset.amount_cents/100)
+  -fee = number_to_currency(@booking_request.order.fee_cents/100)
+  -total = number_to_currency(@booking_request.order.amount_cents/100)
+  %p="#{base_amount} +  #{fee} fee = #{total}"
+  When your instructor accepts your request you will be charged this amount. If your instructor declines your request or if it automatically expires after 48 hours, the charge will be voided.
+
+%p
+  If you need to cancel for whatever reason please respond to us ASAP. Shoot us an email at:
+  ="<a href='mailto:support@monkey.com' target='_blank'> support@monkey.com</a>".html_safe
+
+%p
+  Here is a link to your bookable_asset:
+  =link_to @bookable_asset.name, user_bookable_asset_url(@bookable_asset.user, @bookable_asset, confirmation_page: @booking_request.order.euid), target: '_blank'
+
+%p
+  Make sure to read up on
+  =link_to 'our policies', provider_policies_url, target: '_blank'
+  if you haven't already.
+
+%p
+  Best,
+  %br
+  Monkey Team

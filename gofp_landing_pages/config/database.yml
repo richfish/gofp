@@ -1,0 +1,26 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: landing_page_dev_env
+  password: root
+  min_messages: WARNING
+
+heroku: &heroku
+
+development:
+  <<: *common
+  database: landing_page_dev_env_development
+
+test:
+  <<: *common
+  database: landing_page_dev_env_test
+
+staging:
+  <<: *heroku
+  database: landing_page_dev_env_staging
+
+production:
+  <<: *heroku
+  database: landing_page_dev_env_production

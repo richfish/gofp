@@ -1,0 +1,338 @@
+@import 'constants'
+@import 'mixins'
+
+.profile
+  margin: 0 auto
+
+  max-width: 1000px
+  img
+    @include border-radius(5px)
+  #replace_image
+    margin-top: 5px
+    background-color: #383838
+    display: inline-block
+    color: white
+    padding: 4px 10px
+    @include border-radius(10px)
+  form
+    @media (max-width: 767px)
+      .multiselect-container
+    input, textarea
+      @include border-radius(2px)
+    .inner-addon .fa
+      margin-left: 10px
+    #profile_rate_cents
+      padding-left: 40px
+    .beers
+      font-size: 18px
+      margin-top: 45px
+      span
+        margin: 0 10px
+        @media (max-width: 767px)
+          float: left
+          display: block
+          width: 100%
+          margin: 14px 0px 10px 0px
+      label
+        font-weight: 100 !important
+        margin-bottom: -4px
+        cursor: pointer
+        padding-left: 5px
+      input
+        margin-top: -4px
+        &:focus
+          box-shadow: none
+        @media (max-width: 767px)
+          margin-top: 9px
+      .checkbox
+        margin-left: 0px
+        @media (max-width: 767px)
+          margin-left: 20px
+
+    .gender
+      @extend .beers
+      margin-top: 10px
+      font-size: 18px
+  .divider
+    margin: 0px 10px
+  .form-group.text
+    margin: 0px 5px 0 0
+    font-size: 18px
+  .dropdown-menu
+    font-size: 18px
+    margin-top: 0px
+    @include border-radius(2px)
+    li, a
+      height: 30px
+      &:hover
+        background-color: #428bca
+        color: white
+
+.styled_box_bookings
+  @include styled_box()
+  min-height: 100px
+  margin-top: 0px
+  padding-left: 20px
+  padding-right: 20px
+  max-width: 380px
+  min-width: 340px
+  .title
+    margin-top: 0
+
+.styled_box_bookings_first
+  @extend .styled_box_bookings
+  max-width: 350px
+  @media (max-width: 767px)
+    margin-top: 20px
+    float: left
+
+.earnings
+  margin-bottom: 5px
+.money
+  color: $hjGreen
+  font-size: 18px
+.missing
+  font-size: 18px
+  color: $missingRed
+  font-style: italic
+  margin-left: 30px
+.profile_edit
+  color: $hjGreen
+hr
+  .section_hr
+    color: $mutedPurple
+
+.steps_left
+  @include styled_box()
+  margin-top: 0px
+  min-height: 180px
+  padding: 10px 35px 35px 35px
+  width: 315px
+  height: 300px
+  @include border-radius(50%)
+  background-color: $darkerGray
+  border-color: $hjGreen
+  border-width: 20px
+  margin: 0 auto
+  margin-right: 0px
+  @media (max-width: 767px)
+    float: left
+  > p
+    margin-top: 10px
+    width: 250px
+    margin-left: -15px
+  .content
+    @include translate-y(26%)
+    i
+      font-size: 8px
+      vertical-align: middle
+  .title
+    margin: 5px 0px
+    text-align: center
+    margin-left: -13px
+    font-size: 29px !important
+    min-width: 222px
+    span
+      color: white
+  .step
+    color: white
+    letter-spacing: .9px
+  p
+    color: white
+  a
+    &:hover
+      text-decoration: none
+  b
+    color: $mutedPurple
+    font-size: 44px
+  .submit_button
+    width: 218px
+    margin: -4px
+    margin-top: 24px
+    background-color: transparent
+    border-color: white
+    @include border-radius(8px)
+    &:hover
+      background-color: $orange
+      border-color: $orange
+
+.steps_left_abs
+  @extend .steps_left
+  position: absolute
+  right: 0
+  top: 0
+  .steps_list
+    margin-left: -8px
+    width: 200px
+    margin-top: -8px
+    .step
+      font-size: 14px
+  height: 230px
+  width: 230px
+  .steps_1
+    margin-top: 15px
+  .steps_2
+    margin-top: 10px
+  .steps_3
+  .steps_pending
+    .title
+      margin-top: -25px
+      margin-bottom: 2px
+      b
+        font-size: 30px
+    .steps_list
+      font-size: 12.5px
+      margin-left: -18px
+      text-align: center
+      width: 160px
+      .step
+        font-size: 13px
+  .steps_fixing
+    @extend .steps_pending
+    .title
+      margin-top: -50px
+  .title
+    margin-left: -50px
+    margin-top: -13px
+    font-size: 24px !important
+    margin-bottom: 0px
+  @media (max-width: 530px)
+    display: none
+  @media (min-width: 531px)
+    right: 40px
+  @media (min-width: 768px)
+    right: 0px
+  @media (min-width: 992px)
+    right: 150px
+  @media (min-width: 1200px)
+    right: 200px
+
+.levels_badge_abs
+  width: 116px
+  height: 116px
+  position: absolute
+  right: 0
+  top: 0
+  border: 1px solid black
+  border-color: $hjGreen
+  background-color: $darkerGray2
+  border-width: 10px
+  &:hover
+    border-color: $mutedPurple
+    background-color: $darkerVanillaOrange
+    .content
+      .level
+        color: $darkerGray2
+  @include border-radius(50%)
+  .fourtn
+    color: white
+    font-weight: 300
+    opacity: .8
+  .content
+    text-align: center
+    margin-top: 24px
+    .level
+      font-size: 20px
+      margin-top: -3px
+  @media (max-width: 300px)
+    display: none
+  @media (min-width: 400px)
+    right: 20px
+  @media (min-width: 625px)
+    right: 100px
+  @media (min-width: 768px)
+    right: 78px
+  @media (min-width: 992px)
+    right: 226px
+  @media (min-width: 1200px)
+    right: 276px
+
+  //1200
+  //992
+  //768
+  //480
+
+
+.profile_meta
+  .meta
+    opacity: .4
+
+.no_profile
+  float: right
+  @media (max-width: 767px)
+    float: none
+
+
+.published_stamp
+  .title_small
+    font-size: 35px
+    color: $mutedPurple
+    margin-bottom: -3px
+  .submit_button_xsmall
+    background: none
+    color: $hjGreen
+    border-color: $hjGreen
+    @include border-radius(5px)
+    &:hover
+      border-color: $orange
+
+
+.the_basics
+  .subtitle
+    font-size: 16px
+    color: $mutedPurple
+    font-weight: 300
+    text-align: right
+    @media (max-width: 767px)
+      text-align: left
+  .info
+    margin-top: 3px
+  .review_meta
+    a
+      color: black
+      text-decoration: underline
+.long_form
+  margin-top: 20px
+  p
+    font-size: 15px
+  .row
+    margin-top: 8px
+  .col-sm-9
+    margin-top: -8px
+    //Due to simple_format of text
+
+#the_basics_first_visit
+  opacity: .5
+
+#locations
+  .confirm_on_map
+    float: right
+    height: 46px
+    background-color: $backgroundGray
+    color: $mutedPurple
+    border-color: $borderGray
+    @media (max-width: 767px)
+      float: left
+      margin: -15px 0px 10px 0px
+  .location_artist_display
+    margin-left: 20px
+    a
+      font-size: 17px
+    p
+      font-style: italic
+    i
+      &:hover
+        text-decoration: none !important
+  #use_same_location
+    color: $mutedPurple
+    font-size: 18px
+    label
+      cursor: pointer
+
+
+
+
+
+
+
+

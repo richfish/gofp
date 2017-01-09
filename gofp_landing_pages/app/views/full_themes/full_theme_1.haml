@@ -1,0 +1,76 @@
+-view_css :full_theme_1
+
+.splash__container
+  =render "slideout_menus/default"
+  .splash__header-container
+    .splash__header-logo
+      =image_tag 'tilt-logo.png', class: 'splash__header-logo-img'
+      .splash__header-logo-txt
+        richard
+
+    .splash__header-link-list-items
+      .visible-xs
+        =mobile_menu_toggler_button
+      .visible-md.visible-lg.visible-sm
+        %ul
+          %li
+            =link_to "#SignupLinkReplace", class: 'splash__header-link-list-item-fade-left' do
+              Start Here
+          %li
+            =link_to "#", class: 'splash__header-link-list-item-fade-left' do
+              How it works
+          %li
+            =link_to "#", class: 'splash__header-link-list-item-fade-left' do
+              Examples
+          %li
+            =text_field_tag "ok", nil, class: 'input-md form-control splash__header-link-list-item-search-field', style: 'display:none;'
+            =link_to "#" do
+              =image_tag "search_icon.png", height: 20, class: 'splash__header-link-list-item-search-toggle'
+          %li
+            =link_to "#LoginLinkReplace", class: 'splash__header-link-list-item-box' do
+              Log in
+
+  .splash__central-content
+    =image_tag 'tilt-logo.png', class: 'splash__central-content-logo'
+    .splash__central-content-tagline
+      Richard boilerplate app thing and make something happen
+    .splash__central-content-cta-button.btn-tilt--blue
+      Get started
+
+.container.splash__info-sets
+  .row
+    .col-sm-6
+      .splash__info-set
+        .splash__info-set-heading
+          Happening Now
+        .splash__info-set-info-block
+          =link_to "#" do
+            =image_tag "welcome/awkwardtable.jpg", class: 'splash__info-set-info-block-cta-img'
+    .col-sm-6
+      .splash__info-set
+        .splash__info-set-heading
+          Learn More
+        .splash__info-set-info-block
+          =link_to "#" do
+            =image_tag "welcome/awkwardtable.jpg", class: 'splash__info-set-info-block-cta-img'
+  .row.margin-top-40px
+    .col-sm-12
+      .splash__info-set
+        .splash__info-set-heading
+          RichApp for Businesses
+        .row
+          .col-sm-6
+            .splash__info-set-info-block
+              .splash__info-set-info-block-title
+                Richapp Open
+              .splash__info-set-info-block-description
+                Fully customizable open source crowdfunding pages
+              =link_to "learn more", class: 'splash__info-set-info-block-cta-link'
+
+          .col-sm-6
+            .splash__info-set-info-block
+              .splash__info-set-info-block-title
+                Richapp API
+              .splash__info-set-info-block-description
+                Add crowdfunding or group payments to your application
+              =link_to "learn more", class: 'splash__info-set-info-block-cta-link'

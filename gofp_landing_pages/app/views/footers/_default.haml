@@ -1,0 +1,65 @@
+%footer
+  .row#footer_menu
+    .col-sm-8.col-sm-offset-2
+      .row
+        .col-sm-12{ style: 'text-align: left;'}
+          .row
+            .col-sm-4
+              %h4 Stay Up To Date
+              =form_tag "#" do
+                .input-group
+                  =text_field_tag "subscription", nil, placeholder: "Email", class: 'form-control', type: 'email', required: 'true'
+                  .input-group-btn
+                    %button.btn.splash__cta-input-button{ :'data-disable-with' => disable_with_short() }
+                      %span="Go".html_safe
+                %h5
+                  .padding-top-10px
+                  Learn about the latest
+                  .padding-top-10px
+                  Boilerplate offerings from
+                  .padding-top-10px
+                  yada yada.
+            .col-sm-3
+              %h4 Support
+              =link_to 'General FAQ', "#"
+              =link_to "Acceptance on platform", "#"
+              =link_to "Payments", "#"
+              =link_to "Cancellations", "#"
+              =link_to "Reviews", "#"
+            .col-sm-3
+              %h4 Popular
+              =link_to "San Francisco Bay Area - Ruby on Rails", "#"
+              =link_to "San Francisco Bay Area - React", "#"
+              =link_to "San Francisco Bay Area - Python", "#"
+              =link_to "San Francisco Bay Area - Node.js", "#"
+              =link_to "New York City Area - Ruby on Rails", "#"
+              =link_to "Bostan, MA - Meteor", "#"
+              =link_to "Boston, MA - Angular", "#"
+              =link_to "Houston, Tx - Elixir", "#"
+            .col-sm-2
+              %h4 Contact
+              =link_to "contact@monkey.com", "#"
+              =link_to "1-800-123-44536" "#"
+              %span=link_to iconf('facebook'), "#"
+              %span=link_to iconf('twitter'), "#"
+
+  .row
+    #logo
+      %a{ href: root_path }
+        %span.title.no-wrap{ style: 'font-family:Pacifico; font-size:38px; margin-top:16px;' }
+          Boilerplate
+  .row.fourtn
+    Made with
+    %span.bold_red=iconf('heart')
+    for
+    =iconf('coffee')
+
+.row#legal
+  @2015 Boilerplate All Rights Reserved.
+  =link_to "Privacy", "#"
+  &
+  =link_to "Terms", "#"
+
+    
+
+=render "welcome/terms_conditions_privacy"

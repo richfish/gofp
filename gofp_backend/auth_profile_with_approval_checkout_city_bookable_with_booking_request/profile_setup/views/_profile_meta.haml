@@ -1,0 +1,25 @@
+.row.margin-top-10px
+
+  .col-xs-12
+    .fourtn.purple
+      %b
+        =profile.years_experience
+        Years
+      Professional Experience
+.row
+  .col-xs-12.meta{ style: 'font-size:14px'}
+    =link_to reviews_path, class: 'fourtn', style: 'color:#333333' do
+      -no_stars_reviews_str = "#{iconf('star')}#{iconf('star')}#{iconf('star')}#{iconf('star')}#{iconf('star')} on <span><a href='#' class='b-more bold_red'>0 reviews</a></span>"
+      -if current_user.bootcamps.complete.present?
+        -if current_user.reviews_count.to_i > 0
+          .color_alt.fourtn
+            =no_stars_reviews_str.html_safe
+        -else
+          -rating = current_user.avg_overall
+          -num_reviews = pluralize(current_user.reviews_count, 'review')
+          -stars_reviews_str = "#{num_to_stars(current_user.avg_overall) } on <span><a href='#{reviews_path}' class='b-more bold_red'>#{num_reviews}</a></span>"
+        .color_alt.fourtn
+          =stars_reviews_str.html_safe
+      -else
+        .color_alt.fourtn
+          =no_stars_reviews_str.html_safe

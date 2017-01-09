@@ -1,0 +1,109 @@
+-view_js :profile, :asset_images
+.profile
+  .col-sm-offset-1.col-sm-11
+    .title="#{@creating ? "Make" : "Edit"} Boilerplate Profile (Sample Fields Below)"
+
+    =toggle_info_panel do
+      %ul
+        %li This profile information will be shown to prospective clients
+        %li After submitting your profile info, you will be able to add x,y,z asset.
+        %li The most important minimum requirement for acceptance is 3 years of professional developer experience, and the thing we like to see the most is a robust portfolio of sites that you have built from scratch.
+        %li="Please read more about our <a href=#{provider_policies_path(anchor:'profile_guideliens')} target='_blank'>Profile Guidelines</a> and our <a href=#{provider_policies_path(anchor:'minimum_requirements')} target='_blank'> Minimum Requirements</a>".html_safe
+
+    .margin-top-20px
+    =form_for [current_user, @profile ||= current_user.build_profile], html: { multipart: true } do |f|
+      =errors(@profile)
+
+      .form-group.text
+        Picture
+        =tooltip("We use a portrait shape. Suggested dimensions are 300px (width) x 350px (height)")
+      =avatar_field(@profile.user.avatar.try(:image), f, :image_url => profile_image_path)
+
+      .form-inline
+        %h4
+          Name
+          =tooltip('Customers will respond better if you use your real identity. Meeting people in person is awesome, and you are good at it - be proud. But you still may have legitimate reasons to use a fake name.')
+        .form-group
+          =f.text_field :first_name, placeholder: 'First Name', class: 'input-lg form-control', style: 'min-width:280px'
+        .form-group
+          =f.text_field :last_name, placeholder: 'Last Name (optional)', class: 'input-lg form-control', style: 'min-width:280px'
+
+      .form-inline{ style: 'margin: 30px 0'}
+        .form-group.text
+          I Want to Help
+        .form-group
+          -people = ["Men", "Women"]
+          =f.select :customer_gender, options_for_select(people, 'Men'), {}, {multiple: 'multiple', class: 'form-control input-lg multiselect'}
+        .form-group.text{ style: 'margin-left:6px'}
+          Meet
+        .form-group
+          =f.select :target_gender, options_for_select(people, 'Women'), {}, {multiple: 'multiple', class: 'form-control input-lg multiselect'}
+
+      .form-group
+        %h4 Dating Bio
+        =f.text_area :datingbio, placeholder: 'In a few sentences, talk about your background and your dating experience.', class: 'input-lg form-control', rows: 3
+
+      .form-group
+        %h4 Your Outing
+        =f.text_area :service_description, placeholder: "In a few sentences, describe what your outing will be. For example, you'll go to a coffeeshop first to learn about the person, and then go and chat up people at your favorite happy hour bar.", class: 'input-lg form-control', rows: 3
+
+
+      .form-group
+        %h4 About the Customer
+        =f.text_area :about_customer, placeholder: 'Who are the ideal people you want to take out? Briefly describe what you expect from your customers', class: 'input-lg form-control', rows: 3
+
+      .form-group
+        %h4
+          Facebook or Other Social Media Link
+          =tooltip('Optional... but again, showing your actual self here may make people want to book with you more.')
+        =f.text_field :facebook_link, placeholder: "Optional. Paste public link to a social media profile or personal website", class: 'input-lg form-control'
+
+      .form-group
+        .form-inline
+          .form-group
+            %h4 Your Hourly Rate
+            .inner-addon.left-addon
+              =iconf('dollar')
+              =f.text_field :rate_cents, :value => (number_with_precision((f.object.rate_cents/100 rescue nil), :precision => 2) || nil), class: 'form-control input-lg currency_formatter'
+          .form-group.beers
+            %span Or
+            .checkbox
+              %label
+                =f.check_box :beers
+                =f.label :beers, "Just Buy Me Beers #{iconf('beer', nil, 'font-size:24px;')}".html_safe
+            =f.hidden_field :creating, value: true
+
+      .form-group{ style: 'margin-top: 30px; margin-bottom: 20px;'}
+        %h4 Specific Instructions for Outing?
+        %p="<i>This is only given to a customer after they have booked. It may be relevant to the place where you're going, how you want them to dress, etc. Just put \"Have fun!\" if anything.</i>".html_safe
+        =f.text_area :instructions, placeholder: "Tell them to wear a jacket, to have eaten before, to put on sunscreen, whatever may be relevant.", class: 'input-lg form-control', rows: 3
+
+      .form-group{ style: 'margin: 30px 0px 14px 0px'}
+        %span{ style: 'font-size:18px'} Method for Customer Contact
+        =tooltip("This will never be shown until someone pays for a booking. Your customer may need to contact you last minute, so please provide either a phone or email. Customers are advised this is only for emergencies or last minute logistics.")
+      .form-inline
+        .form-group
+          Email
+          =tooltip("You may not want to use your normal email address, so put whichever one want to be contacted at.")
+        .form-group
+          =f.text_field :customer_contact_email, placeholder: "example@example.com",  class: 'input-lg form-control', style: 'min-width: 350px'
+      .form-group{ style: 'margin: 5px 0px'}
+        Or
+      .form-inline{ style: 'margin-bottom: 40px'}
+        .form-group
+          Phone
+          =tooltip("Format however.")
+        .form-group
+          =f.text_field :phone, placeholder: "(281) 330-8004",  class: 'input-lg form-control', style: 'min-width: 350px'
+
+
+
+      -button_text = unless @creating
+        -if @profile.published?
+          -"Publish Changes"
+        -else
+          -"Submit Edits"
+      -else
+        -"Create Profile"
+      =orange_submit_button(button_text)
+

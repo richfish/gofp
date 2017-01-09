@@ -1,0 +1,16 @@
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/Users/richard/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170108-25630-1jpshjx.rb extconf.rb
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

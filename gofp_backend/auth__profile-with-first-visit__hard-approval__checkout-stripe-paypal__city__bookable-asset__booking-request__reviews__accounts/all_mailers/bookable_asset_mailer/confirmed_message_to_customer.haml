@@ -1,0 +1,29 @@
+%p="Hi #{@booking_request.guest_name},"
+
+%p
+  You're all set for your upcoming BookableAsset! This is a message to confirm that
+  =@bookable_asset.user.first_name
+  has confirmed your bookable_asset request for
+  =link_to @bookable_asset.name, user_bookable_asset_url(@bookable_asset.user, @bookable_asset)
+
+%p
+  You will be put in touch directly with the instructor momentarily. Please make sure to chat with him or her to confirm that everything, such location, dates, times, prerequisites, requirements, etc. are all ducks in a row.
+
+%p
+  As of now, your bookable_asset is slated to begin at
+  =@bookable_asset.start_date
+  at
+  =@bookable_asset.decorate.start_time_first_day
+  at the location
+  =@bookable_asset.location
+
+%p
+  Be sure to familiarize yourself with policies ranging from refunds, cancellations, disputes, and reviews at
+  =link_to "policies page", policies_path
+  and for any questions, concerns, of things that may need to involve use, make sure to message us at
+  =link_to "support@monkey.com", "mailto:support@monkey.com"
+
+%p
+  Best,
+  %br
+  Monkey Team

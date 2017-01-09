@@ -1,0 +1,86 @@
+@import 'mixins'
+@import 'constants'
+
+footer
+  width: 100%
+  background-color: $blackPurple
+  text-align: center
+  color: $dadaGray
+  min-height: 420px
+  font-size: medium
+  font-weight: lighter
+  #footer_menu
+    min-height: 260px
+    padding-top: 40px
+    h4
+      font-size: 16px
+      font-weight: 300
+      color: white
+    a
+      display: block
+      color: #DEDEDE
+      font-size: 12px
+    .input-group
+      width: 180px
+    button
+      width: 60px      
+    input
+      width: 140px
+      border-radius: 2px
+      height: 50px
+    @media (max-width: 767px)
+      padding-left: 15px      
+  span
+    height: 25px
+    line-height: 25px
+    display: inline-block
+  i
+    display: inline-block
+    vertical-align: middle
+  .pull-right
+    font-weight: lighter
+    &:hover
+      text-decoration: none
+  #logo
+    margin-left: 30px
+    height: 80px
+    z-index: 10000
+    margin-top: 18px    
+    span
+      margin-right: -3px
+      font-weight: 400
+      opacity: .9
+      letter-spacing: -1px
+    a
+      color: $backgroundGray !important
+      text-decoration: none
+      font-size: 14px
+      &:hover
+        color: white
+  .bullets
+    text-align: right
+    font-size: 14px
+    min-height: 80px
+    @include translate-y(36%)
+    a
+      transition: all 0.2s ease
+      margin-right: 20px
+      color: $dadaGray
+      &:hover
+        color: white
+        text-decoration: none
+  @media (max-width: 540px)
+    .xxs_break
+      width: 100%
+      
+      
+#legal
+  font-size: 14px
+  background-color: black
+  color: white
+  text-align: center
+  height: 32px
+  padding: 6px
+  a    
+    color: $brighterBlue
+    text-decoration: underline      

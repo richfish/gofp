@@ -1,0 +1,250 @@
+-view_css :splash_page_full_1
+
+:coffeescript
+  $(document).ready ->
+    navToggler = $(".asset-splash-page__page-toggler-and-nav")
+    topContainer = $(".asset-splash-page__top-section-container")
+    height = topContainer.height() + topContainer.offset().top
+    navToggler.css('top', height + 'px')
+
+    $(".asset-splash-age__description-section-reward").hover ->
+      overlay = $(".asset-splash-age__description-section-reward-overlay").clone()
+      container = $(this)
+      container.append(overlay.show())
+      overlay.addClass('animated fadeIn')
+    , ->
+      $(this).find(".asset-splash-age__description-section-reward-overlay").addClass('fadeOut')
+      setTimeout ->
+       $(".asset-splash-age__description-section-reward-overlay.fadeOut").remove()
+      , 1000
+
+
+
+
+
+
+.asset-splash-page__top-section-container
+  .asset-splash-page__top-section-heading
+    .asset-splash-page__top-section-title
+      Let's make art history and preserve Joaquín Orellana's work.
+    .asset-splash-page__top-section-author-byline
+      %span by
+      NuMu
+  .row.asset-splash-page__asset-and-meta-secton
+    .col-sm-8
+      .asset-splash-page__top-section-main-asset2-yada-experimenting
+        =image_tag "welcome/awkwardtable.jpg", style: 'height:100%; width:100%;'
+        .asset-splash-page__top-section-main-asset-img-toggler
+          .asset-splash-page__top-section-main-asset-img-toggler-arrow--left
+            =iconf('chevron-left')
+          .asset-splash-page__top-section-main-asset-img-toggler-arrow--right
+            =iconf('chevron-right')
+    .col-sm-4
+      .asset-splash-page__top-section-asset-meta
+        .asset-splash-page__top-section-asset-meta-point
+          .asset-splash-page__top-section-asset-meta-point--data
+            88
+          .asset-splash-page__top-section-asset-meta-point--label
+            Backers
+        .asset-splash-page__top-section-asset-meta-point
+          .asset-splash-page__top-section-asset-meta-point--data
+            $23,330
+          .asset-splash-page__top-section-asset-meta-point--label
+            pledged of $30,000 goal
+        .asset-splash-page__top-section-asset-meta-point
+          .asset-splash-page__top-section-asset-meta-point--data
+            11
+          .asset-splash-page__top-section-asset-meta-point--label
+            days to go
+
+        .row.asset-splash-page__cta-row.o-visible
+          .col-sm-7
+            .asset-splash-page__top-section-asset-cta-btn
+              Back This Project
+          .col-sm-5
+            .asset-splash-page__top-section-asset-cta-remind-btn
+              =iconf('star')
+              Remind Me
+        .asset-splash-page__top-section-asset-disclaimer-blurb
+          This project will only be funded if at least $30,000 is pledged by Wed, Dec 30 2015 9:43 PM PST.
+  .row
+    .col-sm-8
+      .asset-splash-page__top-section-tags
+        .asset-splash-page__top-section-tag
+          =iconf('map-marker')
+          Guatemala City, Guatemala
+        .asset-splash-page__top-section-tag
+          =iconf('tag')
+          Art
+      .asset-splash-page__top-section-author-logline
+        Joaquín Orellana is a groundbreaking Guatemalan sound artist. Help record his masterpieces and preserve his unique artistic legacy.
+      .asset-splash-page__top-section-share-row
+        %span
+          Share:
+        .asset-splash-page__top-section-shareable
+          =iconf('twitter')
+          Tweet
+        .asset-splash-page__top-section-shareable
+          =iconf('facebook-square')
+          Share
+        .asset-splash-page__top-section-shareable
+          =iconf('code')
+          Embed
+        .asset-splash-page__top-section-shareable
+          =iconf('pinterest')
+          Pin
+        .asset-splash-page__top-section-shareable
+          =iconf('tumblr')
+          Post
+    .col-sm-4
+      .row.asset-splash-page__author-meta-section
+        .col-sm-8
+          .asset-splash-page__top-section-author-name
+          .asset-splash-page__top-section-author-meta
+            .asset-splash-page__top-section-author-meta-point
+              =iconf('bolt')
+              First Created
+            .asset-splash-page__top-section-author-meta-point-divider
+            .asset-splash-page__top-section-author-meta-point--bolder
+              4 Backed
+            .asset-splash-page__top-section-author-meta-point--bolder
+              =iconf('globe')
+              elnuevomuseo.org
+          .asset-splash-page__top-section-author-links
+            %span
+              See full bio
+            %span
+              Contact me
+        .col-sm-4
+          =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__top-section-author-avatar'
+
+
+-content_for :full_width_content do
+  .asset-splash-page__page-toggler-and-nav.hidden-xs
+    .row
+      .col-xs-6
+        .row
+          .col-sm-12.col-md-10.col-md-offset-1
+            .row
+              .col-xs-4
+                .asset-splash-page__page-toggler-and-nav-nav-item.asset-splash-page__page-toggler-and-nav-nav-item--active
+                  Campaign
+              .col-xs-4
+                .asset-splash-page__page-toggler-and-nav-nav-item
+                  Updates (3)
+              .col-xs-4
+                .asset-splash-page__page-toggler-and-nav-nav-item
+                  Comments (1)
+      .col-xs-6
+        .col-xs-5.col-xs-offset-2
+          .asset-splash-page__page-toggler-and-nav-cta-btn
+            Back This Project
+        .col-xs-5
+          .asset-splash-page__page-toggler-and-nav-cta-remind-btn
+            =iconf('star')
+            Remind Me
+        .col-xs-4
+
+.asset-splash-age__description-section
+  .row
+    .col-sm-8
+      .asset-splash-age__description-section-main-heading
+        About this project
+      .asset-splash-age__description-section-title
+        Presenting Joaquín Orellana
+      .asset-splash-age__description-section-paragraph
+        PINE A64 is not only a computer, it is a super affordable 64-bit high performance expandable single board computer (SBC).  Whether you are an IT professional, electronics hobbyist, student, teacher, hacker, inventor, or just someone who wants to have more flexibility to increase their productivity at work, the PINE A64 is a computer board made for everyone.  Enjoy more fun and entertainment at home with endless possibilities.
+      .asset-splash-age__description-section-asset
+        =image_tag 'welcome/awkwardtable.jpg', class: 'asset-splash-age__description-section-img'
+        .asset-splash-age__description-section-img-caption
+          PINE A64 boards next to iPhone 6S for size comparison
+      .asset-splash-age__description-section-paragraph
+        Unfortunately most of his work is at risk of being lost, as it has never been properly recorded or preserved. His music notation system is highly original and peculiar, making it impossible for musicians to interpret without proper instruction. Currently the only way to play his music is for Orellana to direct it himself.
+      .asset-splash-age__description-section-title
+        How we're making art history
+      .asset-splash-age__description-section-paragraph
+        Orellana is a pioneering sound artist who has been experimenting with electroacoustic music since the early 1960s. However, unlike other artists from his generation, he didn't have access to leading technology and was forced to invent a series of primitive instruments that when played together produce sound sequences, which simulate electronic music.
+      .asset-splash-age__description-section-main-heading
+        Risks and Challenges
+      .asset-splash-age__description-section-faq
+        .asset-splash-age__description-section-main-heading
+          FAQ
+        .asset-splash-age__description-section-faq-link
+          Is sound supported through the hdm connector?
+        .asset-splash-age__description-section-faq-link
+          What picture format does the camera card support?
+      .asset-splash-age__description-section-ask-question-button
+        Ask a Question
+      .asset-splash-age__description-section-report-button
+        Report this project to KickStarter
+
+
+    .col-sm-4
+      .asset-splash-age__description-section-main-heading
+        Rewards
+      .asset-splash-age__description-section-reward
+        .asset-splash-age__description-section-reward-pledge-amount
+          Pledge $10 or more
+        .asset-splash-age__description-section-reward-num-backers
+          =iconf('level-up')
+          21 backers
+        .asset-splash-age__description-section-reward-description
+          Poster designed by Carlos Amorales and inspired by the work of Joaquín Orellana, a unique opportunity to download a commissioned documentary on Orellana by Jose Wolff featuring interviews with the artist, and all of the above.
+        .asset-splash-age__description-section-reward-footer
+          .row
+            .col-xs-6
+              .asset-splash-age__description-section-reward-meta-label
+                Estimated delivery:
+              .asset-splash-age__description-section-reward-meta-data
+                May 2016
+            .col-xs-6
+              .asset-splash-age__description-section-reward-meta-label
+                Ships to:
+              .asset-splash-age__description-section-reward-meta-data
+                Anywhere in the world
+
+      .asset-splash-age__description-section-reward
+        .asset-splash-age__description-section-reward-pledge-amount
+          Pledge $25 or more
+        .asset-splash-age__description-section-reward-num-backers
+          =iconf('level-up')
+          21 backers
+        .asset-splash-age__description-section-reward-description
+          Poster designed by Carlos Amorales and inspired by the work of Joaquín Orellana, a unique opportunity to download a commissioned documentary on Orellana by Jose Wolff featuring interviews with the artist, and all of the above.
+        .asset-splash-age__description-section-reward-footer
+          .row
+            .col-xs-6
+              .asset-splash-age__description-section-reward-meta-label
+                Estimated delivery:
+              .asset-splash-age__description-section-reward-meta-data
+                May 2016
+            .col-xs-6
+              .asset-splash-age__description-section-reward-meta-label
+                Ships to:
+              .asset-splash-age__description-section-reward-meta-data
+                Anywhere in the world
+
+      .asset-splash-age__description-section-reward
+        .asset-splash-age__description-section-reward-pledge-amount
+          Pledge $50 or more
+        .asset-splash-age__description-section-reward-num-backers
+          =iconf('level-up')
+          21 backers
+        .asset-splash-age__description-section-reward-description
+          Poster designed by Carlos Amorales and inspired by the work of Joaquín Orellana, a unique opportunity to download a commissioned documentary on Orellana by Jose Wolff featuring interviews with the artist, and all of the above.
+        .asset-splash-age__description-section-reward-footer
+          .row
+            .col-xs-6
+              .asset-splash-age__description-section-reward-meta-label
+                Estimated delivery:
+              .asset-splash-age__description-section-reward-meta-data
+                May 2016
+            .col-xs-6
+              .asset-splash-age__description-section-reward-meta-label
+                Ships to:
+              .asset-splash-age__description-section-reward-meta-data
+                Anywhere in the world
+
+.asset-splash-age__description-section-reward-overlay{ style: 'display:none;'}
+  .asset-splash-age__description-section-reward-overlay-txt
+    Select this reward

@@ -1,0 +1,328 @@
+@import "constants"
+@import "mixins"
+
+.splash__nav-sidebar
+  width: 240px
+  position: fixed
+  height: 100%
+  top: 0
+  left: 0
+  background-color: #3d4542
+  z-index: 1
+  padding-top: 42px
+  overflow-y: scroll
+.splash__container
+  margin-left: 170px
+  padding-left: 70px
+.splash__nav-sidebar-logo
+  margin-bottom: 40px
+  text-align: center
+.splash__nav-sidebar-logo-txt
+  color: #ffa300
+  font-size: 24px
+  font-weight: 500
+  padding-left: 5px
+  display: inline-block
+  vertical-align: middle
+.splash__nav-sidebar-logo-img
+  height: 40px
+.splash__nav-sidebar-section
+  padding-left: 20px
+  margin-bottom: 30px
+.splash__nav-sidebar-section-title
+  text-transform: uppercase
+  color: #7a8581
+  font-size: 12px
+  letter-spacing: 1px
+  margin-bottom: 2px
+.splash__nav-sidebar-section-link-list
+  list-style-type: none
+  padding-left: 8px
+  li
+    line-height: 32px
+    .fa
+      padding-right: 8px
+      color: #7a8581
+      font-size: 20px
+      vertical-align: middle
+    a
+      color: white
+      font-size: 16px
+      font-weight: 300
+      opacity: .9
+
+.splash__core-btn-theme
+  border-radius: 3px
+  padding: 10px 16px 8px 16px !important
+  color: white
+  text-align: center
+  font-size: 16px
+.splash__header-link-list-item-box--shaded
+  @extend .splash__core-btn-theme
+  background-color: #00a19a
+  border-color: #00817b
+  border-bottom: 2px solid #007473
+.splash__header-link-list-item-box--transparent
+  @extend .splash__core-btn-theme
+
+.splash__nav-sidebar-cta-btn--shaded
+  @extend .splash__header-link-list-item-box--shaded
+  margin-bottom: 10px
+  margin-left: 12px
+  margin-right: 12px
+.splash__nav-sidebar-cta-box
+  background-color: #383f3c
+  padding: 8px
+  font-size: 16px
+  text-align: center
+  span
+    color: #747f7b
+    opacity: .9
+  a
+    color: #00a19a
+    text-decoration: none
+
+
+.splash__container
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), asset-url("welcome/awkwardtable.jpg")
+  background-size: cover
+  height: 500px
+.splash__central-content
+  max-width: 640px
+  text-align: center
+  padding-top: 160px
+  color: white
+  margin: auto
+  text-shadow: 0 0 2px rgba(0,0,0,.6)
+.splash__central-content-title
+  margin-bottom: 20px
+  font-size: 48px
+  line-height: 48px
+.splash__central-content-subtitle
+  font-size: 20px
+  line-height: 26px
+
+.splash__wrapper
+  margin-left: 170px
+  padding-left: 70px
+.splash__cta-section
+  max-width: 480px
+  text-align: center
+  margin: auto
+  padding-top: 70px
+  padding-bottom: 70px
+.splash__cta-section-title
+  margin-bottom: 2px
+  font-size: 30px
+  color: #3d4542
+  font-weight: 200
+.splash__cta-section-subtitle
+  font-size: 12px
+  margin-bottom: 16px
+  color: #747f7b
+.splash__cta-section-sign-in-link
+  color: #00a19a
+  text-decoration: none
+.splash__cta-section-form
+  padding: 20px 0px
+  input,select
+    width: 100%
+    margin-bottom: 16px
+    color: #87928E
+    font-size: 15px
+    padding-left: 10px
+.splash__cta-section-submit-btn
+  @extend .splash__nav-sidebar-cta-btn--shaded
+  background-color: #00a19a
+  padding-top: 16px !important
+  padding-bottom: 16px !important
+  max-width: 290px
+  margin: auto
+  margin-bottom: 10px
+.splash__cta-section-disclaimer
+  font-size: 12px
+  color: #747f7b
+
+
+//placeholder stylings
+::-webkit-input-placeholder
+  font-size: 14px
+  color: rgba(128, 128, 128, 0.84)
+
+\:-moz-placeholder
+  color: #909
+  opacity: 1
+
+::-moz-placeholder
+  color: #909
+  opacity: 1
+
+\:-ms-input-placeholder
+  color: #909
+
+
+
+.splash__icon-set
+  padding-top: 40px
+  padding-bottom: 70px
+.splash__icon-set-icon
+  text-align: center
+  max-width: 270px
+.splash__icon-set-icon-img
+  margin-bottom: 30px
+  img
+    height: 168px
+.splash__icon-set-icon-name
+  font-size: 26px
+  color: #00a19a
+  margin-bottom: 10px
+.splash__icon-set-icon-description
+  line-height: 26px
+  color: #747f7b
+  font-size: 20px
+  margin-bottom: 20px
+.splash__icon-set-icon-cta-link
+  font-size: 16px
+  color: #00a19a
+  font-weight: 300
+  letter-spacing: .5px
+
+
+.splash__testimonial
+  background-color: #fbfbfb
+  padding-top: 60px
+  padding-bottom: 60px
+  border-top: 1px solid #eee
+  border-bottom: 1px solid #eee
+.splash__testimonial-avatar-img
+  border-radius: 50%
+  height: 200px
+  padding-right: 20px
+.splash__testimonial-quote-txt
+  font-size:  24px
+  font-weight: 200
+  max-width: 550px
+  position: relative
+  margin-bottom: 30px
+  line-height: 31px
+  .fa
+    position: absolute
+    top: 2px
+    left: -36px
+    color: #e6e6e6
+    font-size: 26px !important
+.splash__testimonial-name
+  color: #3d4542
+  font-weight: 600
+  display: inline-block
+  font-size: 16px
+.splash__testimonial-location
+  color: #747f7b
+  display: inline-block
+  font-size: 16px
+.splash__testimonial-link-to-more
+  font-size: 16px
+  a
+    font-weight: 500
+    color: #00a19a
+    text-decoration: none
+
+
+
+.splash__who-uses-section
+  padding-top: 120px
+  padding-bottom: 70px
+.splash__who-uses-section-data-box
+  display: inline-block
+  margin-right: 4px
+  border-radius: 4px
+  height: 200px
+  width: 190px
+  text-align: center
+  color: white
+.splash__who-uses-section-data-number-box
+  width: 100%
+  font-size: 30px
+  height: 50%
+  padding-top: 28px
+  font-weight: 200
+  border-top-left-radius: 4px
+  border-top-right-radius: 4px
+.splash__who-uses-section-data-label-box
+  width: 100%
+  height: 50%
+  padding-top: 20px
+  border-bottom-left-radius: 4px
+  border-bottom-right-radius: 4px
+.splash__who-uses-section-data-label-bold
+  font-size: 20px
+  font-weight: 400
+  margin-bottom: 2px
+.splash__who-uses-section-data-label-faded
+  font-size: 16px
+  font-weight: 200
+.splash__who-uses-section-data-number-box--1
+  @extend .splash__who-uses-section-data-number-box
+  background-color: #009992
+.splash__who-uses-section-data-label-box--1
+  @extend .splash__who-uses-section-data-label-box
+  background-color: #00a19a
+.splash__who-uses-section-data-number-box--2
+  @extend .splash__who-uses-section-data-number-box
+  background-color: #f29b00
+.splash__who-uses-section-data-label-box--2
+  @extend .splash__who-uses-section-data-label-box
+  background-color: #ffa300
+.splash__who-uses-section-data-number-box--3
+  @extend .splash__who-uses-section-data-number-box
+  background-color: #4daf6e
+.splash__who-uses-section-data-label-box--3
+  @extend .splash__who-uses-section-data-label-box
+  background-color: #55b475
+
+
+
+.splash__who-uses-section-title
+  color: #3d4542
+  font-size: 32px
+  margin-bottom: 10px
+  white-space: nowrap
+  font-weight: 200
+.splash__who-uses-section-description
+  line-height: 26px
+  color: #747f7b
+  margin-bottom: 20px
+  font-size: 20px
+.splash__who-uses-section-disclaimer
+  color: #747f7b
+  font-size: 12px
+
+
+.splash__security-section
+  background: asset-url("cozy-background-security.jpg") center no-repeat
+  background-size: cover
+  padding: 70px
+.splash__security-section-btn
+  background-color: #55b475
+  text-transform: uppercase
+  letter-spacing: .05em
+  border-radius: 1000px
+  padding: 12px 28px
+  color: white
+  font-size: 16px
+  display: inline-block
+.splash__security-section-central-content
+  max-width: 470px
+  text-shadow: 0 0 2px rgba(0,0,0,.6)
+  color: white
+  padding-top: 80px
+  margin-bottom: 80px
+.splash__security-section-title
+  font-size: 36px
+  line-height: 42px
+  margin-bottom: 10px
+  font-weight: 200
+.splash__security-section-description
+  font-size: 20px
+  line-height: 26px
+  font-weight: 200

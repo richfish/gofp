@@ -1,0 +1,13 @@
+- content_for :content do
+  %h1 Issue with your profile
+
+  %p="Hi #{@profile.full_name},"
+  %p="We had an issue with your profile... Please take a look below:"
+  %p=@profile.issues.unresolved.first.description
+
+  %p="Please go to your <a href='#{user_url(@profile.user)}'>Profile Page</a> to correct it.".html_safe
+
+  %h3 Relevant Policies
+  %p="If you aren't familiar with boilerplate bolierplate policies about profiles, #{link_to 'Please read up on relevant policies', policies_provider_url}".html_safe
+
+  %p="Best, <br /> The Boilerplate Folks".html_safe

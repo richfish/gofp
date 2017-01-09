@@ -1,0 +1,20 @@
+%p="Hi #{@booking_request.first_name},"
+%p
+  Please leave a review for
+  =@bookable_asset.user.full_name
+  for your recent bookable_asset,
+  ="#{@bookable_asset.name}. "
+  You have 7 days after the outing to leave a review if you wish to do so.
+
+%p
+  =link_to "Leave Review for #{@bookable_asset.user.first_name.capitalize}", new_review_url(euid: @bookable_asset.review_key), target: '_blank'
+
+%p
+  If you want, checkout our
+  =link_to "review policies page", reviews_policy_url
+  to learn more about reviews.
+
+%p
+  Best,
+  %br
+  Monkey Team

@@ -1,0 +1,35 @@
+.inquiries
+  .title_small
+    =iconf('comment')
+    Inquiries about this Bootcamp
+    %span.see_more.fourtn.margin-left-10px
+      =iconf('caret-down')
+      =iconf('caret-right', nil, 'display:none')
+      Hide Inquiries
+  .see_more_section
+    -conversations = ConversationDecorator.decorate_collection Conversation.for_bootcamp(bootcamp)
+    -conversations.each do |conversation|
+      .conversation_summary
+        .row
+          .col-xs-9.col-md-6
+            .color_alt
+              %span.bold_red.fourtn
+                =conversation.guest_name
+              inquired on
+              %span.fourtn
+                =conversation.display_date
+              %span.upcase.twelve
+                -count = conversation.comments_count
+                =count == 1 ? ' - new' : " - #{count} messages"
+
+            .fourteen
+              =truncate(conversation.first_message.message, length: 100)
+          .col-xs-3.col-md-6
+            =link_to conversation_path(conversation, euid: conversation.euid) do
+              %button.submit_button_xsmall_secondary.squeeze
+                View
+
+
+
+
+

@@ -1,0 +1,33 @@
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/unicorn-5.2.0/ext/unicorn_http
+/Users/richard/.rvm/rubies/ruby-2.3.3/bin/ruby -r ./siteconf20170108-25630-1dtvwx1.rb extconf.rb
+checking for SIZEOF_OFF_T in ruby.h... yes
+checking for SIZEOF_SIZE_T in ruby.h... yes
+checking for SIZEOF_LONG in ruby.h... yes
+checking for rb_str_set_len() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+checking for gmtime_r() in time.h... yes
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/extensions/x86_64-darwin-16/2.3.0/unicorn-5.2.0/mkmf.log
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/unicorn-5.2.0/ext/unicorn_http
+make "DESTDIR=" clean
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/unicorn-5.2.0/ext/unicorn_http
+make "DESTDIR="
+compiling httpdate.c
+compiling unicorn_http.c
+unicorn_http.c:300:18: warning: unused variable 'http_parser_en_ChunkedBody_chunk_chunk_end' [-Wunused-const-variable]
+static const int http_parser_en_ChunkedBody_chunk_chunk_end = 105;
+                 ^
+unicorn_http.c:302:18: warning: unused variable 'http_parser_en_main' [-Wunused-const-variable]
+static const int http_parser_en_main = 1;
+                 ^
+2 warnings generated.
+linking shared-object unicorn_http.bundle
+
+current directory: /Users/richard/projects/garden_of_forking_paths/gofp_combinator/vendor/bundle/ruby/2.3.0/gems/unicorn-5.2.0/ext/unicorn_http
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 unicorn_http.bundle ./.gem.20170108-25630-1h3no92

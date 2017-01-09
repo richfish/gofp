@@ -1,0 +1,26 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: template_dev_env
+  password: root
+  min_messages: WARNING
+
+heroku: &heroku
+
+development:
+  <<: *common
+  database: template_dev_env_development
+
+test:
+  <<: *common
+  database: template_dev_env_test
+
+staging:
+  <<: *heroku
+  database: template_dev_env_staging
+
+production:
+  <<: *heroku
+  database: template_dev_env_production

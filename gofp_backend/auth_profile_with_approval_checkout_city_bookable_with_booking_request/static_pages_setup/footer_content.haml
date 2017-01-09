@@ -1,0 +1,18 @@
+%footer
+  .container.text-center
+    .row
+      .col-xs-4.xxs_break
+        #logo
+          %a{ href: root_path }
+            %span{ class: 'title' } Boiler
+            plate
+            App
+      .col-xs-8.xxs_break
+        .bullets
+          %a{:href => policies_path, target: "_blank"}
+            FAQ
+          %a{:href => policies_path(anchor:'booking_issues'), target: "_blank"}
+            Booking Help
+          %a{:href => "mailto:support@offlinedating.io", target: "_blank"}
+            %i.fa.fa-fw.fa-1x.fa-envelope{ style: 'margin:-4px -2px 0px 0px'}
+            Talk to us

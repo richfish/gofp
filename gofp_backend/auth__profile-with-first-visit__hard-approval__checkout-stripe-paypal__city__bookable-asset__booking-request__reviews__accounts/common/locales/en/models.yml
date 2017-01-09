@@ -1,0 +1,29 @@
+#################################################
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#  PLEASE KEEP ALL KEYS IN ALPHABETICAL ORDER
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#################################################
+en:
+  # activerecord:
+  #   attributes:
+  #     profile:
+  #       datingbio: "Dating Bio"
+  #       rate_cents: "Your Hourly Rate"
+  #       service_description: "Your Outing"
+  # errors:
+  #   template:
+  #     header:
+  #       one: "C'mon man, be careful"
+  #       other: "C'mon man, be careful."
+  #   models:
+  #     profile:
+  #       attributes:
+  #         rate_cents:
+  #           blank: "You should provide a thingie"
+  #           numericality: "Listen up ya'll"
+
+
+
+
+
+

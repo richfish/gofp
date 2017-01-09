@@ -1,0 +1,48 @@
+-view_css :carousel_1
+
+.splash-carousel__container
+
+  #carousel-example.carousel.slide{ 'data-ride' => 'carousel'}
+    %ol.carousel-indicators
+      %li.active{ 'data-target' => '#carousel-example', 'data-slide-to' => 0 }
+      %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 1 }
+      %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 2 }
+    .carousel-inner{ 'role' => 'listbox' }
+      .item.active
+        =image_tag "welcome/date.jpg"
+      .item
+        =image_tag "welcome/awkwardtable.jpg"
+      .item
+        =image_tag "welcome/browserbackdrop.png"
+
+    %a.left.carousel-control{ href: '#carousel-example', 'data-slide' => 'prev' }
+      %span.glyphicon.glyphicon-chevron-left
+    %a.right.carousel-control{ href: '#carousel-example', 'data-slide' => 'next' }
+      %span.glyphicon.glyphicon-chevron-right
+
+
+  =render "headers/streak_and_hover"
+
+  .splash__cta-container-backdrop--center-center
+    .splash__cta-heading
+      The Best Magic Wands Ever
+    .splash__cta-teaser
+      Impress your Friends, and then dance a lot. We promise.
+    .splash__cta-lower-container--center
+      .splash__cta-input-header
+        FIND WHAT YOURE LOOKING FOR NOW
+      =form_tag "/" do
+        .input-group
+          =text_field_tag "boilerplate[test_1]", nil, placeholder: "Enter Search Term", class: 'splash__cta-input form-control'
+          .input-group-btn
+            %button.btn.splash__cta-input-button{ :'data-disable-with' => disable_with_short() }
+              Browse
+      .splash__cta-or-seperator
+        &#8212;
+        OR
+        &#8212;
+      %button.btn.btn-border-white
+        ="#{iconf('gift', nil, 'font-size: 20px;opacity:.7;')} &nbsp; Learn How It Works".html_safe
+
+  .splash__cta-footer--black
+    This is a footer you can do some stuff with

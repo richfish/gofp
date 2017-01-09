@@ -1,0 +1,48 @@
+-if false#artist.profile.beers
+  -booking_rate = "#{iconf('beer')} Beers".html_safe
+  -booking_cost_no_fee = "#{iconf('beer')} Beers".html_safe
+  -service_fee = number_to_currency(0)
+  -booking_total = "#{iconf('beer')} Beers".html_safe
+-else
+  -booking_rate = number_to_currency(30.90)
+  -booking_cost_no_fee = number_to_currency(120.99)
+  -#booking_manager = BookingFeeManager.new(booking)
+  -service_fee = number_to_currency(10.23)
+  -booking_total = number_to_currency(131.22)
+
+.row
+  .col-sm-12{ style: 'min-height: 165px'}
+    .heading="Order Summary".upcase
+    %hr.hr_thin
+    .row
+      .col-xs-6
+        =pluralize(booking.num_hours, "hour")
+        %br
+        ="(#{booking_rate}/Hour)".html_safe
+      .col-xs-6
+        =booking_cost_no_fee
+    .row
+      .col-xs-6
+        ="Service Fee"
+      .col-xs-6
+        =service_fee
+    .row
+      .col-xs-6
+        %b="Total"
+      .col-xs-6
+        %b=booking_total
+.row
+  .col-sm-12{ style: 'min-height: 300px; margin-bottom:50px'}
+    .heading="Payment Info".upcase
+    %hr.hr_thin
+      =render "orders/cc_form", booking_total: booking_total
+.row
+  .col-sm-12{ style: 'min-height: 200px'}
+    .heading="About you"
+    %hr.hr_thin
+      -if current_user && false#current_user.is_customer?
+        %p="Hey #{current_user.first_name}, welcome back."
+        %p="You're signed into your customer account."
+      -else
+        %p="Already have an account? If you want, <a href=#{login_path(123123)}>click here and log in</a>, you can checkout more quickly and see everything on your dashboard.".html_safe
+        %p="Otherwise you are booking as a guest. You can create an account after booking. Why? Keep track of things on your dashboard and rebook quickly."

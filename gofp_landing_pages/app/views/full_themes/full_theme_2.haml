@@ -1,0 +1,134 @@
+-view_css :full_theme_2
+-view_js :gigster
+
+.splash__container.container
+
+  =render "slideout_menus/default"
+  .splash__header-container
+    .splash__header-logo
+      =image_tag "gigster-logo.png", class: 'splash__header-logo-img'
+      .splash__header-logo-txt
+        Richster
+    .splash__header-link-list-items
+      .visible-xs
+        =mobile_menu_toggler_button
+      .visible-md.visible-lg.visible-sm
+        %ul
+          %li
+            =link_to "#" do
+              Who we are
+          %li
+            =link_to "#" do
+              Success Stories
+          %li
+            =link_to "#" do
+              How it works
+          %li
+            =link_to "#SignupLinkReplace" do
+              Join us
+          %li
+            =link_to "#LoginLinkReplace" do
+              Log in
+  .splash__below-header-flourish
+    =link_to "#", class: 'splash__below-header-bubble' do
+      Something Here!
+
+  .splash__central-content
+    .row
+      .col-sm-8
+        .splash__central-content-title
+          Richapp an elite team in just minutes
+        .splash__central-content-subtitle
+          Richapp connects you with Silicon Valley based product managers and top 1% software developers from our vetted talent pool. Get a guaranteed price quote in minutes.
+        .splash__central-content-cta-btn.btn-gigster--blue
+          Start a project
+      .col-sm-4
+        #carousel-example.carousel.slide{ 'data-ride' => 'carousel'}
+          .carousel-inner{ 'role' => 'listbox' }
+            .item.active
+              =image_tag "gigster-carousel-1.svg"
+            .item
+              =image_tag "gigster-carousel-2.svg"
+            .item
+              =image_tag "gigster-carousel-3.svg"
+          %ol.carousel-indicators
+            %li.active{ 'data-target' => '#carousel-example', 'data-slide-to' => 0 }
+            %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 1 }
+            %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 2 }
+    .splash__central-content-cta-arrow
+      =iconf('chevron-down')
+
+.splash__section
+  .container
+
+    .row{ style: 'margin-bottom: 100px;'}
+      .col-sm-6
+        .splash__section-quote
+          .splash__section-quote-card
+            =image_tag "welcome/awkwardtable.jpg", class: 'splash__section-quote-avatar'
+            .splash__section-quote-txt
+              I needed a simple program that would control the callbox in my apartment building. I found out about Gigster and in less than 5 minutes the project was fully spec'd and underway. It was delivered in days and I use it every day to get into my building. This was an amazing experience!
+            .splash__section-quote-author-name
+              Michael Siebeloya
+            .splash__section-quote-author-job
+              Partner at Z Combinator
+
+      .col-sm-6
+        .splash__section-info-box
+          .splash__section-info-box-heading-name
+            %span
+              Success Stories
+          .splash__section-info-box-title
+            Learn about Richsters from our customers
+          .splash__section-info-box-subtitle
+            We couldn't be prouder of the work we've done and, luckily, our customers feel the same way. Hear what they have to say.
+          =link_to "#", class: 'splash__section-info-box-cta-link' do
+            Read More
+            =iconf('chevron-right', nil, 'padding-left: 6px;')
+
+    .row.margin-top-40px
+      .col-sm-6
+        .splash__section-info-box
+          .splash__section-info-box-heading-name
+            %span
+              How it works
+          .splash__section-info-box-title
+            From your idea to a finished product
+          .splash__section-info-box-subtitle
+            Submit your project and get a quote within minutes. We can start work immediately and you'll have weekly check-ins with your product manager until we're done.
+          =link_to "#", class: 'splash__section-info-box-cta-link' do
+            Read More
+            =iconf('chevron-right', nil, 'padding-left: 6px;')
+      .col-sm-6
+        =image_tag "gigster-section-img-1.png"
+
+.splash__data-stack
+  .container
+    .row
+      .col-sm-6.col-md-3.splash__data-set
+        .splash__data-num
+          271
+        .splash__data-label
+          Active projects
+      .col-sm-6.col-md-3.splash__data-set
+        .splash__data-num
+          1,490
+        .splash__data-label
+          Number of Richsters
+      .col-sm-6.col-md-3.splash__data-set
+        .splash__data-num
+          1%
+        .splash__data-label
+          Talent pedigree
+      .col-sm-6.col-md-3.splash__data-set
+        .splash__data-num
+          1,275,294
+        .splash__data-label
+          lines of code
+
+.splash__stack
+  .container
+    .splash__stack-tagline
+      Find your Richster
+    .splash__stack-cta-btn.btn-gigster--blue
+      start a project

@@ -1,0 +1,226 @@
+@mixin opacity ( $value: 0.5 )
+  opacity: $value
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $value * 100 ")"
+  filter: alpha(opacity= $value * 100 )
+  zoom: 1
+
+//----------------------------
+
+@mixin box-shadow($horizontalLength, $verticalLength, $blurRadius, $spreadRadius, $opacity)
+  -webkit-box-shadow: $horizontalLength $verticalLength $blurRadius $spreadRadius rgba(0,0,0,$opacity)
+  -moz-box-shadow: $horizontalLength $verticalLength $blurRadius $spreadRadius rgba(0,0,0,$opacity)
+  box-shadow: $horizontalLength $verticalLength $blurRadius $spreadRadius rgba(0,0,0,$opacity)
+
+//----------------------------
+
+@mixin translate-y( $value )
+  -ms-transform: translateY($value)
+  -webkit-transform: translateY($value)
+  transform: translateY($value)
+
+@mixin translate-x( $value )
+  -ms-transform: translateX($value)
+  -webkit-transform: translateX($value)
+  transform: translateX($value)
+//----------------------------
+
+@mixin border-radius-bottom ( $topLeft: 0, $topRight: $topLeft, $bottomLeft: $topLeft, $bottomRight: $topLeft )
+  -webkit-border-bottom-right-radius: $bottomRight
+  -khtml-border-bottom-right-radius: $bottomRight
+  -moz-border-bottom-right-radius: $bottomRight
+  -ms-border-bottom-right-radius: $bottomRight
+  -o-border-bottom-right-radius: $bottomRight
+  border-bottom-right-radius: $bottomRight
+
+  -webkit-border-bottom-left-radius: $bottomLeft
+  -khtml-border-bottom-left-radius: $bottomLeft
+  -moz-border-bottom-left-radius: $bottomLeft
+  -ms-border-bottom-left-radius: $bottomLeft
+  -o-border-bottom-left-radius: $bottomLeft
+  border-bottom-left-radius: $bottomLeft
+
+
+@mixin border-radius-top ( $topLeft: 0, $topRight: $topLeft, $bottomLeft: $topLeft, $bottomRight: $topLeft )
+  -webkit-border-top-left-radius: $topLeft
+  -khtml-border-top-left-radius: $topLeft
+  -moz-border-top-left-radius: $topLeft
+  -ms-border-top-left-radius: $topLeft
+  -o-border-top-left-radius: $topLeft
+  border-top-left-radius: $topLeft
+
+  -webkit-border-top-right-radius: $topRight
+  -khtml-border-top-right-radius: $topRight
+  -moz-border-top-right-radius: $topRight
+  -ms-border-top-right-radius: $topRight
+  -o-border-top-right-radius: $topRight
+  border-top-right-radius: $topRight
+
+
+@mixin border-radius-left ( $topLeft: 0, $topRight: $topLeft, $bottomLeft: $topLeft, $bottomRight: $topLeft )
+  -webkit-border-top-left-radius: $topLeft
+  -khtml-border-top-left-radius: $topLeft
+  -moz-border-top-left-radius: $topLeft
+  -ms-border-top-left-radius: $topLeft
+  -o-border-top-left-radius: $topLeft
+  border-top-left-radius: $topLeft
+
+  -webkit-border-bottom-left-radius: $bottomLeft
+  -khtml-border-bottom-left-radius: $bottomLeft
+  -moz-border-bottom-left-radius: $bottomLeft
+  -ms-border-bottom-left-radius: $bottomLeft
+  -o-border-bottom-left-radius: $bottomLeft
+  border-bottom-left-radius: $bottomLeft
+
+@mixin border-radius-right ( $topLeft: 0, $topRight: $topLeft, $bottomLeft: $topLeft, $bottomRight: $topLeft )
+  -webkit-border-bottom-right-radius: $bottomRight
+  -khtml-border-bottom-right-radius: $bottomRight
+  -moz-border-bottom-right-radius: $bottomRight
+  -ms-border-bottom-right-radius: $bottomRight
+  -o-border-bottom-right-radius: $bottomRight
+  border-bottom-right-radius: $bottomRight
+
+  -webkit-border-top-right-radius: $topRight
+  -khtml-border-top-right-radius: $topRight
+  -moz-border-top-right-radius: $topRight
+  -ms-border-top-right-radius: $topRight
+  -o-border-top-right-radius: $topRight
+  border-top-right-radius: $topRight
+
+@mixin border-radius ( $topLeft: 0, $topRight: $topLeft, $bottomLeft: $topLeft, $bottomRight: $topLeft )
+  -webkit-border-top-left-radius: $topLeft
+  -khtml-border-top-left-radius: $topLeft
+  -moz-border-top-left-radius: $topLeft
+  -ms-border-top-left-radius: $topLeft
+  -o-border-top-left-radius: $topLeft
+  border-top-left-radius: $topLeft
+
+  -webkit-border-top-right-radius: $topRight
+  -khtml-border-top-right-radius: $topRight
+  -moz-border-top-right-radius: $topRight
+  -ms-border-top-right-radius: $topRight
+  -o-border-top-right-radius: $topRight
+  border-top-right-radius: $topRight
+
+  -webkit-border-bottom-right-radius: $bottomRight
+  -khtml-border-bottom-right-radius: $bottomRight
+  -moz-border-bottom-right-radius: $bottomRight
+  -ms-border-bottom-right-radius: $bottomRight
+  -o-border-bottom-right-radius: $bottomRight
+  border-bottom-right-radius: $bottomRight
+
+  -webkit-border-bottom-left-radius: $bottomLeft
+  -khtml-border-bottom-left-radius: $bottomLeft
+  -moz-border-bottom-left-radius: $bottomLeft
+  -ms-border-bottom-left-radius: $bottomLeft
+  -o-border-bottom-left-radius: $bottomLeft
+  border-bottom-left-radius: $bottomLeft
+
+  // keeps background from busting out of border
+  -webkit-background-clip: padding-box
+  -khtml-background-clip: padding
+  -moz-background-clip: padding-box
+  -ms-background-clip: padding
+  -o-background-clip: padding-box
+  background-clip: padding-box
+
+//----------------------------
+
+@mixin linear-gradient($fromColor, $toColor)
+  background-color: $toColor /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)) /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor) /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor) /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor) /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor) /* Opera 11.10+ */
+  background-image:         linear-gradient(to right, $fromColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+@mixin linear-gradient-left-to-right($fromColor, $toColor)
+  background-color: $toColor /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)) /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(to right, $fromColor, $toColor) /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(to right, $fromColor, $toColor) /* FF3.6 */
+  background-image:     -ms-linear-gradient(to right, $fromColor, $toColor) /* IE10 */
+  background-image:      -o-linear-gradient(to right, $fromColor, $toColor) /* Opera 11.10+ */
+  background-image:         linear-gradient(to right, $fromColor, $toColor)
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}')
+
+//----------------------------
+
+@mixin linear-gradient-image($fromColor, $toColor, $url)
+  background: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)), asset_url($url) no-repeat /* Saf4+, Chrome */
+  background: -webkit-linear-gradient(top, $fromColor, $toColor), asset_url($url) no-repeat /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background:    -moz-linear-gradient(top, $fromColor, $toColor), asset_url($url) no-repeat /* FF3.6 */
+  background:     -ms-linear-gradient(top, $fromColor, $toColor), asset_url($url) no-repeat /* IE10 */
+  background:      -o-linear-gradient(top, $fromColor, $toColor), asset_url($url) no-repeat /* Opera 11.10+ */
+  background:         linear-gradient(top, $fromColor, $toColor), asset_url($url) no-repeat
+
+
+//----------------------------
+
+@mixin transform($value: 0)
+  transform: rotate(#{$value}deg)
+  -ms-transform: rotate(#{$value}deg)
+  -webkit-transform: rotate(#{$value}deg)
+
+//----------------------------
+
+@mixin placeholder_weight($weight)
+  ::-webkit-input-placeholder
+    font-weight: $weight
+  :-moz-placeholder
+    font-weight: $weight
+  ::-moz-placeholder
+    font-weight: $weight
+  :-ms-input-placeholder
+    font-weight: $weight
+
+@mixin placeholder($color, $size, $font-family, $position, $weight)
+  ::-webkit-input-placeholder
+    color: $color
+    font-size: $size
+    font-family: $font-family
+    font-weight: $weight
+  :-moz-placeholder
+    color: $color
+    font-size: $size
+    font-family: $font-family
+    text-align: $position
+    font-weight: $weight
+  ::-moz-placeholder
+    color: $color
+    font-size: $size
+    font-family: $font-family
+    text-align: $position
+    font-weight: $weight
+  :-ms-input-placeholder
+    color: $color
+    font-size: $size
+    font-family: $font-family
+    text-align: $position
+    font-weight: $weight
+
+//----------------------------
+
+@mixin no_bootstrap_effects
+  outline: none
+  border: none !important
+  -webkit-box-shadow: none !important
+  -moz-box-shadow: none !important
+  box-shadow: none !important
+
+@mixin styled_box
+  min-height: 100px
+  margin-top: 20px
+  padding: 7px
+  border: 1px solid $borderGray
+  @include border-radius(2px)
+  background-color: $backgroundGray
+  padding: 12px 40px 26px 40px
+
+@mixin infield_icon
+  font-size: 20px
+  position: absolute
+  padding: 12px 10px 10px 13px
+  color: black
+  pointer-events: none

@@ -1,0 +1,4 @@
+=form_for profile, url: create_issue_tibetan_sherpa_access_profile_path(profile), html: {method: :post} do |f|
+ =label_tag :description, "Description"
+ =text_area_tag :description
+ =f.submit "Create Issue"

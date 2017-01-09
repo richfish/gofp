@@ -1,0 +1,19 @@
+-profile = bootcamp.user.profile.decorate
+.the_basics
+  =render "profiles/picture_and_meta_customer", bootcamp: bootcamp
+
+  =render "profiles/the_basics_customer", profile: profile
+
+  .row
+    .col-sm-12
+      .see_more{style: 'cursor:pointer; margin:10px 0px; font-size:18px; font-weight:300'}
+        =iconf('caret-down', nil, 'display:none;')
+        =iconf('caret-right')
+        Read Instructor Reviews
+      .see_more_section{ style: 'display:none'}
+        =render "reviews/reviews_display", user: profile.user
+
+
+
+
+

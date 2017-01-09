@@ -1,0 +1,25 @@
+# production:
+#   bucket: template_dev_env-production
+#   access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+#   secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+#
+# development: &defaults
+#   access_key_id: 12342134
+#   secret_access_key: 123412341234
+#   bucket: template_dev_env-development
+#
+# test:
+#   <<: *defaults
+#   bucket: template_dev_env-test
+#
+# demo:
+#   <<: *defaults
+#   bucket: template_dev_env-demo
+#
+# staging:
+#   <<: *defaults
+#   bucket: template_dev_env-staging
+#
+# sandbox:
+#   <<: *defaults
+#   bucket: template_dev_env-sandbox

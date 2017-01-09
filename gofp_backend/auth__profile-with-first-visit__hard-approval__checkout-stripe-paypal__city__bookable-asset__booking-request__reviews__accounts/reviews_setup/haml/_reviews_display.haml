@@ -1,0 +1,15 @@
+-reviews = Review.for_user(user).acknowledged
+.reviews_display
+  -if reviews.present?
+    .title
+      Reviews for
+      =user.full_name
+    =render "reviews/reviews_meta", user: user
+
+    -reviews.each do |review|
+      %hr
+      =render "reviews/review", review: review, user: user
+  -else
+    .no_reviews
+      -no_reviews_str = current_user ? "You have no reviews or rating yet" : "This user has no reviews at this time"
+      %i=no_reviews_str

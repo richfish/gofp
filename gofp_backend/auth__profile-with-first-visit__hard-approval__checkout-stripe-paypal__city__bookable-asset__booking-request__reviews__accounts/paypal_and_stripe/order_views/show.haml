@@ -1,0 +1,86 @@
+%script{ src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBQezPN-sSw7aK9rOKVSW3YNOR89UkK6Ms"}
+-view_js :confirmation
+-location_obj = @booking.location
+
+.confirmation
+  .title="#{green_check_mark} Success!".html_safe
+  %h5="<i>You will receive a copy of this information by email. Please note the meetup location below.</i>".html_safe
+  %h5="<i>You may also receive instructions via email from #{@booking.artist.profile.first_name}, as well as an emergency contact method for him.</i>".html_safe
+
+  %hr
+
+  .row
+    .col-sm-6
+      .row
+        .col-sm-12
+          %h3 Meetup location
+          -full_location = [location_obj.location, @artist.city].join(', ')
+          -regular_map_src = regular_map_url(full_location)
+          %iframe{ src: embedded_map_url(full_location), height: "160", width: "350", frameborder: '0' }=location_obj.location
+          %div{ style: 'margin-top:15px'}
+            %a{ href: regular_map_url(full_location), target: "_blank" }="#{iconf('map-marker')} #{full_location}".html_safe
+            %p="<i>#{location_obj.where_find}</i>".html_safe
+      %hr
+
+      .row
+        .col-sm-12
+          %h3 Summary
+          %p="Your Booking with <a href='#{user_path(@artist)}'> #{@artist.full_name}</a>".html_safe
+          %p="<b>#{@booking.local_date}</b> starting at <b>#{@booking.local_time}</b> #{CITY_TIMEZONE_HASH[@artist.city]}".html_safe
+          %p="Duration: #{pluralize(@booking.num_hours, "hour")}"
+          %p="Amount paid: #{number_to_currency(@booking.order.amount_cents.to_f/100)}"
+          %p="Additional instructions and emergency contact method: See email we've sent."
+
+
+    .col-sm-6.styled_box
+      .new_user
+        .row
+          .col-sm-12
+            %div{style: 'float:right'}=iconf('user', nil, 'font-size:80px; margin-top:10px')
+            %h3 Register as a User?
+            %ul
+              %li Immediately rebook a provider
+              %li Access info about your bookings, past and present
+              %li You're always welcome to book as a guest in the future. This is optional.
+
+          -if current_user && current_user.is_customer?
+            %p.center You have a user account :)
+          -else
+            =form_tag user_booking_order_proto_to_user_path(user_id: @artist.id, booking_id: @booking.id, order_id: @order.id), class: 'form-horizontal', remote: true, data: {type: 'script'} do
+              .form-group
+                =label_tag :email, "Email", class: 'control-label col-sm-3'
+                .col-sm-9{ style: 'margin-top: 5px' }
+                  =@order.email
+              .form-group
+                =label_tag :password, "Password", class: 'control-label col-sm-3'
+                .col-sm-9
+                  =text_field_tag :password, nil, class: 'input-lg form-control', type: 'password'
+              .form-group
+                =label_tag :password_confirmation, "Password Confirmation", class: 'control-label col-sm-3'
+                .col-sm-9
+                  =text_field_tag :password_confirmation, nil, class: 'input-lg form-control', type: 'password'
+                  =hidden_field_tag :euid, @order.order_key
+              .form-group
+                .col-sm-12
+                  %button.submit_button{ type: "submit", style: 'width:100%; margin-top:15px', :'data-disable-with' => disable_with("Submitting") }
+                    Get an Account
+            .success_message{ style: 'display:none' }
+              ="#{iconf('check')} Success! You now have an account and can log into the app!".html_safe
+            .error_message_duplicate{ style: 'display:none' }
+              ="#{iconf('close')} We already have a user account for #{@order.email}. If there is a problem, please get in touch with us.".html_safe
+            .error_message_password{ style: 'display:none' }
+              ="#{iconf('close')} Your passwords don't match! Please try again.".html_safe
+  %hr
+  .row
+    .col-sm-12
+      %h3 Review of Policies & Help
+      %p="Read about <a href=#{policies_customer_path} target='_blank'>cancellation, refund, and other policies</a>".html_safe
+      %p="Running late? Don't panic - Your provider is required to stay at the meetup location for 1 hour. <a href='mailto:support@monkey.com' target='_blank'> Message us</a> anyways so we can alert him or her.".html_safe
+      %p="You will also receive an emergency contact email for your provider, as sometimes he or she might respond more quickly than we can. That email address is in your confirmation email"
+      %p="Still need assistance or have questions about your booking? <a href='mailto:support@monkey.com' target='_blank'> Message us</a> and we'll get in touch as quick as we can".html_safe
+
+
+
+
+
+

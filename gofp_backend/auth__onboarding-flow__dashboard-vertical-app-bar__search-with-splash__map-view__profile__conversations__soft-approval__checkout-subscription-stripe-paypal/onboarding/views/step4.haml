@@ -1,0 +1,22 @@
+-content_for :full_width_content do
+  =render "onboardings/step_guide_bar", step: 4
+
+.onboarding__step-section{ 'data-section-id' => 4}
+  .onboarding__step-section-heading
+    Go to your Dash
+  =form_tag onboardings_path do
+    .onboarding__form-group
+      .onboarding__form-label
+        Test Field Four
+      .form-group
+        =text_field_tag "onboarding[test_field_4]", get_session_val("test_field_4"), class: 'form-control input-lg', placeholder: 'e.g. test field 4'
+    .onboarding__form-group
+      .onboarding__form-label
+        Create your Account
+      .form-group
+        =email_field_tag "onboarding[email]", get_session_val(:email), required: 'required', class: 'form-control input-lg', placeholder: 'e.g. monkey@monkey.com'
+      .form-group
+        =password_field_tag "onboarding[password]", nil, autocomplete: "off", class: 'form-control input-lg', placeholder: 'password'
+    =hidden_field_tag "step_id", 4
+    .form-group.center
+      =button_tag "Continue", class: 'btn-tv onboarding__continue-btn', data: { disable_with: disable_with() }

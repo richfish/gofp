@@ -1,0 +1,16 @@
+-content_for :full_width_content do
+  =render "onboardings/step_guide_bar", step: 1
+
+.onboarding__step-section{ 'data-section-id' => 1}
+  .onboarding__step-section-heading
+    Let us know where you currently are
+  =form_tag onboardings_path do
+    .onboarding__form-group
+      .onboarding__form-label
+        Test Field One
+      .form-group
+        =text_field_tag "onboarding[test_field_1]", get_session_val("test_field_1"), class: 'form-control input-lg', placeholder: 'e.g. test field 1'
+
+    =hidden_field_tag "step_id", 1
+    .form-group.center
+      =button_tag "Continue", class: 'btn-tv onboarding__continue-btn', data: { disable_with: disable_with() }

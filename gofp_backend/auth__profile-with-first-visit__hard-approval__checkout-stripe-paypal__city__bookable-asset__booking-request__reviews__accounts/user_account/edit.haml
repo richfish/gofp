@@ -1,0 +1,83 @@
+-view_js :account, :city_validation
+
+.account
+  =errors(@user)
+  .title My Account
+
+  =form_for @user, html: {role: 'form', class: 'form-horizontal'} do |f|
+
+    =city_validation_markup
+
+    .form-group
+      =f.label :city, class: 'control-label col-sm-2'
+      .col-sm-6
+        =f.text_field :city, class: 'form-control input-lg typeahead'
+
+    .form-group#account_email
+      =f.label :email, "Account Email", class: 'control-label col-sm-2'
+      .col-sm-6{ style: 'margin-top:5px'}
+        %span{ id: 'change_account_email'}
+          .btn.btn-secondary{ style: 'width:100%' }
+            Change Account Email
+
+    .form-group#paypal_email
+      =f.label :paypal_email, "Paypal Email", class: 'control-label col-sm-2'
+      .col-sm-6{ style: 'margin-top:5px'}
+        %span{ id: 'change_paypal_email'}
+          .btn.btn-secondary{ style: 'width:100%' }
+            =current_user.paypal_email.present? ? "Change Paypal Email" : "Add Paypal Email"
+
+    .form-group.password_control
+      =f.label :password, class: 'control-label col-sm-2'
+      .col-sm-6{ style: 'margin-top:5px'}
+        %span{ id: 'change_password'}
+          .btn.btn-secondary{ style: 'margin-top: -3px; width:100%'}
+            Change Passowrd
+
+    %div{ style: 'display:none', id: 'edit_paypal_email'}
+      .form-group
+        =f.label :paypal_email, class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.text_field :paypal_email, class: 'form-control input-lg', disabled: true
+      .form-group
+        =f.label :password, "Monkey Password", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :password, class: 'form-control input-lg', disabled: true
+
+    %div{ style: 'display:none', id: 'edit_account_email'}
+      .form-group
+        =f.label :email, "Account Email", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.text_field :email, class: 'form-control input-lg', disabled: true
+      .form-group
+        =f.label :password, class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :password, class: 'form-control input-lg', disabled: true
+
+    %div{ style: 'display:none', id: 'new_password'}
+      .form-group
+        =f.label :password, "Old Password", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :old_password, class: 'form-control input-lg', disabled: true
+      .form-group
+        =f.label :password, "New Password", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :new_password, class: 'form-control input-lg', disabled: true
+      .form-group
+        =f.label :new_password_confirmation, "Password Confirmation", class: 'control-label col-sm-2'
+        .col-sm-6
+          =f.password_field :new_password_confirmation, class: 'form-control input-lg', disabled: true
+
+
+    -if (current_user.published? rescue nil)
+      .form-group#no_search
+        =check_box_tag "disable_account", '1', false,  :'data-custom-alert' => 'Be Aware! This will unpublish your profile. You will no longer be visible to customers, no one can book you. Uncheck the box if you don\'t want to do this.', :'data-custom-no-nav' => true
+        =label_tag "disable_account", "Remove Me From Search Results", class: 'control-label', :'data-custom-alert' => 'Be Aware! This will unpublish your profile. You will no longer be visible to customers, no one can book you. Uncheck the box if you don\'t want to do this.', :'data-custom-no-nav' => true
+
+    .form-group.margin-top-30px
+      .col-sm-6.action_row
+        =button_tag data: { disable_with: disable_with('Submitting') }, style: '', class: 'submit_button' do
+          Update Account
+        -path = Proc.new{ user_path(current_user) }
+        =link_to user_path(current_user) do
+          %span.margin-left-10px Cancel

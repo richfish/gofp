@@ -1,0 +1,56 @@
+-profile = searchable_entity.user.profile
+=BootstrapHelper::Modal.new('contact_modal', {flat: true}) do |modal|
+  =modal.body do
+    .conversation
+      .first_message
+        .row
+          .col-sm-4.no-float
+            .row
+              .col-sm-12
+                =profile_image_smaller profile
+              .col-sm-12
+                %h4
+                  Send a message to
+                  =profile.first_name
+                %p Make sure you share the following:
+                %ul
+                  %li Your background
+                  %li What are your goals?
+                  -if searchable_entity.rolling?
+                    %li When do you want to get started?
+          .col-sm-8.no-float
+            =form_for @conversation ||= Conversation.new, url: conversations_path do |f|
+              =errors(@conversation)
+              .row
+                .col-sm-12
+                  %h4
+                    searchable_entity dates
+                    -if searchable_entity.rolling?
+                      %span{ style: 'font-size:14px'}=tooltip("This searchable_entity is rolling, please select a start date for this searchable_entity. It can always be changed later.")
+                  -if false#searchable_entity.rolling?
+                    .form-inline
+                      .form-group
+                        Start Date
+                      .form-group
+                        -start_dates = searchable_entity.available_start_dates_for_searchable_entity
+                        =f.select :potential_date, options_for_select(start_dates, start_dates.first), {}, {class: 'input-lg form-control'}
+                  -else
+                    %i=searchable_entity.start_date
+              .row
+                .col-sm-12
+                  .form-group
+                    =text_field_tag :first_name, nil, placeholder: "Sample Field", class: 'input-lg form-control', required: 'required'
+                  .form-group
+                    =text_field_tag :last_name, nil, placeholder: "Another Sample Field", class: 'input-lg form-control', required: 'required'
+                  .form-group
+                    =text_field_tag :guest_email, nil, placeholder: "Maybe or maybe not?", class: 'input-lg form-control', type: 'email', required: 'required'
+              .row
+                .col-sm-12
+                  .form-group
+                    =f.fields_for :comments, @conversation.comments.build do |ff|
+                      =ff.text_area :message, class: 'input-lg form-control', rows: 6, placeholder: "Write your inquiry here.", style: 'height:240px !important'
+
+              .row
+                .col-sm-12
+                  %button.margin-right-10px.submit_button_small_secondary{ type: 'submit', :'data-disable-with' => disable_with('Sending')}
+                    =@conversation.persisted? ? 'Send Message' : 'Start Conversation'

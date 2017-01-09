@@ -1,0 +1,16 @@
+-guest_obid = params[:guest].presence rescue nil
+=form_for @conversation ||= Conversation.new, url: conversation_path(@conversation) do |f|
+  =errors(@conversation)
+  -if @conversation.new_record?
+    .form-inline
+      .form-group
+        =f.text_field :first_name, class: 'input-lg form-control', placeholder: "First Name"
+      .form-group
+        =f.text_field :last_name, class: 'input-lg form-control', placeholder: "Last Name"
+  =f.fields_for :comments, @conversation.comments.build do |ff|
+    =ff.text_area :message, class: 'input-lg form-control fourtn', rows: 4, placeholder: "Write your message here."
+    -#ff.hidden_field :guest, value: guest_obid || @guest_error
+
+
+  %button.submit_button_small_secondary.floatright.thirtn{ type: 'submit', :'data-disable-with' => disable_with('Sending')}
+    =@conversation.persisted? ? 'Send Message' : 'Start Conversation'

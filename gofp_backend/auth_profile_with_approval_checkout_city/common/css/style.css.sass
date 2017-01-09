@@ -1,0 +1,117 @@
+/* application specific stylings here */
+
+@import 'mixins'
+@import 'constants'
+
+html
+  font-family: "Proxima Nova"
+
+html, body
+  height: 100%
+  margin: 0px
+
+.container
+  padding-top: 20px
+
+h1, h2, h3, h4, h5, h6
+  font-family: 'Proxima Nova'
+  font-weight: lighter
+
+p, div, a
+  font-family: 'Proxima Nova'
+  font-weight: lighter
+  font-size: 16px
+
+.inline
+  float: left
+
+
+#wrap
+  min-height: 100%
+  height: auto
+  margin: 0 auto -54px
+  padding: 0 0 120px 0
+
+
+#nav_section
+  height: 42px
+  .navbar
+    height: 41px
+    z-index: 1000
+    width: 100%
+    background-color: white
+    margin-bottom: 0px
+    color: white
+    font-family: roboto
+    font-weight: lighter
+    font-size: 17px
+    min-height: 40px
+    border-top: none
+    a
+      margin-top: 5px
+      background-color: white
+      color: #383838
+      img
+        @include border-radius(5px)
+        opacity: .7
+      @media (max-width: 767px)
+        margin-top: 0px
+    ul
+      li
+        a
+          margin-top: 0px
+          font-size: 14px
+          padding-top: 12px
+          padding-bottom: 5px
+
+#dashboard
+  min-height: 100%
+
+#logo
+  position: absolute
+  margin-left: 30px
+  height: 50px
+  z-index: 10000
+  span
+    margin-right: -3px
+  a
+    color: #383838
+    text-decoration: none
+  .subtitle
+    font-size: 14px
+    font-style: italic
+
+footer
+  clear: both
+  width: 100%
+  height: 54px
+  z-index: 10
+  background-color: #383838
+  text-align: center
+  color: white
+  font-size: medium
+  font-weight: lighter
+  a
+    color: lightgray
+    transition: all 0.2s ease
+    display: inline-block
+    &:hover
+      color: white
+  span
+    height: 25px
+    line-height: 25px
+    display: inline-block
+  i
+    display: inline-block
+    vertical-align: middle
+  .pull-right
+    font-weight: lighter
+    &:hover
+      text-decoration: none
+
+.footersocial
+  vertical-align: top
+  margin-top: 2px
+
+
+

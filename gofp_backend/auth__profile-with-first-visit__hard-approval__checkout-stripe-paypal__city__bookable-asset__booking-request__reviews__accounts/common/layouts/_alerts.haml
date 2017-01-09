@@ -1,0 +1,19 @@
+-if (!Rails.env.test? && current_user && !browser.modern?)
+  -flash[:error] = [flash[:error], t("flash.modern_browser", name: "#{browser.name} #{browser.version}")]
+
+-if notice.present?
+  .alert-success
+    =icon('thumbs-up')
+    =notice
+-if flash[:warn].present?
+  .alert-warn
+    =icon('warning-sign')
+    =[flash[:warn]].flatten.compact.join("<br/>").html_safe
+-if flash[:error].present?
+  .alert-error
+    =icon('warning-sign')
+    =[flash[:error]].flatten.compact.join("<br/>").html_safe
+-if alert.present?
+  .alert-error
+    =icon('warning-sign')
+    =alert

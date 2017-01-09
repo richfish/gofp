@@ -1,0 +1,19 @@
+#logo
+  %a{ href: root_path }
+    %span{ class: 'title' }
+      Rich
+    App
+
+#nav_section
+  %nav.navbar.navbar-default{:role => "navigation"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{:"data-target" => "#the_navbar", :"data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      #the_navbar.collapse.navbar-collapse.floatright
+        %ul.nav.navbar-nav
+          %li
+            %a Stuff to Come

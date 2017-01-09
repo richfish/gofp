@@ -1,0 +1,27 @@
+%p="Hi #{@profile.full_name},"
+%p Welcome aboard! Your BookableAsset and Profile are now published, so you are well on your way to hosting your first BookableAsset!
+
+%p
+  See your live BookableAsset and any incoming booking_requests or inquiries
+  =link_to "on your dashboard.", user_path(@profile.user)
+
+%p
+  If you haven't already, make sure to give us your PayPal email so we can pay you. You can still accept bookings in the meantime.
+  =link_to "Enter PayPal email on Accounts page", edit_user_path(@profile.user)
+
+%h3 Relevant Policies
+%p
+  For Beginner Levels, be sure to learn about our
+  =link_to "payment policies.", "#"
+%p Leveling up through repeated bookable_asset bookings proves to us you are both good and trustworthy, and opens up more options related to bookable_asset design, payments, and search findings.
+%p Remember, after someone submits an booking_request for you bookable_asset, you have 48 hours to confirm or reject. Use the information they submit as well as their Linkedin profile to reach a decision.
+%p Potential participants can also contact you via our platform, and you can view and respond to conversations in your dashboard or via email.
+%p
+  Make sure to read up on
+  =link_to 'our policies', provider_policies_url
+  if you haven't already.
+
+%p
+  Best,
+  %br
+  Monkey Team

@@ -1,0 +1,204 @@
+-view_css :full_theme_6
+-view_js :transferwise
+
+.splash__container
+  .splash__header
+    .container
+      .splash__header-logo
+        .splash__header-logo-img
+          =image_tag "transferwise-logo.svg"
+        .splash__header-logo-txt
+          RichappWise
+      .splash__header-link-list-items
+        .visible-xs
+          =mobile_menu_toggler_button
+        .visible-md.visible-lg.visible-sm
+          %ul
+            %li
+              .dropdown.inline
+                =link_to "#" do
+                  =image_tag "search_icon.png", height: 17
+                  %span.caret
+                %ul.dropdown-menu.dropdown-menu-right.animated.fadeIn
+                  %li
+                    =link_to "#" do
+                      .splash__header-dropdown-item-name
+                        GoRichAppLess
+                      .splash__header-dropdown-item-description
+                        Simple recurring payments
+            %li
+              =link_to "#" do
+                Business
+            %li
+              =link_to "#" do
+                Help
+            %li
+              =link_to "#" do
+                Login
+            %li
+              =link_to "#", class: 'splash__header-link-list-item-box' do
+                Signup
+
+  .splash__central-content
+    .container
+      .row
+        .col-sm-6
+          .splash__central-content-title
+            SEND MONEY WITH THE REAL EXCHANGE RATE
+          .splash__central-content-subtitle
+            Banks charge hidden charges when you send money abroad. With RichappWise you save up to 90%. Problem solved, money saved.
+          =image_tag "welcome/awkwardtable.jpg", class: 'splash__central-content-thumbnail'
+          =link_to "#", class: 'splash__central-content-cta-link' do
+            How does RichappWise work?
+        .col-sm-6{ style: 'padding-left: 50px;'}
+          .splash__central-content-cta-widget
+            .splash__central-content-cta-widget-form
+              .splash__central-content-cta-widget-form-field
+                .splash__central-content-cta-widget-form-field-label
+                  You're spending exactly
+                =text_field_tag "noop1", "1,000"
+                .splash__central-content-cta-widget-form-field-addon
+                  Thing
+                  %span.caret
+              .splash__central-content-cta-widget-form-field
+                .splash__central-content-cta-widget-form-field-label
+                  Recipient gets
+                =text_field_tag "noop2", "675.50"
+                .splash__central-content-cta-widget-form-field-addon-2
+                  Thing 2
+                  %span.caret
+            .splash__central-content-cta-widget-blurb-1
+              Real exchange rate guaranteed:
+              %b 0.6819
+            .splash__central-content-cta-widget-blurb-2
+              You'll save:
+              %b $ 36.68
+              Fee:
+              %b $ 9.90
+            .splash__central-content-cta-widget-cta-btn-wrapper
+              .splash__central-content-cta-widget-cta-btn-1
+                See how
+              .splash__central-content-cta-widget-cta-btn-2
+                get started
+
+
+.splash__top-content-foooter
+  .container
+    .row
+      .col-sm-3
+        .splash__top-content-footer-info-box
+          =image_tag "welcome/awkwardtable.jpg", class: 'splash__top-content-footer-info-img--rounded'
+          .splash__top-content-footer-info-txt
+            Sir Richard Branson invested in TransferWise -
+            =link_to "#" do
+              read why
+      .col-sm-3
+        .splash__top-content-footer-info-box
+          =image_tag "financialtimes-logo.png", class: 'splash__top-content-footer-info-img'
+          .splash__top-content-footer-info-txt
+            5 star rating on Trustpilot - See why
+            =link_to "#" do
+              people love TransferWise.
+      .col-sm-3
+        .splash__top-content-footer-info-box
+          =image_tag "welcome/awkwardtable.jpg", class: 'splash__top-content-footer-info-img--rounded'
+          .splash__top-content-footer-info-txt
+            Winners of the Financial Times Boldness in Business 2014 award
+      .col-sm-3
+        .splash__top-content-footer-info-box
+          =image_tag "financialtimes-logo.png", class: 'splash__top-content-footer-info-img'
+          .splash__top-content-footer-info-txt
+            From the people who built Skype
+
+.splash__section-1
+  .container
+    .row
+      .col-sm-7
+        =image_tag "transferwise-section-img-1.png", class: 'splash__section-1-img'
+      .col-sm-5
+        .splash__section-1-info-block
+          .splash__section-1-info-block-label
+            INTERNET BANKING
+          .splash__section-1-info-block-title
+            Easy & Intuitive
+          .splash__section-1-info-block-description
+            Depending on how much you’re transferring, simply log in to your bank's online banking system to transfer your funds.
+
+
+.splash__section-2
+  .container
+    .row
+      .col-sm-6.col-sm-offset-1
+        .splash__section-2-info-block
+          .splash__section-2-info-block-label
+            QUICKER THAN YOU THINK
+          .splash__section-2-info-block-title
+            NEXT DAY DELIVERY
+          .splash__section-2-info-block-description
+            Transfers from US Dollars are usually received in 1 working day.
+      .col-sm-5
+        =image_tag "transferwise-section-img-2.png", class: 'splash__section-2-img'
+    .splash__section-2-cta-downarrow
+      =iconf('chevron-down')
+
+
+.splash__quotes
+  .splash__quotes-title
+    5/5 STAR RATING, 26075 REVIEWS ON TRUSTPILOT
+
+
+  #carousel-example.carousel.slide{ 'data-ride' => 'carousel'}
+    %ol.carousel-indicators
+      %li.active{ 'data-target' => '#carousel-example', 'data-slide-to' => 0 }
+      %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 1 }
+      %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 2 }
+    .carousel-inner{ 'role' => 'listbox' }
+      .item.active
+        .splash__quotes-quote-box
+          =image_tag "welcome/awkwardtable.jpg", class: 'splash__quotes-quote-avatar'
+          .splash__quotes-quote-name
+            Irene
+          .splash__quotes-quote-txt
+            My transfer went through from the US to Cyprus in ONE DAY and for a fraction of the cost and time using my US Bank, Western Union or the ATM machine. The process is easy. The mobile app works great as well. I'm very happy about the money in fees that I will be saving now that I can use RichappWise.
+          .splash__quotes-quote-rating
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+      .item
+        .splash__quotes-quote-box
+          =image_tag "welcome/awkwardtable.jpg", class: 'splash__quotes-quote-avatar'
+          .splash__quotes-quote-name
+            Travis
+          .splash__quotes-quote-txt
+            Had trouble with PayPal, switched to TransferWise. Had no problems once I switched, couldn't be happier. Don't use the banks, they will rip you off.
+          .splash__quotes-quote-rating
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+      .item
+        .splash__quotes-quote-box
+          =image_tag "welcome/awkwardtable.jpg", class: 'splash__quotes-quote-avatar'
+          .splash__quotes-quote-name
+            Leslie Smeshslie
+          .splash__quotes-quote-txt
+            MWe are living abroad for a few years and had been searching for a convenient way to send money home that isn't too expensive. And we found it!
+          .splash__quotes-quote-rating
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+            =iconf('star')
+
+
+    %a.left.carousel-control{ href: '#carousel-example', 'data-slide' => 'prev' }
+      %span.glyphicon.glyphicon-chevron-left
+    %a.right.carousel-control{ href: '#carousel-example', 'data-slide' => 'next' }
+      %span.glyphicon.glyphicon-chevron-right
+
+
+  .splash__quotes-disclaimer
+    REVIEWS FROM: TrustPilot

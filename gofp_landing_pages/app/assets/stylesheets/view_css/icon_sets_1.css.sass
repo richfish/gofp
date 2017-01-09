@@ -1,0 +1,69 @@
+@import 'constants'
+@import 'mixins'
+
+
+#use_cases
+  background-color: #f2f2ec
+  margin-top: 0px
+  border-top: 1px solid #CBCBD2
+  box-shadow: inset 0px 2px 2px rgba(169, 146, 146, 0.75)
+  padding-bottom: 80px
+  .icon-text
+    text-align: center
+    margin-top: 20px
+    @media (max-width: 767px)
+      margin-bottom: 40px
+    .icon
+    .text
+      font-size: 20px
+      margin-top: 15px
+      font-weight: 400
+      letter-spacing: .4
+    .subtext
+      max-width: 300px
+      margin: auto
+      margin-top: 10px
+      font-size: 15px
+      font-weight: 200
+      opacity: 0.8
+  a
+    text-decoration: none
+  p
+    font-size: 24px
+    padding: 80px
+    text-align: center
+    line-height: 47.5px
+    background-color: #F2F2EC
+    margin-bottom: 0px
+    padding-top: 40px
+    span
+      margin-right: 15px
+      display: inline-block
+  .stack
+    margin-bottom: 30px
+    p
+      max-width: 700px
+      padding-bottom: 20px
+      margin: auto
+      margin-top: 4px
+
+  .hr-stack
+    margin-bottom: 60px
+  .half_hr
+    width: 200px
+    height: 4px
+    background-color: black
+    margin: 10px auto
+  .half-hr-red
+    @extend .half_hr
+    background-color: #DD6154
+  .half-hr-orange
+    @extend .half_hr
+    background-color: #35495c
+  .half-hr-yellow
+    @extend .half_hr
+    background-color: #5D6D7E
+  .star
+    color: #5D6D7E
+    font-size: 12px
+    padding-top: 8px

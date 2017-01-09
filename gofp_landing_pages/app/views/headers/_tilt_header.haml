@@ -1,0 +1,31 @@
+-view_css :header_tilt
+-view_js :header_tilt
+
+=render "slideout_menus/default"
+.splash__header-container
+  .splash__header-logo
+    =image_tag 'tilt-logo.png', class: 'splash__header-logo-img'
+    .splash__header-logo-txt
+      richard
+
+  .splash__header-link-list-items
+    .visible-xs
+      =mobile_menu_toggler_button
+    .visible-md.visible-lg.visible-sm
+      %ul
+        %li
+          =link_to "#SignupLinkReplace", class: 'splash__header-link-list-item-fade-left' do
+            Start Here
+        %li
+          =link_to "#", class: 'splash__header-link-list-item-fade-left' do
+            How it works
+        %li
+          =link_to "#", class: 'splash__header-link-list-item-fade-left' do
+            Examples
+        %li
+          =text_field_tag "ok", nil, class: 'input-md form-control splash__header-link-list-item-search-field', style: 'display:none;'
+          =link_to "#" do
+            =image_tag "search_icon.png", height: 20, class: 'splash__header-link-list-item-search-toggle'
+        %li
+          =link_to "#LoginLinkReplace", class: 'splash__header-link-list-item-box' do
+            Log in

@@ -1,0 +1,229 @@
+# Logfile created on 2015-12-18 16:05:17 -0800 by logger.rb/44203
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Environment: development
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : No known dispatcher detected.
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Application: development
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Net instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Redis Instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Sidekiq instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 16:05:17 -0800 Richards-MacBook-Pro.local (39038)] INFO : Finished instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/single_page_most_basic/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Environment: development
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : No known dispatcher detected.
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Application: development
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Net instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Redis Instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Sidekiq instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 16:05:22 -0800 Richards-MacBook-Pro.local (39055)] INFO : Finished instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/template_dev_env
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/template_dev_env/newrelic.yml, /Users/richfisher/projects/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Environment: development
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : No known dispatcher detected.
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Application: development
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Net instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Redis Instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Sidekiq instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Finished instrumentation
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-18 16:06:33 -0800 Richards-MacBook-Pro.local (40666)] INFO : Installing Sinatra instrumentation
+[2015-12-18 16:06:52 -0800 Richards-MacBook-Pro.local (40666)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-18 16:06:52 -0800 Richards-MacBook-Pro.local (40666)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/gofp_templates/template_dev_env
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Environment: development
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : No known dispatcher detected.
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Application: development
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Net instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Redis Instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Sidekiq instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 16:16:12 -0800 Richards-MacBook-Pro.local (40866)] INFO : Finished instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/gofp_templates/template_dev_env
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Environment: development
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : No known dispatcher detected.
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Application: development
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Net instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Redis Instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Sidekiq instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Finished instrumentation
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-18 16:17:10 -0800 Richards-MacBook-Pro.local (41129)] INFO : Installing Sinatra instrumentation
+[2015-12-18 16:17:17 -0800 Richards-MacBook-Pro.local (41129)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-18 16:17:17 -0800 Richards-MacBook-Pro.local (41129)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/gofp_templates/template_dev_env
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] INFO : Environment: development
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] INFO : No known dispatcher detected.
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] INFO : Application: development
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing ActiveJob instrumentation
+[2015-12-18 17:42:28 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Net instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Redis Instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Sidekiq instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Rails 4 view instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-18 17:42:29 -0800 Richards-MacBook-Pro.local (42513)] INFO : Finished instrumentation
+[2015-12-18 17:42:30 -0800 Richards-MacBook-Pro.local (42513)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-18 17:42:30 -0800 Richards-MacBook-Pro.local (42513)] INFO : Installing Sinatra instrumentation
+[2015-12-18 17:43:09 -0800 Richards-MacBook-Pro.local (42513)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-18 17:43:09 -0800 Richards-MacBook-Pro.local (42513)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/gofp_templates/template_dev_env
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Environment: development
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : No known dispatcher detected.
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Application: development
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing ActiveJob instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Net instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Redis Instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Sidekiq instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Rails 4 view instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-19 16:17:09 -0800 Richards-MacBook-Pro.local (49521)] INFO : Finished instrumentation
+[2015-12-19 16:17:10 -0800 Richards-MacBook-Pro.local (49521)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-19 16:17:10 -0800 Richards-MacBook-Pro.local (49521)] INFO : Installing Sinatra instrumentation
+[2015-12-19 16:17:15 -0800 Richards-MacBook-Pro.local (49521)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-19 16:17:15 -0800 Richards-MacBook-Pro.local (49521)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Starting the New Relic agent in "development" environment.
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/gofp_templates/template_dev_env
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/config/newrelic.yml, /Users/richfisher/projects/gofp_templates/template_dev_env/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Environment: development
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : No known dispatcher detected.
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Application: development
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing ActiveJob instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing ActiveRecord 4 instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Net instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing deferred Rack::Builder instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Rack::Builder middleware instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Rails 3+ middleware instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Redis Instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Sidekiq instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Rails 4 Controller instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Rails 4 view instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Rails 4 Error instrumentation
+[2015-12-19 17:44:48 -0800 Richards-MacBook-Pro.local (51042)] INFO : Finished instrumentation
+[2015-12-19 17:44:49 -0800 Richards-MacBook-Pro.local (51042)] INFO : Doing deferred dependency-detection before Rack startup
+[2015-12-19 17:44:49 -0800 Richards-MacBook-Pro.local (51042)] INFO : Installing Sinatra instrumentation
+[2015-12-19 17:44:59 -0800 Richards-MacBook-Pro.local (51042)] ERROR : Invalid license key, please contact support@newrelic.com
+[2015-12-19 17:44:59 -0800 Richards-MacBook-Pro.local (51042)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Starting the New Relic agent in "development" environment.
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/garden_of_forking_paths/gofp_templates
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Environment: development
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : No known dispatcher detected.
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Application: development
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing ActiveJob instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing ActiveRecord 4 instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Net instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Redis Instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Sidekiq instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Rails 4 Controller instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Rails 4 view instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Rails 4 Error instrumentation
+[2016-02-15 16:25:29 -0500 Richards-MacBook-Pro.local (8278)] INFO : Finished instrumentation
+[2016-02-15 16:25:30 -0500 Richards-MacBook-Pro.local (8278)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-02-15 16:25:30 -0500 Richards-MacBook-Pro.local (8278)] INFO : Installing Sinatra instrumentation
+[2016-02-15 16:25:45 -0500 Richards-MacBook-Pro.local (8278)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-02-15 16:25:45 -0500 Richards-MacBook-Pro.local (8278)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Starting the New Relic agent in "development" environment.
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] WARN : No configuration file found. Working directory = /Users/richfisher/projects/garden_of_forking_paths/gofp_templates
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] WARN : Looked in these locations (based on defaults): /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/config/newrelic.yml, /Users/richfisher/projects/garden_of_forking_paths/gofp_templates/newrelic.yml, /Users/richfisher/.newrelic/newrelic.yml, /Users/richfisher/newrelic.yml
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Environment: development
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : No known dispatcher detected.
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Application: development
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing ActiveJob instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing ActiveRecord 4 instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Net instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Redis Instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Sidekiq instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Rails 4 Controller instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Rails 4 view instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Rails 4 Error instrumentation
+[2016-02-18 17:01:34 -0500 Richards-MacBook-Pro.local (89052)] INFO : Finished instrumentation
+[2016-02-18 17:01:35 -0500 Richards-MacBook-Pro.local (89052)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-02-18 17:01:35 -0500 Richards-MacBook-Pro.local (89052)] INFO : Installing Sinatra instrumentation
+[2016-02-18 17:01:44 -0500 Richards-MacBook-Pro.local (89052)] ERROR : Invalid license key, please contact support@newrelic.com
+[2016-02-18 17:01:44 -0500 Richards-MacBook-Pro.local (89052)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

@@ -1,0 +1,82 @@
+-#Swap filename out with profile/ user/ searchable_entity/ whatever is actually being serached
+.searchable_entity_splash__container
+  .searchable_entity_splash__title
+    The searchable entity
+
+  .row
+    .col-sm-12
+      .searchable_entity_splash__name
+        =searchable_entity.name
+      / .searchable_entity_splash__meta-tags
+      /   %span=primary_tech_stack_formatted(searchable_entity.primary_tech_stack)
+
+  .searchable_entity_splash__description
+    .searchable_entity_splash__section-name
+      Overall Description
+    .fiftn=simple_format searchable_entity.description
+
+  .row
+    .col-sm-12
+      .searchable_entity_splash__section-name
+        Goals of searchable_entity
+      .fiftn=simple_format searchable_entity.goals
+  .row
+    .col-sm-12
+      .searchable_entity_splash__section-name
+        =what_gets_title
+      .fiftn=simple_format searchable_entity.customer_gains
+  .row
+    .col-sm-12
+      .searchable_entity_splash__section-name
+        Secondary Tech Stack
+        =tooltip("These are all technologies or techniques you will be working with at some point during the searchable_entity.")
+      .fiftn=simple_format searchable_entity.display_tech_stack
+  .row
+    .col-sm-12
+      .searchable_entity_splash__section-name
+        =participant_requirements_title
+        %span=tooltip("Please read these carefully. You may not want to apply if you cannot meet the instructor's criteria.")
+      .fiftn=simple_format searchable_entity.customer_requirements
+  -if searchable_entity.misc_note.present?
+    .row.m_b_8
+      .col-sm-12
+        .searchable_entity_splash__section-name
+          Miscellaneous Notes
+        .fiftn=simple_format searchable_entity.misc_note
+
+
+.searchable_entity_splash__weekly-plan-container#teaser_schedule_section
+  .searchable_entity_splash__weekly-plan-title
+    Yada Yada Section
+  .searchable_entity_splash__weekly-plan-timeline
+    .btn-group
+      %button.btn{ 'data-week-target' => 1, style: 'background-color:#FFAA5C' } Week One
+      %button.btn{ 'data-week-target' => 2, style: 'background-color:#DA727E' } Week Two
+      %button.btn{ 'data-week-target' => 3, style: 'background-color:#AC6C82' } Week Three
+      %button.btn{ 'data-week-target' => 4, style: 'background-color:#685C79' } Week Four
+      %button.btn{ 'data-week-target' => 5, style: 'background-color:#455C7B' } Week Five
+      %button.btn{ 'data-week-target' => 6, style: 'background-color:rgba(0,0,0,.7)' } Week Six
+  .row.searchable_entity_splash__week-plan{ 'data-week' => 1 }
+    .col-sm-12
+      %h4 Week 1
+      =simple_format searchable_entity.week_one
+  .row.searchable_entity_splash__week-plan{ 'data-week' => 2 }
+    .col-sm-12
+      %h4 Week 2
+      =simple_format searchable_entity.week_two
+  .row.searchable_entity_splash__week-plan{ 'data-week' => 3 }
+    .col-sm-12
+      %h4 Week 3
+      =simple_format searchable_entity.week_three
+  .row.searchable_entity_splash__week-plan{ 'data-week' => 4 }
+    .col-sm-12
+      %h4 Week 4
+      =simple_format searchable_entity.week_four
+  .row.searchable_entity_splash__week-plan{ 'data-week' => 5 }
+    .col-sm-12
+      %h4 Week 5
+      =simple_format searchable_entity.week_five
+  .row.searchable_entity_splash__week-plan{ 'data-week' => 6 }
+    .col-sm-12
+      %h4 Week 6
+      =simple_format searchable_entity.week_six

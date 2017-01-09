@@ -1,0 +1,306 @@
+@import "constants"
+@import "mixins"
+
+.splash__container
+  height: 100%
+  min-height: 600px
+  width: 100%
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), asset-url("welcome/awkwardtable.jpg")
+  background-size: cover
+  position: relative
+.splash__header
+  width: 100%
+  padding: 50px 64px 0px 64px
+.splash__header-logo
+  float: left
+  margin-top: -6px
+  opacity: .9
+.splash__header-logo-txt
+  color: white
+  text-transform: uppercase
+  font-size: 18px
+  font-weight: 500
+  span
+    padding: 4px
+    text-align: center
+    height: 30px
+    width: 30px
+    display: inline-block
+    background-color: white
+    border-radius: 5px
+    color: #ff3366
+    text-transform: lowercase
+    vertical-align: bottom
+.splash__header-link-list-items
+  float: right
+  height: 30px
+  ul
+    list-style-type: none
+    li
+      display: inline
+      margin-right: 30px
+      a
+        font-size: 13px
+        font-weight: 400
+        color: white
+        text-transform: uppercase
+        letter-spacing: 1px
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+
+.splash__core-btn-theme
+  border-radius: 3px
+  padding: 19px 27px 17px 27px
+  color: white
+  text-align: center
+  font-size: 14px
+  text-transform: uppercase
+.splash__header-link-list-item-box--shaded
+  @extend .splash__core-btn-theme
+  background-color: #ff3366
+  border-color: #ff3366
+.splash__header-link-list-item-box--transparent
+  @extend .splash__core-btn-theme
+  border: solid 1px #ff3366
+  color: #ff3366 !important
+.splash__header-link-list-item-box--transparent--small
+  @extend .splash__header-link-list-item-box--transparent
+  padding: 12px 17px
+  transition: background-color .2s
+  transition: color .2s
+  &:hover
+    background-color: #ff3366 !important
+    color: white !important
+    transition: background-color .2s
+    transition: color .2s
+.splash__central-content-cta-btn--shaded
+  @extend .splash__core-btn-theme
+
+
+.splash__top-section-footer
+  height: 80px
+  width: 100%
+  background-color: #F9F9FA
+  position: absolute
+  bottom: 0
+  text-align: center
+  padding-top: 10px
+
+.splash__central-content
+  text-align: center
+  margin-top: 140px
+.splash__central-content-title
+  margin-bottom: 6px
+  font-size: 48px
+  text-transform: uppercase
+  font-weight: 300
+  color: white
+  letter-spacing: 1.5px
+.splash__central-content-subtitle
+  margin-bottom: 36px
+  font-size: 26px
+  font-style: italic
+  color: white
+  font-weight: 200
+  letter-spacing: -.5px
+.splash__central-content-cta-btn--shaded
+  @extend .splash__header-link-list-item-box--shaded
+  display: inline-block
+  font-weight: 400
+  letter-spacing: 1.5px
+.splash__central-content-play-btn
+  margin: auto
+  height: 50px
+  width: 50px
+  margin-top: 50px
+  border-radius: 50%
+  background-color: white
+  text-align: center
+  padding-top: 13px
+  padding-left: 4px
+  cursor: pointer
+  .fa
+    color: black
+    font-size: 25px
+
+
+
+.splash__features
+  overflow: hidden
+.splash__feature
+  padding: 80px 80px
+  padding-top: 70px
+  padding-bottom: 70px
+  border-bottom: 1px solid #cfd5e1
+  &:last-child
+    padding-bottom: 200px
+.splash__feature--extra-padded
+  @extend .splash__feature
+  padding-top: 100px
+  padding-bottom: 100px
+.splash__feature-info-section
+  max-width: 450px
+  margin-top: 120px
+  padding-left: 50px
+.splash__feature-name
+  color: #333c4e
+  line-height: 50px
+  font-size: 36px
+  letter-spacing: 1.5px
+  margin-bottom: 30px
+  font-weight: 200
+.splash__feature-description
+  line-height: 30px
+  color: #7e8890
+  margin-bottom: 50px
+  font-size: 17px
+.splash__feature-icon-txt-block
+  margin-bottom: 40px
+.splash__feature-icon-txt-block-icon
+  color: rgb(255, 51, 102)
+  display: inline-block
+.splash__feature-icon-txt-block-name
+  color: #323a45
+  font-weight: 400
+  display: inline-block
+  padding-left: 8px
+  font-size: 17px
+.splash__feature-icon-txt-block-txt
+  line-height: 30px
+  color: #7e8890
+  font-size: 17px
+.splash__feature-img
+  height: 100%
+.splash__feature-img--positioned
+  position: relative
+  right: 100%
+
+
+
+.splash__testimonials
+  height: 700px
+  width: 100%
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), asset-url("welcome/awkwardtable.jpg")
+  background-size: cover
+  position: relative
+.splash__testimonial-central-content
+  text-align: center
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+.splash__testimonial-central-content--slide
+  @extend .splash__testimonial-central-content
+  z-index: 1
+.splash__testimonial-central-content-title
+  font-style: italic
+  font-weight: 200
+  font-size: 34px
+  color: white
+  margin-bottom: 30px
+.splash__testimonial-central-content-subtitle
+  text-transform: uppercase
+  color: #939da5
+  letter-spacing: 1px
+  font-size: 14px
+  font-weight: 200
+.splash__testimonial-central-content-cta-btn
+  @extend .splash__central-content-play-btn
+  margin-top: 40px
+.splash__testimonials-toggle-row
+  width: 100%
+  min-height: 10px
+  position: absolute
+  text-align: center
+  bottom: -36px
+  z-index: 1
+.splash__testimonials-toggle-img
+  border-radius: 50%
+  height: 75px
+  width: 75px
+  border: 2px solid white
+  margin-right: 30px
+  cursor: pointer
+  -webkit-filter: grayscale(100%)
+  opacity: .9
+  transition: all .2s ease-in-out
+.splash__testimonials-toggle-img--active, .splash__testimonials-toggle-img--active-preview
+  @extend .splash__testimonials-toggle-img
+  opacity: 1
+  -webkit-filter: grayscale(0%)
+  transform: scale(1.3, 1.3)
+  transition: all .2s ease-in-out
+.splash__testimonial-slide-img
+  -webkit-filter: brightness(80%)
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+.splash__testimonial-slide-container
+  z-index: 0
+  position: absolute
+  width: 100%
+  height: 700px
+  top: 0
+  left: 0
+  animation-duration: .4s
+
+
+.splash__companies
+  padding: 120px
+  text-align: center
+.splash__companies-title
+  font-size: 16px
+  letter-spacing: 1.2px
+  text-transform: uppercase
+  color: #939da5
+  margin-bottom: 24px
+.splash__companies-logos-img
+
+.splash__stack-cta
+  padding: 160px 30px
+  text-align: center
+  background-color: #323a45
+.splash__stack-cta-title
+  font-size: 32px
+  color: white
+  font-weight: 200
+  margin-bottom: 50px
+  letter-spacing: .5px
+  span
+    font-weight: 400
+.splash__stack-cta-form
+  margin-bottom: 40px
+  .fa
+    color: #747c83
+    position: absolute
+    padding: 16px
+    font-size: 22px
+    padding-top: 20px
+  input
+    border-radius: 2px
+    margin-right: 4px
+    padding: 18px 15px 18px 48px
+    font-size: 18px
+    min-height: 62px
+    min-width: 280px
+.splash__stack-cta-form-submit-btn
+  @extend .splash__header-link-list-item-box--shaded
+  display: inline-block
+  font-weight: 400
+  letter-spacing: 1.5px
+  height: 62px
+  padding-top: 22px
+  cursor: pointer
+.splash__stack-cta-form-disclaimer
+  color: #747c83
+  font-size: 12px
+  a
+    text-decoration: none
+    color: #747c83

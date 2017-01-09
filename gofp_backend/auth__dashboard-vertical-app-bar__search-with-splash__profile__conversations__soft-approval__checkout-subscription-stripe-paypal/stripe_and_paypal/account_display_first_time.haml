@@ -1,0 +1,34 @@
+-pending_payment_bookable_assets = BookableAsset.for_provider(current_user).confirmed
+.account_display
+  .styled_box
+    .item
+      .b-less
+        Paid out to Date
+        =iconf('question-circle')
+      .money $9,540.00
+    .item
+      .b-less
+        Pending Payments
+        =iconf('question-circle')
+      .money $1,200.00
+      .fourtn
+        %div Pending Payouts left for:
+        .pending_payout_bc
+          %span.bold_red Ruby on Rails Weekened BookableAsset
+          %i with
+          %span.b-less James Castillo
+          %i started
+          %span.b-less=(Time.now - 10.days).strftime(BookableAsset::DATEFORMAT)
+      .fourtn
+        ="Read more about our <a href='#{provider_payouts_path}' target='_blank'>payout policies</a>".html_safe
+    .item
+      .b-less
+        Refunded Total
+        =iconf('question-circle')
+      .money $400.00
+    .tiem
+      .b-less
+        Total Earned
+        =iconf('question-circle')
+      .money
+        $10,740.00

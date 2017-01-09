@@ -1,0 +1,53 @@
+.profile__container
+  .searchable_entity-page-profile__title
+    Profile
+    -if true #should_view_edit_link?
+      .searchable_entity-page-profile__edit-btn
+        =link_to "edit", edit_profile_path(profile.id || 1)
+  .searchable_entity-page-profile
+    .searchable_entity-page-profile__main-fields
+      .searchable_entity-page-profile__main-field
+        .row
+          .col-sm-4
+            .searchable_entity-page-profile__field-icon-set
+              .row
+                .col-sm-1.col-sm-offset-1
+                  =image_tag("skillset.png")
+                .col-sm-9
+                  .searchable_entity-page-profile__field-name
+                    Qualifications
+                  .searchable_entity-page-profile__field-description
+                    professional experience
+          .col-sm-12
+            .searchable_entity-page-profile__field-val
+              =simple_format profile.qualification_description
+      .searchable_entity-page-profile__main-field
+        .row
+          .col-sm-4
+            .searchable_entity-page-profile__field-icon-set
+              .row
+                .col-sm-1.col-sm-offset-1
+                  =image_tag("skillset.png")
+                .col-sm-9
+                  .searchable_entity-page-profile__field-name
+                    Main Thing
+                  .searchable_entity-page-profile__field-description
+                    Thing Yada yada
+          .col-sm-12
+            .searchable_entity-page-profile__field-val
+              =simple_format profile.core_competencies
+      .searchable_entity-page-profile__main-field
+        .row
+          .col-sm-4
+            .searchable_entity-page-profile__field-icon-set
+              .row
+                .col-sm-1.col-sm-offset-1
+                  =image_tag("skillset.png")
+                .col-sm-9
+                  .searchable_entity-page-profile__field-name
+                    Teaching Style
+                  .searchable_entity-page-profile__field-description
+                    teaching style and methods
+          .col-sm-12
+            .searchable_entity-page-profile__field-val
+              =simple_format profile.teaching_style

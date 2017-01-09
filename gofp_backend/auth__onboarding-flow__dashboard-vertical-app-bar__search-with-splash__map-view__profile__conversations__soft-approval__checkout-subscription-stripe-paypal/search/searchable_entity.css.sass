@@ -1,0 +1,503 @@
+@import 'constants'
+@import 'mixins'
+
+#bootcamps
+  margin-top: 30px
+  margin-bottom: 60px
+
+#power_sessions
+  margin-top: 30px
+  margin-bottom: 60px
+
+.searchable_entity
+  #availability
+    margin-bottom: 60px
+    .schedule_box
+      .submit_button
+        width: 100%
+      h2
+        color: $mutedPurple
+        font-weight: 300
+    .slot_bootcamp
+      font-size: 16px
+      background-color: $lessMutedGreen
+      padding: 14px
+      @include border-radius(2px)
+    .bookable_timeslot
+      cursor: pointer
+      &:hover
+        @extend .slot_bootcamp
+    .week_dropdown
+      .label_col
+        text-align: right
+        @media (max-width: 767px)
+          text-align: left
+        label
+          font-size: 20px
+          margin-top: 10px
+    .styled_box
+      @include styled_box()
+      min-height: 100px
+      min-width: 473px
+      margin-top: 20px
+      padding: 7px
+      text-align: center
+      .submit_button
+        width: 100%
+      textarea
+        min-height: 100px
+        margin: 10px 0px -6px 0px
+      @media (max-width: 520px)
+        min-width: 350px
+  .form-group
+    margin-bottom: 25px
+  .multiselect
+    width: 600px
+    @media (max-width: 650px)
+      width: 400px
+    @media (max-width: 450px)
+      width: 350px
+  .radio-inline
+    margin-left: -20px
+    margin-right: 24px
+    input
+      height: 20px
+      width: 20px
+      margin-right: 5px
+      margin-top: 1px
+  .radio-vertical
+    input
+      margin: 0px 5px 0px 0px
+      height: 20px
+      width: 20px
+
+.power-session
+  @extend .searchable_entity
+
+
+.searchable_entity_splash__container
+  padding: 20px
+  border: 1px solid #D2D2D2
+  background-color: white
+  box-shadow: 0px 3px 0px #999
+  margin-bottom: 20px
+.searchable_entity_splash__name
+  font-size: 20px
+  margin-bottom: 10px
+.searchable_entity_splash__meta-tags
+.searchable_entity_splash__description
+.searchable_entity_splash__section-name
+  color: $mutedPurple
+  font-weight: 400
+  margin-top: 6px
+
+.searchable_entity_splash__weekly-plan-container
+  @extend .searchable_entity_splash__container
+.searchable_entity_splash__weekly-plan-title
+  font-weight: 400
+  letter-spacing: -0.5px
+  opacity: .7
+  font-size: 18px
+  border-bottom: 1px solid #D0CECE
+  margin-bottom: 18px
+  padding-bottom: 6px
+  text-transform: uppercase
+.searchable_entity_splash__weekly-plan-timeline
+  .btn-group
+    width: 100%
+  button
+    color: white
+    font-weight: 100
+    text-transform: uppercase
+    font-size: 14px
+    padding: 10px
+    width: 16.6%
+    &:active, &:visited, &:hover, &:focus
+      color: white !important
+
+.searchable_entity_splash__verified-badge-container
+  @extend .searchable_entity_splash__container
+  min-width: 240px
+  min-height: 160px
+  position: relative
+  img
+    position: absolute
+    right: 10px
+    top: -3px
+  p
+    margin-top: 86px
+
+.searchable_entity_splash__week-plan
+  display: none
+  opacity: 0
+  padding: 30px
+  transition: opacity .4s ease-in
+
+.searchable_entity_splash__week-plan--active
+  opacity: 1
+  transition: opacity .4s ease-in
+
+.searchable_entity_splash__meta-container
+  @extend .searchable_entity_splash__container
+  min-width: 240px
+  b
+    color: rgba(0,0,0,.7) !important
+
+.searchable_entity_splash__meta-point
+  min-width: 240px
+  margin-bottom: 18px
+  .schedule_date_time
+    white-space: normal !important
+  img
+    max-height: 30px
+    width: auto !important
+  p
+    max-width: 170px
+    margin-bottom: 0
+
+.searchable_entity_splash__title
+  font-weight: 400
+  letter-spacing: -0.5px
+  opacity: .7
+  font-size: 18px
+  border-bottom: 1px solid #D0CECE
+  margin-bottom: 18px
+  padding-bottom: 6px
+  text-transform: uppercase
+
+.searchable_entity-application__container
+  .modal-dialog
+    width: 900px
+    .modal-body
+      padding: 40px
+      padding-top: 10px
+
+.searchable_entity-application__apply-button
+
+.searchable_entity-status-actions__container
+  @extend .searchable_entity_splash__container
+
+.searchable_entity-status-actions__title
+.searchable_entity-status-actions__status
+.searchable_entity-status-actions__cta
+
+
+.searchable_entity-special-circumstance-actions__container
+  @extend .searchable_entity_splash__container
+
+.searchable_entity-other-offerings__container
+  @extend .searchable_entity_splash__container
+.searchable_entity-other-offerings__title
+  font-weight: 400
+  letter-spacing: -0.5px
+  opacity: .7
+  font-size: 18px
+  border-bottom: 1px solid #D0CECE
+  margin-bottom: 18px
+  padding-bottom: 6px
+  text-transform: uppercase
+.searchable_entity-other-offerings__offering
+  font-size: 16px
+  font-weight: 300
+  padding: 6px
+.searchable_entity-other-offerings__learn-more
+  font-size: 14px
+  font-weight: 200
+  text-decoration: underline
+  margin-left: 6px
+.searchable_entity-other-offerings__type-icon
+  height: 22px
+  margin-right: 6px
+
+
+
+.searchable_entity-page-reviews__title
+  font-weight: 400
+  letter-spacing: -0.5px
+  opacity: .7
+  font-size: 18px
+  border-bottom: 1px solid #D0CECE
+  margin-bottom: 18px
+  padding-bottom: 6px
+  text-transform: uppercase
+
+.searchable_entity-page-reviews__container
+  @extend .searchable_entity_splash__container
+  min-height: 200px
+.searchable_entity-page-reviews__container--no-reviews
+  @extend .searchable_entity_splash__container
+  min-height: 200px
+  padding: 0px
+  box-shadow: 0px 3px 6px #424242
+  text-align: center
+  padding: 40px
+  margin: auto
+  color: white
+  background-image: linear-gradient(to right, rgb(48, 67, 82), rgb(215, 210, 204))
+  border: 1px solid #9A9A9A
+  p
+    font-size: 20px
+    padding-top: 40px
+
+.searchable_entity-page-profile__container
+  @extend .searchable_entity_splash__container
+
+.searchable_entity-page-profile__edit-btn
+  display: inline-block
+  padding-left: 10px
+  a
+    font-size: 14px
+    text-transform: lowercase
+    text-decoration: underline
+
+.searchable_entity-page-profile__title
+  font-weight: 400
+  letter-spacing: -0.5px
+  opacity: .7
+  font-size: 18px
+  border-bottom: 1px solid #D0CECE
+  margin-bottom: 18px
+  padding-bottom: 6px
+  text-transform: uppercase
+
+.searchable_entity-page__sidemenu-action-buttons
+  margin-bottom: 10px
+  .btn
+    min-width: 240px
+    margin-bottom: 6px
+    text-transform: uppercase
+    font-size: 12px
+
+
+.confirm_notice
+  font-weight: bolder
+  margin-top: 17px
+  margin-bottom: 0px
+  opacity: .8
+  text-transform: uppercase
+  font-size: 15px
+
+.cannot-edit
+
+
+.searchable_entity_basic_info_short
+  .status
+    color: $herokuPurple
+    text-transform: uppercase
+    margin-bottom: 10px
+    font-size: 14px
+  .primary
+    p
+      font-style: italic
+      margin-top: 5px
+    .name
+      margin-bottom: 12px
+  .schedule
+  .cost-location
+  .meta_row
+    b
+      opacity: .8
+
+.unconfirmed_action_buttons
+  span
+    &:hover
+      cursor: pointer
+
+.centered_toggle_buttons
+  text-align: center
+  margin-bottom: 30px
+  margin-top: 15px
+  .submit_button_small
+    background-color: $poppyNeon
+    border-color: $poppyNeon
+  #current, #current_ps
+    display: inline-block
+    text-transform: uppercase
+  #past, #past_ps
+    display: inline-block
+    text-transform: uppercase
+  #new_bootcamp, #new_power_session
+    display: inline-block
+    .trans_button
+      font-size: 19px
+      border: 1px solid $hjGreen
+      @include border-radius(4px)
+      padding: 15px
+      color: $hjGreen
+      letter-spacing: -.3px
+      cursor: pointer
+    .trans_button_disabled
+      @extend .trans_button
+      opacity: .4
+      cursor: inherit
+    a
+
+
+.searchable_entitys
+  a
+    text-decoration: none
+.searchable_entity_manager
+  .label-important
+    background-color: $labelImportantRed
+    font-size: 20px
+  .inline
+    float: left
+    margin-right: 10px
+  button
+    margin-top: 5px
+  .title
+    font-size: 30px
+    margin-bottom: 14px
+    span
+      letter-spacing: 4px
+  .searchable_entity_basic_info
+    margin-bottom: 10px
+  .dispute_refund
+    margin-top: -10px
+    margin-bottom: 10px
+
+.note_to_provider
+  margin-left: 30px
+  font-style: italic
+
+.label-inverse
+  background-color: #333
+
+.label
+  font-size: 16px
+  font-weight: lighter
+
+.provider_reschedule_form
+  input
+  select
+
+
+.searchable_entity_search_result__no-results-container
+  text-align: center
+  padding: 40px
+  max-width: 800px
+  margin: auto
+  padding: 40px
+  max-width: 800px
+  margin: auto
+  background-image: linear-gradient(to right, rgb(48, 67, 82), rgb(215, 210, 204))
+.searchable_entity_search_result__headline
+  font-size: 50px
+  margin: 5px 0px
+  margin-top: 90px
+  font-weight: 400
+  color: #f8f8f8
+  span
+    font-size: 16px
+
+.searchable_entity_search_result__cta
+  a
+    color: rgba(254,59,59,0.85)
+    font-size: 14px
+    font-weight: 400
+
+.searchable_entity_search_result__instructor-image
+  float: right
+  margin-right: -10px
+.searchable_entity_search_result__bootcamp-headline
+  line-height: 26px
+  font-weight: 300
+
+.searchable_entity_search_result__tech-tag
+  text-transform: uppercase
+  border: 2px solid black
+  color: black
+  font-weight: 500
+  padding: 2px 5px
+  font-size: 12px
+  display: inline-block
+  @include border-radius(5px)
+  opacity: .8
+  padding-bottom: 0px
+  float: right
+  margin-right: 10px
+  line-height: 16px
+
+.searchable_entity_search_result__container
+  padding: 20px
+  background-color: white
+  border-radius: 2px
+  position: relative
+  margin-top: 20px
+  border: 1px solid #E4E0E0
+  margin-bottom: 4px
+  box-shadow: 0px 3px 0px #999
+  .fa-star, .fa-star-half-empty
+    color: #605A7F
+  .schedule_date_time
+    font-size: 14px !important
+.searchable_entity_search_result__meta-section
+  margin-top: 14px
+
+.searchable_entity_search_result__description
+  font-size: 14px
+  margin-bottom: 6px
+  margin-top: 10px
+  font-style: italic
+
+.searchable_entity_search_result__ratings-line
+  font-size: 14px
+  p
+    font-size: 14px
+  h5
+    color: $mutedPurple
+    font-weight: 500
+    margin-bottom: 1px
+    margin-top: 1px
+
+.search_again
+  text-align: center
+  .selectpicker
+    min-width: 214px !important
+  button
+    @media (max-width: 767px)
+      width: 100%
+.searchable_entity-summary__container
+  padding: 20px
+  border: 1px solid #D2D2D2
+  background-color: white
+  box-shadow: 0px 3px 0px #999
+  margin-bottom: 20px
+
+.power-session-summary__container
+  padding: 20px
+  border: 1px solid #D2D2D2
+  background-color: white
+  box-shadow: 0px 3px 0px #999
+  margin-bottom: 20px
+
+.applications
+  .title_small
+    margin-top: 20px
+    margin-bottom: 8px
+    opacity: .8
+  .application
+    padding: 20px
+    border: 1px solid $borderGray
+    background-color: $backgroundGray
+    margin-top: 20px
+
+.searchable_entity_application
+  textarea
+    height: 100px
+
+#bootcamp_first_visit
+  opacity: .5
+
+
+.unconfirmed-urgent
+  // background-color: $fadedRed
+  // padding: 20px
+  // @include border-radius(8px)
+
+.searchable_entity-page__full-width-heading-cointainer
+  opacity: .2
+  font-size: 32px
+  text-align: center
+  padding-top: 30px
+  text-transform: uppercase

@@ -1,0 +1,180 @@
+#color_palette
+  %h1 Color Palette
+
+  %h3 Greens
+  .row
+    .col-xs-3
+      =set_color('#70CC14', '$lessMutedGreen')
+    .col-xs-3
+      =set_color('#78AB46', '$mutedGreen')
+    .col-xs-3
+      =set_color('#6a9e6f', '$hjGreen')
+    .col-xs-3
+      =set_color('#43D40A', '$popGreen')
+  .row
+    .col-xs-3
+      =set_color('#81d140', '$poppyNeon')
+
+  %h3 Blues - Purples
+  .row
+    .col-xs-3
+      =set_color('#007BA7', '$cerulean')
+    .col-xs-3
+      =set_color('#01B8DE', '$brighterBlue')
+    .col-xs-3
+      =set_color('#605A7F', '$mutedPurple')
+    .col-xs-3
+      =set_color('#79589F', '$herokuPurple')
+  .row
+    .col-xs-3
+      =set_color('#343036', '$blackPurple')
+
+  %h3 Grays - Blacks
+  .row
+    .col-xs-3
+      =set_color('#dadada', '$dadaGray')
+    .col-xs-3
+      =set_color('#7D7D8E', '$h-gray')
+    .col-xs-3
+      =set_color('#333333', '$darkerGray')
+    .col-xs-3
+      =set_color('#424242', '$darkerGray2')
+  .row
+    .col-xs-3
+      =set_color('#535e62', '$charcoal')
+    .col-xs-3
+      =set_color('rgb(221, 221, 221)', '$borderGray')
+    .col-xs-3
+      =set_color('#E7E7EC', '$h-grayLighter')
+    .col-xs-3
+      =set_color('#CBCBD2', '$h-grayLight')
+  .row
+    .col-xs-3
+      =set_color('#3F3F44', '$h-grayDark')
+    .col-xs-3
+      =set_color('#f2f2f2', '$backgroundGray')
+    .col-xs-3
+      =set_color("#eee", "$backgroundGray2")
+    .col-xs-3
+      =set_color("#ececec", "$backgroundGray3")
+  .row
+    .col-xs-3
+      =set_color("#e3e3e3", "$backgroundGray4")
+    .col-xs-3
+      =set_color("#DADBD5", "$backgroundGray5")
+
+
+  %h3 Red - Oranges
+  .row
+    .col-xs-3
+      =set_color('#fe4918', '$orange')
+    .col-xs-3
+      =set_color('#f26b43', '$sleekOrange')
+    .col-xs-3
+      =set_color('rgba(255, 127, 42, 1)', '$legacyOrange')
+    .col-xs-3
+      =set_color('#F9533B', '$niceOrange')
+  .row
+    .col-xs-3
+      =set_color('rgb(230, 104, 104)', '$missingRed')
+    .col-xs-3
+      =set_color('rgba(230, 104, 104, 0.1)', '$fadedRed')
+    .col-xs-3
+      =set_color(' rgba(254,59,59,0.85)', '$poppyRed')
+    .col-xs-3
+      =set_color('#B94A48', '$labelImportantRed')
+  .row
+    .col-xs-3
+      =set_color('#fe4918', '$redOrange')
+    .col-xs-3
+      =set_color('rgb(255, 127, 80)', '$coral')
+    .col-xs-3
+      =set_color('#ff2b42', '$shapeShiftRed')
+
+  %h3 MISC
+  .row
+    .col-xs-3
+      =set_color('rgba(252, 228, 184, 0.43)', '$fadedWheat')
+    .col-xs-3
+      =set_color('#F8DEB5', '$vanillaOrange')
+    .col-xs-3
+      =set_color('#f1d0a9', '$darkerVanillaOrange')
+    .col-xs-3
+      =set_color('#584B4F', '$grayRed')
+
+  %h3 NEONS
+  .row
+    .col-xs-3
+      =set_color('#6FFF00', 'Neon Green')
+    .col-xs-3
+      =set_color('#FF00FF', 'Neon Pink')
+    .col-xs-3
+      =set_color('#FFFF00', 'Neon Yellow')
+    .col-xs-3
+      =set_color('#FF4105', 'Neon Orange')
+  .row
+    .col-xs-3
+      =set_color('#4D4DFF', 'Neon Blue')
+    .col-xs-3
+      =set_color('#FE0001', 'Neon Red')
+    .col-xs-3
+      =set_color('#993Cf3', 'Neon Purple')
+
+
+%h1 Other Resources
+%p -> Find good gradients: http://uigradients.com/
+%p -> Find good color complements: https://color.adobe.com/explore/most-used
+%p -> http://www.google.com/design/spec/style/color.html#color-color-palette
+
+
+
+#color_palette_md
+  %h1 Color Palette From Material Design Page
+  %p=link_to "http://www.google.com/design/spec/style/color.html#color-color-palette", "http://www.google.com/design/spec/style/color.html#color-color-palette"
+
+  %h3 Primary Colors
+  .row
+    .col-xs-3
+      =set_color("#F44336", "$mdRed")
+    .col-xs-3
+      =set_color("#E91E63", "$mdPink")
+    .col-xs-3
+      =set_color("#9C27B0", "$mdPurple")
+    .col-xs-3
+      =set_color("#673AB7", "$mdDeepPurple")
+  .row
+    .col-xs-3
+      =set_color("#3F51B5", "$mdIndigo")
+    .col-xs-3
+      =set_color("#2196F3", "$mdBlue")
+    .col-xs-3
+      =set_color("#03A9F4", "$mdLightBlue")
+    .col-xs-3
+      =set_color("#00BCD4", "$mdCyan")
+  .row
+    .col-xs-3
+      =set_color("#009688", "$mdTeal")
+    .col-xs-3
+      =set_color("#4CAF50", "$mdGreen")
+    .col-xs-3
+      =set_color("#8BC34A", "$mdLigthGreen")
+    .col-xs-3
+      =set_color("#CDDC39", "$mdLime")
+  .row
+    .col-xs-3
+      =set_color("#FFEB3B", "$mdYellow")
+    .col-xs-3
+      =set_color("#FFC107", "$mdAmber")
+    .col-xs-3
+      =set_color("#FF9800", "$mdOrange")
+    .col-xs-3
+      =set_color("#FF5722", "$mdDeepOrange")
+  .row
+    .col-xs-3
+      =set_color("#795548", "$mdBrown")
+    .col-xs-3
+      =set_color("#9E9E9E", "$mdGrey")
+    .col-xs-3
+      =set_color("#607D8B", "$mdBlueGrey")
+
+

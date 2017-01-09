@@ -1,0 +1,35 @@
+.row
+  .col-sm-12
+    .searchable_entity_splash__meta-point
+      .row
+        .col-sm-2
+          =image_tag('studentguy.png', style: 'max-height: 44px !important' )
+        .col-sm-10
+          %b 1-on-1
+          %p Just you and the Instructor
+
+  .col-sm-12
+    .searchable_entity_splash__meta-point
+      .row
+        .col-sm-2
+          =image_tag('purplecalendar.png', style: 'height:40px; width:40px;' )
+        .col-sm-10
+          =schedule_formatted(searchable_entity)
+  .col-sm-12
+    .searchable_entity_splash__meta-point
+      .row
+        .col-sm-2
+          =image_tag('earnings.png', style: 'height: 40px; width: 27px;')
+        .col-sm-10
+          .earnings
+            %div
+              %b.block=cost_earnings_title
+              =number_to_currency(searchable_entity.amount_cents.to_f/100, precision: 0)
+  .col-sm-12
+    .searchable_entity_splash__meta-point
+      .row
+        .col-sm-2
+          =image_tag('locationpurple.png', style: 'height:44px; width: 32px;')
+        .col-sm-10
+          %b Location
+          %p=searchable_entity.location

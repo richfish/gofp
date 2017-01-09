@@ -1,0 +1,203 @@
+-view_css :splash_page_full_2
+
+:coffeescript
+  $(document).ready ->
+
+-content_for :full_width_content do
+  .asset-splash-page__top-section-container
+    .asset-splash-page__top-section-cover-img
+    .asset-splash-page__top-section-info-container
+      .row
+        .col-sm-8.asset-splash-page__top-section-menu-items
+          %ul
+            %li
+              Home
+            %li
+              =iconf('map-marker')
+              Photos
+            %li
+              =iconf('map-marker')
+              Reviews
+            %li
+              =iconf('tags')
+              Best Contractors in Los Angeles, CA
+      .row
+        .col-sm-8.asset-splash-page__top-section-biz-info-container
+          =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__top-section-biz-logo'
+          .asset-splash-page__top-section-biz-details-container
+            .asset-splash-page__top-section-biz-details-meta-block
+              .asset-splash-page__top-section-biz-details-score
+                .asset-splash-page__top-section-biz-details-score-num
+                  164
+                .asset-splash-page__top-section-biz-details-score-label
+                  ELITE
+              .asset-splash-page__top-section-biz-details-license
+                .asset-splash-page__top-section-biz-details-license-label
+                  License #
+                .asset-splash-page__top-section-biz-details-license-num
+                  13VH06510600
+            .asset-splash-page__top-section-biz-details-name
+              DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros
+            .asset-splash-page__top-section-biz-details-meta-block
+              .asset-splash-page__top-section-biz-details-phone
+                (973) 207-9334
+              .asset-splash-page__top-section-biz-details-contact-btn-wrapper
+                .asset-splash-page__top-section-biz-details-contact-btn
+                  contact us
+              .asset-splash-page__top-section-biz-details-stars
+                =iconf('star')
+                =iconf('star')
+                =iconf('star')
+                =iconf('star')
+                =iconf('star')
+                %span
+                  (8)
+  .asset-splash-page__page-toggler-and-nav.hidden-xs
+    .row
+      .col-xs-12.asset-splash-page__page-toggler-and-nav-menu-items
+        %ul
+          %li
+            About
+          %li
+            Photos (17)
+          %li
+            Answers
+
+.asset-splash-page__main-content-container
+  .row.o-visible
+    .col-sm-8
+      .asset-splash-page__main-content-section
+        .asset-splash-page__main-content-gallery
+          .row
+            .col-xs-12.col-sm-4
+              .asset-splash-page__shadox-box--padded
+                =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__main-content-gallery-cover-img'
+                .asset-splash-page__main-content-gallery-name
+                  D F Builders & Renovations, Llc Project 2
+            .col-xs-12.col-sm-4
+              .asset-splash-page__shadox-box--padded
+                =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__main-content-gallery-cover-img'
+                .asset-splash-page__main-content-gallery-name
+                  D F Builders & Renovations, Llc Project 1
+      .asset-splash-page__main-content-txt-section
+        .asset-splash-page__main-content-txt-section-title
+          About DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros
+        .asset-splash-page__main-content-txt-section-paragraph
+          DF Builders & Renovations specializes in top quality work and personalized service for all your remodeling needs. Over 25 years of industry experience, owner Gary DeFazio has managed the company’s office from the start. As a full service general contractor, we provide kitchen and bathroom remodels, whole home renovations, additions, custom decks and exterior improvements. Our knowledgeable and experienced staff gives personalized attention to every customer. The expert carpentry work we have provided over the years has resulted in excellent customer referrals, which is our primary source of business. We believe having a well- respected reputation is paramount. DF Builders & Renovations is licensed and insured ready to provide references at your request. All our estimates are based on each individual job to eliminate surprises and extra costs. We happily serve Bergen, Morris, Passaic, Union and Essex Counties.
+        %hr
+        .asset-splash-page__main-content-txt-section-paragraph
+          DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros operates out of Fairfield, NJ and holds a Home Improvement Contractor license according to the New Jersey contractors license board.
+        .asset-splash-page__main-content-txt-section-paragraph
+          Their license (13VH06510600) was verified as active when we last checked. If you are considering hiring DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros, we recommend double-checking their license status with the license board and using our
+
+      .asset-splash-page__main-content-services
+        .asset-splash-page__shadox-box        
+          .asset-splash-page__shadox-box-title
+            Services
+          .asset-splash-page__main-content-services-tag-list
+            -tags = %w( carpentry framing additions basement_remodeling bathroom_remodeling drywall kitchen_remodeling remodeling decks roofing siding custom_woodwork commercial_contracting general_contracting restoration)
+            -tags.each do |tag|
+              .asset-splash-page__main-content-services-tag
+                =tag.split('_').map(&:capitalize).join(" ")
+          .asset-splash-page__shadox-box-title
+            Contact Info
+          .asset-splash-page__main-content-services-contact
+            .asset-splash-page__main-content-services-contact-location
+              =iconf('map-marker')
+              Pier Lane, Fairfield, NJ 07004
+            .asset-splash-page__main-content-services-contact-phone
+              =iconf('phone')
+              (973) 207-9334
+
+
+    .col-sm-4
+      .asset-splash-page__sidebar-container
+
+        .asset-splash-page__shadox-box--padded
+          .asset-splash-page__cta-form
+            .asset-splash-page__cta-form-title
+              Ready to Start a Project?
+            .asset-splash-page__cta-form-blurb
+              Contact
+              %span DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros
+              about a new project, and get competitive quotes.
+            =form_tag "#" do
+              .form-group
+                .asset-splash-page__cta-form-label
+                  I need help with...
+                =text_field_tag "topic", nil, placeholder: "ex: Bathroom Remodeling", class: 'form-control input-lg asset-splash-page__cta-form-field'
+              .form-group
+                .asset-splash-page__cta-form-label
+                  Zip Code
+                =text_field_tag "zip", nil, class: 'form-control input-lg asset-splash-page__cta-form-field'
+                .asset-splash-page__cta-form-btn
+                  Request A Quote
+
+        .asset-splash-page__shadox-box
+          .asset-splash-page__sidebar-info-section
+            .asset-splash-page__shadox-box-title
+              Key License Information
+            .row.asset-splash-page__sidebar-info-section-img-blurb-set
+              .col-xs-3
+                =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__sidebar-info-section-badge-img'
+              .col-xs-9
+                .asset-splash-page__sidebar-info-section-point
+                  .asset-splash-page__sidebar-info-section-label
+                    License #:
+                  .asset-splash-page__sidebar-info-section-val
+                    13VH06510600
+                .asset-splash-page__sidebar-info-section-point
+                  .asset-splash-page__sidebar-info-section-label
+                    Status:
+                  .asset-splash-page__sidebar-info-section-val
+                    Active
+                .asset-splash-page__sidebar-info-section-point
+                  .asset-splash-page__sidebar-info-section-label
+                    State:
+                  .asset-splash-page__sidebar-info-section-val
+                    New Jersey
+                .asset-splash-page__sidebar-info-section-point
+                  .asset-splash-page__sidebar-info-section-label
+                    Type:
+                  .asset-splash-page__sidebar-info-section-val
+                    Home Improvement
+                .asset-splash-page__sidebar-blurb
+                  Click here to compare DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros to the highest rated general contractors in Fairfield.
+
+            .row.asset-splash-page__sidebar-info-section-img-blurb-set
+              .col-xs-3
+                =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__sidebar-info-section-badge-img'
+              .col-xs-9
+                .asset-splash-page__sidebar-blurb
+                  Click here to compare DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros to the highest rated general contractors in Fairfield.
+            .row.asset-splash-page__sidebar-info-section-img-blurb-set
+              .col-xs-3
+                =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__sidebar-info-section-badge-img'
+              .col-xs-9
+                .asset-splash-page__sidebar-blurb
+                  Click here to compare DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros to the highest rated general contractors in Fairfield.
+            .row.asset-splash-page__sidebar-info-section-img-blurb-set
+              .col-xs-3
+                =image_tag "welcome/awkwardtable.jpg", class: 'asset-splash-page__sidebar-info-section-badge-img'
+              .col-xs-9
+                .asset-splash-page__sidebar-blurb
+                  Click here to compare DF Builders & Renovations, N.J. G.C.Kitchen & Bath Pros to the highest rated general contractors in Fairfield.
+            .asset-splash-page__sidebar-info-section-cta-btn-wrapper
+              .asset-splash-page__sidebar-info-section-cta-btn
+                Request More Info
+        .asset-splash-page__shadox-box
+          .asset-splash-page__employee-section
+            .asset-splash-page__shadox-box-title
+              EMPLOYEES OF DF BUILDERS & RENOVATIONS, N.J. G.C.KITCHEN & BATH PROS
+        .asset-splash-page__shadox-box
+          .asset-splash-page__endorses-section
+            .asset-splash-page__shadox-box-title
+              THIS CONTRACTOR ENDORSES
+        .asset-splash-page__shadox-box
+          .asset-splash-page__bid-tools-section
+            .asset-splash-page__shadox-box-title
+              HOW BUILDZOOM'S BID TOOL WORKS
+        .asset-splash-page__shadox-box--black
+          .asset-splash-page__bid-about-section
+            .asset-splash-page__shadox-box-title--black
+              About Buildzoom

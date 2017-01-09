@@ -1,0 +1,104 @@
+-view_css :full_theme_11
+
+-# :coffeescript
+-#   $(document).scroll ->
+-#     if
+
+.splash__container
+  .splash__header
+    .splash__header-logo
+      =image_tag "blacktux_logo_white.jpg", class: 'splash__header-logo-img'
+    .splash__header-link-list-items
+      .visible-xs
+        =mobile_menu_toggler_button
+      .visible-md.visible-lg.visible-sm
+        %ul
+          %li.splash__header-dropdown-group
+            .dropdown.inline
+              =link_to "#" do
+                Our Collection
+                =iconf('chevron-down')
+              %ul.dropdown-menu.dropdown-menu-right.animated.fadeIn
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Curated Look
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Tuxedo & Suits
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Shirts
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Vests
+          %li.splash__header-dropdown-group
+            .dropdown.inline
+              =link_to "#" do
+                How it works
+                =iconf('chevron-down')
+              %ul.dropdown-menu.dropdown-menu-right.animated.fadeIn
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Curated Look
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Tuxedo & Suits
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Shirts
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Vests
+          %li.splash__header-dropdown-group
+            .dropdown.inline
+              =link_to "#" do
+                Fit & Quality
+                =iconf('chevron-down')
+              %ul.dropdown-menu.dropdown-menu-right.animated.fadeIn
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Curated Look
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Tuxedo & Suits
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Shirts
+                %li
+                  =link_to "#" do
+                    .splash__header-dropdown-item-name
+                      Vests
+          %li
+            =link_to "#", style: 'vertical-align:top; line-height:22px;' do
+              Reviews
+          %li.floatright
+            =link_to "#", style: 'font-size: 14px; letter-spacing: -.5px; font-weight: 300;' do
+              Free shipping & fit guaranteed
+          %li.floatright
+            =link_to "#" do
+              =iconf('shopping-cart')
+          %li.floatright
+            =link_to "#" do
+              Sign Up
+            =iconf('circle')
+            =link_to "#" do
+              Login
+
+
+
+  .splash__central-content
+    .splash__central-content-title
+      Black Tie Done Right
+    .splash__central-content-cta-btn
+      Get Started

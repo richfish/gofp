@@ -1,0 +1,170 @@
+-view_css :full_theme_5
+
+.splash__container
+  .splash__header
+    .container
+      .splash__header-logo
+        .splash__header-logo-img
+          =image_tag "onelogin-logo.png"
+      .splash__header-link-list-items
+        .visible-xs
+          =mobile_menu_toggler_button
+        .visible-md.visible-lg.visible-sm
+          %ul
+            %li
+              =link_to "#" do
+                Why Onelogin
+            %li
+              =link_to "#" do
+                Product
+            %li
+              =link_to "#" do
+                Customers
+            %li
+              =link_to "#" do
+                Partners
+            %li
+              =link_to "#" do
+                Resources
+            %li
+              =link_to "#" do
+                =image_tag "search_icon.png", height: 20
+            %li
+              =link_to "#", class: 'splash__header-link-list-item-box--1' do
+                Demo
+            %li
+              =link_to "#SignupLinkReplace", class: 'splash__header-link-list-item-box--2' do
+                Free Trial
+
+  #carousel-example.carousel.slide{ 'data-ride' => 'carousel'}
+    .carousel-inner{ 'role' => 'listbox' }
+      .item.active.splash__carousel-slide
+        =image_tag "welcome/awkwardtable.jpg"
+      .item.splash__carousel-slide
+        =image_tag "welcome/awkwardtable.jpg"
+      .item.splash__carousel-slide
+        =image_tag "welcome/awkwardtable.jpg"
+    %ol.carousel-indicators
+      %li.active{ 'data-target' => '#carousel-example', 'data-slide-to' => 0 }
+      %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 1 }
+      %li{ 'data-target' => '#carousel-example', 'data-slide-to' => 2 }
+
+
+  .splash__central-content
+    .splash__central-content-title
+      Cafesoft is now part of Richapp
+    .splash__central-content-subtitle
+      Webaccess management. No extra code.
+
+.splash__section-screenshot
+  .splash__section-screenshot-seperator
+  .splash__section-screenshot-title
+    secure access
+  .splash__section-screenshot-subtitle
+    Every User, Every App, Every Device
+  .splash__section-screenshot-subtitle2
+    OneLogin Simplifies Identity and Access Management for a More Efficient, Secure Enterprise
+  .splash__section-screenshot-img-wrapper
+    =image_tag "onelogin-screenshot.png", class: 'splash__section-screenshot-img'
+
+.splash__section-customers
+  .splash__section-customers-title
+    1400+ companies in 44 countries secure their applications with OneLogin
+  .splash__section-customers-logos
+
+.splash__section-quotes
+  .container
+    .splash__section-quotes-seperator
+    .splash__section-quotes-title
+      RICHAPPS SCALES TO ANY SIZE
+    .row
+      .col-sm-4
+        .splash__section-quotes-quote-box
+          .splash__section-quotes-quote-heading
+            Small
+          .splash__section-quotes-quote-txt
+            "With Richapps, we can quickly provision new users, control on-premises vs off-premises access, and streamline employee on-boarding and off-boarding."
+          .splash__section-quotes-quote-avatar
+            =image_tag "welcome/awkwardtable.jpg"
+          .splash__section-quotes-quote-name
+            MARK RIDLEY
+          .splash__section-quotes-quote-job
+            Director of Technology
+          .splash__section-quotes-quote-company-logo
+            =image_tag "onelogin-logo.png"
+          .splash__section-quotes-quote-cta-btn
+            Impact Study
+      .col-sm-4
+        .splash__section-quotes-quote-box
+          .splash__section-quotes-quote-heading
+            Small
+          .splash__section-quotes-quote-txt
+            "With Richapps, we can quickly provision new users, control on-premises vs off-premises access, and streamline employee on-boarding and off-boarding."
+          .splash__section-quotes-quote-avatar
+            =image_tag "welcome/awkwardtable.jpg"
+          .splash__section-quotes-quote-name
+            COLLIN HACHWI
+          .splash__section-quotes-quote-job
+            Director of Technology
+          .splash__section-quotes-quote-company-logo
+            =image_tag "onelogin-logo.png"
+          .splash__section-quotes-quote-cta-btn
+            Impact Study
+      .col-sm-4
+        .splash__section-quotes-quote-box
+          .splash__section-quotes-quote-heading
+            Small
+          .splash__section-quotes-quote-txt
+            "With Richapps, we can quickly provision new users, control on-premises vs off-premises access, and streamline employee on-boarding and off-boarding."
+          .splash__section-quotes-quote-avatar
+            =image_tag "welcome/awkwardtable.jpg"
+          .splash__section-quotes-quote-name
+            PAUL PRENTICE
+          .splash__section-quotes-quote-job
+            Director of Technology
+          .splash__section-quotes-quote-company-logo
+            =image_tag "onelogin-logo.png"
+          .splash__section-quotes-quote-cta-btn
+            Impact Study
+
+.splash__section-leaders
+  .container
+    .splash__section-leaders-seperator
+    .splash__section-leaders-title
+      INDUSTRY LEADER
+    .splash__section-leaders-subtitle
+      Analysts Agree on OneLogin’s Proven Identity Access Management Solution
+    .row
+      .col-sm-4
+        .splash__section-leaders-box
+          .splash__section-leaders-logo
+            =image_tag "onelogin-leaders-logo-1.svg"
+          .splash__section-leaders-name
+            Gartner
+          .splash__section-leaders-blurb
+            Named visionary in Gartner's IDaaS Magic Quadrant
+      .col-sm-4
+        .splash__section-leaders-box
+          .splash__section-leaders-logo
+            =image_tag "onelogin-leaders-logo-2.svg"
+          .splash__section-leaders-name
+            Forrester
+          .splash__section-leaders-blurb
+            Named visionary in Gartner's IDaaS Magic Quadrant
+      .col-sm-4
+        .splash__section-leaders-box
+          .splash__section-leaders-logo
+            =image_tag "onelogin-leaders-logo-3.svg"
+          .splash__section-leaders-name
+            Kuppingercole
+          .splash__section-leaders-blurb
+            Named visionary in Gartner's IDaaS Magic Quadrant
+
+
+.splash__stack
+  .splash__stack-title
+    Secure All Your Apps, Users, & Devices
+  .splash__stack-cta-btn-1
+    Get a free trial
+  .splash__stack-cta-btn-2
+    Request a demo

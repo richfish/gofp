@@ -1,0 +1,250 @@
+-view_js :bootcamp
+.boilerplate
+  .col-sm-offset-1.col-sm-11
+    .title="#{@boilerplate ? "Edit" : "Design"} Your Boilerplate Form"
+
+    =toggle_info_panel('Explain This to Me') do
+      %ul
+        %li="All boilerplates follow a 6 week format. (We're exploring other formats too. <a mailto='monkey@monkey.com' target='_blank'> Message us</a> if you want to see something else)".html_safe
+        %li You can pick how intensive the boilerplate is, the frequency of meetings and at what times.
+        %li Bootcamps are just for one person, for now. You teach it with other people, but there's a minimum of a 1/1 student-teacher ratio for now.
+
+    .margin-top-30px
+    =form_for [current_user, @boilerplate  ||= Bootcamp.new], html: { multipart: true } do |f|
+      =errors(@boilerplate )
+
+      .title_small The Basics
+
+      .form-group
+        %h4
+          Basic Text Field
+          =tooltip("Suggestion, try to include at least some of: the main technology, your target audience, how intensive it is.")
+        =f.text_field :basic_text_field, placeholder: "e.g. Learn Go on Saturdays, for Intermediate or Experienced Developers", class: 'input-lg form-control'
+
+      .form-group
+        %h4
+          Basic Text Area
+          =tooltip("This is free form. List as many as you want, just to round out the picture for what the client will encounter.")
+        =f.text_area :basic_text_area, placeholder: "Git, Shell scripting, VirtualBox, Vagrant, CSS (sass), HTML (haml), client side JavaScript, jQuery, Bootstrap, Redis, Sidekiq, Pusher, Nginx, Jenkins, TDD with MiniTest, etc.", class: 'input-lg form-control', rows: 3
+
+
+      .form-group#core_tech
+        %h4 Multiselect Field
+        %p="<i>Note: Pick up to three core technologies your client will be learning, you probably only want to pick one or two.</i>".html_safe
+        =f.select :multiselect_field, options_for_select((1..10).to_a, nil), {}, {multiple: 'multiple', class: 'form-control input-lg multiselect'}
+
+
+      .form-group
+        %h4
+          Select Field
+          =tooltip("Just your basic select field")
+        =f.select :select_field, options_for_select((1..5).to_a, nil), {}, {class: 'input-lg form-control'}
+
+      .form-inline
+        .form-group
+          Inline Select Field
+          =tooltip('Again, we require a minimum of 3 years of professional developer experience.')
+        .form-group
+          -years = [3, 3.5, 4, 4.5, 5, 5.5, 6, 7, 8, 9].map{|x| ["#{x} years", x]}.prepend("Select years").append("10+ years")
+          =f.select :inline_select_field, options_for_select(years, nil), {}, {class: 'input-lg form-control'}
+
+
+      .form-inline{ style: 'margin: 30px 0'}
+        .form-group.text
+          Double Inline One
+        .form-group
+          -people = (1..3).to_a#Profile::GENDERS.map(&:capitalize)
+          =f.select :double_inline_select_field_1, options_for_select(people, nil), {}, {multiple: 'multiple', class: 'form-control input-lg multiselect'}
+        .form-group.text{ style: 'margin-left:6px'}
+          Double Inline Two
+        .form-group{ style: 'width: 200px !important' }
+          =f.select :double_inline_select_field_2, options_for_select(people, nil), {}, {multiple: 'multiple', class: 'form-control input-lg multiselect'}
+
+
+
+      .form-group
+        %h4 Radio Test Inline
+        %p="<i>If you select 'Fixed Start Date', then you will need to set the start date below. Read more about <a href=#{policies_provider_path(anchor:'rolling_scheudle')} target='_blank'>Rolling vs. Fixed Start policies</a></i>".html_safe
+        .center.margin-top-20px
+          %label.radio-inline
+            =f.radio_button :radio_test_inline, true, checked: true
+            Rolling
+          %label.radio-inline
+            =f.radio_button :radio_test_inline, false
+            Fixed Starting Date
+
+      .form-group
+        %h4 Radio Test Vertical
+        %p="<i>If you select 'Fixed Start Date', then you will need to set the start date below. Read more about <a href=#{policies_provider_path(anchor:'rolling_scheudle')} target='_blank'>Rolling vs. Fixed Start policies</a></i>".html_safe
+        .margin-top-20px
+          .radio.radio-vertical
+            %label
+              =f.radio_button :radio_test_vertical, true, checked: true
+              Rolling
+          .radio.radio-vertical
+            %label
+              =f.radio_button :radio_test_vertical, false
+              Fixed Starting Date
+
+      .form-group
+        %h4 Radio Many
+        %p="<i>If you select 'Fixed Start Date', then you will need to set the start date below. Read more about <a href=#{policies_provider_path(anchor:'rolling_scheudle')} target='_blank'>Rolling vs. Fixed Start policies</a></i>".html_safe
+        .margin-top-20px
+          .radio.radio-vertical
+            %label
+              =f.radio_button :radio_many, '1'
+              Rolling
+          .radio.radio-vertical
+            %label
+              =f.radio_button :radio_many, '2', checked: true
+              Fixed Starting Date
+          .radio.radio-vertical
+            %label
+              =f.radio_button :radio_many, '3'
+              Other
+
+      .form-group
+        %h4
+          Money Field
+          =tooltip("Amount you will earn for your 6 week boilerplate. Fees are charged to clients, not to you. Minimum is $50 (USD).")
+        .inner-addon.left-addon
+          =iconf('dollar')
+        =f.text_field :money_field, :value => (number_with_precision((f.object.amount_cents/100 rescue nil), :precision => 2, delimiter: ',') || nil), class: 'form-control input-lg currency_formatter', style: 'padding-left:30px; max-width: 400px;'
+
+
+      .form-group
+        %h4 Date Field
+        =f.text_field :date_field, placeholder: 'Better have bootstrap-datepicker', class: 'input-lg form-control datepicker'
+
+      .form-group
+        %h4 Date Range Field
+        =f.text_field :date_range_field, placeholder: 'Better have bootstrap-daterangepicker',  class: 'input-lg form-control daterangepicker'
+
+      Date Range Double Field:
+      .form-inline
+        .form-group
+          .inner-addon.left-addon
+            =iconf('calendar')
+            =f.text_field :date_range_double_field_1, placeholder: 'Start date', required: 'required', class: 'input-lg form-control datepicker', style: "width: 98%"
+          .inner-addon.left-addon
+            =iconf('calendar')
+            =f.text_field :date_range_double_field_2, placeholder: 'Return date', required: 'required', class: 'input-lg form-control datepicker'
+
+      .form-group
+        .checkbox
+          %label
+            =f.check_box :single_checkbox, class: 'input-sm form-control'
+            Checkbox Example
+
+      .form-group
+        .checkbox
+          %label
+            =f.check_box :many_checkbox_vertical, {multiple: true, class: 'input-sm form-control'}, "1", nil
+            Checkbox Vertical One
+        .checkbox
+          %label
+            =f.check_box :many_checkbox_vertical, {multiple: true, checked: 'checked', class: 'input-sm form-control checkbox'}, "2", nil
+            Checkbox Vertical Two
+        .checkbox
+          %label
+            =f.check_box :many_checkbox_vertical, {multiple: true, class: 'input-sm form-control checkbox'}, "3", nil
+            Checkbox Vertical Three
+
+
+      .form-group.inline-checkboxes
+        .checkbox
+          %label
+            =f.check_box :many_checkbox_inline, {multiple: true, class: 'input-lg form-control', checked: 'checked'}, "1", nil
+            Checkbox Inline One
+        .checkbox{ style: 'display-inline'}
+          %label
+            =f.check_box :many_checkbox_inline, {multiple: true, class: 'input-lg form-control', checked: 'checked'}, "2", nil
+            Checkbox Inline Two
+        .checkbox{ style: 'display-inline'}
+          %label
+            =f.check_box :many_checkbox_inline, {multiple: true, class: 'input-lg form-control'}, "3", nil
+            Checkbox Inline Three
+
+
+      File Uploads
+      Just use this helper for main profile pic type things:
+      %br
+      \=avatar_field(@profile.avatar, f, :image_url => image_asset_path)
+      %br
+      Otherwise use this below:
+      .margin-bottom-30px
+      Ajax file Upload
+      .form-group.margin-bottom-25px
+        =image_tag URI.unescape((your_image_reference rescue "")), style: 'margin-bottom:10px'
+        %div
+        =f.file_field :ajax_file_upload, class: 'input-lg form-control', :'data-url' => (opts[:image_url] rescue nil), style: ('display:none' if (has_avatar? rescue nil))
+        %span#success_saved{:style => "display:none;"}
+          =iconf('check')
+          Saved
+        #replace_image{ style: ('display:none' if (!has_avatar? rescue nil)) }
+          Replace Image?
+        #loading_image{ style: "display:none"}
+          =iconf('spinner fa-spin')
+          This may take a minute... Feel free to keep editing your profile.
+        #upload_error{:style => "display:none"}
+          Oops... that didn't work. Please try refreshing and uploading again.
+
+      Basic File Upload
+      .form-group
+        %h5 General File Upload
+        =f.file_field :general_file_field, class: 'input-lg form-control'
+
+
+
+      -button_text = if @boilerplate.persisted?
+        -if false #@boilerplate.published?
+          -"Publish Changes"
+        -else
+          -"Submit Edits"
+      -else
+        -"Create Boilerplate"
+      =orange_submit_button(button_text)
+
+
+/ ------------------------------------__________________________________________________----------------------------------____________________
+/ CSS YOU NEED TO HAVE (IN ADDITION TO CERTAIN JS LIBRARIES...)
+/
+/ .radio-inline
+/   margin-left: -20px
+/   margin-right: 40px
+/   input
+/     height: 20px
+/     width: 20px
+/     margin-right: 5px
+/     margin-top: 0px
+/ .radio-vertical
+/   input
+/     margin-right: 5px
+/     margin-top: 0px
+/     height: 20px
+/     width: 20px
+/
+/ .multiselect
+/   width: 100%
+/
+/ .checkbox
+/   input
+/     height: 20px
+/     width: 20px
+/     margin-top: 0px
+/     margin-right: 5px
+/
+/
+/ .currency_formatter
+/
+/ .inline-checkboxes
+/   .checkbox
+/     display: inline
+/     margin-right: 10px
+/   input
+/     margin-right: 5px
+/     margin-top: 0px
+/     height: 20px
+/     width: 20px
+/
+

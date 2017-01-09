@@ -1,0 +1,11 @@
+.comment
+  .row
+    .col-sm-12
+      .message
+        =simple_format comment.message
+  .row
+    .col-sm-12
+      .meta{ class: ('floatright' if comment.guest)}
+        .faded-more.fourtn
+          =comment.author_with_image
+          %b=comment.display_date

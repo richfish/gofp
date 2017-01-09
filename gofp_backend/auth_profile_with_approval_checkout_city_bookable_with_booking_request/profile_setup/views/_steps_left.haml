@@ -1,0 +1,23 @@
+-availability_step = {link: "#", content: 'Create X,Y,Z Asset'}
+-publish_step = {link: "#", content: "Publish"}
+-profile = profile.decorate
+
+-if profile.fixing_issue_unpublished?
+  -step1 = {content: "We had an issue with your submitted profile" }
+  -step2 = {content:  profile.issues.first.description}
+  -step3 = {content: "Please correct this issue and re-publish."}
+  =steps_left_box("<b>Pending</b>", step1: step1, step2: step2, step3: step3, top_class: 'steps_fixing')
+-else
+  -case profile.steps_left
+    -when 0
+      -if profile.unpublished_pending_approval?
+        -step1 = {content:  "Your Profile will be officially published shortly."}
+        -step2 = {content: "Please check back soon."}
+        =steps_left_box("<b>Pending</b>", step1: step1, step2: step2 )
+    -when 1
+      =steps_left_box("<b>1</b> <span>Step Left</span>", step1: locations_step)
+    -when 2
+      =steps_left_box("<b>2</b> <span>Steps Left</span>", step1: availability_step, step2: locations_step)
+    -when 3
+      -step1 = {link: edit_user_profile_path(current_user, profile), content: "Finish Profile"}
+      =steps_left_box("<b>3</b> <span>Steps Left</span>", step1: step1, step2: availability_step, step3: publish_step)

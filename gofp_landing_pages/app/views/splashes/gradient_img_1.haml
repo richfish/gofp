@@ -1,0 +1,30 @@
+-view_css :gradient_img_1
+
+.splash-gradient-img__container
+
+  -header_template = params.fetch(:header_template, "with_dropdowns_slideoutmenu")
+  =render "headers/#{header_template}"
+
+  .splash__cta-container--left-center
+    .splash__cta-heading
+      The Best Magic Wands Ever
+    .splash__cta-teaser
+      Impress your Friends, and then dance a lot. We promise.
+    .splash__cta-lower-container
+      .splash__cta-input-header
+        FIND WHAT YOURE LOOKING FOR NOW
+      =form_tag "/" do
+        .input-group
+          =text_field_tag "boilerplate[test_1]", nil, placeholder: "Enter Search Term", class: 'splash__cta-input form-control'
+          .input-group-btn
+            %button.btn.splash__cta-input-button{ :'data-disable-with' => disable_with_short() }
+              Browse
+      .splash__cta-or-seperator
+        &#8212;
+        OR
+        &#8212;
+      %button.btn.splash__cta-button--black
+        ="#{iconf('gift', nil, 'font-size: 20px;opacity:.7;')} &nbsp; Learn How It Works".html_safe
+
+  .splash__cta-footer--black
+    This is a footer you can do some stuff with

@@ -1,0 +1,34 @@
+@import "constants"
+@import "mixins"
+
+.map-view__infowindow-container
+  font-size: 42px
+  font-weight: 200
+  color: $black
+  &:hover
+    text-decoration: none
+    color: $black
+.map-view__infowindow-map-with-overlay-container
+  position: relative
+  margin-bottom: 20px
+.map-view__infowindow-img
+  height: 160px
+  width: 220px
+.map-view__infowindow-price-overlay
+  position: absolute
+  bottom: 0
+  left: 0
+  background-color: rgba(0,0,0,.8)
+  color: white
+  font-weight: 500
+  padding: 6px
+  text-align: center
+.map-view__infowindow-meta-info-container
+  text-align: left
+  padding: 10px
+.map-view__infowindow-title
+  font-size: 16px
+  font-weight: 400
+.map-view__infowindow-subtitle
+  font-size: 13px
+  font-weight: 200

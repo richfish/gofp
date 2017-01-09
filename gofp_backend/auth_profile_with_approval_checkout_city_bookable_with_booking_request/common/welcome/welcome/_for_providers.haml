@@ -1,0 +1,14 @@
+#for_providers
+  .container
+    .row
+      .col-sm-6
+        #texting
+      .col-sm-6
+        %div{ style: 'max-width: 560px'}
+          %div{ style: 'font-size:44px; font-weight: 400; margin-top:-8px; margin-bottom:4px;'} Good at Boilerplate?
+          %p="#{iconf('dollar')} #{ iconf('dollar')} Earn money simply for going out".html_safe
+          %p="#{iconf('heart')} Boilerplate yada yada".html_safe
+          %p{ style: 'margin-bottom: 18px'}="#{iconf('users')} Or have some more boilerplate".html_safe
+          %a{ href: signup_path }
+            .submit_button{ style: 'margin-top:0px' }
+              Sign up as Provider

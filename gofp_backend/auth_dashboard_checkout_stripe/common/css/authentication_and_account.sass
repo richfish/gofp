@@ -1,0 +1,115 @@
+@import 'constants'
+@import 'mixins'
+
+#sign_in, #sign_up
+  .title
+    margin-top: 40px
+    font-size: 40px
+    margin-bottom: 14px
+    font-weight: normal
+    letter-spacing: -2px
+  .subtitle
+    font-size: 16px
+    font-style: italic
+    font-weight: lighter
+    letter-spacing: 0px
+  width: 380px
+  margin: 0 auto
+  form
+    @include placeholder(gray, 17px, "Proxima Nova", left, lighter)
+    input[type='email'], input[type='password'], input[type='text']
+      padding: 20px 16px
+      height: 54px
+      @include border-radius(4px)
+    .typeahead
+      width: 380px
+    label
+      font-weight: lighter
+    .btn
+      width: 380px
+      height: 60px
+      margin-top: 10px
+
+.sign-up-teaser-box
+  margin-top: 40px
+  min-height: 280px
+.sign-up-teaser-box--short
+  min-height: 400px
+.sign-up-divider
+  height: 140px
+  width: 3px
+  background-color: $popGreen
+  background-image: linear-gradient(to bottom, #00C9FF, #92FE9D)
+  margin-top: 140px
+.sign-up-teaser-box__divider-container
+  margin-left: -50px
+  width: 30px
+.sign-up-teaser-box__content
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  min-width: 280px
+  ul
+    padding-left: 0
+    list-style-type: none
+    li
+      font-size: 14px
+      .fa
+        font-size: 8px
+        padding-right: 4px
+        color: rgba(0,0,0,.6)
+
+  img
+    text-align: center
+    display: block
+    margin: auto
+    padding-right: 60px
+    margin-bottom: 24px
+    height: 80px
+
+.sign-up-teaser-special-relations
+  font-size: 14px
+  span
+    font-weight: 400
+
+.sign-up-divider--horizontal
+  @extend .sign-up-divider
+  height: 3px
+  width: 200px
+  margin: auto
+  margin-top: 20px
+  margin-bottom: 30px
+  background-image: linear-gradient(to right, #00C9FF, #92FE9D)
+
+
+.account
+  .title
+    font-size: 50px
+    margin: 20px 0px
+  .twitter-typeahead
+    width: 100%
+  #no_search
+    width: 280px
+    background-color: $labelImportantRed
+    color: white
+    @include border-radius(4px)
+    padding: 0px 0px 4px 6px
+    margin-left: 164px
+    input
+      margin-left: 6px
+      height: 18px
+      width: 18px
+    label
+      cursor: pointer
+      margin-left: 5px
+    @media (max-width: 767px)
+      margin-left: 0px !important
+      margin-top: 20px
+    @media (max-width: 991px)
+      margin-left: 126px
+    @media (min-width: 1200px)
+      margin-left: 195px
+
+
+
+#forgot_password

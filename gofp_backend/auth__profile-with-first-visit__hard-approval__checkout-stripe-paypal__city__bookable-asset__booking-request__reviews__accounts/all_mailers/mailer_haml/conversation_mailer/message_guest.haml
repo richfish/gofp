@@ -1,0 +1,23 @@
+-provider_first_name = @conversation.bookable_asset.user.profile.first_name
+-bookable_asset_name = @conversation.bookable_asset.name
+%p="Hi #{@conversation.first_name}, "
+
+%p
+  You have a new message in your thread with
+  =@conversation.bookable_asset.user.full_name
+  about the bookable_asset
+  =link_to bookable_asset_name, user_bookable_asset_url(@conversation.bookable_asset.user, @conversation.bookable_asset)
+
+%p
+  ="#{provider_first_name} says:"
+  =@message.message
+
+%p
+  To view the full conversation, follow this link (it requires no login):
+  =link_to "Your conversation with #{provider_first_name}", conversation_url(@conversation, euid: @conversation.euid, guest: rand(123124..9099424))
+
+%p
+  Best,
+  %br
+  Monkey Team
+

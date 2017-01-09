@@ -1,0 +1,24 @@
+-view_css :summary_card_3
+
+.summary-cards__formatter-container
+  .summary-card__container
+    .summary-card__top-img
+      .summary-card__top-img-toggler
+        .summary-card__top-img-toggle-left
+          =iconf('chevron-left')
+        .summary-card__top-img-toggle-right
+          =iconf('chevron-right')
+    .summary-card__info-container
+      .summary-card__info-title
+        THE ART OF CHOCOLATE MAKING
+      .summary-card__info-subtitle
+        Chocolate sculpting is a new world of design with its own set of rules: create your own inspired pieces.
+      .row.summary-card__info-bottom-container
+        .col-sm-6.left
+          .summary-card__info-bottom-author-container
+            =image_tag "welcome/awkwardtable.jpg", class: 'summary-card__info-bottom-author-img'
+            .summary-card__info-bottom-author-name
+              Louis Quinoes
+        .col-sm-6.right
+          =link_to "#SplashPageLinkRemove", class: 'summary-card__info-bottom-cta-btn' do
+            Register

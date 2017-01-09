@@ -1,0 +1,23 @@
+-existing_cc_data =  Stripe::Customer.retrieve(current_user.stripe_customer_id).cards.first rescue nil
+
+=form_tag returning_stripe_path, id: "returning-stripe-form" do
+  %p="<b>Email:</b> #{current_user.email}".html_safe
+  %p="<b>Order name:</b> #{current_user.full_name}".html_safe
+
+  .cc_box{ style: 'margin-top:30px'}
+    .form-group
+      .cc_box_stripe
+        .header.padding-lr-30{ style: "color:#393939; font-weight:bolder; opacity:.6;"}
+          ="Payment Details".upcase
+          =link_to image_tag('stripe_transparent.png', height: 35, width: 60, style: 'float:right; margin:-3px 0 0 -4px; opacity: .6'), "https://stripe.com/", target: 'blank'
+          %span{style: 'float:right; opacity:.6; font-size:18px; margin-top:2px;'}=icon('lock')
+    .form-group
+      %p{style: 'margin-left:20px'}=cc_with_only_last_4(existing_cc_data.last4)
+    .form-group.padding-lr-30
+      %button.submit_button_styled{ type: 'submit', :'data-disable-with' => disable_with('Submitting'), style: 'width: 100%; font-weight:bolder; opacity:.8; font-size:14px;text-align:center; padding: 10px 0; margin:10px 0 0 0'}="#{booking_total} <span style='font-size:8px;margin:5px'>#{iconf('circle')}</span> Book".html_safe
+    .form-group
+      %i#new_cc{style: 'margin-left:20px'}="<a style='cursor:pointer'>Or use different credit card?</a>".html_safe
+
+-#for needing to enter new CC
+%div#new_cc_form{ style: 'display:none' }
+  =render "orders/new_customer_or_paypal", booking_total: booking_total

@@ -1,0 +1,21 @@
+-view_js :city_validation
+
+#sign_up
+  .title
+    Sign up
+    %span.subtitle For the Yada Yada
+  =form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    =devise_error_messages!
+    .form-group
+      =f.email_field :email, autofocus: true, required: 'required', class: 'form-control input-lg', placeholder: 'Email Address'
+    .form-group
+      =f.password_field :password, autocomplete: "off", class: 'form-control input-lg', placeholder: 'Password'
+
+    =city_validation_markup
+    .form-group
+      =f.text_field :city, class: 'typeahead form-control input-lg', placeholder: 'Nearest City'
+
+    %input{type: 'submit', class: 'btn btn-lg submit_button' }
+
+  =render "users/shared/links"
+

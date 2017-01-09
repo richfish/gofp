@@ -1,0 +1,29 @@
+-if (!Rails.env.test? && current_user && !browser.modern?)
+  -flash[:error] = [flash[:error], t("flash.modern_browser", name: "#{browser.name} #{browser.version}")]
+
+-if current_user && (current_user.profile.decorate.complete? rescue nil) && current_user.notify_for_paypal_email? && !current_user.paypal_email.present?
+  .alert-warn
+    =iconf('money')
+    ="Give us your PayPal Email <span style='font-size:16px'> So We Can Pay You.<span> <a href='#{edit_user_path(current_user)}' style='font-size:16px'> #{iconf('hand-o-right')} Go to your account page</a>".html_safe
+
+-if current_user && (bootcamps = Bootcamp.for_provider(current_user).unconfirmed).present?
+  .alert-warn
+    =iconf('flag')
+    ="You have #{pluralize(bootcamps.count, 'new Application')}.<a href='#use_this_anchor'>Confirm before it expires - #{iconf('hand-o-right') } Manage Bootcamps</a>".html_safe
+
+-if notice.present?
+  .alert-success
+    =icon('thumbs-up')
+    =notice
+-if flash[:warn].present?
+  .alert-warn
+    =icon('warning-sign')
+    =[flash[:warn]].flatten.compact.join("<br/>").html_safe
+-if flash[:error].present?
+  .alert-error
+    =icon('warning-sign')
+    =[flash[:error]].flatten.compact.join("<br/>").html_safe
+-if alert.present?
+  .alert-error
+    =icon('warning-sign')
+    =alert

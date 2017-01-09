@@ -1,0 +1,61 @@
+Hello!
+
+Richard's Profile + Checkout + City Specific App Generator
+
+This is for apps that require users to sign up and list an asset/ service/ booking, and then customers come along and purchase the asset/ service/ booking. (AirBnb, various types of marketplaces, for example).
+
+It basically generates a ton boilerplate to give you a significant leg up.
+
+FEATURES
+-Admin functionality
+-Basic profile creation flow + Avatar/ Images
+-Account management (changing email, password, city etc.)
+-Paypal and Stripe integration
+-A Checkout/ Order flow
+-Ability to set cities (Conformity logic, auto selection)
+-Static 'policy' pages
+-Heroku env integration with add-ons
+-Fonts
+-Images
+-Decent UI/ design (custom alert boxes, flash messages, sign up screens, etc.)
+-Mobile friendly, responsive design
+-A ton of basic functionality in helper & lib directories
+-Nice Sass mixins & constants
+
+THE STACK
+-Rails 4.2 / Ruby 2.1.3
+-Sidekiq
+-Redis
+-Postgres
+-Devise
+-AWS storage
+-Git
+-Heroku
+-CoffeeScript
+-Sass
+
+DEPENDENCIES
+******* You need to have these installed before you run the scripts, or you'll have a bad time **********
+-Ruby 2.1.3
+-Git
+-Image Magick (Paperclip integration)
+-Redis (for Sidekiq)
+-The Postgres.app App #http://postgresapp.com/ (recommended) --> add to path so can automatically create a DB.
+-App name dependencies for now (feed lower case version, single word for now...)
+
+
+INSTRUCTIONS
+-Confirm the above are installed ('DEPENDENCIES')
+-Clone
+-cd into the directory
+-run your normal "rails new APP_NAME"
+-then run "sh setup_core_app.sh APP_NAME"
+-wait 5 for it to set up everything
+-Finally, "mv" your app out of this directory into the one you want.
+-Fire up Redis, Sidekiq, and your rails server, and navigate to localhost.
+-You should see a nice landing page with "RICHARD'S BOILERPLATE"
+
+
+
+
+

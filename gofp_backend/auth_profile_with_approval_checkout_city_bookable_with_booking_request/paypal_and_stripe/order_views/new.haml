@@ -1,0 +1,19 @@
+-view_js :checkout
+
+.checkout
+  .row
+    .col-sm-12
+      %h1="Place Boilerplate Booking  <span style='font-size:16px'>(Emmanuel Boilerplate)</span>".html_safe
+  .row{ style: 'margin-bottom: 30px'}
+    .col-sm-12
+      .styled_box
+        =render "orders/order_summary_top", booking: @booking
+  .row
+    .col-sm-6.col-md-7
+      =render "orders/order_details_section", booking: @booking
+    .col-sm-6.col-md-5.order_box
+      =render "orders/order_box", booking: @booking
+
+.contenthover{ style: "text-align:center;"}
+  %a{ href: '#', style: "color:white; font-size:28px;" }
+    Visit Profile

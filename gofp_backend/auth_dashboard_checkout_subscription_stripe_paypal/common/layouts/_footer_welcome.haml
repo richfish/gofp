@@ -1,0 +1,73 @@
+-view_js :footer
+
+%footer
+  .row#footer_menu
+    .col-sm-8.col-sm-offset-2{ style: 'text-align: left;'}
+      .row{ style: 'overflow: visible;'}
+        .col-sm-2
+          %h4 Explore
+          =link_to "Web", "#"
+          =link_to "Programming", "#"
+          =link_to "Mobile", "#"
+          =link_to "DevOps", "#"
+          =link_to "ML", "#"
+          =link_to "Misc Other", "#"
+        .col-sm-3
+          %h4 Popular Searches
+          =link_to "San Francisco Bay Area, CA - Ruby on Rails", "#"
+          =link_to "San Francisco Bay Area, CA - React", "#"
+          =link_to "San Francisco Bay Area, CA - Node.js", "#"
+          =link_to "New York City Area, NY - Ruby on Rails", "#"
+          =link_to "Bostan, MA - Ruby on Rails", "#"
+          =link_to "Portland, OR - Ruby on Rails", "#"
+          =link_to "Los Angeles, CA - Ruby on Rails", "#"
+          =link_to "San Francisco Bay Area, CA - Swift", "#"
+        .col-sm-2
+          %h4 General
+          =link_to 'FAQ', policies_path
+          =link_to "Payments", policies_path
+          =link_to "Cancellations & Refunds", policies_path
+          =link_to "Reviews", policies_path
+          =link_to "Acceptance", policies_path
+        .col-sm-2
+          %h4 Contact
+          =link_to "email us", "mailto:contact@monkey.com", target: '_blank'
+          =link_to "1-800-123-4567", "#"
+          %span=link_to iconf('facebook'), "#"
+          %span=link_to iconf('twitter'), "#"
+        .col-sm-3
+          %h4 Stay Up To Date
+          .footer__subscription-success-message
+            =iconf('check')
+            Good Choice! You're Subscribed.
+          =form_for SiteSubscription.new, method: :post, remote: true, data: {type: 'script'}, style: 'white-space:nowrap;' do |f|
+            .input-group{ style: 'width: 170px'}
+              =f.text_field :email, placeholder: "Your Email", class: 'input-lg form-control', type: 'email', required: 'true', style: 'width: 170px; border-radius:2px; height: 50px;'
+              .input-group-btn
+                %button.submit_button_small_secondary{ type: 'submit', style: 'height: 50px;'}
+                  Go
+            %h5{ style: 'line-height: 18px;'}
+              Learn about the latest
+              %br
+              Monkey offerings from
+              %br
+              talented local devs.
+
+  .row
+    #logo-footer
+      %a{ href: root_path }
+        =image_tag "laptopswithcoffee.png", height: 50
+  .row.fourtn{ style: 'padding-bottom: 28px;'}
+    Made with a lotta
+    %span.bold_red=iconf('heart')
+    in
+    %span San Francisco
+
+.row#legal
+  @2015 Monkey All Rights Reserved.
+  =link_to "Privacy", "#", "data-toggle" => "modal", "data-target" => "#privacy_modal"
+  &
+  =link_to "Terms", "#", "data-toggle" => "modal", "data-target" => "#terms_modal"
+
+
+=render "welcome/terms_conditions_privacy"

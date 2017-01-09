@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    =page_title
+
+    //add meta tag logic
+    =csrf_meta_tags
+
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+
+    =stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    %link{ href: "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel: "stylesheet" }
+
+    %script{:src => "https://js.stripe.com/v2/", :type => "text/javascript"}
+    //%script{ src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBQezPN-sSw7aK9rOKVSW3YNOR89UkK6Ms"}
+
+    %link{:href => "http://fonts.googleapis.com/css?family=Fascinate|Source+Sans+Pro|Dosis|Abel|Noto+Sans|Droid+Sans|Arvo|Cabin|New+Rocker|Lora|PT+Sans|PT+Sans+Narrow|Arimo|Oleo+Script|Ubuntu|Montserrat+Alternates|Bitter|PT+Serif|Lobster|Shadows+Into+Light|Rokkitt|Libre+Baskerville|Ubuntu+Condensed|Droid+Serif|Open+Sans|Roboto|Oswald|Open+Sans+Condensed:300|Roboto+Condensed|Montserrat|Raleway|Yanone+Kaffeesatz|Oxygen|Merriweather|Varela+Round|Francois+One|Roboto+Slab|Titillium+Web|Play|Nunito|Fjalla+One|Inconsolata|Indie+Flower|Pacifico|Hammersmith+One|Righteous|Black+Ops+One|Audiowide|Luckiest+Guy|Lobster+Two|Comfortaa|Orbitron|Carme|Allerta+Stencil|Keania+One|Alike|Rye|Sancreek|Megrim|Fruktur", :rel => "stylesheet", :type => "text/css"}
+
+    =javascript_include_tag 'application', 'data-turbolinks-track' => true
+    /[if lt IE 9]
+      <script data-turbolinks-eval="false" src="/assets/ie/html5shiv.js" type="text/javascript"></script>
+      <script data-turbolinks-eval="false" src="/assets/ie/respond.min.js" type="text/javascript"></script>
+
+    =google_analytics
+
+  %body
+    #wrap
+      =render "layouts/header"
+      =render "layouts/alerts"
+      .container
+        =yield
+
+    =render "layouts/footer"
+
+    =Gon::Base.render_data({})
+    =include_view_js
+    =include_view_css
+    =include_custom_alerts

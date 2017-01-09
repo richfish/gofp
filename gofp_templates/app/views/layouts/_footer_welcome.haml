@@ -1,0 +1,75 @@
+-view_js :footer
+
+%footer
+  .row#footer_menu
+    .col-sm-8.col-sm-offset-2{ style: 'text-align: left;'}
+      .row{ style: 'overflow: visible;'}
+        .col-sm-2
+          %h4 Explore
+          =link_to "Straight Aussie Guys", "#"
+          =link_to "Straight Aussie Girls", "#"
+          =link_to "Straight British Girls", "#"
+          =link_to "Gay American Guys", "#"
+          =link_to "Straight American Guys"
+          =link_to "Gay Icelandic Men", "#"
+          =link_to "Straight Canadian Girls"
+          =link_to "Straight British Guys"
+          =link_to "Bisexual Aussie Girls"
+        .col-sm-3
+          %h4 Popular Searches
+          =link_to "Traveling Western Europe - Currently in Paris", "#"
+          =link_to "Traveling East Asia  - Currently in Taipei", "#"
+          =link_to "Traveling in Colombia - Currently in Medellin", "#"
+          =link_to "Living in Tokyo - Currently in Tokyo", "#"
+          =link_to "Traveling in New York City - Currently in London", "#"
+          =link_to "Traveling Western Europe - Currently in Iceland", "#"
+          =link_to "Traveling United States - Currently in Los Angeles, CA", "#"
+          =link_to "Traveling in Ireland - Currenlty in London", "#"
+        .col-sm-2
+          %h4 General
+          =link_to 'FAQ', policies_path
+          =link_to "Profiles", policies_path
+          =link_to "Matching", policies_path
+          =link_to "Premium Stuff", policies_path
+          =link_to "Misc", policies_path
+        .col-sm-2
+          %h4 Contact
+          =link_to "email us", "mailto:support@travelflings.com", target: '_blank'
+          =link_to "1-800-123-4567", "#"
+          %span=link_to iconf('facebook'), "#"
+          %span=link_to iconf('twitter'), "#"
+        .col-sm-3
+          %h4 Stay Up To Date
+          .footer__subscription-success-message
+            =iconf('check')
+            Good Choice! You're Subscribed.
+          =form_for SiteSubscription.new, method: :post, remote: true, data: {type: 'script'}, style: 'white-space:nowrap;' do |f|
+            .input-group{ style: 'width: 170px'}
+              =f.text_field :email, placeholder: "Your Email", class: 'input-lg form-control', type: 'email', required: 'true', style: 'width: 170px; border-radius:2px; height: 50px;'
+              .input-group-btn
+                %button.submit_button_small_secondary{ type: 'submit', style: 'height: 50px;'}
+                  Go
+            %h5{ style: 'line-height: 18px;'}
+              Learn about the latest
+              %br
+              offerings from
+              %br
+              TravelFlings.
+
+  .row
+    %a{ href: root_path }
+      =image_tag "passport-wine.png", height: 40, class: 'footer__bottom-vanity-graphic'
+  -# .row.fourtn{ style: 'padding-bottom: 28px;'}
+  -#   Made with a lotta
+  -#   %span.bold_red=iconf('heart')
+  -#   in
+  -#   %span Offshore
+
+.row#legal
+  @2015 RichardFisher All Rights Reserved.
+  =link_to "Privacy", "#", "data-toggle" => "modal", "data-target" => "#privacy_modal"
+  &
+  =link_to "Terms", "#", "data-toggle" => "modal", "data-target" => "#terms_modal"
+
+
+=render "welcome/terms_conditions_privacy"

@@ -1,0 +1,288 @@
+@import 'constants'
+@import 'mixins'
+
+
+.splash__container
+  height: 585px
+  width: 100%
+  background: linear-gradient(rgba(73, 142, 224, .8), rgba(73, 142, 224, .8)), asset-url("welcome/awkwardtable.jpg")
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  background-size: cover
+  .dropdown-menu
+    position: absolute
+    width: 260px
+    color: $black !important
+    top: 100%
+    background: inherit !important
+    z-index: 10000 !important
+    background-color: #fff !important
+    line-height: 1.46667
+    margin-top: -5px
+    box-shadow: 0 0 8px rgba(0,0,0,.2)
+    margin-right: -80px !important
+    border-radius: 4px
+    padding: 10px 0px
+    li
+      z-index: 10000
+      height: 52px
+      padding: 0
+      display: inline-block
+      a
+        color: $black !important
+        &:hover
+          background-color: white
+    hr
+      margin-top: 9px
+      margin-bottom: 9px
+    .splash__header-dropdown-item-name
+      font-weight: 500
+      color: #498EE0
+      font-size: 14px
+    .splash__header-dropdown-item-description
+      font-size: 14px
+      font-weight: 200
+    &::before, &::after
+      bottom: 100%
+      left: 50%
+      top: -24px
+      right: 10px
+      margin-left: -12px
+      height: 0
+      position: absolute
+      content: ""
+      border: 12px solid transparent
+      border-bottom-color: white
+      width: 24px
+
+
+.dropdown--simple-list
+  .dropdown-menu
+    padding-top: 20px
+    .dropdown-link--bold-blue
+      font-weight: 500
+      color: #498EE0 !important
+      margin-bottom: 8px
+    li
+      z-index: 10000
+      height: 30px
+      padding: 0
+      display: inline-block
+      a
+        font-weight: 200
+        color: #498EE0 !important
+        &:hover
+          background-color: white
+
+
+
+.splash__header
+  padding-top: 24px
+  .container
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+.splash__header-logo
+  float: left
+.splash__header-logo-txt
+  font-size: 22px
+  text-transform: uppercase
+  color: white
+  display: inline
+  font-weight: 400
+.splash__header-logo-txt--bold
+  font-weight: 700
+  font-size: 22px
+  text-transform: uppercase
+  color: white
+  display: inline
+.splash__header-link-list-items
+  float: right
+  height: 30px
+  ul
+    list-style-type: none
+    li
+      display: inline
+      margin-right: 20px
+      a
+        font-size: 14px
+        font-weight: 400
+        color: white
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+.splash__header-link-list-item-box
+  border-radius: 4px
+  border: 1px solid white
+  padding: 10px
+
+
+
+
+.splash__central-content
+  max-width: 640px
+  position: relative
+  margin: auto
+  top: 40%
+  transform: translateY(-50%)
+  text-align: center
+  color: white
+.splash__central-content-title
+  font-size: 42px
+  font-weight: 200
+  line-height: 52px
+  margin-bottom: 10px
+.splash__central-content-subtitle
+  font-size: 18px
+  margin-bottom: 30px
+  font-weight: 400
+  letter-spacing: .5px
+.splash__central-content-cta-btn--shaded
+  display: inline-block
+  margin-right: 10px
+  width: 200px
+  padding: 10px 40px
+  color: #498EE0
+  font-weight: 400
+.splash__central-content-cta-btn--transparent
+  display: inline-block
+  font-weight: 400
+  width: 200px
+  padding: 10px 40px
+
+
+.splash__section-icon-set
+  padding: 70px 0px
+.splash__section-icon-set-title
+  font-weight: 200
+  color: #5E6E81
+  margin-bottom: 34px
+  font-size: 24px
+  text-align: center
+.splash__section-icon-set-box
+  text-align: center
+  max-width: 960px
+  margin: auto
+.splash__section-icon-set-icon
+  margin-bottom: 10px
+.splash__section-icon-set-label
+  color: #5E6E81
+  margin-bottom: 10px
+  font-size: 20px
+  font-weight: 200
+.splash__section-icon-set-description
+  color: #7D8B9B
+  line-height: 22px
+  font-size: 15px
+
+.splash__section-customers
+  padding: 60px 0px
+  padding-bottom: 90px
+  background-color: #F8F8F8
+  min-height: 200px
+  border-top: 1px solid #EBEBEB
+  border-bottom: 1px solid #EBEBEB
+.splash__section-customers-title
+  font-weight: 200
+  color: #5E6E81
+  margin-bottom: 34px
+  font-size: 24px
+  text-align: center
+  margin-top: 10px
+.splash__section-customers-logo-img
+  height: 55px
+  display: block
+  margin: auto
+
+.splash__section-features
+  padding: 60px 0px
+.splash__section-features-title
+  font-weight: 200
+  color: #5E6E81
+  margin-bottom: 34px
+  font-size: 24px
+  text-align: center
+  margin-top: 10px
+.splash__section-features-box
+  max-width: 960px
+  text-align: center
+  margin: auto
+.splash__section-features-block
+  position: relative
+  width: 300px
+  height: 251px
+.splash__section-features-top-section
+  border: 1px solid #EBEBEB
+  padding: 22px 0px
+  height: 204px
+.splash__section-features-icon
+  margin-bottom: 10px
+.splash__section-features-label
+  color: #5E6E81
+  margin-bottom: 20px
+  font-size: 20px
+  font-weight: 300
+  max-width: 191px
+  margin: auto
+.splash__section-features-footer
+  background-color: #498EE0
+  border-color: #498EE0
+  position: absolute
+  bottom: 0
+  width: 100%
+  text-align: center
+  height: 47px
+.splash__section-features-footer-cta-txt
+  text-transform: uppercase
+  color: white
+  font-size: 15px
+  font-weight: 400
+  padding-top: 12px
+
+.splash__stack-1
+  padding: 80px 0px
+  border-top: 1px solid #EBEBEB
+  border-bottom: 1px solid #EBEBEB
+  width: 100%
+.splash__stack-1-central-content
+  max-width: 600px
+  margin: auto
+  text-align: center
+.splash__stack-1-title
+  font-weight: 100
+  font-size: 26px
+  margin-bottom: 8px
+  color: #5E6E81
+.splash__stack-1-subtitle
+  margin-bottom: 30px
+  color: #7D8B9B
+.splash__stack-1-cta-btn--transparent
+  font-weight: 400
+  width: 250px
+  padding: 12px 20px
+  color: #498EE0
+  border: 2px solid #498EE0
+
+.splash__stack-2
+  padding: 80px 0px
+  text-align: center
+  width: 100%
+.splash__stack-2-central-content
+  max-width: 600px
+  margin: auto
+  text-align: center
+.splash__stack-2-cta-btn--shaded
+  margin-right: 10px
+  width: 250px
+  padding: 12px 20px
+  color: white
+  background-color: #498EE0
+  font-weight: 400
+  margin-bottom: 10px
+  border: 2px solid #498EE0
+.splash__stack-2-subtitle
+  margin-bottom: 30px
+  color: #7D8B9B

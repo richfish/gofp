@@ -1,0 +1,47 @@
+.header-transparent-set-sm-seperator  
+  .header-transparent-set-sm-seperator--seperator
+    .header-transparent-set-sm__logo.pull-left
+      BOILERPLATE
+    .header-transparent-set-sm__link-set.pull-right
+      %ul
+        %li.condensed-capitalized
+          .dropdown.inline
+            =link_to "#", 'data-toggle' => 'dropdown', 'data-target' => "#" do
+              DD Content
+              %span.caret
+            %ul.dropdown-menu.dropdown-menu-right
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something One
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Two           
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Three                        
+        %li.condensed-capitalized
+          .dropdown.inline
+            =link_to "#", 'data-toggle' => 'dropdown', 'data-target' => "#" do
+              DD Content 2
+              %span.caret
+            %ul.dropdown-menu.dropdown-menu-right
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something One
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Two           
+              %li
+                =link_to "#" do
+                  =iconf('star')
+                  This is Something Three
+        %li.condensed-capitalized.color-streak-bottom 
+          =link_to "Help", "#"
+        %li
+          .btn.btn-special
+            Other Provider    

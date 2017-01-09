@@ -1,0 +1,21 @@
+-view_js :stripe_custom
+-opts ||= {}
+
+-if current_user && false#current_user.stripe_customer?
+  -if (existing_cc_data =  Stripe::Customer.retrieve(current_user.stripe_customer_id).cards.first rescue nil)
+    =render "orders/returning_stripe_customer", booking_total: booking_total, existing_cc_data: existing_cc_data
+  -else
+    =render "orders/new_customer_or_paypal", booking_total: booking_total
+-else
+  =render "orders/new_customer_or_paypal", opts: opts
+
+#alt_payments{ style: 'font-style:italic; text-align:center; margin-top:10px'}
+  We also accept
+  =link_to image_tag("paypal_logo.jpg", height:30, width:65, style: 'opacity:.7'), PaypalManager.paypal_url(@booking), onclick: 'return false', :'data-custom-alert' => "After booking on Paypal, we'll send you an email with everything, but in case you aren't redirected back automatically, click 'redirect back' if you want see our neat confirmation page or create a customer account with us."
+  / or
+  / =link_to image_tag("btc_logo.jpeg", height: 29, width: 34, style: 'opacity: .8'), "#"
+
+
+-pubKey = Rails.configuration.stripe[:publishable_key]
+:javascript
+  Stripe.setPublishableKey('#{pubKey}');

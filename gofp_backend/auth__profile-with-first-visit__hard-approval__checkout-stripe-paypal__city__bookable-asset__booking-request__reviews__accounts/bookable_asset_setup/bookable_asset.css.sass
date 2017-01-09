@@ -1,0 +1,79 @@
+@import 'constants'
+@import 'mixins'
+
+.bookable_asset
+  #availability
+    margin-bottom: 60px
+    .schedule_box
+      .submit_button
+        width: 100%
+      h2
+        color: $mutedPurple
+        font-weight: 300
+    .slot_bookable_asset
+      font-size: 16px
+      background-color: $lessMutedGreen
+      padding: 14px
+      @include border-radius(2px)
+    .bookable_timeslot
+      cursor: pointer
+      &:hover
+        @extend .slot_bookable_asset
+    .week_dropdown
+      .label_col
+        text-align: right
+        @media (max-width: 767px)
+          text-align: left
+        label
+          font-size: 20px
+          margin-top: 10px
+    .styled_box
+      @include styled_box()
+      min-height: 100px
+      min-width: 473px
+      margin-top: 20px
+      padding: 7px
+      text-align: center
+      .submit_button
+        width: 100%
+      textarea
+        min-height: 100px
+        margin: 10px 0px -6px 0px
+      @media (max-width: 520px)
+        min-width: 350px
+
+
+.bookable_assets
+  a
+    text-decoration: none
+.bookable_asset_manager
+  .label-important
+    background-color: $labelImportantRed
+    font-size: 20px
+  .inline
+    float: left
+    margin-right: 10px
+  button
+    margin-top: 5px
+  .title
+    font-size: 30px
+    margin-bottom: 14px
+    span
+      letter-spacing: 4px
+  .bookable_asset_basic_info
+    margin-bottom: 10px
+  .dispute_refund
+    margin-top: -10px
+    margin-bottom: 10px
+
+.note_to_provider
+  margin-left: 30px
+  font-style: italic
+
+.label-inverse
+  background-color: #333
+
+.label
+  font-size: 16px
+  font-weight: lighter
+

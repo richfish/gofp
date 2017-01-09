@@ -1,0 +1,326 @@
+@import "constants"
+@import "mixins"
+
+.splash__container
+  background: asset-url("transferwise-splash-wings.svg"), asset-url('transferwise-splash-backdrop.jpg')
+  background-repeat: no-repeat
+  background-position: 50% 100%
+  background-color: #4F5C7E
+  color: #e6ebed
+  padding-bottom: 110px
+  min-height: 530px
+  .dropdown-menu
+    position: absolute
+    width: 260px
+    color: $black !important
+    top: 100%
+    background: inherit !important
+    z-index: 10000 !important
+    background-color: #fff !important
+    line-height: 1.46667
+    margin-top: -5px
+    box-shadow: 0 0 8px rgba(0,0,0,.2)
+    margin-right: -80px !important
+    border-radius: 4px
+    padding: 10px 0px
+    li
+      z-index: 10000
+      height: 52px
+      padding: 0
+      display: inline-block
+      a
+        color: $black !important
+        &:hover
+          background-color: white
+    hr
+      margin-top: 9px
+      margin-bottom: 9px
+    .splash__header-dropdown-item-name
+      font-weight: 500
+      color: #498EE0
+      font-size: 14px
+    .splash__header-dropdown-item-description
+      font-size: 14px
+      font-weight: 200
+    &::before, &::after
+      bottom: 100%
+      left: 50%
+      top: -24px
+      right: 10px
+      margin-left: -12px
+      height: 0
+      position: absolute
+      content: ""
+      border: 12px solid transparent
+      border-bottom-color: white
+      width: 24px
+
+.splash__header
+  width: 100%
+  padding-top: 18px
+  height: 55px
+.splash__header-logo
+  float: left
+.splash__header-logo-img
+  height: 10px
+  padding-right: 3px
+  display: inline-block
+.splash__header-logo-txt
+  font-size: 20px
+  color: white
+  display: inline
+  font-weight: 400
+  display: inline-block
+.splash__header-link-list-items
+  float: right
+  height: 30px
+  ul
+    list-style-type: none
+    li
+      display: inline
+      margin-right: 30px
+      a
+        font-size: 14px
+        font-weight: 400
+        color: white
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+.splash__header-link-list-item-box
+  background: rgba(255, 255, 255, 0.2) !important
+  border-radius: 3px
+  padding: 8px 16px 7px 16px !important
+  text-transform: uppercase
+
+.splash__central-content
+  padding-top: 80px
+.splash__central-content-title
+  font-size: 40px
+  line-height: 48px
+  margin-bottom: 20px
+  font-weight: 300
+  text-transform: uppercase
+  color: #f5f7f9
+.splash__central-content-subtitle
+  color: rgba(255, 255, 255, 0.75)
+  font-size: 16px
+  line-height: 24px
+  margin-bottom: 20px
+.splash__central-content-thumbnail
+  height: 48px
+  width: 88px
+  display: inline-block
+  margin-right: 10px
+  border-radius: 3px
+.splash__central-content-cta-link
+  display: inline-block
+  color: #00B9FF
+  text-decoration: underline
+  font-size: 14px
+.splash__central-content-cta-widget
+  max-width: 480px
+.splash__central-content-cta-widget-form
+  width: 100%
+  min-height: 100px
+  margin: auto
+  margin-bottom: 10px
+.splash__central-content-cta-widget-form-field
+  height: 80px
+  position: relative
+  input
+    height: 80px
+    color: #111
+    font-size: 30px
+    font-weight: 200
+    width: 60%
+    float: left
+    padding: 12px
+    padding-top: 30px
+.splash__central-content-cta-widget-form-field-addon
+  height: 80px
+  float: left
+  width: 40%
+  background-color: #223049
+  color: white
+  font-size: 22px
+  font-weight: 200
+  text-align: center
+  padding: 10px
+  padding-top: 20px
+  .caret
+    margin-left: 12px
+    color: #00B9FF
+.splash__central-content-cta-widget-form-field-addon-2
+  @extend .splash__central-content-cta-widget-form-field-addon
+  background-color: #192439
+.splash__central-content-cta-widget-form-field-label
+  position: absolute
+  top: 0
+  color: #00B9FF
+  font-size: 14px
+  font-weight: 400
+  padding: 10px
+.splash__central-content-cta-widget-blurb-1
+  color: #c8d4db
+  font-size: 15px
+  font-weight: 200
+  text-align: center
+  margin-bottom: 6px
+  b
+    padding-left: 6px
+.splash__central-content-cta-widget-blurb-2
+  @extend .splash__central-content-cta-widget-blurb-1
+  margin-bottom: 12px
+.splash__central-content-cta-widget-cta-btn-1
+  text-transform: uppercase
+  font-weight: 400
+  color: white
+  padding: 17px 36px
+  font-size: 16px
+  background-color: #00B9FF
+  min-width: 192px
+  margin-right: 6px
+  display: inline-block
+  border-radius: 2px
+  text-align: center
+.splash__central-content-cta-widget-cta-btn-2
+  @extend .splash__central-content-cta-widget-cta-btn-1
+  background-color: #58D941
+  min-width: 270px
+.splash__central-content-cta-widget-cta-btn-wrapper
+  margin: auto
+
+
+.splash__top-content-foooter
+  padding: 26px 0px
+.splash__top-content-footer-info-box
+  max-width: 240px
+  text-align: center
+.splash__top-content-footer-info-txt
+  font-size: 14px
+  line-height: 24px
+  color: #829ca9
+  font-weight: 200
+  a
+    color: #00B9FF
+    text-decoration: underline
+.splash__top-content-footer-info-img
+  margin-bottom: 10px
+
+.splash__top-content-footer-info-img--rounded
+  @extend .splash__top-content-footer-info-img
+  border-radius: 50%
+  height: 60px
+  width: 60px
+
+
+.splash__section-1
+  padding: 50px 15px
+  background-color: #f1f1f1
+.splash__section-1-img
+.splash__section-1-info-block
+  margin-top: 80px
+.splash__section-1-info-block-label
+  margin-bottom: 16px
+  font-size: 12px
+  text-transform: uppercase
+  color: #829ca9
+  font-weight: 200
+.splash__section-1-info-block-title
+  font-size: 36px
+  color: #00b9ff
+  font-weight: 400
+  margin-bottom: 0px
+  text-transform: uppercase
+.splash__section-1-info-block-description
+  font-size: 18px
+  line-height: 30px
+  color: #829ca9
+  max-width: 390px
+
+
+.splash__section-2
+  padding: 50px 15px
+.splash__section-2-img
+.splash__section-2-info-block
+  margin-top: 80px
+.splash__section-2-info-block-label
+  @extend .splash__section-1-info-block-label
+.splash__section-2-info-block-title
+  @extend .splash__section-1-info-block-title
+.splash__section-2-info-block-description
+  @extend .splash__section-1-info-block-description
+.splash__section-2-cta-downarrow
+  text-align: center
+  margin: 25px 0px 30px 0px
+  margin-top: 40px
+  cursor: pointer
+  i
+    font-size: 30px
+    color: #819da9
+
+
+.splash__quotes
+  padding: 80px 0px
+  background: linear-gradient(to bottom, #00b9ff 0%, #36c9ff 100%)
+  text-align: center
+  .carousel
+    overflow: visible
+    .carousel-control
+      background-image: none
+      opacity: 1
+    .carousel-inner
+      overflow: visible
+    .item
+      overflow: visible
+.splash__quotes-title
+  font-size: 36px
+  font-weight: 400
+  margin-bottom: 82px
+  color: white
+.splash__quotes-quote-box
+  position: relative
+  text-align: center
+  background-color: white
+  width: 100%
+  min-height: 300px
+  margin: auto
+  max-width: 700px
+  border-radius: 6px
+  padding: 50px 110px
+  z-index: 100
+  overflow: visible
+.splash__quotes-quote-avatar
+  border-radius: 50%
+  position: absolute
+  height: 90px
+  width: 90px
+  top: 0
+  margin-top: -45px
+  margin-left: -45px
+  z-index: 100
+.splash__quotes-quote-name
+  color: #00b9ff
+  font-size: 20px
+  margin-bottom: 16px
+.splash__quotes-quote-txt
+  line-height: 30px
+  font-size: 18px
+  margin-bottom: 18px
+  color: #909090
+.splash__quotes-quote-rating
+  .fa
+    color: #00b9ff
+    display: inline
+    padding-right: 8px
+.splash__quotes-disclaimer
+  font-size: 12px
+  font-weight: 300
+  text-transform: uppercase
+  margin-top: 45px
+  color: white

@@ -1,0 +1,9 @@
+.splash-gradient-img__cta-lower-container#toggleable_search_preview{ style: 'margin:20px auto;'}
+  .splash-gradient-img__cta-input-header
+    SEARCH 'RICHARD' TO TOUR FEATURES
+  =form_tag search_searchable_entities_path, method: :get do
+    .input-group
+      =text_field_tag "test_term", nil, placeholder: "Enter Search Term", class: 'splash-gradient-img__cta-input form-control'
+      .input-group-btn
+        %button.btn.splash-gradient-img__cta-input-button{ :'data-disable-with' => disable_with("") }
+          Browse

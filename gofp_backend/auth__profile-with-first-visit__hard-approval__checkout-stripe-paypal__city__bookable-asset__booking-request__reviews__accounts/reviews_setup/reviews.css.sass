@@ -1,0 +1,70 @@
+@import 'constants'
+@import 'mixins'
+
+.review
+  .stars
+    font-size: 40px !important
+    color: $mutedPurple
+    cursor: pointer
+  form
+    input, textarea
+      @include border-radius(4px)
+
+.reviews_display
+  .review
+    .review-synopsis
+    .review-meta
+  .reviews-ratings
+    .category-rating
+      .stars
+        font-size: 40px !important
+        color: $mutedPurple !important
+    .overall
+  .no_reviews
+
+
+.transparency
+  .styled_box
+    @include styled_box()
+    min-height: 240px
+    padding: 5px 20px
+    min-width: 366px
+  .styled_box_minimal
+    @extend .styled_box
+    background-color: white
+    border: none
+  .all_reviews
+    margin-bottom: 6px
+    font-weight: bolder
+  .synopsis
+    text-indent: 10px
+    font-size: 15px
+  .author
+    margin-left: 20px
+  .title_small
+    color: $mutedPurple
+  .general
+    background-color: white
+    padding: 11px 40px 11px 16px
+    margin: 10px 0
+    display: inline-block
+    @include border-radius(5px)
+    border: 1px solid $borderGray
+    i
+      font-size: 15px
+  .panel-group
+    margin-top: 20px
+    .panel-title
+      color: $mutedPurple
+      font-style: italic
+      background-color: white
+  .big_and_opaque
+    opacity: 0.2
+    letter-spacing: 0.1em
+    font-size: 52px
+    text-align: center
+    margin-top: 13px
+  .panel-heading
+    background-color: white
+    padding: 13px
+    text-align: center

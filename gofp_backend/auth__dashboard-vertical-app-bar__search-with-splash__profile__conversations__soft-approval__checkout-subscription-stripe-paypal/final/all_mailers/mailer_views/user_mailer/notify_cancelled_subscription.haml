@@ -1,0 +1,11 @@
+- content_for :content do
+  %p
+    ="Hi #{@user.first_name.presence || 'fellow user'},"
+  %p
+    We're cancelled your subscription service to Ping N' Sleep.
+  %p
+    Your pingers will stop working at this point. If you'd like our service back, please add 10 pingers for $3/month to get started again. You won't have to ren-enter your pingers.
+  %p
+    Best,
+    %br
+    Ping N' Sleep

@@ -1,0 +1,455 @@
+@import 'constants'
+@import 'mixins'
+
+.profile
+  margin: 0 auto
+
+  max-width: 1000px
+  img
+    @include border-radius(5px)
+  #replace_image
+    margin-top: 5px
+    background-color: #383838
+    display: inline-block
+    color: white
+    padding: 4px 10px
+    @include border-radius(10px)
+  form
+    @media (max-width: 767px)
+      .multiselect-container
+    input, textarea
+      @include border-radius(2px)
+    .inner-addon .fa
+      margin-left: 10px
+    #profile_rate_cents
+      padding-left: 40px
+    .beers
+      font-size: 18px
+      margin-top: 45px
+      span
+        margin: 0 10px
+        @media (max-width: 767px)
+          float: left
+          display: block
+          width: 100%
+          margin: 14px 0px 10px 0px
+      label
+        font-weight: 100 !important
+        margin-bottom: -4px
+        cursor: pointer
+        padding-left: 5px
+      input
+        margin-top: -4px
+        &:focus
+          box-shadow: none
+        @media (max-width: 767px)
+          margin-top: 9px
+      .checkbox
+        margin-left: 0px
+        @media (max-width: 767px)
+          margin-left: 20px
+
+    .gender
+      @extend .beers
+      margin-top: 10px
+      font-size: 18px
+  .divider
+    margin: 0px 10px
+  .form-group.text
+    margin: 0px 5px 0 0
+    font-size: 18px
+  .dropdown-menu
+    font-size: 18px
+    margin-top: 0px
+    @include border-radius(2px)
+    li, a
+      height: 30px
+      &:hover
+        background-color: #428bca
+        color: white
+
+.styled_box_bookings
+  @include styled_box()
+  min-height: 100px
+  margin-top: 0px
+  padding-left: 20px
+  padding-right: 20px
+  max-width: 380px
+  min-width: 340px
+  .title
+    margin-top: 0
+
+.styled_box_bookings_first
+  @extend .styled_box_bookings
+  max-width: 350px
+  @media (max-width: 767px)
+    margin-top: 20px
+    float: left
+
+.earnings
+  margin-bottom: 5px
+.money
+  color: $hjGreen
+  font-size: 18px
+.missing
+  font-size: 18px
+  color: $missingRed
+  font-style: italic
+  margin-left: 30px
+.profile_edit
+  color: $hjGreen
+hr
+  .section_hr
+    color: $mutedPurple
+
+.steps_left
+  @include styled_box()
+  margin-top: 0px
+  min-height: 180px
+  padding: 10px 35px 35px 35px
+  width: 315px
+  height: 300px
+  @include border-radius(50%)
+  background-color: $darkerGray
+  border-color: $hjGreen
+  border-width: 20px
+  margin: 0 auto
+  margin-right: 0px
+  @media (max-width: 767px)
+    float: left
+  > p
+    margin-top: 10px
+    width: 250px
+    margin-left: -15px
+  .content
+    @include translate-y(26%)
+    i
+      font-size: 8px
+      vertical-align: middle
+  .title
+    margin: 5px 0px
+    text-align: center
+    margin-left: -13px
+    font-size: 29px !important
+    min-width: 222px
+    span
+      color: white
+  .step
+    color: white
+    letter-spacing: .9px
+  p
+    color: white
+  a
+    &:hover
+      text-decoration: none
+  b
+    color: $mutedPurple
+    font-size: 44px
+  .submit_button
+    width: 218px
+    margin: -4px
+    margin-top: 24px
+    background-color: transparent
+    border-color: white
+    @include border-radius(8px)
+    &:hover
+      background-color: $orange
+      border-color: $orange
+
+.steps_left_abs
+  @extend .steps_left
+  position: absolute
+  right: 0
+  top: 0
+  .steps_list
+    margin-left: -8px
+    width: 200px
+    margin-top: -8px
+    .step
+      font-size: 14px
+  height: 230px
+  width: 230px
+  .steps_1
+    margin-top: 15px
+  .steps_2
+    margin-top: 10px
+  .steps_3
+  .steps_pending
+    .title
+      margin-bottom: 10px
+      b
+        font-size: 30px
+    .steps_list
+      font-size: 12.5px
+      margin-left: -18px
+      text-align: center
+      width: 160px
+      .step
+        font-size: 13px
+  .steps_fixing
+    @extend .steps_pending
+    .title
+      margin-top: -50px
+  .title
+    margin-left: -50px
+    margin-top: -13px
+    font-size: 24px !important
+    margin-bottom: 0px
+  @media (max-width: 530px)
+    display: none
+  @media (min-width: 531px)
+    right: 40px
+  @media (min-width: 768px)
+    right: 0px
+  @media (min-width: 992px)
+    right: 150px
+  @media (min-width: 1200px)
+    right: 200px
+
+
+
+.levels_badge__container
+  width: 120px
+  height: 120px
+  position: absolute
+  right: 0
+  top: 0
+  border: 1px solid black
+  border-color: $hjGreen
+  background-color: $darkerGray2
+  border-width: 10px
+  text-align: center
+  &:hover
+    border-color: $mutedPurple
+    background-color: $darkerVanillaOrange
+    .levels_badge__level
+      color: $darkerGray2
+  @include border-radius(50%)
+  @media (max-width: 300px)
+    display: none
+  @media (min-width: 400px)
+    right: 20px
+  @media (min-width: 625px)
+    right: 100px
+  @media (min-width: 768px)
+    right: 78px
+  @media (min-width: 992px)
+    right: 226px
+  @media (min-width: 1200px)
+    right: 276px
+.levels_badge__heading
+  color: white
+  font-weight: 300
+  opacity: .8
+  margin-top: 7px
+.levels_badge__level
+  font-size: 20px
+  margin-top: -3px
+  color: #A39EBF
+  font-weight: 500
+
+  //1200
+  //992
+  //768
+  //480
+
+
+.no_profile
+  float: right
+  @media (max-width: 767px)
+    float: none
+
+
+.published_stamp
+  .title_small
+    font-size: 35px
+    color: $mutedPurple
+    margin-bottom: -3px
+  .submit_button_xsmall
+    background: none
+    color: $hjGreen
+    border-color: $hjGreen
+    @include border-radius(5px)
+    &:hover
+      border-color: $orange
+
+
+.profile-meta__reviews-tagline-container
+  font-size: 14px
+  opacity: .8
+  a
+    color: $mutedPurple
+
+.profile-meta__reviews-tagline--no-reviews
+  color: $mutedPurple
+  opacity: .6
+
+.profile-meta__reviews-tagline
+  color: $mutedPurple
+
+.profile-meta__link-set
+  padding-left: 0
+  margin-top: 6px
+  display: inline
+  .fa
+    color: $mutedPurple
+    margin-right: 8px
+
+.profile-meta__years-tagline
+  font-size: 14px
+  color: $mutedPurple
+  span
+    font-weight: 500
+
+.profile-meta__name
+  font-size: 30px
+  display: inline-block
+  font-weight: 300
+  margin-bottom: 8px
+  opacity: .8
+  white-space: nowrap
+
+.profile-meta__avatar
+  margin-bottom: 8px
+
+.profile-meta-account__container
+  margin-bottom: 20px
+  .subtitle
+    font-size: 16px
+    color: $mutedPurple
+    font-weight: 300
+    text-align: right
+    @media (max-width: 767px)
+      text-align: left
+  .info
+    margin-top: 3px
+  .subtitle
+    font-size: 24px
+  .subtitle2
+    text-align: right !important
+    font-weight: 300
+    font-size: 14px !important
+    opacity: .9
+    margin-top: 4px
+
+.profile-meta-account__container--faded
+  @extend .profile-meta-account__container
+  opacity: .5
+
+.profile-meta__container
+  text-align: right
+
+.searchable_entity-page-profile
+  .info
+    margin-top: 3px
+
+
+.searchable_entity-page-profile__main-fields
+  margin-top: 20px
+  img
+    max-height: 30px
+    float: left
+  p
+    font-size: 15px
+  .row
+    margin-top: 8px
+  .col-sm-9
+    margin-top: -8px
+
+.searchable_entity-page-profile__main-field
+
+.searchable_entity-page-profile__field-icon-set
+  border-bottom: 1px solid #D4CECE
+  padding-bottom: 6px
+
+.searchable_entity-page-profile__field-val
+  font-size: 15px
+  padding: 24px 20px 0px 100px
+  margin-bottom: 20px
+
+.searchable_entity-page-profile__field-name
+  font-size: 18px
+  color: $mutedPurple
+  font-weight: 300
+  margin-top: 4px
+  padding-left: 10px
+
+.searchable_entity-page-profile__field-description
+  font-size: 14px
+  padding-left: 10px
+
+.searchable_entity-page-profile__meta-fields
+  margin-bottom: 30px
+
+.profile-meta__edit-link
+  display: inline
+  a
+    font-size: 14px
+    font-weight: 400
+    color: $mutedPurple
+
+.searchable_entity-page-profile__meta-links
+  padding-left: 0
+  margin-top: 6px
+  .fa
+    color: $mutedPurple
+    margin-right: 8px
+
+
+#locations
+  .confirm_on_map
+    float: right
+    height: 46px
+    background-color: $backgroundGray
+    color: $mutedPurple
+    border-color: $borderGray
+    @media (max-width: 767px)
+      float: left
+      margin: -15px 0px 10px 0px
+  .location_artist_display
+    margin-left: 20px
+    a
+      font-size: 17px
+    p
+      font-style: italic
+    i
+      &:hover
+        text-decoration: none !important
+  #use_same_location
+    color: $mutedPurple
+    font-size: 18px
+    label
+      cursor: pointer
+
+
+.profile__container
+  padding: 20px
+  border: 1px solid #D2D2D2
+  background-color: white
+  box-shadow: 0px 3px 0px #999
+  margin-bottom: 20px
+
+.profile-sidemenu-action-buttons
+  padding-top: 10px
+  .btn
+    min-width: 240px
+    margin-bottom: 6px
+    text-transform: uppercase
+    font-size: 12px
+
+.searchable_entity-section__title-link
+  font-size: 14px
+  text-decoration: underline
+  margin-left: 6px
+.searchable_entity-section__title
+  margin-bottom: 0px
+  margin-left: 20px
+  font-weight: 400
+  opacity: .8
+  letter-spacing: -1px
+  font-size: 32px
+  display: inline-block
+.power-session-section__title
+  @extend .searchable_entity-section__title
+.power-session-section__title-link
+  @extend .searchable_entity-section__title-link

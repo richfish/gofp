@@ -1,0 +1,279 @@
+/* Typically just one-off components, things shared on many pages */
+
+@import 'constants'
+@import 'mixins'
+
+
+
+
+.info_panel
+  margin-bottom: 20px
+  .clickable
+    i, span
+      cursor: pointer
+  .info
+    .non_list_notice
+      margin-left: 30px
+      margin-top: 8px
+
+.policies
+  margin-top: 5px
+  a
+    text-decoration: none
+    color: gray
+    font-size: 15px
+    font-style: italic
+
+.action_row
+  margin-top: 30px
+
+.tt-dropdown-menu
+  display: none !important
+
+.cancel
+  &:hover
+    text-decoration: none
+  margin-left: 30px
+  margin-top: 52px
+
+.inner-addon
+  position: relative
+  float: left
+  width: 50%
+  .fa
+    position: absolute
+    padding: 16px 10px 10px 10px
+    color: black
+    pointer-events: none
+
+.input-icon-container
+  display: inline-block
+
+.inner-addon--img
+  position: relative
+  float: left
+  width: 50%
+  img
+    position: absolute
+    margin-top: 10px
+    margin-left: 2px
+    color: black
+    pointer-events: none
+
+
+.or-seperator
+  font-weight: 400
+  opacity: .3
+  padding: 10px
+  text-transform: uppercase
+
+
+.left-addon .fa
+  left: 0px
+.left-addon img
+  left: 0
+
+.right-addon .fa
+  right: 0px
+
+.left-addon input
+  padding-left: 30px
+
+.right-addon input
+  padding-right: 30px
+
+.custom-error
+  color: red
+  margin-left: 5px
+
+.styled_box
+  min-height: 100px
+  margin-top: 20px
+  padding: 7px
+  border: 1px solid $borderGray
+  @include border-radius(2px)
+  background-color: $backgroundGray
+  padding: 12px 40px 26px 40px
+
+.sm-push-35px
+  @media (max-width: 767px)
+    margin-bottom: 35px !important
+.sm-push-20px
+  @media (max-width: 767px)
+    margin-bottom: 10px !important
+.sm-float-switch-r-n
+  float: right
+  @media (max-width: 767px)
+    float: none
+
+.lg-nmarg-l-10
+  @media (min-width: 992px)
+    margin-left: -12px !important
+
+.pagination
+  .active
+    a
+      border-color: $poppyRed !important
+      background-color: $poppyRed !important
+      color: white !important
+  li
+    a
+      color: $poppyRed !important
+
+.modal_flat
+  @include border-radius(0px)
+  box-shadow: 0px 0px 0px 0
+
+.see_more
+  cursor: pointer
+
+.non_link
+  a
+    color: inherit
+    &:hover
+      text-decoration: none
+
+
+.delete_icon
+  font-size: 18px
+  color: black
+  margin-left: 5px
+
+.form-inline
+  .form-group:first-child
+    margin-right: 10px
+
+
+
+input[type="checkbox"]
+  + label
+    font-size: 16px
+    padding-right: 4px
+    margin-bottom: 10px
+    padding-left: 0
+    span.box
+      display: none
+      width: 18px
+      height: 18px
+      margin: -1px 10px 0 0
+      vertical-align: middle
+      cursor: pointer
+      border-radius: 20%
+      border: 1px solid #ccc
+      background-color: #fff
+    span.check
+      display: none
+      color: #fff
+      margin: 0px 10px 0 -25px
+      color: #fff
+      font-size: 0.8em
+  &:checked
+    + label
+      span.box
+        display: none
+        background-color: $orange
+
+
+input[type="radio"]
+  display: none
+  + label
+    font-size: 16px
+    padding-right: 15px
+    span.outer
+      display: inline-block
+      width: 28px
+      height: 28px
+      margin: -1px 10px 0 0
+      vertical-align: middle
+      cursor: pointer
+      border-radius: 50%
+      border: 1px solid #ccc
+      background-color: #fff
+  &:checked
+    + label
+      span.outer
+        background-color: $mutedPurple
+
+.checkbox-checked
+  fill: $herokuPurple
+  vertical-align: middle
+  display: inline
+
+.checkbox-checked.disabled
+  @extend .checkbox-checked
+  fill: $backgroundGray
+
+.checkbox-unchecked
+  @extend .checkbox-checked
+  fill: $backgroundGray
+
+
+.hover-link
+  &:hover
+    color: $missingRed
+    text-decoration: none
+
+
+
+.tt-menu
+  cursor: pointer
+  background-color: $strongerWheat
+  background-opacity: 1
+  width: 100%
+  padding-top: 20px
+  padding-bottom: 20px
+  text-align: center
+  .tt-dataset
+    .tt-suggestion
+      font-size: 15px
+      padding: 6px 0px
+      color: white
+      .tt-highlight
+        font-weight: 300
+
+#sign_up
+  .tt-menu
+    @extend .tt-menu
+    background-color: $wheat
+    .tt-suggestion
+      color: $black2 !important
+
+.header-dropdown__trigger
+  padding-top: 6px
+  &:hover
+    a
+      text-decoration: none
+    .header-dropdown__menu
+      display: block
+
+.header-dropdown__menu
+  margin-bottom: 0
+  margin-top: 0
+  padding-top: 0
+  li
+    padding: 8px
+    border-bottom: 1px solid #DEDEDE
+    text-transform: uppercase
+    font-weight: 200
+    a
+      font-weight: 400
+      font-size: 12px
+    .fa
+      padding-right: 6px
+    &:hover
+      background-color: #DEDEDE
+      a
+        background-color: #DEDEDE !important
+  li:last-child
+    border: none
+  li:first-child
+    padding-top: 6px
+
+
+#terms_privacy_modals
+  .modal-dialog
+    width: 90%
+  p
+    font-size: 12px
+  li
+    font-size: 12px

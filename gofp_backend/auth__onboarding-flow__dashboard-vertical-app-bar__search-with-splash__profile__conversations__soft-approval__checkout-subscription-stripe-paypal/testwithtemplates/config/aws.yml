@@ -1,0 +1,25 @@
+production:
+  bucket: testwithtemplates-production
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+
+development: &defaults
+  bucket: testwithtemplates-development
+  access_key_id: 123
+  secret_access_key: 456
+
+test:
+  <<: *defaults
+  bucket: testwithtemplates-test
+
+demo:
+  <<: *defaults
+  bucket: testwithtemplates-demo
+
+staging:
+  <<: *defaults
+  bucket: testwithtemplates-staging
+
+sandbox:
+  <<: *defaults
+  bucket: testwithtemplates-sandbox

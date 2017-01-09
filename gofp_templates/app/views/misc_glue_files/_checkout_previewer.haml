@@ -1,0 +1,42 @@
+#toggleable_checkout_preview
+  -if params[:checkout].present?
+    =link_to new_order_path(euid: params[:checkout]), 'data-no-turbolink' => '' do
+      .btn.submit_button_small
+        =iconf('caret-right')
+        Return to Checkout
+  -elsif params[:confirmation_page].present?
+    =link_to order_path(euid: params[:confirmation_page]) do
+      .btn.submit_button_small
+        =iconf('caret-right')
+        Back to Confirmation Page
+  -elsif params[:review].present?
+    =link_to new_review_path(euid: params[:review]) do
+      .btn.submit_button_small
+        =iconf('caret-right')
+        Back to Your Review
+  -if should_allow_booking_prompt?
+    .btn.submit_button_small{ style: 'opacity:.8', 'data-toggle' => 'modal', 'data-target' => '#book_now_modal' }
+      =iconf('bolt', nil, 'font-size: 18px;')
+      Book It
+  .btn.submit_button_small{ 'data-toggle' => 'modal', 'data-target' => '#contact_modal' }
+    Preview Conversations
+  =render "conversations/first_conversation_modal", searchable_entity: @searchable_entity
+  =link_to new_order_path do
+    .btn.submit_button_small
+      %span Preview Checkout Page
+  .btn.submit_button_small{ 'data-toggle' => 'modal', 'data-target' => '#payment_modal'}
+    %span Payments Modal
+  =render "orders/payment_modal"
+  =link_to "#profile_section" do
+    .btn.submit_button_small_secondary{ class: ('disabled' if should_disable_buttons_for_instructor?) }
+      Yada Profile
+  =link_to "#review_section" do
+    .btn.submit_button_small_secondary{ class: ('disabled' if should_disable_buttons_for_instructor?) }
+      Reviews Maybe
+  =link_to "#teaser_schedule_section" do
+    .btn.submit_button_small_secondary
+      Yada Etc.
+  -if false#should_show_other_offerings?
+    =link_to "#other_offerings" do
+      .btn.submit_button_small_secondary
+        Other Offerings

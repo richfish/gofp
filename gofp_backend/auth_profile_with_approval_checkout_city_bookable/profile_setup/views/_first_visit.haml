@@ -1,0 +1,14 @@
+.row.margin-bottom-30px
+  .col-sm-12
+    %span{ class: 'title', style: 'display:inline-block' } Your Boilerplate Profile
+    =link_to 'Create Profile', new_user_profile_path(current_user), style: 'font-size:20px; margin-left:5px'
+.row
+  .col-sm-5.col-sm-offset-1.sm-push-20px
+    Maybe a Hero Unit Here
+    =#render "profiles/no_profile"
+  .col-sm-5
+    =render "profiles/steps_left", opts: { first_visit: true }
+    -if false
+      .styled_box_bookings_first
+        Maybe some enticing chart about something about possible sales
+        =render "profiles/bookings_previews"

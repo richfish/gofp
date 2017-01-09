@@ -1,0 +1,19 @@
+%p="Hi #{@booking_request.first_name} and #{@bookable_asset.user.first_name},"
+%p
+  This is a confirmation that your bookable_asset
+  =link_to @bookable_asset.name, user_bookable_asset_url(@bookable_asset.user, @bookable_asset)
+  has come to a stop, either by cancellation of the participant or instructor, or by rain check. This is nothing too unusual, things happen, and we understand.
+
+%p
+  Our team has filed a ticket to follow up on any refunds or dispute resolutions items that may need to be addressed. Expect relevant communication from us regarding these items.
+
+%p
+  If you haven't already, be sure to familiarize yourself with policies ranging from refunds, cancellations, disputes, and reviews at
+  =link_to "policies page", policies_path
+  and feel free to reach out to us if you don't hear from us shortly for any actions that need to be taken
+  =link_to "support@monkey.com", "mailto:support@monkey.com", target: '_blank'
+
+%p
+  Best,
+  %br
+  Monkey Team

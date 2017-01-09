@@ -1,0 +1,133 @@
+@import "constants"
+@import "mixins"
+
+.auth__container
+  min-height: 700px
+.auth__signup-modal
+.auth__container-modal-toggle
+  cursor: pointer
+  margin-left: 40px
+.auth__signup-container
+
+.auth__login-container
+
+
+#signup-modal
+  .modal-dialog
+    width: 500px
+    margin: 80px auto
+    @media (max-width: 520px)
+      width: 100%
+  .modal-content
+    box-shadow: 0px 0px 0px 0
+    border-radius: 10px
+    border: none
+    background-color: #e6e1d7
+    padding-top: 30px
+
+.auth__signup-title
+  font-size: 32px
+  font-weight: 500
+  margin-bottom: 20px
+  text-align: center
+  color: #555555
+  letter-spacing: -.5px
+.auth__signup-subtitle
+  margin: auto
+  width: 430px
+  font-size: 16px
+  text-align: center
+  font-weight: 400
+  margin-bottom: 16px
+  color: #5e5e5e
+  line-height: 20px
+.auth__signup-action-container
+  width: 430px
+  margin: auto
+.auth__signup-form
+  width: 344px
+  margin: auto
+.auth__signup-form-field-set
+  margin-bottom: 20px
+  width: 100%
+.auth__signup-form-label
+  font-size: 14px
+  color: #5e5e5e
+  margin-bottom: 7px
+  font-weight: 500
+.auth__signup-form-field
+  position: relative
+  .fa
+    color: #e6e1d7
+    position: absolute
+    padding: 12px
+    font-size: 22px
+    right: 0
+    transition: color .2s ease-in-out
+  input
+    border-radius: 2px
+    margin-right: 4px
+    padding: 18px 15px 18px 15px
+    font-size: 18px
+    height: 46px
+    width: 100%
+    border: none
+    border-radius: 10px
+    &:focus
+      outline: none
+      border: 3px solid #18bdcb
+      background-color: #fcf6ef
+      transition: all .2s ease-in-out
+.auth__signup-submit-btn
+  margin-bottom: 35px
+.auth__signup-close
+  background-color: white
+  height: 28px
+  width: 28px
+  border-radius: 50%
+  position: absolute
+  right: 0
+  top: 0
+  cursor: pointer
+  text-align: center
+  margin-top: -16px
+  margin-right: 12px
+  .fa
+    color: #e6e1d7
+    font-size: 22px
+    padding-top: 3px
+  &:hover
+    background-color: #ff4d4f
+.auth__signup-or-divider-wrapper
+  z-index: 1
+  text-align: center
+  position: relative
+  margin-bottom: 30px
+.auth__signup-or-divider
+  color: #555555
+  background: #e6e1d7
+  display: inline-block
+  padding: 0 10px
+  font-weight: 400
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    top: 0.45em
+    border-top: 1px solid black
+    z-index: -1
+.auth__signup-fb-cta-btn
+  margin-bottom: 40px
+  .fa
+    padding-right: 10px
+    font-size: 32px
+    vertical-align: bottom
+.auth__signup-login-cta
+  font-size: 14px
+  text-align: center
+  font-weight: 400
+  color: #5e5e5e
+  a
+    color: #ff4d4f

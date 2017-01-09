@@ -1,0 +1,8 @@
+-if BookableAssetTimeManager.new(@bookable_asset).hours_since_bootcamp_ended <= (24*7)
+  =render "reviews/form"
+-else
+  %h4
+    We are sorry, it has been more than 7 days since your outing. You cannot leave a review at this point. However if something was bad about the outing, please reach out to us to let us know
+    =link_to "support@monkey.com", "mailto:support@monkey.com", target: '_blank'
+
+

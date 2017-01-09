@@ -1,0 +1,206 @@
+@import 'constants'
+@import 'mixins'
+
+
+//Overlay experiment
+
+.mini_hover_overlay
+  &:hover
+    .mini_hover_overlay_content
+      opacity: 1
+
+.mini_hover_overlay_content
+  background: rgba(0,0,0,.75)
+  text-align: center
+  padding: 45px 0 66px 0
+  opacity: 0
+  -webkit-transition: opacity .25s ease
+  -moz-transition: opacity .25s ease
+
+.contenthover
+  top: 50%
+  position: relative
+  @include translate-y(-50%)
+  font-weight: bold
+  a
+    text-decoration: none
+
+
+
+// Date display box
+
+#date_display_box
+  color: gray
+  margin-top: 10px
+  #time
+    font-size: 20px
+    color: $mutedPurple
+    font-weight: bolder
+  #the_box
+    display: inline-block
+    font-size: 20px
+    border: 1px solid $mutedPurple
+    background-color: white
+    @include border-radius(5px)
+    #month
+      color: white
+      font-size: 20px
+      background-color: $mutedPurple
+      padding: 0px
+    #the_box2
+      padding: 14px 34px
+      #day
+        font-size: 60px
+        color: $mutedPurple
+        font-weight: bold
+        margin-bottom: -18px
+      #day_of_week
+        font-size: 20px
+        font-weight: bolder
+        opacity: 1
+        color: #8D87AD
+
+
+
+//Main checkout page
+
+.checkout
+  img
+    @include border-radius(5%)
+  hr
+    background-color: $mutedGreen
+    height: 3px
+    width: 100%
+    margin-left: 0
+    margin-top: 5px
+  hr.hr_thin
+    background-color: #d3d3d3
+    height: 1px
+    width: 100%
+    opacity: .8
+  .heading
+    font-weight: 500
+    font-size: 16px
+  .heading_summary
+    @extend .heading
+    color: $mutedGreen
+    font-weight: bolder
+    font-size: 18px
+  .heading_small
+    @extend .heading
+    font-size: 18px
+    font-weight: normal
+    color: gray
+    opacity: .6
+    letter-spacing: 1.5px
+  .order_box
+    border: solid #d3d3d3 1px
+    padding-top: 10px
+    @include border-radius(5px)
+  .little_styled_box
+    margin-top: 80px
+    min-height: 100px
+    .hours
+      border: 1px solid $borderGray
+      padding: 50px
+      background-color: white
+      font-weight: bolder
+      display: inline
+      margin-bottom: 22px
+      min-height: 300px
+      font-size: 26px
+
+  #beer_form
+    button
+      @include translate-y(50%)
+      width: 100%
+      font-weight: bolder
+      opacity: .8
+      font-size: 20px
+      text-align: center
+      padding: 10px 0
+      margin: 10px 0 0 0
+
+//CC form
+
+#cc_form
+  text-align: center
+  h4
+    font-family: 'Proxima Nova'
+    font-weight: lighter
+  .stripe_long
+    min-width: 280px
+  form
+    input
+      font-weight: normal
+      font-family: 'Proxima Nova'
+      border: 1px solid lightgray
+      padding: 7px 5px 5px 10px
+      @include border-radius(0px)
+      outline: none
+      -webkit-box-shadow: none !important
+      -moz-box-shadow: none !important
+      box-shadow: none !important
+  .form-row
+    margin-bottom: -5px
+    i
+      color: #707070
+  #the_x
+    font-size: 14px
+  #month
+    width: 64px
+    border-right: none
+    border-top: none
+    padding-left: 8px
+    border-bottom: none
+  #year
+    width: 100px
+    border-left: none
+    border-top: none
+    border-bottom: none
+  #cvc
+    width: 100px
+    border-right: none
+    border-top: none
+    border-bottom: none
+  #email
+    @include border-radius-bottom(5px)
+  #phone
+    margin: 20px 14px 10px 0
+    padding-left: 0px
+    text-align: center
+    @include border-radius(5px)
+  #name
+    @include border-radius-top(5px)
+    border-bottom: none
+
+
+.cc_placeholder
+  margin-bottom: -5px
+  font-size: 20px
+  font-weight: bold
+  letter-spacing: 1.5px
+.cc_box
+  @include border-radius(5px)
+  background-color: #eee
+  padding: 30px 0 10px 0
+  border: solid #d3d3d3 1px
+  input
+    @media (max-width: 767px)
+      margin-bottom: 3px !important
+      width: 100% !important
+      margin-left: 0px !important
+  [data-stripe="cvc"]
+    @media (min-width: 1201px)
+      width: 170px !important
+
+  .cc_box_stripe
+    padding: 10px
+    background-color: #d3d3d3
+
+.cc_field
+  @include border-radius(5px)
+
+.payment-errors
+  color: $orange
+  margin-left: 10px

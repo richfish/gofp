@@ -1,0 +1,36 @@
+-pending_payment_bookable_assets = BookableAsset.for_provider(current_user).confirmed_or_unconfirmed
+.account_display
+  .styled_box
+    .item
+      .b-less
+        Paid out to Date
+      .money=paid_out_to_date
+    .item
+      .b-less
+        Pending Payments
+        =tooltip("These are payments enqueued for current bookable_assets, as well as authorized charges not yet confirmed.")
+      -if pending_payment_bookable_assets.present?
+        .money=pending_payout_amount
+        .fourtn
+          %div Payouts enqueued for:
+          -pending_payment_bookable_assets.each do |bc|
+            .pending_payout_bc
+              =iconf('caret-right')
+              %span.bold_red.fourtn=bc.name
+      -else
+        .money=number_to_currency(0, prection: 2)
+    .item
+      .b-less
+        Refunded Total
+      .money=total_refunds
+    .item
+      .b-less
+        Total Earned
+        =tooltip("Both paid out and pending, minus refunds.")
+      .money=total_earnings
+    .item{ style: 'margin-top: 6px'}
+      %i.fourtn="read about our <a href='#{policies_path}' target='_blank' class='fourtn'>payment policies</a>".html_safe
+
+
+
+

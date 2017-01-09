@@ -1,0 +1,28 @@
+%p="Hi #{@booking_request.guest_name},"
+
+%p
+  Your instructor
+  =@bookable_asset.user.first_name
+  for your bookable_asset
+  =link_to @bookable_asset.name, user_bookable_asset_url(@bookable_asset.user, @bookable_asset)
+  is unable to instruct this bookable_asset after all.
+
+%p
+  Your previous authorization has been voided in full, including any fees. Depending on how you paid, expect the authorization voiding to reflect in your bank statements within the next few business days.
+
+%p
+  The bookable_asset request may have simply auto expired due to the inactivity from the instructor, or there may have been a schedule conflict, or you may have simply failed to meet the instructor's requirements which they have listed on their bookable_asset page.
+
+%p
+  At any rate, if you believe the instructor should have accepted your bookable_asset request, you can either email us at
+  =link_to "support@monkey.com", "mailto:support@monkey.com", target: '_blank'
+  or feel free to reach out to the instructor via the "Contact" feature on his or her bookable_asset page.
+
+%p
+  Best,
+  %br
+  Monkey Team
+
+
+
+

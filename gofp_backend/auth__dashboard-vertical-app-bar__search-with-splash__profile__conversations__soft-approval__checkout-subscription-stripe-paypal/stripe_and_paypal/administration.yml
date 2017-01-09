@@ -1,0 +1,4 @@
+base_charge: 900
+# fee:
+#  percentage: 9.0
+#  #Note Stripe or PayPal fees factored into this

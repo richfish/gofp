@@ -1,0 +1,41 @@
+-# This is a two column layout with controls on right; may want header action bar, or vertical action bar
+
+-content_for :full_width_content do
+  .searchable_entity-page__full-width-heading-cointainer{ style: 'opacity: .2; font-size: 32px; text-align: center; padding-top: 30px; text-transform: uppercase;'}
+    TITLE OR SPLASH IMAGE MAYBE
+
+.row{ style: 'overflow: visible;' }
+  .col-sm-10
+    =render "searchable_entities/searchable_entity_show_full", searchable_entity: searchable_entity
+
+    -if false#should_show_special_actions? #E.g. 'return to checkout; back to your review; back to confirmation page'
+      .searchable_entity-special-circumstance-actions__container
+        =render "searchable_entities/special_cicumstance_actions"
+
+    -if false#should_show_instructor_profile?
+      .searchable_entity-page-profile__container#profile_section
+        =render "profiles/customer_view", searchable_entity: searchable_entity
+
+    -if false#should_show_other_offerings?
+      .searchable_entity-other-offerings__container#other_offerings
+        =render "searchable_entities/other_offerings", searchable_entity: searchable_entity
+
+    -if false#should_show_instructor_reviews?
+      #review_section
+        =render "reviews/reviews_display", user: searchable_entity.user
+
+  .col-sm-2
+    .searchable_entity-page__sidemenu-action-buttons.hidden-xs
+      =render "searchable_entities/searchable_entity_splash_page_menu_buttons", searchable_entity: searchable_entity
+
+    .searchable_entity_splash__meta-container
+      =render "searchable_entities/searchable_entity_splash_meta_container", searchable_entity: searchable_entity
+
+    .searchable_entity_splash__verified-badge-container
+      =render "searchable_entities/verified_badge", searchable_entity: searchable_entity
+
+-if false#should_allow_booking_prompt?
+  .searchable_entity-application__container
+    =BootstrapHelper::Modal.new('book_now_modal', {flat: true}) do |modal|
+      =modal.body do
+        =render "searchable_entity_applications/form"

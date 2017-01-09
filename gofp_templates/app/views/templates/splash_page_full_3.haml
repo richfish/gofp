@@ -1,0 +1,168 @@
+-view_css :splash_page_full_3
+
+.row
+  .col-sm-12.col-md-8.col-md-offset-2
+    .row.profile-splash__top-info-row
+      .col-sm-4
+        .profile-splash__photo-viewer{ 'data-toggle' => 'modal', 'data-target' => '#photo-viewer' }
+          .profile-splash__photo-primary
+            =image_tag "welcome/awkwardtable.jpg"
+          .profile-splash__photo-view-prompt
+            view photos
+      .col-sm-4
+        .profile-splash__travel-region
+          #region_hover
+            =centered_content_with_faded_heading('') do
+              .profile-splash__travel-region-img
+                =image_tag "europe-map.png"
+              .profile-splash__travel-region-txt
+                traveling or living
+      .col-sm-4
+        .profile-splash__meta-info
+          .profile-splash__meta-info-username
+            MyUsername
+          .profile-splash__meta-info-where-now
+            London, UK
+            =iconf('map-marker')
+            .profile-splash__inline-label
+              where now
+          .profile-splash__meta-info-main-fields
+            %span
+              28
+            =iconf('circle', nil, 'font-size: 6px;color: rgba(56,56,56,.3); padding: 6px;vertical-align:middle;')
+            %span
+              January 27, 2016
+            .profile-splash__inline-label
+              last active
+          .profile-splash__cta
+            -# -user1 = current_user
+            -# -user2 = profile.user
+            -# -existing_conversation = Conversation.for_pair(user1, user2)
+            -# -if existing_conversation.exists?
+            -#   =link_to conversation_path(existing_conversation.first.id) do
+            -#     .btn.submit_button_small
+            -#       Visit Conversation
+            -# -elsif current_user == profile.user
+            -#   .btn.submit_button_small{ style: 'cursor: default;'}
+            -#     This is you...
+            .btn.submit_button_small{ 'data-toggle' => 'modal', 'data-target' => '#contact_modal' }
+              Message
+
+    .row
+      .col-sm-12
+        .searchable_entity_splash__meta-container
+          .searchable_entity_splash__title
+            Of Interest
+          .row
+            .col-sm-12
+              .searchable_entity_splash__meta-point-list
+                .searchable_entity_splash__meta-point
+                  ="Straight".capitalize
+
+                =iconf('circle', nil, 'font-size:10px; color: rgba(56,56,56,.7); padding: 4px;')
+                .searchable_entity_splash__meta-point
+                  ="Male".capitalize
+
+                =iconf('circle', nil, 'font-size:10px; color: rgba(56,56,56,.7); padding: 4px;')
+                .searchable_entity_splash__meta-point
+                  non smoker
+
+                =iconf('circle', nil, 'font-size:10px; color: rgba(56,56,56,.7); padding: 4px;')
+                .searchable_entity_splash__meta-point
+                  no kids
+                -# -if profile.friendship?
+                -#   =iconf('circle', nil, 'font-size:10px; color: rgba(56,56,56,.7); padding: 4px;')
+                -#   .searchable_entity_splash__meta-point
+                -#     =profile.friendship_display
+
+    .row
+      .col-sm-12
+        .searchable_entity_splash__container
+          .searchable_entity_splash__title
+            Type of Traveler
+          .row
+            .col-sm-12
+              Digital Nomad
+          .row
+            .col-sm-12
+              .searcable_entity__type-traveler-description
+                A digital nomad is someone either traveling or living abroad earning income via location-independent setups, such as programming, blogging, or Internet-based businesses.
+
+    .row
+      .col-sm-12
+        .searchable_entity_splash__container
+          .searchable_entity_splash__title
+            About Me
+
+          .searchable_entity_splash__description
+            Hey I'm Richard, I'm a digital nomad traveling around Europe. I've lived in major world cities in Asia, South America, Europe, and more. Yada yada sample info yada yada, yep yep ok.
+
+
+=BootstrapHelper::Modal.new('contact_modal', {flat: true}) do |modal|
+  =modal.body do
+    .first-conversation__container
+      .row
+        .col-sm-4
+          .first-conversation__profile-photo
+            =image_tag "welcome/awkwardtable.jpg", height: 120, width: 120
+          .first-conversation__send-to-prompt
+            Send a message to
+            .first-conversation__send-to-prompt-username
+              TheirUsername
+          .first-conversation__instruction-line
+            follow guidelines:
+          %ul.first-conversation__instruction-list
+            %li keep it personalized
+            %li you're probably cool if you've found this site, so don't worry about that.
+            %li no threats or harassment (you'll be banned)
+
+        .col-sm-8.first-conversation__divider-border
+          .first-conversation__main-content-container
+            =form_for @conversation ||= Conversation.new, url: conversations_path, class: 'first-conversation__conversation-form' do |f|
+              =errors(@conversation)
+              =hidden_field_tag "conversant_id", 1
+              .row
+                .first-conversation__message-count
+                  3
+                  -if true#unless current_user.premium?
+                    =tooltip("Premium users can message as much as they want. Something to consider.", nil, 'bottom')
+              .row
+                .col-sm-12
+                  .form-group
+                    =f.fields_for :comments, @conversation.comments.build do |ff|
+                      =ff.text_area :message, class: 'input-lg form-control', rows: 6, placeholder: "Don't fuck this up.", style: 'height:240px !important'
+              .row
+                .col-sm-12
+                  %button.submit_button_small_secondary.first-conversation__submit-btn{ type: 'submit', :'data-disable-with' => disable_with('Sending')}
+                    =@conversation.persisted? ? 'Send Message' : 'Start Conversation'
+
+-view_js :photo_viewer
+-view_css :photo_viewer
+
+#photo-viewer.modal.fade.photo-viewer__modal-container
+  .modal-dialog
+    .photo-viewer__photo-container.active{ 'data-image-num' => 1 }
+      .photo-viewer__photo
+        =image_tag "welcome/awkwardtable.jpg"
+      .photo-viewer__flag{ 'data-report-url' => "#flag_photo_profile_path(profile, seq: 1)" }
+        =iconf('flag')
+    .photo-viewer__photo-container{ 'data-image-num' => 2 }
+      .photo-viewer__photo
+        =image_tag "welcome/awkwardtable.jpg"
+      .photo-viewer__flag{ 'data-report-url' => "#flag_photo_profile_path(profile, seq: 2)" }
+        =iconf('flag')
+    .photo-viewer__photo-container{ 'data-image-num' => 3 }
+      .photo-viewer__photo
+        =image_tag "welcome/awkwardtable.jpg"
+      .photo-viewer__flag{ 'data-report-url' => "#flag_photo_profile_path(profile, seq: 3)" }
+        =iconf('flag')
+    .photo-viewer__photo-container{ 'data-image-num' => 4 }
+
+    .dot_controls
+      .dot-control.active{ 'data-index' => 1 }
+      .dot-control{ 'data-index' => 2 }
+      .dot-control{ 'data-index' => 3 }
+
+
+.contenthover
+  Traveling through broader region of Europe

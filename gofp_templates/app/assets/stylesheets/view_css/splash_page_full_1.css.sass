@@ -1,0 +1,318 @@
+// Kickstarter style example of full splash page
+
+@import 'constants'
+@import 'mixins'
+
+.asset-splash-page__top-section-container
+  min-height: 900px
+
+.asset-splash-page__top-section-heading
+  text-align: center
+  padding: 10px 10px 40px 10px
+  width: 100%
+.asset-splash-page__top-section-title
+  font-size: 32px
+  font-weight: 300
+  margin-bottom: 10px
+.asset-splash-page__top-section-author-byline
+  font-size: 14px
+  font-weight: 500
+  span
+    font-weight: 200
+.asset-splash-page__asset-and-meta-secton
+  min-height: 400px
+  max-height: 500px
+  @media (max-width: 767px)
+    max-height: 1000px
+  padding-bottom: 30px
+.asset-splash-page__top-section-main-asset
+  background-image: asset_url("welcome/awkwardtable.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  min-height: 200px
+  width: 100%
+  height: 0
+  padding-top: 73%
+.asset-splash-page__top-section-main-asset-img-toggler
+  position: absolute
+  right: 0
+  bottom: 0
+  padding: 30px
+  padding-bottom: 10px
+  opacity: .8
+.asset-splash-page__top-section-main-asset-img-toggler-arrow
+  display: inline-block
+  font-size: 10px
+  color: white
+  background-color: #4a545a
+  padding: 4px 8px 2px 8px
+  cursor: pointer
+.asset-splash-page__top-section-main-asset-img-toggler-arrow--left
+  @extend .asset-splash-page__top-section-main-asset-img-toggler-arrow
+.asset-splash-page__top-section-main-asset-img-toggler-arrow--right
+  @extend .asset-splash-page__top-section-main-asset-img-toggler-arrow
+.asset-splash-page__top-section-asset-meta
+  padding-top: 40px
+.asset-splash-page__top-section-asset-meta-point--label
+  font-size: 14px
+  font-weight: 300
+.asset-splash-page__top-section-asset-meta-point--data
+  font-size: 46px
+  font-weight: 500
+  line-height: 48px
+.asset-splash-page__top-section-asset-meta-point
+  margin-bottom: 10px
+.asset-splash-page__cta-row
+  padding-top: 40px
+  padding-bottom: 40px
+.asset-splash-page__top-section-asset-cta-btn
+  background-color: #2BDE73
+  color: white
+  font-weight: 500
+  font-size: 16px
+  border-radius: 5px
+  padding: 10px 14px
+  cursor: pointer
+  text-align: center
+  white-space: nowrap
+.asset-splash-page__top-section-asset-cta-remind-btn
+  color: #828587
+  font-size: 14px
+  cursor: pointer
+  white-space: nowrap
+  padding-top: 6px
+  .fa
+    margin-right: 8px
+.asset-splash-page__top-section-asset-disclaimer-blurb
+  font-size: 12px
+  color: #828587
+.asset-splash-page__top-section-tags
+  margin-bottom: 30px
+  padding-top: 20px
+.asset-splash-page__top-section-tag
+  display: inline
+  font-size: 14px
+  color: #828587
+  font-weight: 400
+  .fa
+    margin-right: 8px
+.asset-splash-page__top-section-author-logline
+  margin-bottom: 30px
+  font-size: 22px
+  line-height: 26px
+  font-weight: 300
+.asset-splash-page__top-section-share-row
+  span
+    font-size: 14px
+    padding-right: 4px
+.asset-splash-page__top-section-shareable
+  display: inline-block
+  font-size: 12px
+  font-weight: 400
+  opacity: .8
+  color: #828587
+  border: 1px solid $borderGray
+  width: 90px
+  margin-right: 4px
+  padding-top: 2px
+  padding-top: 4px
+  cursor: pointer
+  .fa
+    margin-right: 2px
+    font-size: 10px
+.asset-splash-page__author-meta-section
+  padding-top: 30px
+  padding-bottom: 20px
+  border-top: 1px solid $borderGray
+.asset-splash-page__top-section-author-name
+  font-size: 14px
+  font-weight: 500
+.asset-splash-page__top-section-author-meta
+  margin-bottom: 10px
+  font-size: 14px
+  color: #828587
+.asset-splash-page__top-section-author-meta-point
+  font-weight: 200
+  display: inline-block
+  font-size: inherit
+.asset-splash-page__top-section-author-meta-point--bolder
+  font-weight: 400
+  display: inline-block
+  font-size: inherit
+.asset-splash-page__top-section-author-meta-point-divider
+  display: inline-block
+  width: 1px
+  height: 14px
+.asset-splash-page__top-section-author-links
+  color: #00A0FF
+  font-weight: 400
+  font-size: 14px
+  display: inline-block
+  cursor: pointer
+  span:first-child
+    margin-right: 20px
+.asset-splash-page__top-section-author-avatar
+  height: 80px
+  width: 80px
+  border-radius: 50%
+
+
+.asset-splash-page__page-toggler-and-nav
+  border-top: 1px solid $borderGray
+  border-bottom: 1px solid $borderGray
+  position: absolute
+  width: 100%
+  z-index: 1000
+  background-color: white
+.asset-splash-page__page-toggler-and-nav-nav-item
+  font-size: 14px
+  font-weight: 400
+  display: inline-block
+  padding-top: 20px
+  padding-bottom: 20px
+  cursor: pointer
+.asset-splash-page__page-toggler-and-nav-nav-item--active
+  border-bottom: 4px solid #2bde73
+.asset-splash-page__page-toggler-and-nav-cta-btn
+  @extend .asset-splash-page__top-section-asset-cta-btn
+  max-width: 240px
+  min-width: 180px
+  display: inline-block
+  margin-top: 10px
+.asset-splash-page__page-toggler-and-nav-cta-remind-btn
+  @extend .asset-splash-page__top-section-asset-cta-remind-btn
+  display: inline-block
+  padding-top: 20px
+  padding-bottom: 20px
+
+
+.asset-splash-age__description-section
+  padding-top: 160px
+.asset-splash-age__description-section-main-heading
+  margin-bottom: 40px
+  font-size: 22px
+  font-weight: 300
+.asset-splash-age__description-section-asset
+  margin-bottom: 20px
+  text-align: center
+.asset-splash-age__description-section-img
+  min-height: 140px
+  max-height: 500px
+  margin-bottom: 6px
+  width: 100%
+.asset-splash-age__description-section-img-caption
+  font-style: italic
+  color: #828587
+  text-align: center
+  font-size: 14px
+.asset-splash-age__description-section-paragraph
+  font-size: 16px
+  font-weight: 300
+  line-height: 24px
+  margin-bottom: 20px
+.asset-splash-age__description-section-title
+  font-size: 20px
+  font-weight: 500
+  margin-bottom: 10px
+.asset-splash-age__description-section-faq
+  padding-bottom: 30px
+.asset-splash-age__description-section-faq-link
+  color: #00A0FF
+  font-weight: 300
+  font-size: 15px
+  cursor: pointer
+  &:before
+    content: "\f054"
+    font-family: 'FontAwesome'
+    padding-right: 8px
+    font-size: 12px
+  margin-bottom: 10px
+.asset-splash-age__description-section-ask-question-button
+  background-color: #0080cc
+  color: white
+  width: 138px
+  padding: 6px 14px
+  text-align: center
+  border-radius: 6px
+  cursor: pointer
+  font-size: 14px
+  font-weight: 400
+.asset-splash-age__description-section-report-button
+  margin-bottom: 60px
+  margin-top: 60px
+  border: 1px solid #828587
+  color: #828587
+  padding: 6px 20px
+  border-radius: 6px
+  cursor: pointer
+  width: 260px
+  text-align: center
+  font-size: 14px
+  font-weight: 400
+
+
+.contenthover
+  top: 50%
+  position: relative
+  @include translate-y(-50%)
+  font-weight: 400
+  text-align: center
+  a
+    color: white
+    font-size: 20px
+    text-decoration: none
+
+
+.asset-splash-age__description-section-reward
+  min-height: 320px
+  position: relative
+  border: 1px solid $borderGray
+  border-radius: 3px
+  padding: 16px
+  margin-bottom: 20px
+  background-color: #FBF6F6
+  cursor: pointer
+.asset-splash-age__description-section-reward-pledge-amount
+  font-size: 14px
+  font-weight: 500
+  margin-bottom: 10px
+.asset-splash-age__description-section-reward-num-backers
+  font-weight: 500
+  font-size: 13px
+  margin-bottom: 20px
+  .fa
+    color: rgba(43,222,115,1)
+    font-size: 9px
+.asset-splash-age__description-section-reward-description
+  line-height: 20px
+  font-size: 14px
+  margin-bottom: 20px
+  font-weight: 300
+.asset-splash-age__description-section-reward-meta-label
+  color: #828587
+  font-size: 14px
+.asset-splash-age__description-section-reward-meta-data
+  font-size: 14px
+  font-weight: 300
+
+.asset-splash-age__description-section-reward-footer
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #FBF6F6 26%)
+  position: absolute
+  bottom: 0
+  margin-bottom: 4px
+  padding: 45px 10px 4px 10px
+
+.asset-splash-age__description-section-reward-overlay
+  background-color: rgba(43,222,115,0.9)
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+.asset-splash-age__description-section-reward-overlay-txt
+  font-size: 26px
+  color: white
+  text-align: center
+  position: relative
+  top: 50%
+  transform: translateY(-50%)

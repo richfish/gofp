@@ -1,0 +1,301 @@
+@import "constants"
+@import "mixins"
+
+.splash__container
+  height: 600px
+  position: relative
+  .dropdown-menu
+  .carousel
+    width: 100%
+    height: 100%
+    position: absolute
+    .carousel-inner
+      width: 100%
+      height: 100%
+    &::after
+      content: ''
+      display: block
+      width: 100%
+      height: 100%
+      background: asset-url('onelogin-pixel-screen.png') rgba(0,0,0,.1)
+      position: absolute
+      top: 50%
+      left: 50%
+      bottom: auto
+      right: auto
+      transform: translate(-50%,-50%)
+
+.splash__header
+  height: 85px
+  position: fixed
+  width: 100%
+  top: 0
+  background-color: #1C1F2A
+  z-index: 1
+  padding-top: 24px
+.splash__header-logo
+  float: left
+  margin-left: 40px
+  margin-top: -8px
+.splash__header-logo-img
+.splash__header-link-list-items
+  text-align: center
+  height: 30px
+  padding-top: 10px
+  ul
+    list-style-type: none
+    li
+      display: inline
+      margin-right: 20px
+      a
+        font-size: 13px
+        font-weight: 400
+        color: #BFBFC2
+        text-transform: uppercase
+        letter-spacing: 1.5px
+        &:hover
+          text-decoration: none
+        &:active
+          text-decoration: none
+        &:focus
+          text-decoration: none
+        &:visited
+          text-decoration: none
+      &:last-child
+        position: relative
+        &::before
+          content: 'Log in'
+          text-transform: uppercase
+          font-size: 10px
+          font-weight: 400
+          letter-spacing: 1.5px
+          position: absolute
+          top: 6px
+          color: #BFBFC2
+          width: 100px
+          top: -27px
+          right: -27px
+          cursor: pointer
+.splash__header-link-list-item-box--1
+  background-color: rgba(0,169,224,.1)
+  border: 1px solid #00A9E0
+  padding: 10px 18px
+  max-width: 100px
+  text-transform: uppercase
+  font-weight: 400
+  font-size: 13px
+  color: white !important
+  border-radius: 2px
+.splash__header-link-list-item-box--2
+  @extend .splash__header-link-list-item-box--1
+  background-color: #00A9E0
+
+
+.splash__carousel-slide
+  img
+    width: 100%
+    height: 100%
+    background-size: cover
+    background-position: 50% 50%
+    position: absolute
+    top: 0
+    right: 0
+
+
+.splash__central-content
+  max-width: 700px
+  margin: auto
+  position: relative
+  top: 40%
+  transform: translateY(-50%)
+  text-align: center
+  z-index: 1
+  padding-top: 100px
+  position: relative
+.splash__central-content-title
+  font-size: 34px
+  font-weight: 500
+  letter-spacing: 1px
+  margin-bottom: 10px
+  text-transform: uppercase
+  color: white
+.splash__central-content-subtitle
+  font-size: 22px
+  font-weight: 500
+  letter-spacing: 1px
+  text-transform: uppercase
+  color: white
+
+
+.splash__section-screenshot
+  padding-top: 80px
+  text-align: center
+.splash__section-screenshot-seperator
+  padding-bottom: 30px
+  margin-top: 10px
+  &::after
+    display: block
+    height: 3px
+    left: 50%
+    background-color: #00A9E0
+    position: absolute
+    width: 60px
+    content: ""
+    margin-left: -30px
+.splash__section-screenshot-title
+  text-transform: uppercase
+  color: #1C1F2A
+  font-size: 36px
+  letter-spacing: 1px
+  margin-bottom: 10px
+  font-weight: 500
+.splash__section-screenshot-subtitle
+  margin-bottom: 16px
+  font-weight: 400
+  color: #1C1F2A
+  font-size: 24px
+.splash__section-screenshot-subtitle2
+  color: #76787f
+  font-size: 15px
+  margin-bottom: 16px
+.splash__section-screenshot-img-wrapper
+  max-width: 900px
+  margin: auto
+  text-align: center
+.splash__section-screenshot-img
+  width: 100%
+  height: 100%
+
+
+.splash__section-customers
+  padding: 80px 0px
+  background-color: #152437
+.splash__section-customers-title
+  letter-spacing: 2.5px
+  color: white
+  text-align: center
+  text-transform: uppercase
+  font-size: 18px
+  margin-bottom: 24px
+  font-weight: 400
+.splash__section-customers-logos
+  background-image: asset-url("onelogin-companies-logos.png")
+  height: 50px
+  width: 100%
+
+.splash__section-quotes
+  padding: 80px 0px
+  text-align: center
+.splash__section-quotes-seperator
+  @extend .splash__section-screenshot-seperator
+.splash__section-quotes-title
+  @extend .splash__section-screenshot-title
+  margin-bottom: 30px
+.splash__section-quotes-quote-box
+  text-align: center
+  max-width: 300px
+.splash__section-quotes-quote-heading
+  font-size: 15px
+  text-transform: uppercase
+  color: #1C1F2A
+  margin-bottom: 20px
+  font-weight: 500
+  letter-spacing: 2.5px
+.splash__section-quotes-quote-txt
+  color: #76787f
+  line-height: 22px
+  font-size: 15px
+  margin-bottom: 20px
+.splash__section-quotes-quote-avatar
+  img
+    height: 105px
+    width: 105px
+    border-radius: 50%
+    margin-bottom: 10px
+.splash__section-quotes-quote-name
+  font-size: 15px
+  text-transform: uppercase
+  color: #1C1F2A
+  margin-bottom: 20px
+  font-weight: 500
+  letter-spacing: 2.5px
+.splash__section-quotes-quote-job
+  color: #76787f
+  line-height: 22px
+  font-size: 15px
+  margin-bottom: 20px
+.splash__section-quotes-quote-company-logo
+  img
+    height: 35px
+  margin-bottom: 26px
+.splash__section-quotes-quote-cta-btn
+  @extend .splash__header-link-list-item-box--1
+  background-color: white
+  color: #00A9E0 !important
+  border: 1px solid #00A9E0
+  width: 140px
+  margin: auto
+  max-width: 200px
+
+
+.splash__section-leaders
+  padding: 80px 0px
+  text-align: center
+  background-color: #f3f3f4
+.splash__section-leaders-seperator
+  @extend .splash__section-screenshot-seperator
+.splash__section-leaders-title
+  @extend .splash__section-screenshot-title
+  margin-bottom: 30px
+.splash__section-leaders-subtitle
+  color: #1C1F2A
+  margin-bottom: 40px
+  font-size: 17px
+  font-weight: 300
+.splash__section-leaders-box
+  height: 240px
+  width: 340px
+  background-color: white
+  box-shadow: 0 0 25px rgba(0,0,0,.1)
+  text-align: center
+.splash__section-leaders-logo
+  img
+    height: 60px
+    width: 60px
+    margin-top: 30px
+    margin-bottom: 20px
+.splash__section-leaders-name
+  color: #00A9E0
+  text-transform: uppercase
+  letter-spacing: 3px
+  font-size: 16px
+  font-weight: 400
+.splash__section-leaders-blurb
+  font-size: 20px
+  color: #1C1F2A
+  line-height: 26px
+  padding: 20px 30px
+
+.splash__stack
+  padding: 140px 0px
+  text-align: center
+  background: asset-url("onelogin-stack-backdrop.png") top left #1C1F2A
+.splash__stack-title
+  @extend .splash__section-screenshot-title
+  color: white
+  margin-bottom: 26px
+.splash__stack-btn-wrapper
+  margin: auto
+.splash__stack-cta-btn-1
+  @extend .splash__header-link-list-item-box--2
+  max-width: 180px
+  width: 150px
+  display: inline-block
+  margin: auto
+  margin-right: 10px
+.splash__stack-cta-btn-2
+  @extend .splash__header-link-list-item-box--1
+  max-width: 180px
+  width: 150px
+  display: inline-block
+  margin: auto

@@ -1,0 +1,56 @@
+-search_term = search_opts[:term]
+=form_tag search_searchable_entities_path, method: :get do
+  .row
+    .col-sm-12
+      .searchnfilter__search-bar
+        =form_tag search_searchable_entities_path, method: :get do
+          .input-icon-container{ style: 'width: 100%; padding: 0px 20px;'}
+            .inner-addon--img.left-addon
+              =image_tag "search_icon.png", height: 30
+            =text_field_tag "test_term", search_term, class: 'form-control input-lg searchnfilter__search-bar-input--giant autocomplete', placeholder: "Enter location", style: 'font-size: 28px;', id: "map-view-city-search"
+          -# =hidden_field_tag "city", "city"
+
+    -# .col-sm-3
+    -#   .searchnfilter__location-badge
+    -#     %div{ style: 'position: relative' }
+    -#       .dropdown-toggle.cursor-pointer{ 'data-toggle' => 'dropdown' }
+    -#         %p{ style: 'display:inline-block;'} Location
+    -#         %span.caret
+    -#       %ul.dropdown-menu
+    -#         %li
+    -#           %a{ href: '/', style: 'font-weight: 200' }
+    -#             =iconf('arrow-right', nil, 'font-weight: 100; color:#D2D2D2')
+    -#             Change City
+    -#     %p This is probably irrelevant
+  .row
+    .col-sm-10.col-sm-offset-1
+      .searchnfilter__filter-bar
+        .row
+          .col-sm-12
+            .searchnfilter__filter-set--doubleline
+              .searchnfilter__filter-set-option{ 'data-filter' => 'beginner' }
+                =image_tag "lightningbolt.png", height: 40
+                %p
+                  Level:
+                  %br
+                  %span Beginner
+              .searchnfilter__filter-set-option{ 'data-filter' => 'advanced' }
+                =image_tag "lightningbolt.png", height: 44
+                %p
+                  Level:
+                  %br
+                  %span Advanced
+            -# .searchnfilter__filter-set--doubleline
+            -#   .searchnfilter__filter-set-option{ 'data-filter' => 'power' }
+            -#     =image_tag "lightningbolt.png", height: 38
+            -#     %p
+            -#       Single Session:
+            -#       %br
+            -#       %span{ style: 'font-size: 20px; font-weight: 500;'} &le;
+            -#       %span 1 Day
+            -#   .searchnfilter__filter-set-option{ 'data-filter' => 'extended' }
+            -#     =image_tag "lightningbolt.png", height: 40
+            -#     %p
+            -#       Extended:
+            -#       %br
+            -#       %span Weeks or Months

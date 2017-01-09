@@ -1,0 +1,16 @@
+#use_cases
+  %a{ href: '#'}
+    %p
+      %span New App?
+      %span Plan to make it good?
+      %span Want to build it quickly?
+      %span Use Richard's Boilerplate.
+      %span Auth, Profiles, Dashboards, Payments, Marketplaces, more.
+      %span.downarrow=iconf('chevron-circle-up')
+      %a.submit_button{ href: new_order_path, style: 'text-decoration:none; margin-top: 30px'}
+        %span See Checkout/ Payments Flow
+      %span{ style: 'font-size: 12px;' } or
+      %span.btn.btn-special{ 'data-toggle' => 'modal', 'data-target' => '#payment_modal'}
+        %span Launch Payments Modal
+
+=render "orders/payment_modal"

@@ -1,0 +1,323 @@
+// Udactiy style example of full splash page
+
+@import 'constants'
+@import 'mixins'
+
+
+.asset-splash-page__shadox-box
+  padding-bottom: 30px
+  box-shadow: 0px 3px 0px #999
+  margin-bottom: 20px
+  background-color: white
+  border: 1px solid $borderGray
+  border-radius: 2px
+.asset-splash-page__shadox-box--black
+  @extend .asset-splash-page__shadox-box
+  background-color: #222
+  color: white
+.asset-splash-page__shadox-box--padded
+  @extend .asset-splash-page__shadox-box
+  padding: 15px 15px 30px 15px
+.asset-splash-page__shadox-box-title
+  font-size: 14px
+  font-weight: 400
+  padding: 12px 20px
+  text-transform: uppercase
+  color: $bzHeadingGray
+  border-bottom: 1px solid $borderGrayLighter
+.asset-splash-page__shadox-box-title--black
+  @extend .asset-splash-page__shadox-box-title
+  background-color: #3f3f3f
+  color: white
+
+
+.asset-splash-page__top-section-container
+.asset-splash-page__top-section-cover-img
+  background-image: asset_url("welcome/awkwardtable.jpg")
+  background-repeat: no-repeat
+  min-height: 230px
+  background-position: 50% 50%
+  background-size: cover
+  overflow: hidden
+.asset-splash-page__top-section-info-container
+  padding-top: 20px
+  padding-bottom: 35px
+  padding-left: 60px
+  padding-right: 40px
+.asset-splash-page__top-section-menu-items
+  margin-top: 15px
+  margin-bottom: 15px
+  ul
+    padding-left: 0
+    li
+      color: $bzLighterGray
+      font-size: 12px
+      text-transform: uppercase
+      text-decoration: underline
+      border-bottom: 1px dotted #428bca
+      display: inline
+      margin-right: 10px
+      cursor: pointer
+      font-weight: 300
+.asset-splash-page__top-section-biz-info-container
+.asset-splash-page__top-section-biz-logo
+  float: left
+  height: 80px
+  width: 80px
+  border-radius: 50%
+.asset-splash-page__top-section-biz-details-container
+  margin-left: 100px
+.asset-splash-page__top-section-biz-details-meta-block
+  margin-bottom: 15px
+.asset-splash-page__top-section-biz-details-score
+  border: 1px solid #63b75f
+  margin-right: 10px
+  display: inline-block
+  min-width: 101px
+  border-radius: 2px
+.asset-splash-page__top-section-biz-details-score-num
+  color: white
+  background-color: #63b75f
+  font-size: 12px
+  display: inline
+  width: 50%
+  float: left
+  text-align: center
+  font-weight: 500
+  padding-top: 2px
+.asset-splash-page__top-section-biz-details-score-label
+  color: #63b75f
+  background-color: white
+  font-size: 11px
+  display: inline
+  width: 50%
+  float: left
+  text-align: center
+  font-weight: 500
+  padding-top: 2px
+.asset-splash-page__top-section-biz-details-license
+  display: inline-block
+  vertical-align: top
+.asset-splash-page__top-section-biz-details-license-label
+  font-size: 13px
+  margin-right: 6px
+  display: inline-block
+.asset-splash-page__top-section-biz-details-license-num
+  font-size: 13px
+  font-weight: 500
+  display: inline-block
+.asset-splash-page__top-section-biz-details-name
+  font-size: 38px
+  font-weight: 300
+  line-height: 41px
+  margin-bottom: 8px
+.asset-splash-page__top-section-biz-details-phone
+  font-size: 19px
+  font-weight: 300
+  display: inline-block
+  &:after
+    content: "\007c"
+    font-size: 23px
+    line-height: 13px
+    margin: 0px 12px 0px 3px
+    position: relative
+    top: 1px
+    color: #bcbcbc
+    font-weight: 300
+.asset-splash-page__top-section-biz-details-contact-btn
+  min-width: 110px
+  line-height: 26px
+  padding: 0px 12px
+  font-size: 13px
+  text-transform: uppercase
+  background-color: #4a90e2
+  border-color: #4a90e2
+  color: white
+  border-radius: 2px
+  font-weight: 600
+  box-shadow: 0px 1px 2px $buttonShadow
+  display: inline-block
+  padding-top: 2px
+  cursor: pointer
+.asset-splash-page__top-section-biz-details-contact-btn-wrapper
+  display: inline
+  &:after
+    content: "\007c"
+    font-size: 23px
+    line-height: 13px
+    margin: 0px 12px 0px 3px
+    position: relative
+    top: 1px
+    color: #bcbcbc
+    font-weight: 300
+.asset-splash-page__top-section-biz-details-stars
+  display: inline
+  .fa
+    color: #F5A622
+    font-size: 15px
+    margin-right: 3px
+  span
+    font-size: 15px
+    color: #428bca
+
+.asset-splash-page__page-toggler-and-nav
+  font-size: 15px
+  font-weight: 400
+  text-transform: uppercase
+  background-color: rgba(240,240,240,0.9)
+  padding: 15px 0px 5px
+  width: 100%
+.asset-splash-page__page-toggler-and-nav-menu-items
+  ul
+    li
+      color: #428bca
+      border-bottom: 1px dashed
+      font-size: 15px
+      text-transform: uppercase
+      margin-right: 30px
+      display: inline
+      font-weight: 300
+      padding-bottom: 2px
+
+.asset-splash-page__main-content-container
+.asset-splash-page__sidebar-container
+  margin-top: -195px
+.asset-splash-page__cta-form
+.asset-splash-page__cta-form-label
+  color: #4a4a4a
+  margin-bottom: 5px
+  font-weight: 600
+  font-size: 14px
+  text-transform: uppercase
+.asset-splash-page__cta-form-field
+  border-radius: 5px
+  padding: 6px 12px
+  border-bottom: 1px solid #EEEEEE
+  color: #666
+  font-size: 19px
+  height: 42px
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 -1px 1px #fff, 0 1px 0 #fff
+  margin-bottom: 15px
+.asset-splash-page__cta-form-title
+  text-transform: uppercase
+  font-size: 22px
+  font-weight: 400
+  margin-bottom: 10px
+  padding-top: 10px
+.asset-splash-page__cta-form-blurb
+  font-weight: 300
+  color: $bzDarkerGray
+  margin-bottom: 30px
+  span
+    font-weight: 400
+.asset-splash-page__cta-form-btn
+  margin-top: 20px
+  font-size: 16px
+  font-weight: 600
+  text-transform: uppercase
+  width: 100%
+  color: #ffffff
+  background-color: #63b75f
+  border-color: #63b75f
+  padding: 12px 30px
+  text-align: center
+  box-shadow: 0px 1px 2px #777
+  cursor: pointer
+
+.asset-splash-page__sidebar-info-section
+.asset-splash-page__sidebar-info-section-img-blurb-set
+  border-bottom: 1px solid $borderGrayLighter
+  padding-top: 10px
+  padding-bottom: 10px
+  padding-left: 15px
+  padding-right: 15px
+.asset-splash-page__sidebar-info-section-badge-img
+  height: 60px
+  width: 60px
+  border-radius: 50%
+  margin-top: 4px
+  margin-left: 4px
+
+.asset-splash-page__sidebar-info-section-point
+.asset-splash-page__sidebar-info-section-label
+  font-size: 13px
+  display: inline
+.asset-splash-page__sidebar-info-section-val
+  font-size: 13px
+  font-weight: 500
+  display: inline
+.asset-splash-page__sidebar-blurb
+  font-weight: 200
+  font-size: 13px
+  line-height: 17px
+
+.asset-splash-page__sidebar-info-section-cta-btn
+  @extend .asset-splash-page__cta-form-btn
+.asset-splash-page__sidebar-info-section-cta-btn-wrapper
+  padding-left: 15px
+  padding-right: 15px
+
+
+.asset-splash-page__main-content-section
+.asset-splash-page__main-content-gallery
+  margin-bottom: 30px
+  .asset-splash-page__shadox-box--padded
+    padding-bottom: 8px
+    cursor: pointer
+.asset-splash-page__main-content-gallery-cover-img
+  margin-bottom: 30px
+  width: 100%
+  min-height: 215px
+.asset-splash-page__main-content-gallery-name
+  color: $bzDarkerGray
+  text-transform: uppercase
+  font-size: 13px
+  font-weight: 400
+.asset-splash-page__main-content-txt-section
+  margin-bottom: 30px
+  hr
+    margin-top: 20px
+    margin-bottom: 20px
+    border: 0
+    border-top: 1px solid #eeeeee
+.asset-splash-page__main-content-txt-section-title
+  color: $bzLighterGray
+  font-weight: 500
+  font-size: 14px
+  margin-bottom: 10px
+.asset-splash-page__main-content-txt-section-paragraph
+  font-size: 14px
+  line-height: 20px
+  font-weight: 300
+  margin-bottom: 10px
+.asset-splash-page__main-content-services
+  .asset-splash-page__shadox-box
+    padding-bottom: 10px
+.asset-splash-page__main-content-services-tag-list
+  border-bottom: 1px solid $borderGrayLighter
+  padding: 24px 15px
+.asset-splash-page__main-content-services-tag
+  display: inline-block
+  padding: 2px 8px
+  border: 1px solid #428bce
+  color: #428bce
+  funcont-size: 11px
+  line-height: 14px
+  border-radius: 2px
+  background: #fff
+  margin-bottom: 5px
+  margin-right: 5px
+  text-decoration: none
+  font-weight: 500
+  font-size: 11px
+.asset-splash-page__main-content-services-contact
+  padding: 8px 15px
+  .fa
+    margin-right: 8px
+.asset-splash-page__main-content-services-contact-location
+  font-size: 14px
+  font-weight: 200
+  margin-bottom: 10px
+.asset-splash-page__main-content-services-contact-phone
+  font-size: 14px
+  font-weight: 200

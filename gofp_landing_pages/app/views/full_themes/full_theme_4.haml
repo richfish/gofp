@@ -1,0 +1,171 @@
+-view_css :full_theme_4
+
+.splash__container
+  .splash__header
+    .container
+      .splash__header-logo
+        .splash__header-logo-txt--bold
+          Go
+        .splash__header-logo-txt
+          Richapps
+      .splash__header-link-list-items
+        .visible-xs
+          =mobile_menu_toggler_button
+        .visible-md.visible-lg.visible-sm
+          %ul
+            %li
+              .dropdown.inline
+                =link_to "#" do
+                  Our products
+                  %span.caret
+                %ul.dropdown-menu.dropdown-menu-right.animated.fadeIn
+                  %li
+                    =link_to "#" do
+                      .splash__header-dropdown-item-name
+                        GoRichAppLess
+                      .splash__header-dropdown-item-description
+                        Simple recurring payments
+                  %hr
+                  %li
+                    =link_to "#" do
+                      .splash__header-dropdown-item-name
+                        GoRichappLess Pro
+                      .splash__header-dropdown-item-description
+                        Total contorl over Direct Debit
+                  %hr
+                  %li
+                    =link_to "#" do
+                      .splash__header-dropdown-item-name
+                        Partner with us
+                      .splash__header-dropdown-item-description
+                        Offer GoRichAppLess to your users
+            %li
+              =link_to "#" do
+                Pricing
+            %li
+              =link_to "#" do
+                Stories
+            %li
+              .dropdown.inline.dropdown--simple-list
+                =link_to "#" do
+                  More
+                  %span.caret
+                %ul.dropdown-menu.dropdown-menu-right.animated.fadeIn{ style: 'width: 200px;'}
+                  %li
+                    =link_to "#", class: 'dropdown-link--bold-blue' do
+                      Security
+                  %li
+                    =link_to "#", class: 'dropdown-link--bold-blue' do
+                      Guides
+                  %li
+                    =link_to "#", class: 'dropdown-link--bold-blue' do
+                      Support
+                  %li
+                    =link_to "#", class: 'dropdown-link--bold-blue' do
+                      FAQ
+                  %hr
+                  %li
+                    =link_to "#" do
+                      About Us
+                  %li
+                    =link_to "#" do
+                      Jobs
+            %li
+              =link_to "#LoginLinkReplace", class: 'splash__header-link-list-item-box' do
+                Login
+
+  .splash__central-content
+    .splash__central-content-title
+      Recurring payments made simple
+    .splash__central-content-subtitle
+      RichappLess makes collecting by Direct Debit easy for everyone from individuals to multi-national corporations
+    .splash__central-content-cta-btn--shaded.ab-btn--shaded
+      learn more
+    .splash__central-content-cta-btn--transparent.ab-btn--transparent
+      sing up now
+
+
+.splash__section-icon-set
+  .container
+    .splash__section-icon-set-title
+      Our global richapp network has processed over $1 billion
+    .splash__section-icon-set-box
+      .row
+        .col-sm-4
+          .splash__section-icon-set-icon
+            =image_tag "gocardless-icon-1.png"
+          .splash__section-icon-set-label
+            Fully automated
+          .splash__section-icon-set-description
+            Save time, stop human errors and avoid failed payments
+        .col-sm-4
+          .splash__section-icon-set-icon
+            =image_tag "gocardless-icon-2.png"
+          .splash__section-icon-set-label
+            Ultra-low fees
+          .splash__section-icon-set-description
+            Less than half the cost of PayPal, with easy-to-understand pricing
+        .col-sm-4
+          .splash__section-icon-set-icon
+            =image_tag "gocardless-icon-3.png"
+          .splash__section-icon-set-label
+            13,000+ merchants
+          .splash__section-icon-set-description
+            Powering payments for companies across the UK and Europe
+.splash__section-customers
+  .container
+    .splash__section-customers-title
+      You'll be in great company
+    =image_tag "gocardless-company-logos.png", class: 'splash__section-customers-logo-img'
+
+.splash__section-features
+  .container
+    .splash__section-features-title
+      What are you looking for?
+    .splash__section-features-box
+      .row
+        .col-sm-4
+          .splash__section-features-block
+            .splash__section-features-top-section
+              .splash__section-features-icon
+                =image_tag "gocardless-feature-icon-1.png"
+              .splash__section-features-label
+                Super simple online payments
+            .splash__section-features-footer
+              .splash__section-features-footer-cta-txt
+                discover richappless
+        .col-sm-4
+          .splash__section-features-block
+            .splash__section-features-top-section
+              .splash__section-features-icon
+                =image_tag "gocardless-feature-icon-2.png"
+              .splash__section-features-label
+                Complete control over Direct Debit
+            .splash__section-features-footer
+              .splash__section-features-footer-cta-txt
+                discover richappless pro
+        .col-sm-4
+          .splash__section-features-block
+            .splash__section-features-top-section
+              .splash__section-features-icon
+                =image_tag "gocardless-feature-icon-3.png"
+              .splash__section-features-label
+                Help your customers collect payments
+            .splash__section-features-footer
+              .splash__section-features-footer-cta-txt
+                discover our partners
+
+.splash__stack-1
+  .splash__stack-1-central-content
+    .splash__stack-1-title
+      Simple, transparent pricing for everyone
+    .splash__stack-1-subtitle
+      Competitive rates for everyone from individuals through to large corporations
+    .splash__stack-1-cta-btn--transparent.ab-btn--transparent
+      Learn about our pricing
+.splash__stack-2
+  .splash__stack-2-central-content
+    .splash__stack-2-cta-btn--shaded.ab-btn--shaded
+      start taking payments
+    .splash__stack-2-subtitle
+      No set up costs, no hidden charges, no commitments

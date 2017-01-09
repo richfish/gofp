@@ -1,0 +1,34 @@
+-view_js :onboarding
+
+.onboarding__guide-bar-container
+  .row
+    .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
+      .row
+        .col-sm-3
+          .onboarding__guide-bar-section--horizontal{ "data-section-toggle" => 1, class: ('active' if @step_id == 1) }
+            =link_to onboardings_path(step_id: 1) do
+              -img_path = step_1_complete? ? "onboarding-checkmark.png" : "number-one.png"
+              =image_tag img_path, class: 'onboarding__guide-bar-icon'
+              .onboarding__guide-bar-description
+                Your Loction(s)
+        .col-sm-3
+          .onboarding__guide-bar-section--horizontal{ "data-section-toggle" => 2, class: ('active' if @step_id == 2) }
+            =link_to_if_with_block step_1_complete?, onboardings_path(step_id: 2) do
+              -img_path = step_2_complete? ? "onboarding-checkmark.png" : "number-two.png"
+              =image_tag img_path, class: 'onboarding__guide-bar-icon'
+              .onboarding__guide-bar-description
+                Availability
+        .col-sm-3
+          .onboarding__guide-bar-section--horizontal{ "data-section-toggle" => 3, class: ('active' if @step_id == 3) }
+            =link_to_if_with_block step_2_complete?, onboardings_path(step_id: 3) do
+              -img_path = step_3_complete? ? "onboarding-checkmark.png" : "number-three.png"
+              =image_tag img_path, class: 'onboarding__guide-bar-icon'
+              .onboarding__guide-bar-description
+                What you're looking for
+        .col-sm-3
+          .onboarding__guide-bar-section--horizontal{ "data-section-toggle" => 4, class: ('active' if @step_id == 4) }
+            =link_to_if_with_block step_3_complete?, onboardings_path(step_id: 4) do
+              -img_path = step_4_complete? ? "onboarding-checkmark.png" : "number-four.png"
+              =image_tag img_path, class: 'onboarding__guide-bar-icon'
+              .onboarding__guide-bar-description
+                Go to Dashboard

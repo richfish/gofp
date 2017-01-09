@@ -1,0 +1,39 @@
+-view_css :summary_card_4
+
+.summary-cards__formatter-container{ onclick: "window.location.href = '#{searchable_entity_path(1)}'", style: 'cursor: pointer;'}
+  .summary-card__container
+    .summary-card__top-img
+    .summary-card__contents
+      .summary-card__title
+        The Lampster | A Lamp with Attitude
+      .summary-card__author-name
+        Radu & Andrew
+      .summary-card__description
+        A customizable robo lamp with 2 LED light sources, one RGB controlled by mobile and a clear one controlled by touch!
+        A customizable robo lamp with 2 LED light sources, one RGB controlled by mobile and a clear one controlled by touch!
+    .summary-card__footer
+      .summary-card__footer-location
+        =iconf('map-marker')
+        Los Angeles, CA
+      .summary-card__footer-progress-bar
+        .progress{ style: 'margin-bottom: 8px; height: 8px'}
+          .progress-bar{ style: 'width: 66%'}
+      .row.summary-card__footer-meta-container
+        .col-xs-4
+          .summary-card__footer-meta-percentage
+            .summary-card__footer-meta-percentage-number
+              66%
+            .summary-card__footer-meta-percentage-label
+              funded
+        .col-xs-4
+          .summary-card__footer-meta-pledged-amount
+            .summary-card__footer-meta-pledged-amount-number
+              $30,054
+            .summary-card__footer-meta-pledged-amount-label
+              pledged
+        .col-xs-4
+          .summary-card__footer-meta-days-left
+            .summary-card__footer-meta-days-left-number
+              45
+            .summary-card__footer-meta-days-left-label
+              days to go

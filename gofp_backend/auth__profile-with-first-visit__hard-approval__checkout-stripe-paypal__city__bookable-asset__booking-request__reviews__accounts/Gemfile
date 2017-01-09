@@ -1,0 +1,105 @@
+source 'https://rubygems.org'
+ruby '2.3.0'
+
+gem 'rails', '4.2.0'
+
+group :production do
+  gem 'unicorn' #https://devcenter.heroku.com/articles/rails-unicorn
+  gem 'heroku-deflater'
+  gem 'rails_12factor'  #recommend by Heroku
+end
+
+gem 'pg'
+gem 'haml'
+gem 'haml-rails'
+#gem 'html2haml'
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+gem 'turbolinks', '~> 2.5.3'
+gem 'jbuilder', '~> 2.0'
+gem 'bootstrap-sass', '~> 3.1.1' #official Sass port of Bootstrap3
+
+gem 'uuid' #UUID.generate
+gem 'ransack' #object based searching
+gem 'fuzzy_match' #search utility
+gem 'draper'
+gem 'gon' #put Ruby variables in your JS
+gem 'rollout' #feature flipping
+gem 'browser'
+#gem 'audited-activerecord'  #compat issues Rails latest
+gem 'geocoder'
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'sidekiq'
+gem 'sinatra', require: false #part of Sidekiq web UI
+gem 'slim'
+#gem 'airbrake'
+gem 'newrelic_rpm'
+gem 'rollbar'
+gem 'responders'
+
+#image related
+gem 'paperclip'
+gem 'delayed_paperclip'
+gem 'aws-sdk'
+gem 'fastimage'
+gem "jquery-fileupload-rails"
+
+#auth related
+gem 'devise', '~> 3.4.0'
+gem 'devise-async' #send devise emails in background jobs
+gem 'devise-bootstrap-views'
+gem 'cancan' #permissions layers
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
+#ecommerce
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'paypal-sdk-rest'
+gem 'rest-client'
+
+group :development do
+  gem 'spring' #Read more: https://github.com/rails/spring
+  gem 'letter_opener'
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'sextant' #see routes on http://localhost:3000/rails/routes
+  gem 'binding_of_caller' #enables the REPL and local/instance variable inspection, good for debugging exceptions
+  gem 'git-up'
+  gem 'guard-minitest' #to use, run 'bundle exec guard'
+  gem 'minitest-colorize', git: 'https://github.com/ysbaddaden/minitest-colorize'
+  gem 'terminal-notifier-guard'
+  gem 'guard-bundler'
+  gem 'guard-livereload', :require => false
+  #gem 'rack-livereload' #used for automatic browser reload with guard
+  gem 'guard-spork'
+  gem 'meta_request' #https://github.com/dejan/rails_panel
+  gem 'google-translate'
+  gem 'brakeman' #security vulnerability scanning. To use, run 'brakeman -o brakeman.html'
+end
+
+group :development, :test do
+  gem 'thin'
+  #gem 'debugger' #http://stackoverflow.com/questions/20826568/debugger-gem-not-supported-in-ruby-2-1-0-2-1-1-2-1-2
+  gem 'byebug'
+  gem 'spork-rails'
+  gem 'awesome_print'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'ci_reporter'
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
+  gem 'capybara', '~> 2.2.0'
+  gem 'poltergeist', '~> 1.5.0' #[linux] sudo apt-get install phantomjs | [mac] brew install phantomjs
+  gem 'database_cleaner'
+  gem 'mocha'
+end
+
+
+
+

@@ -1,0 +1,22 @@
+-provider_first_name = @conversation.bootcamp.user.profile.first_name
+-bootcamp_name = @conversation.bootcamp.name
+%p="Hi #{@conversation.first_name}, "
+
+%p
+  You have a new message in your thread with
+  =@conversation.bootcamp.user.full_name
+  about the bootcamp
+  =link_to bootcamp_name, user_bootcamp_url(@conversation.bootcamp.user, @conversation.bootcamp)
+
+%p
+  ="#{provider_first_name} says:"
+  =@message.message
+
+%p
+  To view the full conversation, follow this link (it requires no login):
+  =link_to "Your conversation with #{provider_first_name}", conversation_url(@conversation, euid: @conversation.euid, guest: rand(123124..9099424))
+
+%p
+  Best,
+  %br
+  The Monkey Team

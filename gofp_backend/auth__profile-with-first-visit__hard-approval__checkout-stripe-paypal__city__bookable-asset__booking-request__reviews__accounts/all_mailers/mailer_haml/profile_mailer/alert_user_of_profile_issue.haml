@@ -1,0 +1,24 @@
+%h1 Issue with your profile
+
+%p="Hi #{@profile.full_name},"
+
+%p We had an issue with your profile... Please take a look below:
+
+%p=@profile.issues.unresolved.first.description
+
+%p
+  Please
+  =link_to "Log in", user_path(@profile.user), target: '_blank'
+  and edit the relevant parts of your profile or bookable_asset.
+
+%p
+  When you are done, try to publish your bookable_asset again.
+
+%p
+  If you aren't familiar with policies about profiles, please take a look at
+  =link_to 'relevant policies', provider_policies_url, target: '_blank'
+
+%p
+  Best,
+  %br
+  The Monkey Team

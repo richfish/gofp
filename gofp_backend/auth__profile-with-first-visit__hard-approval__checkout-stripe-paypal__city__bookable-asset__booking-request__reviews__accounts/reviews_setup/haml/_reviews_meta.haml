@@ -1,0 +1,13 @@
+.reviews-ratings
+  .category-rating
+    %span.title_small Teaching Ability
+    %span.stars=num_to_stars(user.avg_teaching_ability)
+  .category-rating
+    %span.title_small Value of Material
+    %span.stars=num_to_stars(user.avg_value_of_experience)
+  .category-rating
+    %span.title_small Satisfaction
+    %span.stars=num_to_stars(user.avg_satisfaction)
+  .category-rating
+    %span.title_small Overall Rating
+    %span.stars=num_to_stars(user.avg_overall)
